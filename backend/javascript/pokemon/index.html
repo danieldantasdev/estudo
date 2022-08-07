@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pokemon</title>
+
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <main class="l-main">
+            <section class="l-section">
+                <div class="text">
+                    Nome:
+                    <h2 class="pokemon_name"></h2>
+                </div>
+
+                <div class="text">
+                    Id:
+                    <h2 class="pokemon_number"></h2>
+                </div>
+            </section>
+
+            <img src="img/pokedex.webp" alt="" />
+
+            <img src="" class="pokemon_image" alt="" />
+            <section class="l-section--normal">
+                <button class="button_previous" onclick="decrementPokemon()">Descrementar Pokemon</button>
+                <button class="button_next" onclick="incrementPokemon()">Incrementar Pokemon</button>
+            </section>
+        </main>
+
+        <!-- <div class="load-container"></div> -->
+
+        <script src="js/script.js"></script>
+    </body>
+</html>

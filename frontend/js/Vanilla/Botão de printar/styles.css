@@ -1,0 +1,19 @@
+html {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background: lightblue;
+    border: none;
+    padding: 1rem;
+    color: white;
+    /*   display:flex;
+    justify-content:center;
+    align-items:center; */
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}

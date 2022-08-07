@@ -1,0 +1,144 @@
+{
+    //Editor
+    "workbench.colorTheme": "Omni",
+    "vscode-edge-devtools.mirrorEdits": true,
+    "editor.fontLigatures": true,
+    "editor.lineHeight": 24,
+    "editor.fontFamily": "Fira Code",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.rulers": [120],
+    "editor.wordWrapColumn": 120,
+    "editor.fontSize": 16,
+    "terminal.integrated.fontSize": 16,
+    "editor.minimap.enabled": true,
+    "editor.wordWrap": "on",
+    "workbench.editor.tabSizing": "shrink",
+    "explorer.compactFolders": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.suggest.insertMode": "replace",
+    "files.autoGuessEncoding": true,
+    "[jsonc]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "gitlens.codeLens.scopes": ["document"],
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    //Emmet
+    "emmet.showSuggestionsAsSnippets": true,
+    "editor.snippetSuggestions": "top",
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "razor": "html",
+        "plaintext": "pug"
+    },
+    /* "emmet.preferences": {
+        "filter.commentAfter": "\n<!-- /[#ID][.CLASS] -->"
+    }, */
+    "emmet.variables": {
+        "lang": "pt-br",
+        "charset": "UTF-8"
+    },
+    "emmet.excludeLanguages": [],
+    //Formatter
+    "prettier.tabWidth": 4,
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "none",
+    "prettier.arrowParens": "avoid",
+    "prettier.endOfLine": "auto",
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "githubIssues.queries": [
+        {
+            "label": "My Issues",
+            "query": "default"
+        },
+        {
+            "label": "Created Issues",
+            "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+        }
+    ],
+    "tabnine.experimentalAutoImports": true,
+    "cSpell.userWords": ["Dantas", "linkedin", "preconnect", "variável"],
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    //Comments
+    "better-comments.highlightPlainText": true,
+    "better-comments.tags": [
+        {
+            "tag": "!",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "?",
+            "color": "#3498DB",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "//",
+            "color": "#474747",
+            "strikethrough": true,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "todo",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "*",
+            "color": "#98C379",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        }
+    ],
+    //C - C++ - C#
+    "C_Cpp.updateChannel": "Insiders",
+    "C_Cpp.clang_format_sortIncludes": true,
+    "C_Cpp.experimentalFeatures": "Enabled",
+    "C_Cpp.intelliSenseEngineFallback": "Enabled",
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.commentContinuationPatterns": ["/**"],
+    "c-cpp-compile-run.c-flags": "-Wall -Wextra -std=c17",
+    "c-cpp-compile-run.cpp-flags": "-Wall -Wextra -std=c17",
+    "c-cpp-compile-run.run-in-external-terminal": true,
+    "[cpp]": {
+        "editor.wordBasedSuggestions": true,
+        "editor.suggest.insertMode": "replace",
+        "editor.semanticHighlighting.enabled": true
+    },
+    //Git
+    "git.autofetch": true,
+    "git.allowForcePush": true,
+    "git.allowNoVerifyCommit": true,
+    "git.alwaysShowStagedChangesResourceGroup": true,
+    "editor.suggest.showStatusBar": true
+}
