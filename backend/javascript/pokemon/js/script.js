@@ -5,22 +5,14 @@ const ButtonPrevious = document.querySelector('.button_previous')
 const ButtonNext = document.querySelector('.button_next')
 
 // const pokemonName = document.getElementById('pokemon_name')
-var data
-
 const fetchPokemon = async (pokemon) => {
     const URL = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`).then((res) => res.json())
 
     return URL
 }
 
-const fetchPokemon2 = async () => {
-    const URL = await fetch(`https://pokeapi.co/api/v2/pokemon`).then((res) => res.json())
-
-    return URL
-}
-
 const renderPokemon = async (pokemon) => {
-    this.data = await fetchPokemon(pokemon)
+    let data = await fetchPokemon(pokemon)
 
     pokemonNumber.innerHTML = data.id
     pokemonName.innerHTML = data.name
