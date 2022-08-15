@@ -1,0 +1,6 @@
+<p>products works!</p>
+<div class="container">
+  <p *ngFor="let product of products">
+    {{ product.name }} {{ product.price | currency: "BRL":true:"1.2-2" }}
+  </p>
+</div>

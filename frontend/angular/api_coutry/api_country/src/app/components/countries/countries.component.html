@@ -1,0 +1,73 @@
+<div class="container">
+  <!-- <p *ngFor="let country of countries">
+    {{ country.name.common }} {{ country.flag }} - {{ country.capital }} -
+    {{ country.population }}
+  </p> -->
+
+  <div class="example-container mat-elevation-z8">
+    <div
+      class="example-loading-shade"
+      *ngIf="isLoadingResults || isRateLimitReached"
+    >
+      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+      <div class="example-rate-limit-reached" *ngIf="isRateLimitReached">
+        GitHub's API rate limit has been reached. It will be reset in one
+        minute.
+      </div>
+    </div>
+
+    <div class="example-table-container">
+      <table
+        mat-table
+        [dataSource]="countries"
+        class="example-table"
+        matSort
+        matSortActive="created"
+        matSortDisableClear
+        matSortDirection="desc"
+      >
+        <!-- Number Column -->
+        <ng-container matColumnDef="number">
+          <th mat-header-cell *matHeaderCellDef matSort>País</th>
+          <td mat-cell *matCellDef="let country">{{ country.name.common }}</td>
+        </ng-container>
+
+        <!-- Title Column -->
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef>Bandeira</th>
+          <td mat-cell *matCellDef="let country">{{ country.flag }}</td>
+        </ng-container>
+
+        <!-- State Column -->
+        <ng-container matColumnDef="state">
+          <th mat-header-cell *matHeaderCellDef>Capital</th>
+          <td mat-cell *matCellDef="let country">{{ country.capital }}</td>
+        </ng-container>
+
+        <!-- Created Column -->
+        <ng-container matColumnDef="created">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>
+            Created
+          </th>
+          <td mat-cell *matCellDef="let country">{{ country.area }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let country; columns: displayedColumns"></tr>
+      </table>
+    </div>
+
+    <mat-paginator
+      [length]="resultsLength"
+      [pageSize]="pageSize"
+      aria-label="Select page of GitHub search results"
+    ></mat-paginator>
+
+    <!-- <mat-paginator
+    [length]="10"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    aria-label="Select page of GitHub search results"
+  ></mat-paginator> -->
+  </div>
+</div>
