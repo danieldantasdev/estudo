@@ -22,7 +22,7 @@ export class CountryService {
     sort: string,
     order: SortDirection,
     page: number
-  ): Observable<any> {
+  ): Observable<Country[]> {
     const href = environment.api_url;
     const requestUrl = `${href}?q=${sort}&order=${order}&page=${page + 1}`;
     return this.http.get<Country[]>(requestUrl);

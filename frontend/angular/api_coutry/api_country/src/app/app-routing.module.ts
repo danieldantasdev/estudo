@@ -4,6 +4,7 @@ import { CountriesComponent } from './components/countries/countries.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { ProductsComponent } from './components/products/products.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/countries', pathMatch: 'full' },
@@ -11,6 +12,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'countries', component: CountriesComponent },
   { path: 'countries/:name', component: CountriesComponent },
+  { path: 'products', component: ProductsComponent },
+  { path: 'countries/:id', component: ProductsComponent },
   { path: '**', component: PagenotfoundComponent },
 ];
 

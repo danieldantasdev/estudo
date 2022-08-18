@@ -208,6 +208,3 @@ source ~/.bashrc
 nvm list-remote
 nvm install v13.6.0
 nvm list
-
-
-

@@ -1,12 +1,14 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-import { Country } from 'src/app/model/country/country';
+import { Country, CountryApi } from 'src/app/model/country/country';
 import { CountryService } from 'src/app/services/country/country.service';
 
 import { HttpClient } from '@angular/common/http';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
-import { MatSort, SortDirection } from '@angular/material/sort';
+import { MatSort, Sort, SortDirection } from '@angular/material/sort';
 import { merge, Observable, of as observableOf } from 'rxjs';
 import { catchError, map, startWith, switchMap } from 'rxjs/operators';
+import { MatTableDataSource } from '@angular/material/table';
+import { LiveAnnouncer } from '@angular/cdk/a11y';
 
 @Component({
   selector: 'app-countries',
@@ -14,22 +16,23 @@ import { catchError, map, startWith, switchMap } from 'rxjs/operators';
   styleUrls: ['./countries.component.scss'],
 })
 export class CountriesComponent implements OnInit, AfterViewInit {
-  // exampleDatabase: Country[] | null = [];
-  displayedColumns: string[] = ['created', 'state', 'number', 'title'];
+  // exampleDatabase: CountryApi | null[] = [];
+  displayedColumns: string[] = ['area', 'capital', 'country', 'flag'];
 
   resultsLength = 0;
   isLoadingResults = true;
   isRateLimitReached = false;
 
   countries: Country[] = [];
-  pageSize = 10;
+  dataSource = new MatTableDataSource<Country>(this.countries);
 
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort!: MatSort;
 
   constructor(
     private countryService: CountryService,
-    private _httpClient: HttpClient
+    private _httpClient: HttpClient,
+    private _liveAnnouncer: LiveAnnouncer
   ) {}
 
   ngOnInit(): void {}
@@ -43,13 +46,14 @@ export class CountriesComponent implements OnInit, AfterViewInit {
   //       this.isLoadingResults = false;
   //     });
 
-  /*   ngAfterViewInit() {
-    // this.exampleDatabase = new ExampleHttpDatabase(this._httpClient);
-    this.countries = new Array<Country>();
+  /*  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    // this.exampleDatabase = new CountryApi(this._httpClient);
+    this.sort = new MatSort();
+    this.dataSource.sort = this.sort;
 
     // If the user changes the sort order, reset back to the first page.
-    this.sort = new MatSort();
-    this.sort.sortChange.subscribe(() => (this.paginator.pageIndex = 1));
+    this.sort.sortChange.subscribe(() => (this.paginator.pageIndex = 0));
 
     merge(this.sort.sortChange, this.paginator.page)
       .pipe(
@@ -58,42 +62,44 @@ export class CountriesComponent implements OnInit, AfterViewInit {
           this.isLoadingResults = true;
           return this.countryService
             .getAllCountries(
-              this.sort.active || 'Brazil',
-              this.sort.direction || 'desc',
-              this.paginator.pageIndex || 0
+              this.sort.active,
+              this.sort.direction,
+              this.paginator.pageIndex
             )
             .pipe(catchError(() => observableOf(null)));
         }),
-        map((countries) => {
+        map((data) => {
           // Flip flag to show that loading has finished.
           this.isLoadingResults = false;
-          this.isRateLimitReached = countries === null;
+          this.isRateLimitReached = data === null;
 
-          if (countries === null) {
+          if (data === null) {
             return [];
           }
 
           // Only refresh the result length if there is new data. In case of rate
           // limit errors, we do not want to reset the paginator to zero, as that
           // would prevent users from re-triggering requests.
-          this.resultsLength = countries.total_count;
-          return countries.items;
+          this.resultsLength = data.length;
+          return data;
         })
       )
-      .subscribe((countries) => (this.countries = countries));
+      .subscribe((data) => (this.countries = data));
   } */
 
   ngAfterViewInit() {
+    this.isLoadingResults = true;
+    this.dataSource.paginator = this.paginator;
     this.countryService
       .getAllCountries('brazil', 'desc', 0)
       .subscribe((data) => {
         this.countries = data;
         this.resultsLength = this.countries.length;
-        this.isLoadingResults = false;
 
         data.sort((a: any, b: any) => {
           return a.name.common > b.name.common ? 1 : -1;
         });
+        this.isLoadingResults = false;
       });
   }
 }
