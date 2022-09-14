@@ -1,0 +1,58 @@
+<div class="container">
+  <form class="example-form" (ngSubmit)="onSubmit()">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input
+        type="email"
+        matInput
+        [formControl]="emailFormControl"
+        placeholder="Ex: google@gmail.com"
+        [(ngModel)]="usuario.email"
+      />
+      <mat-error
+        *ngIf="
+          emailFormControl.hasError('email') &&
+          !emailFormControl.hasError('required')
+        "
+      >
+        Digite um email válido, por exemplo: google@gmail.com
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        O email é <strong>obrigatório</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Password</mat-label>
+      <input
+        [type]="hide ? 'password' : 'text'"
+        matInput
+        [formControl]="passwordFormControl"
+        placeholder="Password"
+        [(ngModel)]="usuario.password"
+      />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+      <mat-error *ngIf="passwordFormControl.hasError('required')">
+        A senha é <strong>obrigatória</strong>
+      </mat-error>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="!loginForm.valid"
+      type="submit"
+      name="action"
+      class="button"
+    >
+      Login
+    </button>
+  </form>
+</div>
