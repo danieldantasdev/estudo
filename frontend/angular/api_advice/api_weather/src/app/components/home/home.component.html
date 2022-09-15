@@ -1,0 +1,8 @@
+<p>
+  {{ advices.slip.id }} - {{ advices.slip.advice }}
+  {{ date | date: "dd/MM/yyyy HH:mm:ss" }}
+</p>
+
+<input type="search" name="" id="input" value="" (change)="advicesById()"/>
+
+<button (click)="buscar()">Buscar</button>
