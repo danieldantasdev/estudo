@@ -1,0 +1,129 @@
+<!-- <table *ngFor="let post of posts">
+  <thead>
+    <th>userId</th>
+    <th>id</th>
+    <th>title</th>
+    <th>body</th>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>{{ post.userId }}</td>
+      <td>{{ post.id }}</td>
+      <td colspan="1">{{ post.title }}</td>
+      <td colspan="1">{{ post.title }}</td>
+    </tr>
+  </tbody>
+
+   <tfoot>
+      <tr>
+        <th colspan="4">November was more produstive</th>
+      </tr>
+    </tfoot>
+</table> -->
+
+<table>
+  <!-- <caption>
+    A summary of top sites with both paid and free course
+  </caption> -->
+  <thead>
+    <tr>
+      <th class="primary" scope="col">id</th>
+      <th scope="col">userIde</th>
+      <th scope="col">title</th>
+      <th scope="col">body</th>
+      <th scope="col">status</th>
+      <th scope="col">botão</th>
+      <th scope="col">icon</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let post of posts">
+    <tr *ngIf="post.status === 'INATIVO' ? 0 : 1">
+      <!-- <th scope="row">Freecode Camp</th>
+        <td>Yes</td>
+        <td>Free</td>
+        <td>Web Development and Design</td> -->
+      <td>{{ post.id }}</td>
+      <td>{{ post.userId }}</td>
+      <td>{{ post.title }}</td>
+      <td>{{ post.body }}</td>
+      <td>{{ post.status }}</td>
+      <td><button (click)="updateStatusPost(post)">Excluir</button></td>
+      <td>
+        <mat-icon *ngIf="post.status === 'INATIVO'">{{ icon }}</mat-icon>
+        <mat-icon *ngIf="post.status === 'ATIVO'">{{ icon2 }}</mat-icon>
+      </td>
+    </tr>
+    <!-- <tr> -->
+    <!-- <th scope="row">Udemy</th>
+      <td>Yes</td>
+      <td>Paid</td>
+      <td>Python and Machine Learning</td> -->
+    <!-- </tr> -->
+    <!-- <tr> -->
+    <!-- <th scope="row">Coursera</th>
+      <td>Yes</td>
+      <td>Free and Paid</td>
+      <td>IoT and AI</td> -->
+    <!-- </tr> -->
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Total Courses</th>
+      <td colspan="4">
+        <i>{{ posts.length }}</i>
+      </td>
+    </tr>
+  </tfoot>
+</table>
+
+<form class="example-form" [formGroup]="createPostForm" (ngSubmit)="onSubmit()">
+  <div class="example-full-width" appearance="fill">
+    <label>id</label>
+    <input type="number" name="id" formControlName="id" placeholder="Ex: 1" />
+  </div>
+
+  <div class="example-full-width" appearance="fill">
+    <label>userId</label>
+    <input
+      type="number"
+      name="userId"
+      formControlName="userId"
+      placeholder="Ex: 1"
+    />
+  </div>
+
+  <div class="example-full-width" appearance="fill">
+    <label>title</label>
+    <input
+      type="text"
+      name="title"
+      formControlName="title"
+      placeholder="Ex: lorem"
+    />
+  </div>
+
+  <div class="example-full-width" appearance="fill">
+    <label>body</label>
+    <input
+      type="text"
+      name="body"
+      formControlName="body"
+      placeholder="Ex: lorem"
+    />
+  </div>
+
+  <div class="example-full-width" appearance="fill">
+    <label>status</label>
+    <input
+      type="text"
+      name="status"
+      formControlName="status"
+      placeholder="Ex: lorem"
+    />
+  </div>
+
+  <button color="primary" type="submit" name="action" class="button">
+    Cadastrar
+  </button>
+</form>

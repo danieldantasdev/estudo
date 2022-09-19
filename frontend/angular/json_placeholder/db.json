@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "cs",
+      "body": "w",
+      "status": "ATIVO"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "title": "danieldaksdbasjhd",
+      "body": "khdsjhfvjsdf",
+      "status": "ATIVO"
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "title": "daniel",
+      "body": "djahdkasbdkasbdjhsabdasbd",
+      "status": "INATIVO"
+    },
+    {
+      "id": 4,
+      "userId": 4,
+      "title": "",
+      "body": "",
+      "status": "INATIVO"
+    },
+    {
+      "id": 5,
+      "userId": 5,
+      "title": "djhsgdsvd",
+      "body": "hsadbjasvdj",
+      "status": "ATIVO"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
