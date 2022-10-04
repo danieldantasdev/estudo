@@ -41,7 +41,7 @@ export class PostsService {
 
   updateStatusPost(post: Post) {
     return this.http
-      .put<Post>(environment.baseUrl + `posts/${post.id}`, post, {
+      .patch<Post>(environment.baseUrl + `posts/${post.id}`, post.status, {
         headers,
         params,
       })
