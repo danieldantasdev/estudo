@@ -208,3 +208,23 @@ source ~/.bashrc
 nvm list-remote
 nvm install v13.6.0
 nvm list
+
+----
+
+# AzureDataStudio
+
+sudo dpkg -i azuredatastudio-linux-1.39.1.deb
+
+localhost,11433
+sa
+010394
+
+# sqlserver
+
+sudo docker pull mcr.microsoft.com/mssql/server
+
+sudo docker run --name testesqlserver2017 -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=DockerSql2017" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 11433:1433 -d mcr.microsoft.com/mssql/server:2022-latest
+
+sudo docker exec -it testesqlserver2017 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P DockerSql2017
+
+ 
