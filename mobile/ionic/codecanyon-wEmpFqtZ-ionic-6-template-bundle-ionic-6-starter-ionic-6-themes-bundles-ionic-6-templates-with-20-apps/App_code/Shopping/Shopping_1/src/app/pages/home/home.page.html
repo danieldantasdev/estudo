@@ -1,0 +1,257 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>New Trend</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onCart()" color="dark">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-segment>
+    <ion-segment-button>
+      <div class="btn">
+        <ion-icon name="filter"></ion-icon>
+        <ion-label>Sort</ion-label>
+      </div>
+    </ion-segment-button>
+    <ion-segment-button (click)="onFilter()">
+      <div class="btn">
+        <ion-icon name="options"></ion-icon>
+        <ion-label>Filter</ion-label>
+      </div>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div>
+
+    <div class="main_content">
+      <ion-row>
+        <ion-col size="6">
+          <div class="content" (click)="onProduct()">
+            <div class="back_img" [style.backgroundImage]="'url(assets/images/s1.png)'"></div>
+            <div class="sub_content">
+              <ion-label>Handbag LV</ion-label>
+              <div class="price">
+                <ion-label class="h6">$225</ion-label>
+                <ion-icon name="heart" color="danger"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col size="6" (click)="onProduct()" *ngFor="let item of [1,2,3,4,5,6]">
+          <div class="content">
+            <div class="back_img" [style.backgroundImage]="'url(assets/images/s11.png)'"></div>
+            <div class="sub_content">
+              <ion-label>Dress</ion-label>
+              <div class="price">
+                <ion-label class="h6">$87</ion-label>
+                <ion-icon name="heart" color="danger"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="second_content">
+      <ion-row>
+        <ion-col size="12">
+          <div class="content">
+            <div class="back_img" [style.backgroundImage]="'url(assets/images/s13.png)'"></div>
+            <div class="sub_content">
+              <ion-label>NEW TREND</ion-label>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="main_content">
+      <ion-row>
+        <ion-col size="6" (click)="onProduct()" *ngFor="let item of [1,2,3,4]">
+          <div class="content">
+            <div class="back_img" [style.backgroundImage]="'url(assets/images/s1.png)'"></div>
+            <div class="sub_content">
+              <ion-label>Handbag LV</ion-label>
+              <div class="price">
+                <ion-label class="h6">$225</ion-label>
+                <ion-icon name="heart" color="danger"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="second_content">
+      <ion-row>
+        <ion-col size="12">
+          <div class="content">
+            <div class="back_img" [style.backgroundImage]="'url(assets/images/s12.png)'"></div>
+            <div class="sub_content">
+              <ion-label>SRIPPES</ion-label> <br>
+              <ion-label class="sub_ttl">The Line Kings</ion-label>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="second_content">
+      <ion-row>
+        <ion-col size="12">
+          <div class="content">
+            <div class="back_img" [style.backgroundImage]="'url(assets/images/s13.png)'"></div>
+            <div class="sub_content">
+              <ion-label>NEW TREND</ion-label>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="title">
+      <ion-label class="h5">Recently Viewed</ion-label>
+
+      <ion-buttons>
+        <ion-button (click)="onClose()" color="danger">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+
+    <ion-slides mode="ios" scrollbar="ios" [options]="slideOpts2">
+      <ion-slide (click)="onProduct()" *ngFor="let item of [1,2,3,4]">
+        <div class="sliders">
+          <ion-col size="6">
+            <div class="content">
+              <div class="back_img" [style.backgroundImage]="'url(assets/images/s1.png)'"></div>
+              <div class="sub_content">
+                <ion-label>Pull&Bear slim fit</ion-label>
+                <div class="price">
+                  <ion-label class="h6">t-shirt in rib in work</ion-label>
+                </div>
+              </div>
+              <ion-icon name="heart" class="icn" color="danger"></ion-icon>
+            </div>
+          </ion-col>
+        </div>
+      </ion-slide>
+    </ion-slides>
+
+    <div class="title">
+      <ion-label class="h5">Saved items</ion-label>
+
+      <ion-buttons>
+        <ion-button (click)="onAll()" color="primary">
+          View All
+        </ion-button>
+      </ion-buttons>
+    </div>
+
+    <div class="third_content">
+      <ion-row>
+        <ion-col size="12">
+          <div class="content" (click)="onProduct()">
+            <div class="back_img" [style.backgroundImage]="'url(assets/images/s1.png)'"></div>
+            <div class="sub_content">
+              <ion-label>Handbag LV</ion-label>
+              <div class="price">
+                <ion-label class="h6">$225</ion-label>
+                <ion-buttons>
+                  <ion-button (click)="onBag()">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                  </ion-button>
+                </ion-buttons>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+
+
+    <div class="third_content">
+      <ion-row>
+        <ion-col size="12">
+          <div class="content" (click)="onProduct()">
+            <div class="back_img" [style.backgroundImage]="'url(assets/images/s3.png)'"></div>
+            <div class="sub_content">
+              <ion-label>T-Shirt</ion-label>
+              <div class="price">
+                <ion-label class="h6">$200</ion-label>
+                <ion-buttons>
+                  <ion-button (click)="onBag()">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                  </ion-button>
+                </ion-buttons>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <ion-label class="h5">Brands you may like</ion-label>
+
+    <div class="chip">
+      <ion-chip color="medium" mode="ios">
+        <ion-label>Nike</ion-label>
+      </ion-chip>
+      <ion-chip color="medium" mode="ios">
+        <ion-label>Adidas</ion-label>
+      </ion-chip>
+      <ion-chip color="medium" mode="ios">
+        <ion-label>Vance</ion-label>
+      </ion-chip>
+      <ion-chip color="medium" mode="ios">
+        <ion-label>The North Face</ion-label>
+      </ion-chip>
+      <ion-chip color="medium" mode="ios">
+        <ion-label>Collusion</ion-label>
+      </ion-chip>
+      <ion-chip color="medium" mode="ios">
+        <ion-label>Calvin Klein</ion-label>
+      </ion-chip>
+    </div>
+
+    <ion-label class="h5">Style based on your shopping habits</ion-label>
+
+    <div class="fourth_content">
+      <ion-row>
+        <ion-col size="6" *ngFor="let item of [1,2,3,4]">
+          <div class="content" (click)="onProduct()">
+            <div class="back_img" [style.backgroundImage]="'url(assets/images/s5.png)'"></div>
+            <div class="sub_content">
+              <div class="price">
+                <ion-label>Just Add Kicks</ion-label>
+                <ion-icon name="heart" color="danger"></ion-icon>
+              </div>
+              <div class="price">
+                <ion-label class="h6">$225</ion-label>
+                <ion-icon name="thumbs-down" color="danger"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+
+  </div>
+
+
+
+
+</ion-content>

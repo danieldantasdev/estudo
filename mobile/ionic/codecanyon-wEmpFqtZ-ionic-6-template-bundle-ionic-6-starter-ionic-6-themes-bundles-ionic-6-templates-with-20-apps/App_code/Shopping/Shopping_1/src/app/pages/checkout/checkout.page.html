@@ -1,0 +1,292 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Checkout</ion-title>
+  </ion-toolbar>
+  <div class="process">
+    <div class="text">
+      <ion-icon name="information-circle-outline"></ion-icon>
+      <ion-label>Information</ion-label>
+    </div>
+    <span></span>
+    <div class="text">
+      <ion-icon name="bicycle-outline"></ion-icon>
+      <ion-label>Shipping</ion-label>
+    </div>
+    <span></span>
+    <div class="text">
+      <ion-icon name="card-outline"></ion-icon>
+      <ion-label>Payment</ion-label>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div *ngIf="current == 1">
+
+    <div class="deliver" (click)="onState()">
+      <div class="ttl">
+        <ion-label>Deliver To :</ion-label>
+        <ion-thumbnail slot="start">
+          <img src="assets/images/f1.png" />
+        </ion-thumbnail>
+        <ion-label class="lbl">United States</ion-label>
+      </div>
+      <ion-buttons>
+        <ion-button color="medium">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+
+    <ion-label class="h5">My Cart</ion-label>
+
+    <div class="third_content">
+      <ion-row>
+        <ion-col size="12">
+          <div class="content">
+            <div class="back_img" [style.backgroundImage]="'url(assets/images/s5.png)'"></div>
+            <div class="sub_content">
+
+              <ion-label>Handbag LV</ion-label>
+              <div class="item">
+                <div class="color">
+                  <ion-label>Color:</ion-label>
+                  <div class="sub_color"></div>
+                </div>
+                <div class="text">
+                  <ion-label>Size:</ion-label>
+                  <ion-label>M</ion-label>
+                </div>
+                <div class="text">
+                  <ion-label>Amount:</ion-label>
+                  <ion-label>12</ion-label>
+                </div>
+              </div>
+
+              <span></span>
+
+              <div class="price">
+                <ion-label class="ttl">Total :</ion-label>
+                <ion-label>$123</ion-label>
+              </div>
+
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="deliver" (click)="onPromo()">
+      <div class="ttl">
+        <ion-label>Promo/Student code or e-gift cards</ion-label>
+      </div>
+      <ion-buttons>
+        <ion-button color="medium">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </div>
+
+  <div *ngIf="current == 2">
+
+    <ion-label class="h5">Shipping Address</ion-label>
+
+    <div class="address">
+      <div class="ttl">
+        <ion-label class="h5">Postal Address</ion-label>
+        <ion-buttons slot="end">
+          <ion-button (click)="onEdit()">
+            <ion-icon name="pencil-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+      <ion-item lines="none">
+        <ion-buttons slot="start">
+          <ion-button color="medium">
+            <ion-icon name="person-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label>Jessi Pham</ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-buttons slot="start">
+          <ion-button color="medium">
+            <ion-icon name="location-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label>Los angeles, Canifornia, USA</ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-buttons slot="start">
+          <ion-button color="medium">
+            <ion-icon name="call-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label>0123 456 789</ion-label>
+      </ion-item>
+
+      <ion-button class="button" (click)="onCheckout()" expand="block" fill="clear">
+        Click & Collect
+      </ion-button>
+    </div>
+
+  <ion-label class="h5">Shipping Options</ion-label>
+
+  <div class="shipping_price">
+    <ion-row>
+      <ion-col size="2">
+        <ion-checkbox color="primary"></ion-checkbox>
+      </ion-col>
+      <ion-col size="10">
+        <ion-label class="h6"><span>Free</span> Standard Shipping</ion-label> <br>
+        <ion-label>Deliverd on before monday. june 8,2020</ion-label> <br>
+        <ion-label><ion-icon name="information-circle-outline"></ion-icon> No shipping on public holiday</ion-label>
+      </ion-col>
+    </ion-row>
+    <span class="hr"></span>
+    <ion-row>
+      <ion-col size="2">
+        <ion-checkbox color="primary"></ion-checkbox>
+      </ion-col>
+      <ion-col size="10">
+        <ion-label class="h6"><span>$10.00</span> Express Shipping</ion-label> <br>
+        <ion-label>Deliverd on before monday. june 8,2020</ion-label> <br>
+      </ion-col>
+    </ion-row>
+    <span class="hr"></span>
+    <ion-row>
+      <ion-col size="2">
+        <ion-checkbox color="primary"></ion-checkbox>
+      </ion-col>
+      <ion-col size="10">
+        <ion-label class="h6"><span>$19.99</span> Express Shipping</ion-label> <br>
+        <ion-label>Deliverd on before monday. june 8,2020</ion-label> <br>
+      </ion-col>
+    </ion-row>
+  </div>
+  </div>
+
+  <div *ngIf="current == 3">
+
+    <ion-label class="h5">Payments</ion-label>
+
+    <div class="address">
+      <div class="ttl">
+        <ion-label class="h5">Billing Address</ion-label>
+        <ion-buttons slot="end">
+          <ion-button (click)="onEdit()">
+            <ion-icon name="pencil-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+      <ion-item lines="none">
+        <ion-buttons slot="start">
+          <ion-button color="medium">
+            <ion-icon name="person-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label>Jessi Pham</ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-buttons slot="start">
+          <ion-button color="medium">
+            <ion-icon name="location-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label>Los angeles, Canifornia, USA</ion-label>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-buttons slot="start">
+          <ion-button color="medium">
+            <ion-icon name="call-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label>0123 456 789</ion-label>
+      </ion-item>
+    </div>
+
+    <h5>Payment type</h5>
+
+    <div class="payment_method">
+      <div class="create_method">
+        <ion-thumbnail>
+          <img src="assets/images/p1.png" />
+        </ion-thumbnail>
+      </div>
+      <div class="method">
+        <ion-thumbnail>
+          <img src="assets/images/p1.png" />
+        </ion-thumbnail>
+      </div>
+      <div class="method">
+        <ion-thumbnail>
+          <img src="assets/images/p1.png" />
+        </ion-thumbnail>
+      </div>
+    </div>
+
+    <h6>We Accept</h6>
+
+    <div class="card">
+      <ion-thumbnail *ngFor="let item of [1,2,3,4]">
+        <img src="assets/images/p1.png" />
+      </ion-thumbnail>
+    </div>
+
+
+    <div class="main_price">
+
+      <div class="sub_price">
+        <ion-label class="text">Sub - total</ion-label>
+        <ion-label class="price">$123</ion-label>
+      </div>
+      <div class="sub_price">
+        <ion-label class="text">Shipping</ion-label>
+        <ion-label class="price">Free</ion-label>
+      </div>
+      <div class="sub_price">
+        <ion-label class="text">Sale tax</ion-label>
+        <ion-label class="price">$5.70</ion-label>
+      </div>
+      <hr>
+      <div class="total_price">
+        <ion-label class="text">Total to pay</ion-label>
+        <ion-label class="price">$128.7</ion-label>
+      </div>
+
+      <ion-button class="content_button" (click)="onOrder()" expand="block">
+        Place order
+      </ion-button>
+    </div>
+
+    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+       when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button class="content_button" *ngIf="current == 1" (click)="current = 2" expand="block">
+      Shipping
+    </ion-button>
+    <ion-button class="content_button" *ngIf="current == 2" (click)="current = 3" expand="block">
+      Continue
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

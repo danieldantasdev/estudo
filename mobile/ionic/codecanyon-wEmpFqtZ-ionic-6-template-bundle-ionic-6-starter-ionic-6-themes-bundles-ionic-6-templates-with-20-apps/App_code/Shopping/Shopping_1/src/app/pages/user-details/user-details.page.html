@@ -1,0 +1,55 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>My Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item lines="none">
+    <ion-label position="stacked">First Name</ion-label>
+    <ion-input type="text" placeholder="Enter your first name."></ion-input>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label position="stacked">Last Name</ion-label>
+    <ion-input type="text" placeholder="Enter your last name."></ion-input>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label position="stacked">Email Address</ion-label>
+    <ion-input type="email" placeholder="Enter email address."></ion-input>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label position="stacked">Date Of Birth</ion-label>
+    <ion-input type="date" placeholder="Enter email address."></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Gender</ion-label>
+    <ion-select placeholder="Enter Gender.">
+      <ion-select-option value="1">Male</ion-select-option>
+      <ion-select-option value="2">Female</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button class="content_button" (click)="onSave()" expand="block">
+      Saved Changes
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,35 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onClose()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Price</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item lines="none">
+    <ion-range id="dual-range" dual-knobs pin color="primary">
+    </ion-range>
+  </ion-item>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button class="content_button" (click)="onView()" expand="block">
+      View
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

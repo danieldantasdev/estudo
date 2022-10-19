@@ -1,0 +1,50 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Checkout</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="searchbar">
+    <ion-item lines="none">
+      <ion-buttons slot="start">
+        <ion-button (click)="onSearch()">
+          <ion-icon name="search"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+      <ion-input type="text" placeholder="Search"></ion-input>
+
+      <ion-buttons slot="end">
+        <ion-button (click)="onCamera()" color="medium">
+          <ion-icon  name="camera"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </div>
+
+  <div class="main_div">
+    <ion-item lines="none" *ngFor="let item of [1,2,3,4]">
+      <ion-thumbnail>
+        <img src="assets/images/f1.png" />
+      </ion-thumbnail>
+      <ion-label>India</ion-label>
+    </ion-item>
+  </div>
+
+
+</ion-content>

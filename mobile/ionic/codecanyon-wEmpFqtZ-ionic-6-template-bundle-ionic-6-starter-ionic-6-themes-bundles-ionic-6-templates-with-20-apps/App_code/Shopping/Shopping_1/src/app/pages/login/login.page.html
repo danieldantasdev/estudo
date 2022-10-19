@@ -1,0 +1,53 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="main_div">
+
+    <div class="info">
+      <ion-item lines="none">
+        <ion-label position="stacked">Email Address</ion-label>
+        <ion-input type="email" placeholder="Enter email address."></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input type="password" placeholder="Enter password."></ion-input>
+      </ion-item>
+
+      <div class="btn">
+        <ion-buttons slot="end">
+          <ion-button (click)="onForgot()">
+            Forgot Password?
+          </ion-button>
+        </ion-buttons>
+      </div>
+
+      <ion-button class="content_button" (click)="login()" expand="block">
+        Log in
+      </ion-button>
+
+      <div class="lbl">
+        <ion-label>You are not register? <span (click)="onSignUp()">Sign Up</span> </ion-label>
+      </div>
+    </div>
+
+  </div>
+
+</ion-content>

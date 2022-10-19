@@ -1,0 +1,106 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.main_content {
+  margin: 1em 0px;
+  ion-row {
+    ion-col {
+      padding: 10px;
+      height: 20vh;
+      width: 100%;
+      .content {
+        position: relative;
+        .back_img {
+          position: absolute;
+          right: 10px;
+          top: -55px;
+          height: 85px;
+          width: 85px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+        }
+        .sub_content {
+          margin-top: 50px;
+          padding: 50px 10px 10px 10px;
+          background: #ffff;
+          box-shadow: 0px 0px 20px var(--box-color);
+          --box-color: #d7d8da;
+          border-radius: 5px;
+          ion-label {
+            color: gray;
+          }
+          .price {
+            margin: 10px 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .h6 {
+              margin: 0px;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.second_content {
+  margin: 1em 0px;
+  ion-row {
+    ion-col {
+      padding: 10px;
+      height: 22vh;
+      width: 100%;
+      .content {
+        position: relative;
+        .back_img {
+          position: absolute;
+          right: 10px;
+          bottom: 0px;
+          height: 170px;
+          width: 100px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+        }
+        .sub_content {
+          margin-top: 30px;
+          padding: 40px 10px 40px 10px;
+          background: #ffff;
+          box-shadow: 0px 0px 20px var(--box-color);
+          --box-color: #d7d8da;
+          border-radius: 5px;
+          ion-label {
+            font-family: bold;
+            font-size: 30px;
+          }
+          .sub_ttl {
+            font-size: 13px;
+            color: gray;
+            position: absolute;
+            bottom: 5vh;
+          }
+          .price {
+            margin: 10px 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .h6 {
+              margin: 0px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

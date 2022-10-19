@@ -1,0 +1,56 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Credit / Debit Card</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Card Number</ion-label>
+    <div class="item">
+      <ion-input type="text" placeholder="Enter card number."></ion-input>
+      <ion-buttons slot="end">
+        <ion-button (click)="onCamera()" color="medium">
+          <ion-icon name="camera"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Expiry Date</ion-label>
+    <ion-input type="text" placeholder="MM/YY."></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Enter Name On Card</ion-label>
+    <ion-input type="text" placeholder="Enter name on card."></ion-input>
+  </ion-item>
+
+  <ion-button class="content_button" (click)="onCard()" expand="block">
+    Save Card
+  </ion-button>
+
+  <ion-label class="h6">We Accept</ion-label>
+
+  <div class="card">
+    <ion-thumbnail *ngFor="let item of [1,2,3,4]">
+      <img src="assets/images/p1.png" />
+    </ion-thumbnail>
+  </div>
+
+</ion-content>

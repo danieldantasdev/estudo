@@ -1,0 +1,132 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-header {
+  box-shadow: none;
+}
+
+.third_content {
+  margin: 1em 0px;
+  ion-row {
+    ion-col {
+      padding: 10px;
+      height: 17vh;
+      width: 100%;
+      .content {
+        position: relative;
+        .back_img {
+          position: absolute;
+          left: -10px;
+          top: -20px;
+          height: 85px;
+          width: 95px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+        }
+        .sub_content {
+          margin: 30px 0px 0px 30px;
+          padding: 10px 10px 10px 5rem;
+          background: #ffff;
+          box-shadow: 0px 0px 20px var(--box-color);
+          --box-color: #d7d8da;
+          border-radius: 5px;
+          ion-label {
+            color: black;
+            font-family: "bold";
+            font-size: 18px;
+          }
+          .price {
+            margin: 3px 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .h6 {
+              margin: 0px;
+              color: gray;
+              font-size: 13px;
+            }
+            ion-buttons {
+              ion-button {
+                border: 1px solid #8e5f43;
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.h6 {
+  margin: 10px 0px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 10px 0px;
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    border: 1px solid #d7d8da;
+    border-radius: 5px;
+    padding: 0px 10px;
+    ion-label {
+      color: #8e5f43;
+      margin: 0px 5px;
+    }
+    ion-icon {
+      font-size: 18px;
+      margin: 0px 5px;
+    }
+  }
+}
+
+.color_content {
+  display: flex;
+  flex-direction: row;
+  .color {
+    margin: 5px 5px 5px 0px;
+    height: 40px;
+    width: 40px;
+    background: #ff6600;
+    border-radius: 50%;
+  }
+}
+
+.size_content {
+  display: flex;
+  flex-direction: row;
+  .size {
+    margin: 5px 5px 5px 0px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px var(--box-color);
+    --box-color: #d7d8da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    ion-label {
+      font-size: 12px;
+      color: gray;
+    }
+  }
+}
+
+.content_button {
+  margin: 30px 0px;
+}

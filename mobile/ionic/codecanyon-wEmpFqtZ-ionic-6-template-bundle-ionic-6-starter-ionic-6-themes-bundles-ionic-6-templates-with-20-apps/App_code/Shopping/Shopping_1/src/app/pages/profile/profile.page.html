@@ -1,0 +1,209 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+
+  <div class="back_img" [style.backgroundImage]="'url(assets/images/b1.jpg)'">
+    <div class="bg_img" [style.backgroundImage]="'url(assets/images/b2.jpg)'">
+      <ion-buttons>
+        <ion-button (click)="onEdit()">
+          <ion-icon name="create-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+    <ion-label>Jessi Pham</ion-label>
+    <ion-buttons class="btn">
+      <ion-button (click)="onSetting()" color="light">
+        <ion-icon name="settings-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+
+  <div class="main_content">
+
+    <div class="itm">
+      <div class="content">
+        <ion-item lines="none" (click)="onOrder()">
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon name="cube-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>My Order</ion-label>
+          <ion-buttons slot="end">
+            <ion-button color="medium">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+
+        <div class="hr"></div>
+
+        <ion-item lines="none" (click)="onDelivery()">
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon name="cash-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>Premium Delivery</ion-label>
+          <ion-buttons slot="end">
+            <ion-button color="medium">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+      </div>
+
+      <div class="content">
+        <ion-item lines="none" (click)="onUser()">
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon name="newspaper-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>My Details</ion-label>
+          <ion-buttons slot="end">
+            <ion-button color="medium">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+
+        <div class="hr"></div>
+
+        <ion-item lines="none">
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon name="location-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>Address Book</ion-label>
+          <ion-buttons slot="end">
+            <ion-button color="medium">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+
+        <div class="hr"></div>
+
+        <ion-item lines="none" (click)="onPayment()">
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon name="card-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>Payment Methods</ion-label>
+          <ion-buttons slot="end">
+            <ion-button color="medium">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+
+        <div class="hr"></div>
+
+        <ion-item lines="none">
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon name="people-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>Contact Preferences</ion-label>
+          <ion-buttons slot="end">
+            <ion-button color="medium">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+
+        <div class="hr"></div>
+
+        <ion-item lines="none">
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon name="person-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>Social Account</ion-label>
+          <ion-buttons slot="end">
+            <ion-button color="medium">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+      </div>
+
+      <div class="content">
+        <ion-item lines="none" (click)="onGiftcard()">
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon name="gift-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>Gift Cards & Voucher</ion-label>
+          <ion-buttons slot="end">
+            <ion-button color="medium">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+      </div>
+
+      <div class="content">
+        <ion-item lines="none" (click)="onVoucher()">
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon name="help-circle-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>Need help?</ion-label>
+          <ion-buttons slot="end">
+            <ion-button color="medium">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+
+        <div class="hr"></div>
+
+        <ion-item lines="none" (click)="onVoucher()">
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>Tell us what you think of Ebuy</ion-label>
+          <ion-buttons slot="end">
+            <ion-button color="medium">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+      </div>
+
+      <div class="content">
+        <ion-item lines="none" (click)="onSignout()">
+          <ion-buttons slot="start">
+            <ion-button>
+              <ion-icon name="log-out-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>Sign out</ion-label>
+          <ion-buttons slot="end">
+            <ion-button color="medium">
+              <ion-icon name="chevron-forward-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+      </div>
+    </div>
+
+  </div>
+
+</ion-content>

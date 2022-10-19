@@ -1,0 +1,132 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>My Orders</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onSearch()">
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="onCart()">
+        <ion-icon name="cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="third_content">
+    <ion-row>
+      <ion-col size="12">
+        <div class="content">
+          <div class="back_img" [style.backgroundImage]="'url(assets/images/s5.png)'"></div>
+          <div class="sub_content">
+            <div class="label">
+              <ion-label class="h6">Womens Hoddie</ion-label>
+              <ion-label>2020/06/10 - 09:30</ion-label>
+            </div>
+            <div class="price">
+              <ion-label>Handbag LV</ion-label>
+              <ion-buttons slot="end">
+                <ion-button>
+                  <ion-icon name="chevron-forward"></ion-icon>
+                </ion-button>
+              </ion-buttons>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="amount">
+              <ion-label class="txt">Cash on delivery :</ion-label>
+              <ion-label class="price">$123</ion-label>
+            </div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="timeline">
+
+    <ion-row>
+      <ion-col size="3" class="rang">
+       <ion-buttons>
+         <ion-button color="light">
+           <ion-icon name="cart-outline"></ion-icon>
+         </ion-button>
+       </ion-buttons>
+
+       <div class="hr"></div>
+
+      </ion-col>
+      <ion-col size="9" class="content">
+        <ion-label class="h5">Place order</ion-label>
+        <ion-label>June 06,2020 - 08:45 am</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="3" class="rang">
+       <ion-buttons>
+         <ion-button color="light">
+           <ion-icon name="home-outline"></ion-icon>
+         </ion-button>
+       </ion-buttons>
+
+       <div class="hr"></div>
+
+      </ion-col>
+      <ion-col size="9" class="content">
+        <ion-label class="h5">Delivery Shipping Units</ion-label>
+        <ion-label>June 06,2020 - 08:45 am</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="3" class="rang">
+       <ion-buttons>
+         <ion-button color="light">
+           <ion-icon name="car-outline"></ion-icon>
+         </ion-button>
+       </ion-buttons>
+
+       <div class="hr"></div>
+
+      </ion-col>
+      <ion-col size="9" class="content">
+        <ion-label class="h5">Order Are Being Shipped</ion-label>
+        <ion-label>June 06,2020 - 08:45 am</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="3" class="rang">
+       <ion-buttons>
+         <ion-button color="light">
+           <ion-icon name="heart-outline"></ion-icon>
+         </ion-button>
+       </ion-buttons>
+
+      </ion-col>
+      <ion-col size="9" class="content">
+        <ion-label class="h5">Delivery Successfully!</ion-label>
+        <ion-label>Your order has been delivered.</ion-label>
+      </ion-col>
+    </ion-row>
+  </div>
+
+</ion-content>

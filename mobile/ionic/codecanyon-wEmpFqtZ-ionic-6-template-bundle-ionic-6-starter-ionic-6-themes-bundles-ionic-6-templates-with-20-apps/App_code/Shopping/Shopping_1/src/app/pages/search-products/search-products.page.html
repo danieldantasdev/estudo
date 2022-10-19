@@ -1,0 +1,66 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <div class="searchbar">
+      <ion-buttons slot="start">
+        <ion-button (click)="onBack()" color="medium">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-item lines="none">
+        <ion-buttons slot="start">
+          <ion-button (click)="onSearch()">
+            <ion-icon name="search"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+
+        <ion-input type="text" placeholder="Search"></ion-input>
+
+        <ion-buttons slot="end">
+          <ion-button (click)="onCamera()" color="medium">
+            <ion-icon name="camera"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+
+
+
+  <div class="main_div">
+    <div class="title">
+      <ion-label class="h5">Recent Searches</ion-label>
+      <ion-buttons>
+        <ion-button (click)="onClose()" color="danger">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+    <ion-item lines="none" *ngFor="let item of [1,2,3,4]">
+      <ion-buttons slot="start">
+        <ion-button (click)="onClick()">
+          <ion-icon name="shirt-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-label>Nike Shirt Transparents</ion-label>
+    </ion-item>
+  </div>
+
+
+  <div class="content">
+
+    <div class="back_img" [style.backgroundImage]="'url(assets/images/5.jpg)'"></div>
+    <ion-label class="h6">You have not recent searches.</ion-label>
+
+  </div>
+
+</ion-content>

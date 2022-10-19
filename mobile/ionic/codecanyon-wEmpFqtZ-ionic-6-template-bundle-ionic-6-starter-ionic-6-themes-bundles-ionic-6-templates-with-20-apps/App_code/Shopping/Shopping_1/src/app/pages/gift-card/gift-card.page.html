@@ -1,0 +1,51 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Add gift cards</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-label class="title">Enter the long number and scratch off the panel on your card to reveal your pin as shown below. </ion-label>
+
+  <div class="main_card">
+    <ion-label class="title">Back Of Gift Card</ion-label>
+    <ion-label>1334 1453 1584 3253</ion-label>
+
+    <div class="image" [style.backgroundImage]="'url(assets/images/b1.png)'"></div>
+
+    <span></span>
+
+  </div>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">16 - Digit Code</ion-label>
+    <ion-input type="number" placeholder="Enter 16 - Digit Code."></ion-input>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label position="stacked">4 - Digit Pin</ion-label>
+    <ion-input type="number" placeholder="Enter 4 - Digit Pin."></ion-input>
+  </ion-item>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button class="content_button" (click)="onCard()" expand="block">
+      Add Gift Card
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

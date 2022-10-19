@@ -1,0 +1,103 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>My Orders</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onSearch()">
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="onCart()">
+        <ion-icon name="cart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-segment value="1" mode="md" [(ngModel)]="current">
+    <ion-segment-button [value]="1">
+      <ion-label>Pending Orders</ion-label>
+    </ion-segment-button>
+    <ion-segment-button [value]="2">
+      <ion-label>Past Orders</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div *ngIf="current == 1" class="third_content">
+    <ion-row (click)="onDetails()">
+      <ion-col size="12">
+        <div class="content">
+          <div class="back_img" [style.backgroundImage]="'url(assets/images/s5.png)'"></div>
+          <div class="sub_content">
+            <div class="label">
+              <ion-label class="h6">Womens Hoddie</ion-label>
+              <ion-label>2020/06/10 - 09:30</ion-label>
+            </div>
+            <div class="price">
+              <ion-label>Handbag LV</ion-label>
+              <ion-buttons slot="end">
+                <ion-button>
+                  <ion-icon name="chevron-forward"></ion-icon>
+                </ion-button>
+              </ion-buttons>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="amount">
+              <ion-label class="txt">Cash on delivery :</ion-label>
+              <ion-label class="price">$123</ion-label>
+            </div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div *ngIf="current == 2" class="third_content">
+    <ion-row (click)="onDetails()">
+      <ion-col size="12">
+        <div class="content">
+          <div class="back_img" [style.backgroundImage]="'url(assets/images/s11.png)'"></div>
+          <div class="sub_content">
+            <div class="label">
+              <ion-label class="h6">Womens Hoddie</ion-label>
+              <ion-label>2020/06/10 - 09:30</ion-label>
+            </div>
+            <div class="price">
+              <ion-label>Handbag LV</ion-label>
+              <ion-buttons slot="end">
+                <ion-button>
+                  <ion-icon name="chevron-forward"></ion-icon>
+                </ion-button>
+              </ion-buttons>
+            </div>
+
+            <div class="hr"></div>
+
+            <div class="amount">
+              <ion-label class="txt">Cash on delivery :</ion-label>
+              <ion-label class="price">$123</ion-label>
+            </div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+
+</ion-content>

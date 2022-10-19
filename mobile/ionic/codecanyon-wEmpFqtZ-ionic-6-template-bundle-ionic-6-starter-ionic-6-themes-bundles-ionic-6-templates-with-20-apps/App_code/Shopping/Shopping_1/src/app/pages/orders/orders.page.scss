@@ -1,0 +1,89 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.third_content {
+  margin: 1em 0px;
+  ion-row {
+    ion-col {
+      padding: 10px;
+      height: 17vh;
+      width: 100%;
+      .content {
+        position: relative;
+        .back_img {
+          position: absolute;
+          left: -10px;
+          top: -20px;
+          height: 85px;
+          width: 95px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+        }
+        .sub_content {
+          margin: 30px 0px 0px 30px;
+          padding: 10px 10px 10px 5rem;
+          background: #ffff;
+          box-shadow: 0px 0px 20px var(--box-color);
+          --box-color: #d7d8da;
+          border-radius: 5px;
+          ion-label {
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+          }
+          .label {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            h6 {
+              margin: 0px;
+              font-size: 10px;
+              color: #8e5f43;
+            }
+            ion-label {
+              font-size: 7px;
+              font-family: "regular";
+            }
+          }
+          .price {
+            margin: 10px 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            ion-buttons {
+              ion-button {
+                border: 1px solid #8e5f43;
+                border-radius: 5px;
+                height: 25px;
+                width: 25px;
+              }
+            }
+          }
+          .hr {
+            width: 100%;
+            border-bottom: 1px solid lightgray;
+            margin: 10px 0px;
+          }
+          .amount {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .txt {
+              color: gray;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

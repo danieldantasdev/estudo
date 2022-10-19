@@ -1,0 +1,117 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="third_content">
+    <ion-row>
+      <ion-col size="12">
+        <div class="content" (click)="onProduct()">
+          <div class="back_img" [style.backgroundImage]="'url(assets/images/s5.png)'"></div>
+          <div class="sub_content">
+
+            <ion-label>Handbag LV</ion-label>
+            <div class="item">
+              <div class="color">
+                <ion-label>Color:</ion-label>
+                <div class="sub_color"></div>
+              </div>
+              <div class="text">
+                <ion-label>Size:</ion-label>
+                <ion-label>M</ion-label>
+              </div>
+            </div>
+
+            <div class="price">
+              <ion-label>$109</ion-label>
+              <div class="btn">
+                <ion-icon name="remove" (click)="onRemove()"></ion-icon>
+                <ion-label>12</ion-label>
+                <ion-icon name="add" (click)="onAdd()"></ion-icon>
+              </div>
+            </div>
+
+            <ion-buttons>
+              <ion-button (click)="onDelete()" color="light">
+                <ion-icon name="close"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="third_content">
+    <ion-row>
+      <ion-col size="12">
+        <div class="content" (click)="onProduct()">
+          <div class="back_img" [style.backgroundImage]="'url(assets/images/s3.png)'"></div>
+          <div class="sub_content">
+
+            <ion-label>Handbag LV</ion-label>
+            <div class="item">
+              <div class="color">
+                <ion-label>Color:</ion-label>
+                <div class="sub_color"></div>
+              </div>
+              <div class="text">
+                <ion-label>Size:</ion-label>
+                <ion-label>M</ion-label>
+              </div>
+            </div>
+
+            <div class="price">
+              <ion-label>$109</ion-label>
+              <div class="btn">
+                <ion-icon name="remove" (click)="onRemove()"></ion-icon>
+                <ion-label>12</ion-label>
+                <ion-icon name="add" (click)="onAdd()"></ion-icon>
+              </div>
+            </div>
+
+            <ion-buttons>
+              <ion-button (click)="onDelete()" color="light">
+                <ion-icon name="close"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="amount_div">
+      <div class="price_div">
+        <ion-label class="label">Total :</ion-label>
+        <ion-label class="total">$123</ion-label>
+      </div>
+      <ion-button class="content_button" (click)="onCheckout()" expand="block">
+        Checkout
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>

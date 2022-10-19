@@ -1,0 +1,112 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.sliders {
+  position: relative;
+  ion-slides {
+    ion-slide {
+      .back_img {
+        height: 40vh;
+        width: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  .main_btn {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    .btn {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px;
+      padding-top: 40px;
+    }
+  }
+  .second_btn {
+    position: absolute;
+    bottom: 50px;
+    right: 10px;
+    .button {
+      display: flex;
+      flex-direction: column;
+      ion-buttons {
+        margin: 10px 0px;
+        ion-button {
+          height: 50px;
+          width: 50px;
+          background: #ffff;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+.main_content {
+  position: relative;
+  .content {
+    position: absolute;
+    top: -70px;
+    width: 100%;
+    z-index: 1;
+    .rating {
+      box-shadow: 0px 0px 20px var(--box-color);
+      --box-color: #d7d8da;
+      padding: 10px;
+      border-radius: 5px;
+      background: #ffff;
+      margin: 20px 0px;
+      .h5 {
+        margin: 5px 0px;
+      }
+      .main_rate {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 0px;
+        .h6 {
+          margin: 0px;
+          font-weight: bold;
+        }
+        .rate {
+          ion-icon {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    .description_div {
+      box-shadow: 0px 0px 20px var(--box-color);
+      --box-color: #d7d8da;
+      padding: 10px;
+      border-radius: 5px;
+      background: #ffff;
+      margin: 20px 0px;
+      .h5 {
+        margin: 5px 0px;
+      }
+      p {
+        span {
+          color: #8e5f43;
+          font-weight: bold;
+        }
+      }
+      .hr {
+        width: 100%;
+        border-bottom: 1px solid lightgray;
+        margin: 10px 0px;
+      }
+    }
+  }
+}
