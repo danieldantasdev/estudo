@@ -1,0 +1,133 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.main_div {
+  padding-top: 40px;
+  .search_bar {
+    margin-top: 20px;
+
+    ion-item {
+      --background: #f4f5f8;
+      --border-radius: 10px;
+      ion-input {
+        margin: 10px 0;
+      }
+
+      ion-icon {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .service {
+    overflow: scroll;
+    margin: 20px 0 10px 0;
+    display: flex;
+    flex-direction: row;
+
+    .select {
+      width: max-content;
+      display: flex;
+      flex-direction: row;
+
+      .item {
+        border-radius: 50%;
+        background: transparent !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background: #f4f5f8;
+        margin: 0 5px;
+
+        ion-label {
+          font-size: 16px;
+          margin-top: 10px;
+          border-bottom: 1px solid #6d5ae7;
+        }
+      }
+    }
+
+    .menu {
+      width: max-content;
+      display: flex;
+      flex-direction: row;
+
+      .item {
+        border-radius: 50%;
+        background: transparent !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background: #f4f5f8;
+        margin: 0 5px;
+
+        ion-label {
+          font-size: 16px;
+          margin-top: 10px;
+          color: lightgray;
+        }
+      }
+    }
+  }
+  .artist {
+    margin-top: 2rem;
+
+    .head_lbl {
+      font-size: 18px;
+      font-family: "bold";
+    }
+
+    .category_div {
+      overflow: scroll;
+      margin: 10px 0;
+
+      .menu {
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+
+        .item {
+          border-radius: 50%;
+          background: transparent !important;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          background: #f4f5f8;
+          margin: 0 10px;
+
+          img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+          }
+
+          ion-label {
+            font-size: 14px;
+            margin-top: 10px;
+          }
+          .style {
+            font-size: 12px;
+            color: #c2c2cb;
+          }
+        }
+      }
+    }
+  }
+
+  .result {
+    margin-top: 2rem;
+
+    .head_lbl {
+      font-size: 16px;
+      font-family: "bold";
+    }
+  }
+}

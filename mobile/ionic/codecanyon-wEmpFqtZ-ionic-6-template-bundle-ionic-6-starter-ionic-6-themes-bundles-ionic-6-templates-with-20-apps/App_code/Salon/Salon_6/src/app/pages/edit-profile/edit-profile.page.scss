@@ -1,0 +1,110 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-content {
+  .avtar {
+    padding-top: 40px;
+    ion-row {
+      ion-col {
+        ion-thumbnail {
+          height: 72px;
+          width: 72px;
+
+          img {
+            border-radius: 10px;
+          }
+        }
+
+        .avtar_lbl {
+          margin-top: 50px;
+          color: #6d5ae7;
+        }
+
+        .cancel {
+          display: flex;
+          justify-content: flex-end;
+
+          ion-icon {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  .fill {
+    margin-top: 1.5rem;
+    ion-item {
+      margin-top: 24px;
+
+      ion-label {
+        font-size: 16px;
+      }
+
+      ion-input {
+        font-size: 16px;
+        color: black;
+        margin-top: 16px;
+      }
+    }
+    .gender {
+      ion-col {
+        ion-label {
+          font-size: 16px;
+        }
+
+        ion-select {
+          margin-top: 24px;
+          font-size: 18px;
+        }
+
+        ion-input {
+          margin-top: 24px;
+        }
+      }
+    }
+
+    .phone {
+      display: flex;
+      align-items: center;
+      padding: 0 0 0 10px;
+      border-radius: 15px;
+      .code {
+        border-right: 1px solid lightgray;
+        padding: 0;
+        .item {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          text-align: center;
+          img {
+            height: 20px;
+            width: 20px;
+          }
+          ion-select {
+            font-size: 12px;
+          }
+        }
+      }
+      ion-col {
+        ion-input {
+          --padding-start: 10px;
+        }
+        ion-buttons {
+          padding: 0;
+          ion-icon {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  ion-button {
+    height: 50px;
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,61 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBackChat()">
+        <ion-icon name="arrow-back-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Calling....</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="center_div">
+    <div class="ripple-container">
+      <div class="thumb-lg ripple-trigger">
+        <img
+        src="assets/images/g1.jpg"
+          onError="this.src='assets/images/g1.jpg'" style="height:100px;width: 100px"
+          class="rounded_img b b-2x box-shadow">
+      </div>
+      <div class="ripple-1"></div>
+      <div class="ripple-2"></div>
+
+    </div>
+
+  </div>
+
+  <div class="content">
+    <ion-label class="name_lbl">Jaydeep Hirani</ion-label>
+    <ion-label class="salon_name">Bella Renova</ion-label>
+    <ion-label class="contact">+153 64 877 869 9</ion-label>
+
+    <div class="btns">
+      <ion-buttons >
+        <ion-button (click)="onClick()">
+          <ion-icon  name="mic-outline" color="dark"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons >
+        <ion-button (click)="onClick()">
+          <ion-icon  name="volume-medium-outline" color="dark"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons >
+        <ion-button (click)="onClick()">
+          <ion-icon  name="call" color="danger"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </div>
+
+</ion-content>

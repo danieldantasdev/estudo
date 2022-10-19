@@ -1,0 +1,164 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+    <div class="upper_div">
+      <div>
+        <ion-label class="head_lbl">Your Appointments</ion-label>
+      </div>
+
+      <div class="btn">
+        <ion-buttons>
+          <ion-button (click)="goToMapView = !goToMapView">
+            <ion-icon name="map-outline" color="dark"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-buttons >
+          <ion-button (click)="onClick()">
+            <ion-icon name="options-outline" color="dark"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+    </div>
+
+    <div class="segment_div">
+      <ion-segment [(ngModel)]="tabs">
+        <ion-segment-button value="upcoming">
+          <ion-label>Upcoming</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="pass">
+          <ion-label>Pass</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+
+    <div class="upcoming" *ngIf="tabs == 'upcoming'">
+      <div *ngIf="goToMapView == false">
+        <div class="schedule">
+          <ion-label class="date_lbl">12 September 2021,08:00</ion-label>
+
+          <div class="shop">
+            <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/salon.webp)'"></div>
+            <div class="shop_detail">
+
+              <ion-label class="spec_lbl">Bella Rinova</ion-label>
+
+              <ion-label class="add_lbl">6391 Elgin St. Celina,Dela...</ion-label>
+
+              <ion-label class="service_lbl">Services: Regular haircut, Classic shaving</ion-label>
+
+            </div>
+          </div>
+
+          <div class="reminder">
+            <div class="select">
+              <ion-toggle checked></ion-toggle>
+                <ion-select value="1" placeholder="Reminde me">
+                  <ion-select-option value="1">30 min before</ion-select-option>
+                  <ion-select-option value="2">60 min before</ion-select-option>
+                </ion-select>
+            </div>
+            <div>
+              <ion-button (click)="onCancelApointment()" expand="block" shape="round">
+                Cancel
+              </ion-button>
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule">
+          <ion-label class="date_lbl">24 September 2021,16:30</ion-label>
+
+          <div class="shop">
+            <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/salon.webp)'"></div>
+            <div class="shop_detail">
+
+              <ion-label class="spec_lbl">Bella Rinova</ion-label>
+
+              <ion-label class="add_lbl">6391 Elgin St. Celina,Dela...</ion-label>
+
+              <ion-label class="service_lbl">Services: Regular haircut, Classic shaving</ion-label>
+
+            </div>
+          </div>
+
+          <div class="reminder">
+            <div class="select">
+              <ion-toggle></ion-toggle>
+                <ion-select value="" placeholder="Reminde me">
+                  <ion-select-option value="1">30 min before</ion-select-option>
+                  <ion-select-option value="2">60 min before</ion-select-option>
+                </ion-select>
+            </div>
+            <div>
+              <ion-button (click)="onCancelApointment()" expand="block" shape="round">
+                Cancel
+              </ion-button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div *ngIf="goToMapView == true">
+        <div class="mapview" *ngFor="let item of [1,2]">
+          <div #map id="map" class="map"></div>
+          <ion-label class="date_lbl">24 September 2021,16:30</ion-label>
+          <ion-label class="add_lbl">6391 Elgin St. Celina,Delaware 10299</ion-label>
+          <ion-label class="service_lbl">Services: Regular haircut, Classic shaving</ion-label>
+
+          <div class="reminder">
+            <div class="select">
+              <ion-toggle></ion-toggle>
+                <ion-select value="" placeholder="Reminde me">
+                  <ion-select-option value="1">30 min before</ion-select-option>
+                  <ion-select-option value="2">60 min before</ion-select-option>
+                </ion-select>
+            </div>
+            <div>
+              <ion-button (click)="onCancelApointment()" expand="block" shape="round">
+                Cancel
+              </ion-button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="pass" *ngIf="tabs == 'pass'">
+      <div class="schedule" *ngFor="let item of [1,2,3]">
+        <ion-label class="date_lbl">24 September 2021,16:30</ion-label>
+
+        <div class="shop">
+          <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/salon.webp)'"></div>
+          <div class="shop_detail">
+
+            <ion-label class="spec_lbl">Bella Rinova</ion-label>
+
+            <ion-label class="add_lbl">6391 Elgin St. Celina,Dela...</ion-label>
+
+            <ion-label class="service_lbl">Services: Regular haircut, Classic shaving</ion-label>
+
+          </div>
+        </div>
+
+        <div class="buttons">
+          <ion-button (click)="onClick()" expand="block" class="btn">
+            Review
+          </ion-button>
+          <ion-button (click)="onClick()" expand="block" class="rebtn">
+            Reschedule
+          </ion-button>
+        </div>
+      </div>
+    </div>
+
+
+</ion-content>

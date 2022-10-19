@@ -1,0 +1,85 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+  <div class="avtar">
+    <ion-row>
+      <ion-col size="3">
+        <ion-thumbnail>
+          <img src="assets/images/profile.webp" />
+        </ion-thumbnail>
+      </ion-col>
+      <ion-col size="6">
+        <ion-label class="avtar_lbl">Change avatar</ion-label>
+      </ion-col>
+      <ion-col size="3">
+        <div class="cancel">
+          <ion-icon name="close" (click)="goBackProfile()"></ion-icon>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="fill">
+    <ion-item lines="none">
+      <ion-label position="stacked">Full Name</ion-label>
+      <ion-input placeholder="Robert Fox"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input placeholder="robert_fox@gmail.com"></ion-input>
+    </ion-item>
+
+    <ion-row class="gender">
+      <ion-col size="6">
+        <ion-item lines="none">
+          <ion-label position="stacked">Gender</ion-label>
+            <ion-select value="male" placeholder="">
+              <ion-select-option value="male">Male</ion-select-option>
+              <ion-select-option value="female">Female</ion-select-option>
+            </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item lines="none">
+          <ion-label position="stacked">Birth of date</ion-label>
+          <ion-input type="date" placeholder=""></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">Address</ion-label>
+      <ion-input placeholder="6391 Elgin St. Celina,Delaware 10299"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label  position="stacked">Phone Number</ion-label>
+    </ion-item>
+
+      <ion-row class="phone">
+        <ion-col size="4" class="code">
+          <div class="item">
+            <img src="assets/images/india.png" />
+              <ion-select placeholder="+91">
+                <ion-select-option>+91</ion-select-option>
+                <ion-select-option>+81</ion-select-option>
+              </ion-select>
+          </div>
+        </ion-col>
+        <ion-col size="8">
+          <ion-input type="number" placeholder="365248667"></ion-input>
+        </ion-col>
+      </ion-row>
+  </div>
+
+  <ion-button (click)="goToProfile()" expand="block">
+    Save
+  </ion-button>
+</ion-content>

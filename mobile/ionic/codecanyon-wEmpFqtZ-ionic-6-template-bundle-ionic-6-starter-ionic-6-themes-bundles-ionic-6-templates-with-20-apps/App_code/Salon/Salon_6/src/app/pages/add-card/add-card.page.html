@@ -1,0 +1,56 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title color="dark">Add Card</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goBackAddPayment()">
+        <ion-icon slot="start" name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <img src="assets/images/card.png" alt="">
+  <ion-item lines="none">
+    <ion-label position="stacked">Card Number</ion-label>
+    <ion-input placeholder="4950 2020 2525 3636"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Card Holder</ion-label>
+    <ion-input placeholder="Jenny Wilson"></ion-input>
+  </ion-item>
+
+  <div class="flex_div">
+    <ion-item lines="none">
+      <ion-label position="stacked">Expiry Date</ion-label>
+      <ion-input placeholder="DD.MM.YYYY"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">CVV</ion-label>
+      <ion-input placeholder="000"></ion-input>
+    </ion-item>
+  </div>
+
+  <ion-item lines="none" class="default" >
+    <ion-checkbox checked="true" mode="md"></ion-checkbox>
+    <ion-label class="set">Set as your default payment method</ion-label>
+  </ion-item>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-button (click)="onClick()" expand="block">
+      Add
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

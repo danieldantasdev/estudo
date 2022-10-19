@@ -1,0 +1,73 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title color="dark">Favourite</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goBack()">
+        <ion-icon slot="start" name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="segment_div">
+    <div class="flex_div">
+      <ion-segment [(ngModel)]="tabs" mode="ios">
+        <ion-segment-button value="all">
+          <ion-label>All</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="haircut">
+          <ion-label>Haircuts</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="mackup">
+          <ion-label>Mack up</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="massage">
+          <ion-label>Massage</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="skin">
+          <ion-label>Skincare</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+  </div>
+
+  <div class="active" *ngIf="tabs == 'all'">
+    <div class="shop" *ngFor="let item of [1,2,3,4,5,6,7,8]">
+      <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/salon.webp)'"></div>
+      <div class="shop_detail">
+
+        <ion-label class="name">Green Apple</ion-label>
+
+        <ion-label class="add_lbl">8502, Preston road, Ingelwood, M...</ion-label>
+
+        <div class="about">
+
+          <ion-icon slot="start" name="location-outline"></ion-icon>
+          <ion-label>15 km</ion-label>
+
+          <ion-buttons class="heart">
+            <ion-button (click)="onClick()">
+              <ion-icon slot="start" name="heart" color="danger"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+
+          <ion-button (click)="onClick()" expand="block">
+            Book
+          </ion-button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</ion-content>
