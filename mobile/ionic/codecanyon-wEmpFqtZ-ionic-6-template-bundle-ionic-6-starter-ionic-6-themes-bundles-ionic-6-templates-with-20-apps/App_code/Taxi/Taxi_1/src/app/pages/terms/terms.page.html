@@ -1,0 +1,39 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToBack()">
+        <ion-icon slot="start" name="chevron-back-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main-content">
+
+    <div class="icon">
+      <ion-icon  name="newspaper-outline"></ion-icon>
+    </div>
+
+    <div class="text">Check the box to indication are at least 18 years of age agree to the <span>Terms and conditions</span> and acknowledge the <span>Privacy Policy.</span>
+    </div>
+
+    <div class="checkbox">
+      <ion-checkbox></ion-checkbox>
+    </div>
+
+    <div class="next-btn">
+      <ion-button (click)="goToHome()" expand="block">
+        Next
+      </ion-button>
+    </div>
+  </div>
+</ion-content>
