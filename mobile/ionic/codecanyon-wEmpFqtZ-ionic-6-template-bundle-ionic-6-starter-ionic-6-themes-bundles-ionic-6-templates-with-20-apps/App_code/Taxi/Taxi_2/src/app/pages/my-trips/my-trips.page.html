@@ -1,0 +1,95 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-button (click)="goBack()" fill="clear" mode="md">
+      <ion-icon name="arrow-back" color="dark"></ion-icon>
+    </ion-button>
+    <ion-title>My Trips</ion-title>
+  </ion-toolbar>
+
+  <ion-row>
+    <ion-col size="4" (click)="tabID = 1">
+      <ion-label [class.active]="tabID == 1">Completed</ion-label>
+    </ion-col>
+    <ion-col size="4" (click)="tabID = 2" style="border-left: 1px solid lightgrey;border-right: 1px solid lightgrey">
+      <ion-label [class.active]="tabID == 2">Upcoming</ion-label>
+    </ion-col>
+    <ion-col size="4" (click)="tabID = 3">
+      <ion-label [class.active]="tabID == 3">Cancelled</ion-label>
+    </ion-col>
+  </ion-row>
+
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <ion-label class="date_lbl">Mon 8 oct 2018</ion-label>
+
+    <div class="review_div" *ngFor="let item of [1,2]">
+      <div class="user_image"></div>
+      <div class="card_box">
+        <div class="name_flex">
+          <ion-label class="name_lbl">Mausam Chavda</ion-label>
+          <ion-label class="price_lbl"><span>LKR</span>800.00</ion-label>
+        </div>
+        <div class="destination_flex" style="margin-bottom: 5px;">
+          <div>
+            <ion-icon name="ellipse" color="success"></ion-icon>
+          </div>
+          <div class="addr_detail">
+            <ion-label class="addr_lbl">R.A De Mel Mawatha</ion-label>
+            <ion-label class="time_lbl">07:30 PM</ion-label>
+          </div>
+        </div>
+        <div class="destination_flex">
+          <div>
+            <ion-icon name="ellipse" color="danger"></ion-icon>
+          </div>
+          <div class="addr_detail">
+            <ion-label class="addr_lbl">Piliyandala Road</ion-label>
+            <ion-label class="time_lbl">08:30 PM</ion-label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ion-label class="date_lbl">Sun 7 oct 2018</ion-label>
+
+    <div class="review_div" *ngFor="let item of [1,2]">
+      <div class="user_image"></div>
+      <div class="card_box">
+        <div class="name_flex">
+          <ion-label class="name_lbl">Mausam Chavda</ion-label>
+          <ion-label class="price_lbl"><span>LKR</span>800.00</ion-label>
+        </div>
+        <div class="destination_flex" style="margin-bottom: 5px;">
+          <div>
+            <ion-icon name="ellipse" color="success"></ion-icon>
+          </div>
+          <div class="addr_detail">
+            <ion-label class="addr_lbl">R.A De Mel Mawatha</ion-label>
+            <ion-label class="time_lbl">07:30 PM</ion-label>
+          </div>
+        </div>
+        <div class="destination_flex">
+          <div>
+            <ion-icon name="ellipse" color="danger"></ion-icon>
+          </div>
+          <div class="addr_detail">
+            <ion-label class="addr_lbl">Piliyandala Road</ion-label>
+            <ion-label class="time_lbl">08:30 PM</ion-label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ion-content>
