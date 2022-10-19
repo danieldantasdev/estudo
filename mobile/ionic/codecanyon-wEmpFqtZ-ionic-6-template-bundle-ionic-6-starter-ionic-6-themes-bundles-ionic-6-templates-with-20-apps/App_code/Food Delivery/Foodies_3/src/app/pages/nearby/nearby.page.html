@@ -1,0 +1,55 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+    <ion-toolbar>
+        <ion-title>Nearby</ion-title>
+        <ion-select value="kalanala" slot="end">
+            <ion-select-option value="kalanala">Kalanala, Bhavnagar</ion-select-option>
+            <ion-select-option value="panwadi">Panwadi, Bhavnagar</ion-select-option>
+            <ion-select-option value="panwadi2">1234, Kalanala, Panwadi, Bhavnagar</ion-select-option>
+        </ion-select>
+    </ion-toolbar>
+    <div class="tabs_div">
+        <div *ngFor="let item of tabs" (click)="tabID = item" [class.active]="tabID == item">
+            <ion-label>{{item}}</ion-label>
+        </div>
+    </div>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="rest_div" *ngFor="let item of rest">
+            <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+            <div class="rest_detail">
+                <div class="name_flex">
+                    <ion-label>{{item.name}}</ion-label>
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+                <div class="address_flex">
+                    <ion-icon name="location"></ion-icon>
+                    <ion-label>76A Eighth Avenue, New York.</ion-label>
+                </div>
+                <div class="bottom_flex">
+                    <div class="rate_flex">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-label>4.3</ion-label>
+                        <span>(1200 Reviews)</span>
+                    </div>
+                    <div class="time_flex">
+                        <ion-label>30 Min</ion-label>
+                        &nbsp;•&nbsp;
+                        <ion-label>0.5 km</ion-label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</ion-content>

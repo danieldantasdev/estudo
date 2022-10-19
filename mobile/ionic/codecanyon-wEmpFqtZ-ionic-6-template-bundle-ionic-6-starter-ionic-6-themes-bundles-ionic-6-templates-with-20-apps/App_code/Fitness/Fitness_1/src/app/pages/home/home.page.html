@@ -1,0 +1,213 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+  <ion-item lines="none" class="account">
+    <div class="name">
+      <div class="lbl_div">
+        <ion-label class="smpl_lbl">Welcome Back,</ion-label>
+        <ion-label class="name_lbl">Stefani Wong</ion-label>
+      </div>
+      <div class="bttn_div">
+        <ion-buttons slot="end">
+          <ion-button (click)="onNotification()">
+            <ion-icon name="notifications-outline" color="dark"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+    </div>
+  </ion-item>
+
+  <div class="index">
+    <ion-row>
+      <ion-col size="6">
+        <div class="first_side">
+          <ion-label class="index_lbl">BMI (Body Mass Index)</ion-label>
+          <ion-label class="smpl_lbl">You have a normal weight</ion-label>
+          <ion-button (click)="onClick()" shape="round">
+            View More
+          </ion-button>
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <canvas id="pieChart" #pieChart></canvas>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="schedule">
+    <ion-label class="head_lbl">Today Target</ion-label>
+    <ion-button (click)="onClick()" shape="round">
+      Check
+    </ion-button>
+  </div>
+
+  <div class="activity">
+    <ion-label class="head_lbl">Activity Status</ion-label>
+
+    <div class="chart">
+      <ion-label class="rate_lbl">Heart Rate</ion-label>
+      <ion-label class="num_lbl">78 BPM</ion-label>
+
+      <canvas id="barChart" #barChart></canvas>
+    </div>
+
+    <ion-row>
+      <ion-col size="2">
+        <div class="progress"></div>
+      </ion-col>
+      <ion-col size="5">
+        <div class="water">
+          <ion-label class="water_lbl">Water intack</ion-label>
+          <ion-label class="number_lbl">4 Liters</ion-label>
+          <ion-label class="update_lbl">Real Time Updates</ion-label>
+
+          <ion-row class="row">
+            <ion-col size="2" class="lines">
+              <ion-icon name="radio-button-on-outline" color="danger"></ion-icon>
+              <div class="timeliner"></div>
+            </ion-col>
+            <ion-col size="10">
+              <div class="right">
+                <ion-label class="zone_lbl">6am-8am</ion-label>
+                <ion-label class="cont_lbl">600 ml</ion-label>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row class="row">
+            <ion-col size="2" class="lines">
+              <ion-icon name="radio-button-on-outline" color="danger"></ion-icon>
+              <div class="timeliner"></div>
+            </ion-col>
+            <ion-col size="10">
+              <div class="right">
+                <ion-label class="zone_lbl">9am-11am</ion-label>
+                <ion-label class="cont_lbl">500 ml</ion-label>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row class="row">
+            <ion-col size="2" class="lines">
+              <ion-icon name="radio-button-on-outline" color="danger"></ion-icon>
+              <div class="timeliner"></div>
+            </ion-col>
+            <ion-col size="10">
+              <div class="right">
+                <ion-label class="zone_lbl">11am-2am</ion-label>
+                <ion-label class="cont_lbl">1000 ml</ion-label>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row class="row">
+            <ion-col size="2" class="lines">
+              <ion-icon name="radio-button-on-outline" color="danger"></ion-icon>
+              <div class="timeliner"></div>
+            </ion-col>
+            <ion-col size="10">
+              <div class="right">
+                <ion-label class="zone_lbl">2am-4am</ion-label>
+                <ion-label class="cont_lbl">700 ml</ion-label>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row class="row">
+            <ion-col size="2" class="lines">
+              <ion-icon name="radio-button-on-outline" color="danger"></ion-icon>
+              <div class="timeliner"></div>
+            </ion-col>
+            <ion-col size="10">
+              <div class="right">
+                <ion-label class="zone_lbl">4am-now</ion-label>
+                <ion-label class="cont_lbl">900 ml</ion-label>
+              </div>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-col>
+      <ion-col size="5" class="right_colum">
+        <div class="sleep">
+          <h5></h5>
+          <h4></h4>
+          <ion-label class="slp_lbl">Sleep</ion-label>
+          <ion-label class="slpnum_lbl">8h 20m</ion-label>
+          <canvas id="lineChart" #lineChart></canvas>
+        </div>
+        <div class="calories">
+          <ion-label class="cal_lbl">Calories</ion-label>
+          <ion-label class="calnum_lbl">760 kcal</ion-label>
+          <div class="main_div">
+            <div class="graph">
+              <div class="circle">
+                <ion-label>230Kcal <br> left</ion-label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </div>
+
+  <div class="workout">
+    <div class="progress">
+      <ion-label class="head_lbl">Workout Progress</ion-label>
+      <ion-chip>
+        <ion-label color="light">Weekly</ion-label>
+        <ion-icon name="chevron-down-outline" color="light"></ion-icon>
+      </ion-chip>
+    </div>
+    <div class="barchart">
+      <canvas id="workoutChart" #workoutChart></canvas>
+    </div>
+  </div>
+
+  <div class="latest_workout">
+    <ion-label class="head_lbl">Latest Workout</ion-label>
+    <ion-label class="sub_lbl" (click)="onFullbodyWorkout()">See more</ion-label>
+  </div>
+
+  <ion-item lines="none">
+    <ion-thumbnail>
+      <img src="assets/images/e1.png" />
+    </ion-thumbnail>
+    <div class="activity">
+      <ion-label class="upr_lbl">Foolbody Workout</ion-label>
+      <ion-label class="lwr_lbl">180cal burns | 30min</ion-label>
+      <h6></h6>
+      <p></p>
+      <ion-progress-bar value="0.5"></ion-progress-bar>
+    </div>
+    <ion-icon name="chevron-forward-circle-outline" slot="end" color="danger"></ion-icon>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-thumbnail>
+      <img src="assets/images/e1.png" />
+    </ion-thumbnail>
+    <div class="activity">
+      <ion-label class="upr_lbl">Lowerbody Workout</ion-label>
+      <ion-label class="lwr_lbl">180cal burns | 30min</ion-label>
+      <ion-progress-bar value="0.5"></ion-progress-bar>
+    </div>
+    <ion-icon name="chevron-forward-circle-outline" slot="end" color="danger"></ion-icon>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-thumbnail>
+      <img src="assets/images/e1.png" />
+    </ion-thumbnail>
+    <div class="activity">
+      <ion-label class="upr_lbl">Ab Workout</ion-label>
+      <ion-label class="lwr_lbl">180cal burns | 30min</ion-label>
+      <ion-progress-bar value="0.5"></ion-progress-bar>
+    </div>
+    <ion-icon name="chevron-forward-circle-outline" slot="end" color="danger"></ion-icon>
+  </ion-item>
+
+
+</ion-content>

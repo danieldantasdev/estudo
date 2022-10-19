@@ -1,0 +1,109 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-header {
+  ion-toolbar {
+    ion-title {
+      padding: 0px;
+      font-family: "bold";
+    }
+    ion-buttons {
+      padding: 5px 2px 5px 2px;
+      margin: 10px;
+      ion-button {
+        height: 40px;
+        width: 40px;
+        border: 1px solid lightgray;
+        --border-radius: 50%;
+        border-radius: 50%;
+        ion-icon {
+          color: gray;
+        }
+      }
+    }
+  }
+}
+
+ion-segment {
+  padding: 5px;
+  background: #f5f6f9;
+  border-radius: 15px;
+  ion-segment-button {
+    --color-checked: #ffff;
+    --indicator-box-shadow: transparent !important;
+    --indicator-color: linear-gradient(#ffa124, #ff7c31) !important;
+    --border-radius: 15px;
+    ion-label {
+      padding: 14px;
+    }
+  }
+}
+
+.main_content {
+  border: 2px solid #f5f6f9;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px 0px 20px 0px;
+  ion-row {
+    ion-col {
+      .img {
+        height: 120px;
+        width: 120px;
+        border-radius: 10px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .title {
+        display: flex;
+        flex-direction: column;
+        margin-top: 12px;
+        .ttl {
+          font-size: 20px;
+          font-family: "bold";
+        }
+        .sub_ttl {
+          font-size: 13px;
+          margin: 3px 0px 3px 0px;
+          color: gray;
+        }
+        .icon_title {
+          display: flex;
+          align-items: center;
+          color: #ff7c31;
+          margin: 2px 0px 2px 0px;
+          ion-icon {
+            font-size: 20px;
+            margin-right: 5px;
+          }
+          ion-label {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .btn {
+    display: flex;
+    flex-direction: row;
+    .content_button {
+      width: 100%;
+      margin-right: 5px;
+    }
+    .content_second_button {
+      height: 50px;
+      --background: #ffff;
+      --border-radius: 10px;
+      color: #ff7c31;
+      border: 1px solid #ff7c31;
+      border-radius: 10px;
+      width: 100%;
+      margin-left: 5px;
+    }
+  }
+}

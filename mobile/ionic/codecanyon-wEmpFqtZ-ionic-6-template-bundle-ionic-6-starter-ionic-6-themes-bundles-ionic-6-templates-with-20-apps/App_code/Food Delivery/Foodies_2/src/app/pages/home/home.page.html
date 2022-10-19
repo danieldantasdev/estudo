@@ -1,0 +1,81 @@
+  <!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md">
+  <ion-toolbar class="ion-no-margin">
+    <ion-label class="chikni">Deliver to</ion-label>
+
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="start" name="location" color="danger"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-label>Hriram Bapa Ashram </ion-label>
+    <ion-icon class="chevron" name="chevron-forward-outline"></ion-icon>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="start" name="heart" color="medium"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar mode="ios" placeholder="Find Restauratns, Foods, Drinks" showCancelButton="never"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+
+  <div class="main-content">
+
+    <div class="banner">
+      <ion-slides pager="false" [options]="slideOpts">
+        <ion-slide *ngFor="let item of banner">
+          <div class="banner-slide" [style.backgroundImage]="'url(assets/banner2.jpg)'">
+            <div class="badge">
+              <ion-label>TOP SALES</ion-label>
+            </div>
+            <br>
+            <div class="title">
+              <ion-label>INVITE FRIENDS</ion-label>
+            </div>
+            <div class="text">
+              <ion-label>Discount 1Rs for first order</ion-label>
+            </div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+    <div class="badge">
+      <ion-row>
+        <ion-col (click)="goToRestaurant()" size="3" *ngFor="let item of [0,1,2,3,4,5,6,7]">
+          <ion-img src="assets/img/5.png"></ion-img>
+          <ion-label>hot tea</ion-label>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="heading">
+      <ion-label class="title">New on Food</ion-label>
+      <ion-label class="text" (click)="goToRestaurant()">View all</ion-label>
+    </div>
+
+    <ion-row class="product">
+      <ion-col size="6" *ngFor="let item of [0,1,2]" (click)="goToRestaurant()">
+        <ion-card class="ion-no-margin">
+          <img src="assets/burger.jpg" />
+          <ion-label class="product-name">Burger is king</ion-label>
+          <ion-label class="price">$ 20.12</ion-label>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </div>
+
+</ion-content>

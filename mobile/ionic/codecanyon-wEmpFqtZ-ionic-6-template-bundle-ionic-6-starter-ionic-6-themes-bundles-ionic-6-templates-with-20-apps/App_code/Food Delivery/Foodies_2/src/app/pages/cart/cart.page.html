@@ -1,0 +1,67 @@
+  <!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-label class="btn">Clear All</ion-label>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>My Cart</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="Back()">
+        <ion-icon slot="end" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="items">
+    <ion-row *ngFor="let iten of [1,2]">
+      <ion-col size="12">
+        <div class="title">
+          <ion-label class="item-name">Vegetable Pizza</ion-label>
+          <ion-label class="edit" (click)="goToItem()">Edit</ion-label>
+        </div>
+        <div class="item-info">
+          <ion-label>Medium Size, pan, crust, coke, spite</ion-label>
+        </div>
+        <div class="item-detail">
+          <ion-icon name="clipboard-outline"></ion-icon>
+          <ion-label>Less Onion, boil eggs, more panner</ion-label>
+        </div>
+        <div class="item-price">
+          <ion-label class="price">$20.12</ion-label>
+          <div class="item-add">
+            <ion-icon class="remove" slot="start" name="remove"></ion-icon>
+            <ion-label>2</ion-label>
+            <ion-icon class="add" slot="end" name="add"></ion-icon>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="cart">
+    <div class="cart-icon">
+      <ion-icon name="cart"> </ion-icon>
+      <ion-badge class="badge">2</ion-badge>
+    </div>
+    <div>
+      <ion-label class="price">$ 20.12</ion-label>  <br>
+      <ion-label class="price-del"><del>$ 22.12</del></ion-label>
+    </div>
+  </div>
+  <ion-button (click)="goToConfirm()" shape="round">
+   Check Out
+  </ion-button>
+</ion-footer>

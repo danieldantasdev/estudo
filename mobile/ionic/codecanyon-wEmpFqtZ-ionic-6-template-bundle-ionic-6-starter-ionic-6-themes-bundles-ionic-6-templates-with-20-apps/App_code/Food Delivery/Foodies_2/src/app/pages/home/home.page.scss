@@ -1,0 +1,124 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-header {
+  ion-toolbar {
+    .chikni {
+      font-size: 12px;
+      position: absolute;
+      left: 15px;
+      top: 0px;
+    }
+  }
+}
+
+.main-content {
+  .banner {
+    ion-slides {
+      ion-slide {
+        padding: 10px 10px 0px 0px;
+        .banner-slide {
+          border-radius: 10px;
+          height: 130px;
+          width: 100%;
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        .badge {
+          display: inline-block;
+          border-radius: 3px;
+          background-color: white;
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          font-size: 12px;
+          margin-top: 10px;
+          padding: 0px 3px 0px 3px;
+        }
+        .title {
+          font-size: 20px;
+          position: absolute;
+          bottom: 25px;
+          left: 16px;
+          color: white;
+          ion-label {
+            font-family: "semi-bold";
+          }
+        }
+        .text {
+          font-size: 14px;
+          position: absolute;
+          bottom: 8px;
+          left: 16px;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .badge {
+    ion-row {
+      margin-top: 5px;
+      ion-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        ion-img {
+          width: 80%;
+          padding: 10px 10px 0px 10px;
+        }
+        ion-label {
+          font-size: 13px;
+          font-family: "medium";
+        }
+      }
+    }
+  }
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0px 10px 0px;
+    .title {
+      font-size: 18px;
+      font-family: "semi-bold";
+      color: var(--ion-color-dark);
+    }
+    .text {
+      font-size: 14px;
+      color: var(--ion-color-secondary);
+    }
+  }
+
+  .product {
+    ion-col {
+      ion-card {
+        display: flex;
+        flex-direction: column;
+        margin: 3px;
+        img {
+          width: 100%;
+          height: 120px;
+        }
+        .product-name {
+          font-size: 14px;
+          font-family: "semi-bold";
+          color: var(--ion-color-medium);
+          padding: 5px;
+        }
+        .price {
+          font-size: 16px;
+          font-family: "semi-bold";
+          padding: 0px 5px 5px 5px;
+          color: var(--ion-color-dark);
+        }
+      }
+    }
+  }
+}

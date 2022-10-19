@@ -1,0 +1,152 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-toolbar {
+  --background: #f8f9fd;
+}
+ion-content {
+  --background: #f8f9fd;
+}
+
+.main_content_div {
+  .bold_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+
+    .bold_lbl {
+      font-size: 22px;
+      font-family: "semi-bold";
+    }
+    .small_lbl {
+      span {
+        color: var(--ion-color-primary);
+      }
+    }
+
+    .simple_lbl {
+      font-size: 14px;
+      font-family: "medium";
+    }
+    .color_lbl {
+      font-size: 14px;
+      font-family: "medium";
+      color: var(--ion-color-primary);
+    }
+  }
+
+  .address_container {
+    background: white;
+    padding: 16px;
+
+    .address_box {
+      display: flex;
+      border: 1px solid lightgrey;
+      border-radius: 5px;
+      padding: 10px;
+      background: white;
+      .map_box {
+        background: lightgray;
+        width: 100px;
+        min-width: 100px;
+        height: 100px;
+        border-radius: 5px;
+      }
+      .addr_detail {
+        margin-left: 16px;
+
+        .addr_flex {
+          display: flex;
+          margin-bottom: 3px;
+
+          ion-icon {
+            color: #a2aac1;
+          }
+
+          ion-label {
+            margin-left: 5px;
+          }
+
+          .bold_lbl {
+            font-family: "medium";
+            font-size: 14px;
+          }
+
+          .small_lbl {
+            color: #a2aac1;
+            font-size: 12px;
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  .title_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 16px;
+
+    ion-label {
+      font-size: 15px;
+    }
+
+    .bold_lbl {
+      font-family: "medium";
+    }
+
+    .color_lbl {
+      font-family: "medium";
+      color: var(--ion-color-primary);
+    }
+  }
+
+  .content_div {
+    padding: 16px;
+    background: white;
+
+    .flex_div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+
+      .bold_lbl {
+        font-family: "semi-bold";
+      }
+    }
+    .color_flex {
+      margin-bottom: 0px;
+      ion-label {
+        font-family: "semi-bold";
+        color: var(--ion-color-primary);
+        font-size: 18px;
+      }
+    }
+    ion-textarea {
+      background: #f8f9fd;
+      font-size: 15px;
+      padding-left: 10px;
+    }
+  }
+}
+
+.footer_div {
+  padding: 10px;
+
+  .outline_btn {
+    margin: 0px;
+    --border-radius: 8px;
+    font-family: "medium";
+    letter-spacing: 0.5px;
+    --border-color: lightgrey;
+    color: black;
+  }
+}

@@ -1,0 +1,257 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+  <div class="main_content_div">
+    <div class="bg_image back_image" [style.backgroundImage]="'url(assets/imgs/rest3.jpg)'">
+      <div class="overlay">
+        <div class="title_header">
+          <ion-icon name="arrow-back" (click)="goBack()"></ion-icon>
+          <div>
+            <ion-icon name="bookmark-outline"></ion-icon>
+            <ion-icon name="ellipsis-horizontal-sharp" style="margin-left: 10px;"></ion-icon>
+          </div>
+        </div>
+
+        <div class="detail_div">
+          <ion-label class="name_lbl">Kichi Coffee & Drink</ion-label>
+          <div class="flex_div">
+            <ion-icon name="location-outline"></ion-icon>
+            <ion-label>76A Eighth Avenue, New York.</ion-label>
+          </div>
+          <div class="flex_div" style="margin-bottom: 0px;">
+            <ion-icon name="star" style="color: var(--ion-color-primary);"></ion-icon>
+            <ion-label>4.5 (1000 Reviews)</ion-label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ion-segment value="products" mode="md" (ionChange)="changeSegment($event)">
+      <ion-segment-button value="products">
+        <ion-label>Products</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="review">
+        <ion-label>Review</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="information">
+        <ion-label>Information</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <div class="content_div" *ngIf="tabID == 'products'">
+
+      <div class="title_flex">
+        <ion-label class="title_lbl">Popular Items</ion-label>
+        <ion-label class="see_lbl">See All &nbsp;
+          <ion-icon name="chevron-forward"></ion-icon>
+        </ion-label>
+      </div>
+
+      <div class="product_slider">
+        <div class="single_pro" *ngFor="let item of foods">
+          <div class="bg_image pro_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+          <div class="food_detail">
+            <ion-label class="name_lbl">{{item.name}}</ion-label>
+            <div class="price_flex">
+              <ion-label>$2.5</ion-label>
+              <ion-icon name="add-circle" (click)="openVariations()"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="list_container">
+        <div class="title_flex">
+          <ion-label class="title_lbl">Juice <span>2 Items</span></ion-label>
+        </div>
+
+        <div class="food_div" *ngFor="let item of (foods | slice : 0:2)">
+          <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+          <div class="food_detail">
+            <div>
+              <ion-label class="name_lbl">{{item.name}}</ion-label>
+              <ion-label class="detail_lbl">Matcha milk tea special is valuable to stock for cooking, cleaning.
+              </ion-label>
+              <div class="food_flex">
+                <ion-label class="price_lbl">${{item.price}}</ion-label>
+                &nbsp;|&nbsp;
+                <ion-label>
+                  <ion-icon name="bag-outline"></ion-icon>
+                  25
+                  <ion-icon name="add"></ion-icon>
+                </ion-label>
+                &nbsp;|&nbsp;
+                <ion-label>
+                  <ion-icon name="thumbs-up-outline"></ion-icon>
+                  25
+                </ion-label>
+              </div>
+            </div>
+            <div class="action_div">
+              <ion-icon name="bookmark-outline" class="book_icn"></ion-icon>
+              <ion-icon name="add-circle" class="add_icn"></ion-icon>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="list_container">
+        <div class="title_flex">
+          <ion-label class="title_lbl">Coffee <span>4 Items</span></ion-label>
+        </div>
+
+        <div class="food_div" *ngFor="let item of (foods | slice: 3:7)">
+          <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+          <div class="food_detail">
+            <div>
+              <ion-label class="name_lbl">{{item.name}}</ion-label>
+              <ion-label class="detail_lbl">Matcha milk tea special is valuable to stock for cooking, cleaning.
+              </ion-label>
+              <div class="food_flex">
+                <ion-label class="price_lbl">${{item.price}}</ion-label>
+                &nbsp;|&nbsp;
+                <ion-label>
+                  <ion-icon name="bag-outline"></ion-icon>
+                  25
+                  <ion-icon name="add"></ion-icon>
+                </ion-label>
+                &nbsp;|&nbsp;
+                <ion-label>
+                  <ion-icon name="thumbs-up-outline"></ion-icon>
+                  25
+                </ion-label>
+              </div>
+            </div>
+            <div class="action_div">
+              <ion-icon name="bookmark-outline" class="book_icn"></ion-icon>
+              <ion-icon name="add-circle" class="add_icn"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="content_div" *ngIf="tabID == 'review'">
+
+      <div class="title_flex">
+        <ion-label class="title_lbl">Photos & Videos</ion-label>
+        <ion-label class="see_lbl">View All &nbsp;
+          <ion-icon name="chevron-forward"></ion-icon>
+        </ion-label>
+      </div>
+
+      <div class="product_slider">
+        <div class="single_photo" *ngFor="let item of (foods | slice: 0 : 8)">
+          <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+        </div>
+      </div>
+
+      <ion-row class="title_flex">
+        <ion-col size="2">
+          <ion-label class="title_lbl">Rate</ion-label>
+        </ion-col>
+        <ion-col size="2" style="text-align: center;">
+          <ion-label class="grey_lbl">99+</ion-label>
+        </ion-col>
+        <ion-col size="2" style="text-align: center;">
+          <ion-label class="grey_lbl">56</ion-label>
+        </ion-col>
+        <ion-col size="2" style="text-align: center;">
+          <ion-label class="grey_lbl">45</ion-label>
+        </ion-col>
+        <ion-col size="2" style="text-align: center;">
+          <ion-label class="grey_lbl">12</ion-label>
+        </ion-col>
+        <ion-col size="2" style="text-align: center;">
+          <ion-label class="grey_lbl">5</ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="padding: 0px 16px;" *ngFor="let item of [1,2,3,4,5]">
+        <ion-col size="2">
+
+        </ion-col>
+        <ion-col size="2" style="text-align: center;">
+          <ion-icon name="star"></ion-icon>
+        </ion-col>
+        <ion-col size="2" style="text-align: center;">
+          <ion-icon name="star"></ion-icon>
+        </ion-col>
+        <ion-col size="2" style="text-align: center;">
+          <ion-icon name="star"></ion-icon>
+        </ion-col>
+        <ion-col size="2" style="text-align: center;">
+          <ion-icon name="star"></ion-icon>
+        </ion-col>
+        <ion-col size="2" style="text-align: center;">
+          <ion-icon name="star"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+      <div class="review_div">
+        <div class="single_review" *ngFor="let item of [1,2]">
+
+          <div class="user_div">
+            <div class="bg_image back_image" [style.backgroundImage]="'url(assets/imgs/user6.jpg)'"></div>
+            <div class="user_detail">
+              <ion-label class="name_lbl">Charles Morris</ion-label>
+              <div class="rate_flex">
+                <div>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+                <ion-label class="grey_lbl">Yesterday 10:30 AM</ion-label>
+              </div>
+            </div>
+          </div>
+          <div class="review_detail">
+            <ion-label>Matcha milk tea very yummy! I like it.</ion-label>
+            <div class="image_flex">
+              <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'"
+                *ngFor="let item of (foods | slice : 0 : 2)"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="content_div" *ngIf="tabID == 'information'">
+
+      <div class="title_flex">
+        <ion-label class="title_lbl">Informations</ion-label>
+      </div>
+
+      <div class="about_div">
+        <ion-label>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+          nemo. Nulla perferendis fugit praesentium commodi blanditiis
+          corporis iste aut, dolore fuga dolor ipsam ab! Eveniet ratione
+          suscipit ipsum eaque quis.
+        </ion-label>
+      </div>
+
+      <div class="title_flex">
+        <ion-label class="title_lbl">Address</ion-label>
+      </div>
+
+      <div class="map_image">
+        <div class="bd_image back_image" [style.backgroundImage]="'url(assets/imgs/map.png)'"></div>
+      </div>
+
+    </div>
+
+  </div>
+</ion-content>

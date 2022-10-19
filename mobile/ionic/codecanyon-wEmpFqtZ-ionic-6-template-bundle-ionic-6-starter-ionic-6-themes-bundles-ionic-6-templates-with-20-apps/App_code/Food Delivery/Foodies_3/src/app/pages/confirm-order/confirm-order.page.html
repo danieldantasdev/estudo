@@ -1,0 +1,146 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear">
+            <ion-icon name="arrow-back" color="dark"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="bold_flex" style="padding-bottom: 0px;">
+            <ion-label class="bold_lbl">Confirm Order</ion-label>
+            <ion-label class="small_lbl"><span>ID: </span>346gxt54</ion-label>
+        </div>
+
+        <div class="bold_flex">
+            <ion-label class="simple_lbl">Delivery to</ion-label>
+            <ion-label class="color_lbl">Add new address</ion-label>
+        </div>
+
+        <div class="address_container">
+            <div class="address_box">
+                <div class="map_box"></div>
+                <div class="addr_detail">
+                    <div class="addr_flex">
+                        <div>
+                            <ion-icon name="location"></ion-icon>
+                        </div>
+                        <ion-label class="bold_lbl">76A Eighth Avenue, Andora Mercy, New York</ion-label>
+                    </div>
+                    <div class="addr_flex">
+                        <div>
+                            <ion-icon name="person"></ion-icon>
+                        </div>
+                        <ion-label class="small_lbl">Beatrice Owen</ion-label>
+                    </div>
+                    <div class="addr_flex">
+                        <div>
+                            <ion-icon name="call"></ion-icon>
+                        </div>
+                        <ion-label class="small_lbl">9876543212</ion-label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="title_div">
+            <ion-label class="bold_lbl">Delivery Time</ion-label>
+            <ion-label>10:10 AM</ion-label>
+            <ion-label>Oct 6, 2020</ion-label>
+            <ion-label class="color_lbl">Edit</ion-label>
+        </div>
+
+        <div class="content_div">
+            <div class="flex_div">
+                <ion-label>Subtotal (1 item)</ion-label>
+                <ion-label class="bold_lbl">$2.9</ion-label>
+            </div>
+            <div class="flex_div">
+                <ion-label>Subtotal (1 item)</ion-label>
+                <ion-label class="bold_lbl">$2.9</ion-label>
+            </div>
+            <div class="flex_div color_flex">
+                <ion-label>Subtotal (1 item)</ion-label>
+                <ion-label>$2.9</ion-label>
+            </div>
+        </div>
+
+        <div class="product_div">
+            <div class="title_flex">
+                <ion-label class="title_lbl">Similar Products</ion-label>
+            </div>
+
+            <div class="product_slider">
+                <div class="single_pro" *ngFor="let item of foods">
+                    <div class="bg_image pro_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                    <div class="food_detail">
+                        <ion-label class="name_lbl">{{item.name}}</ion-label>
+                        <div class="price_flex">
+                            <ion-label>${{item.price}}</ion-label>
+                            <ion-icon name="add-circle"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="voucher_div">
+            <div class="title_flex">
+                <ion-label class="title_lbl">Add Voucher</ion-label>
+            </div>
+
+            <div class="voucher_slider">
+                <div class="bg_image single_voucher" *ngFor="let item of [1,2]"></div>
+                <div class="bg_image single_voucher add_more">
+                    <ion-label>Add More</ion-label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="title_div">
+            <ion-label class="bold_lbl">Note</ion-label>
+        </div>
+
+        <div class="content_div">
+            <ion-textarea rows="3" placeholder="Please call me when you come. Thank you!"></ion-textarea>
+
+            <div class="title_flex">
+                <ion-label class="title_lbl">Payment Method</ion-label>
+                <ion-label class="see_lbl">Add payment method</ion-label>
+            </div>
+
+            <div class="payment_slider">
+                <div class="box_div" (click)="currentCard = 1">
+                    <ion-icon name="checkmark-circle" *ngIf="currentCard == 1"></ion-icon>
+                    <img src="assets/imgs/visa.png" />
+                    <ion-label>**** **** **** 4242</ion-label>
+                </div>
+                <div class="box_div" (click)="currentCard = 2">
+                    <ion-icon name="checkmark-circle" *ngIf="currentCard == 2"></ion-icon>
+                    <img src="assets/imgs/mastercard.png" />
+                    <ion-label>**** **** **** 4242</ion-label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</ion-content>
+
+<ion-footer>
+    <div class="footer_div">
+        <ion-button expand="block" class="block_btn">
+            Confirm
+        </ion-button>
+    </div>
+</ion-footer>

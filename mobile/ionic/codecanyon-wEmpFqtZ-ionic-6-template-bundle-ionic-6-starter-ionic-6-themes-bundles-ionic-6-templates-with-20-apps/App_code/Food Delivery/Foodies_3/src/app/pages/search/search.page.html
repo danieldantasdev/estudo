@@ -1,0 +1,88 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+    <ion-toolbar>
+        <div class="tool_flex">
+            <ion-input type="text" placeholder="Search" slot="start"></ion-input>
+            <ion-button expand="block" size="small" slot="end" mode="ios" (click)="close()">
+              Exit
+            </ion-button>
+        </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="general_content">
+
+            <div class="title_flex">
+                <ion-label class="bold_lbl">History</ion-label>
+                <ion-label class="grey_lbl">Clear All</ion-label>
+            </div>
+
+            <div class="search_item_flex" *ngFor="let item of searchItem">
+                <ion-label>{{item}}</ion-label>
+                <ion-icon name="close"></ion-icon>
+            </div>
+            <div class="view_more">
+                <ion-label>View more</ion-label>
+                <ion-icon name="chevron-down"></ion-icon>
+            </div>
+
+            <div class="title_flex">
+                <ion-label class="bold_lbl">Suggestions</ion-label>
+                <ion-label class="color_lbl">View All</ion-label>
+            </div>
+
+            <div class="food_slider">
+                <div class="single_food" *ngFor="let item of (foods | slice : 0 : 3)">
+                    <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                    <ion-label>{{item.name}}</ion-label>
+                </div>
+            </div>
+
+            <div class="food_slider">
+                <div class="single_food" *ngFor="let item of (foods | slice : 3: 6)">
+                    <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                    <ion-label>{{item.name}}</ion-label>
+                </div>
+            </div>
+        </div>
+
+        <div class="main_content">
+            <ion-label class="count_lbl">Approximately <span>300</span> results.</ion-label>
+
+            <div class="rest_div" *ngFor="let item of foods">
+                <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                <div class="rest_detail">
+                    <div class="name_flex">
+                        <ion-label>{{item.name}}</ion-label>
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                    </div>
+                    <div class="address_flex">
+                        <ion-icon name="location"></ion-icon>
+                        <ion-label>Royal Drink & Coffee</ion-label>
+                    </div>
+                    <div class="bottom_flex">
+                        <div class="rate_flex">
+                            <ion-icon name="star"></ion-icon>
+                            <ion-label>4.3</ion-label>
+                            <span>(120 Reviews)</span>
+                        </div>
+                        <div class="time_flex">
+                            <ion-label>${{item.price}}</ion-label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</ion-content>

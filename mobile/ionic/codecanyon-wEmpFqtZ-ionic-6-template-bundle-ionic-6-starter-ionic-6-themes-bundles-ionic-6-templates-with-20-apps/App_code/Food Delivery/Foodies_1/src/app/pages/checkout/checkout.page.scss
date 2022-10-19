@@ -1,0 +1,108 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-header {
+  ion-toolbar {
+    ion-title {
+      padding: 0px;
+      font-family: "bold";
+    }
+    ion-buttons {
+      padding: 5px 2px 5px 2px;
+      margin: 10px;
+      ion-button {
+        height: 40px;
+        width: 40px;
+        border: 1px solid lightgray;
+        --border-radius: 50%;
+        border-radius: 50%;
+        ion-icon {
+          color: gray;
+        }
+      }
+    }
+  }
+}
+
+.sub_heading {
+  font-family: "bold";
+  color: gray;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  .sub_heading {
+    font-family: "bold";
+    color: black;
+  }
+  ion-label {
+    color: #ff7c31;
+  }
+}
+
+.line {
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+}
+
+.item_div {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px 0px 20px 0px;
+  ion-item {
+    --background: transparent;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 10px 0px 10px 0px;
+    ion-thumbnail {
+      height: 30px;
+      margin-right: 10px;
+    }
+    ion-label {
+      font-size: 13px;
+      margin: 20px 0px 20px 0px;
+    }
+  }
+}
+
+.price_div {
+  padding: 10px;
+  margin-top: 20px;
+  .discount_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    ion-label {
+      font-family: "bold";
+      font-size: 18px;
+      color: #ff7c31;
+    }
+  }
+
+  .line {
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 1rem;
+    ion-label {
+      font-family: "bold";
+      font-size: 22px;
+      color: #ff7c31;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+    <ion-toolbar>
+        <ion-title>Order</ion-title>
+    </ion-toolbar>
+    <ion-segment value="ongoing" (ionChange)="segmentChanged($event)" mode="md">
+        <ion-segment-button value="ongoing">
+            <ion-label>Ongoing</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="history">
+            <ion-label>History</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="draft">
+            <ion-label>Draft</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div *ngIf="tabID == 'ongoing'">
+            <div class="rest_div" *ngFor="let item of rest">
+                <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                <div class="rest_detail">
+                    <ion-label class="name_lbl">{{item.name}}</ion-label>
+                    <ion-label class="id_lbl">ID: <span>4567343</span></ion-label>
+
+                    <div class="bottom_flex">
+                        <ion-label class="no_lbl">1 Item</ion-label>
+                        <ion-label class="color_lbl">Shipping</ion-label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="tabID == 'history'">
+            <div class="rest_div" *ngFor="let item of rest">
+                <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                <div class="rest_detail">
+                    <ion-label class="name_lbl">{{item.name}}</ion-label>
+
+                    <div class="bottom_flex">
+                        <ion-label class="no_lbl">3 Items</ion-label>
+                        <ion-label class="no_lbl">Yesterday</ion-label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="tabID == 'draft'">
+            <div class="rest_div" *ngFor="let item of rest">
+                <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                <div class="rest_detail">
+                    <ion-label class="name_lbl">{{item.name}}</ion-label>
+
+                    <div class="address_flex">
+                        <ion-icon name="location"></ion-icon>
+                        <ion-label>76A Eighth Avenue, New York.</ion-label>
+                    </div>
+
+                    <div class="bottom_flex">
+                        <ion-label class="no_lbl">4 Items</ion-label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</ion-content>

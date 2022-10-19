@@ -1,0 +1,133 @@
+  <!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+
+  <img src="assets/banner2.jpg">
+  <div class="main-content">
+    <ion-row class="icon">
+      <div>
+        <ion-icon class="back" name="chevron-back-outline" (click)="goToHome()"></ion-icon>
+      </div>
+      <div>
+        <ion-icon class="heart" name="heart"></ion-icon>
+      </div>
+    </ion-row>
+
+    <div class="card">
+      <div class="r-detail">
+        <div class="heading">
+          <ion-label class="title"> Ralf's Artisan Gelato </ion-label>
+          <ion-label class="text"> 3 Miles - 396 Brockton Avenue, London 235 MM</ion-label>
+        </div>
+        <ion-row>
+          <ion-col size="3">
+            <ion-label class="title">rating</ion-label><br>
+            <ion-label class="text">4.8(90)</ion-label>
+          </ion-col>
+          <ion-col size="4">
+            <ion-label class="title">Est.Delivery time</ion-label><br>
+            <ion-label class="text">15 mins</ion-label>
+          </ion-col>
+          <ion-col size="5">
+            <ion-label class="title">Status</ion-label><br>
+            <ion-label class="text" color="success">Order by 9:00PM</ion-label>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="coupon">
+        <div>
+          <ion-icon name="pricetag-outline"></ion-icon>
+          <ion-label>10% off for orders over $100</ion-label>
+        </div>
+        <div>
+          <ion-label class="view" color="tertiary">View T&C</ion-label>
+        </div>
+      </div>
+      <div class="segment">
+
+        <ion-row fixed>
+          <ion-col size="3" (click)="segmentChange(1)" class="ion-text-center" [class.active]="seg_id == 1">Pizza
+          </ion-col>
+          <ion-col size="3" (click)="segmentChange(2)" class="ion-text-center" [class.active]="seg_id == 2">Pasta
+          </ion-col>
+          <ion-col size="3" (click)="segmentChange(3)" class="ion-text-center" [class.active]="seg_id == 3">Jalebi
+          </ion-col>
+          <ion-col size="3" (click)="segmentChange(4)" class="ion-text-center" [class.active]="seg_id == 4">Veggi
+          </ion-col>
+
+        </ion-row>
+      </div>
+
+      <div class="items" *ngIf="seg_id == 1">
+        <div class="name">
+          <ion-label>Pizza</ion-label>
+        </div>
+
+        <ion-row *ngFor="let iten of [1,2,3,4,5,6,7,8,9]">
+          <ion-col class="ion-no-padding" size="3">
+            <img src="assets/burger.jpg">
+          </ion-col>
+          <ion-col size="9" >
+            <div class="title" (click)="goToItem()">
+              <ion-label class="item-name">Vegetable Pizza</ion-label>
+              <ion-label class="calery">250 cal</ion-label>
+            </div>
+            <div class="item-detail" (click)="goToItem()">
+              <ion-label>begetable pizza with soya sous and long corn with pasta healthy wand well.</ion-label>
+            </div>
+            <div class="item-price">
+              <ion-label class="price">$20.12</ion-label>
+              <ion-icon class="add-btn" name="add" (click)="cart()"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="items" *ngIf="seg_id == 2">
+        <div class="name">
+          <ion-label>Pasta</ion-label>
+        </div>
+
+        <ion-row *ngFor="let iten of [1,2,3]">
+          <ion-col class="ion-no-padding" size="3">
+            <img src="assets/burger.jpg">
+          </ion-col>
+          <ion-col size="9">
+            <div class="title" (click)="goToItem()">
+              <ion-label class="item-name">Pasta Pizza</ion-label>
+              <ion-label class="calery">20 cal</ion-label>
+            </div>
+            <div class="item-detail" (click)="goToItem()">
+              <ion-label>begetable pizza with soya sous and long corn with pasta healthy wand well.</ion-label>
+            </div>
+            <div class="item-price">
+              <ion-label class="price">$0.12</ion-label>
+              <ion-icon class="add-btn" name="add" (click)="cart()"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="cart" (click)="cart()">
+    <div class="cart-icon">
+      <ion-icon name="cart"> </ion-icon>
+      <ion-badge class="badge">2</ion-badge>
+    </div>
+    <div>
+      <ion-label class="price">$ 20.12</ion-label> <br>
+      <ion-label class="price-del"><del>$ 22.12</del></ion-label>
+    </div>
+  </div>
+  <ion-button (click)="goToConfirm()" shape="round">
+    Check Out
+  </ion-button>
+</ion-footer>

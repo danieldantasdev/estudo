@@ -1,0 +1,328 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-content {
+    .account {
+        box-shadow: none;
+        padding-left: 0;
+        padding-right: 0;
+        --padding-start:0;
+        --padding-end:0;
+        width: 100%;
+        .name {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            .smpl_lbl {
+                font-size: 14px;
+            }
+            .name_lbl {
+                font-size: 20px;
+                font-family: 'semi-bold';
+            }
+            .bttn_div {
+                ion-buttons {
+                    ion-icon {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .index {
+        background: #92a4fdcc;
+        border-radius: 20px;
+        padding: 5px;
+        ion-row {
+            ion-col {
+                .first_side {
+                    display: flex;
+                    flex-direction: column;
+
+                    .index_lbl {
+                        font-size: 18px;
+                        color: #fff;
+                        margin-bottom: 5px;
+                    }
+                    .smpl_lbl {
+                        font-size: 14px;
+                        color: #fff;
+                        margin-bottom: 5px;
+                    }
+
+                    ion-button {
+                        width: 100%;
+                        padding-left: 5px;
+                        padding-right: 60px;
+                        margin-top: 10px;
+                        --background: #c58bf2;
+                    }
+                }
+                img {
+                    margin-top: 10px;
+                    height: 100px;
+                    width: 100px;
+                }
+                canvas {
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    margin-top: 2rem;
+                    height: 100px;
+                }
+            }
+        }
+    }
+    .schedule {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+        background: #92a4fd4f;
+        padding: 5px;
+        border-radius: 10px;
+        .head_lbl {
+            margin-left: 5px;
+            font-family: 'semi-bold';
+        }
+        ion-button {
+            height: 35px;
+        }
+    }
+    .activity {
+        .head_lbl {
+            font-size: 18px;
+            font-family: 'semi-bold';
+            margin-top: 20px;
+        }
+        .chart {
+            margin-top: 2rem;
+            background: #92a4fd4f;
+            padding: 5px;
+            border-radius: 10px;
+            .rate_lbl {
+                margin-left: 10px;
+                margin-top: 10px;
+                font-family: 'medium';
+            }
+            .num_lbl {
+                margin-left: 10px;
+                color: #92a3fd;
+                margin-top: 5px;
+            }
+        }
+        ion-row {
+            margin-top: 2rem;
+            ion-col {
+                display: flex;
+                justify-content: center;
+                .progress {
+                    margin-top: 10rem;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    align-items: center;
+                    border: 15px solid #92a3fd;
+                    border-radius: 20px;
+                    height: 300px;
+                    color: #92a3fd;
+                }
+                .water {
+                    .water_lbl {
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                        font-family: 'semi-bold';
+                    }
+                    .number_lbl{
+                        color: #92a3fd;
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                    }
+                    .update_lbl{
+                        margin-bottom: 10px;
+                        font-size: 14px;
+                    }
+                    .row {
+                        margin: 0;
+                        .lines {
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            justify-content: center;
+                            padding: 0;
+                            margin: 0;
+                            ion-icon {
+                                font-size: 18px;
+                            }
+                            .timeliner {
+                                width: 2px;
+                                height: 100%;
+                                border: 1px dotted #c58bf23a;
+                            }
+                        }
+                        .right {
+                            .zone_lbl {
+                                font-size: 14px;
+                                margin-bottom: 5px;
+                            }
+                            .cont_lbl {
+                                color: #c58bf2;
+                                font-size: 14px;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            .right_colum {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                .sleep {
+                    box-shadow: 0px 0px 20px var(--box-color);
+                    --box-color: lightgrey;
+                    background: #fff;
+                    border-radius: 10px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    .slpnum_lbl {
+                        margin-bottom: 5px;
+                        color: #92a3fd;
+                        margin-right: 5px;
+                        font-size: 18px;
+                        font-family: 'semi-bold';
+                    }
+                    .slp_lbl {
+                        margin-right: 10px;
+                        font-size: 16px;
+                        font-family: 'semi-bold';
+                    }
+                    canvas{
+                        height: 120px;
+                        width: 140px;
+                    }
+                }
+                .calories{
+                    margin-top: 1rem;
+                    box-shadow: 0px 0px 20px var(--box-color);
+                    --box-color: lightgrey;
+                    background: #fff;
+                    border-radius: 10px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    height: 250px;
+                    width: 140px;
+                    .calnum_lbl {
+                        margin-bottom: 5px;
+                        color: #92a3fd;
+                        margin-right: 5px;
+                        font-size: 18px;
+                        font-family: 'semi-bold';
+                    }
+                    .cal_lbl {
+                        margin-right: 10px;
+                        font-size: 16px;
+                        font-family: 'semi-bold';
+                    }
+                    .main_div {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .graph {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+                            padding: 5px;
+                            border: 10px solid lightgray;
+                            width: 120px;
+                            height: 120px;
+                            .circle{
+                                width: 80px;
+                                height: 80px;
+                                border-radius: 50%;
+                                background: #92a3fd;
+                                color: #fff;
+                                display: flex;
+                                align-items: center;
+                                text-align: center;
+                                justify-content: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .workout{
+        margin-top: 1rem;
+        .progress{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .head_lbl{
+                font-size: 18px;
+                font-family: 'semi-bold';
+            }
+            ion-chip{
+                background: #92a3fd;
+                margin-top: 10px;
+                ion-label{
+                    font-size: 12px;
+                }
+                ion-icon{
+                    font-size: 18px;
+                }
+            }
+        }
+        .barchart{
+            margin-top: 1rem;
+        }
+    }
+    .latest_workout{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 24px;
+        .head_lbl{
+            font-size: 18px;
+            font-family: 'semi-bold';
+        }
+    }
+    ion-item {
+        margin-top: 10px;
+        box-shadow: 1px 3px 10px var(--box-shadow-color);
+        --box-shadow-color: lightgray;
+        border-radius: 10px;
+        padding: 10px;
+        ion-thumbnail {
+          img {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+          }
+        }
+        .activity{
+            margin-left: 10px;
+            .upr_lbl{
+                margin-top: 15px;
+                font-size: 16px;
+                font-family: 'medium';
+                margin-bottom: 5px;
+            }
+            .lwr_lbl{
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            ion-progress-bar{
+                height: 10px;
+                border-radius: 20px;
+            }
+        }
+    }
+}

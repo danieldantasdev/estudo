@@ -1,0 +1,103 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar lines="none">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Filter</ion-title>
+   <ion-label slot="end">Clear</ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-label class="heading">Category</ion-label>
+
+  <div class="category_div">
+    <div class="menu">
+      <div class="item" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+        <ion-label>Food</ion-label>
+      </div>
+    </div>
+  </div>
+
+
+  <ion-label class="heading">Price</ion-label>
+
+  <ion-item lines="none">
+    <ion-range value="30" color="warning">
+      <ion-icon slot="start" name="radio-button-on-outline" color="warning"></ion-icon>
+      <ion-icon slot="end" name="radio-button-on-outline" color="warning"></ion-icon>
+    </ion-range>
+  </ion-item>
+
+  <ion-label class="heading">Rating</ion-label>
+
+  <div class="rating">
+    <div class="rate_div">
+      <ion-buttons>
+        <ion-button (click)="onClick()">
+          <ion-icon name="star"></ion-icon>
+          <ion-label>1</ion-label>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons>
+        <ion-button (click)="onClick()">
+          <ion-icon name="star"></ion-icon>
+          <ion-label>2</ion-label>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons>
+        <ion-button (click)="onClick()">
+          <ion-icon name="star"></ion-icon>
+          <ion-label>3</ion-label>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons>
+        <ion-button (click)="onClick()">
+          <ion-icon name="star"></ion-icon>
+          <ion-label>4</ion-label>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons class="selected">
+        <ion-button (click)="onClick()">
+          <ion-icon name="star"></ion-icon>
+          <ion-label>5</ion-label>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </div>
+
+  <ion-label class="heading">Ingredient</ion-label>
+
+  <ion-item lines="none">
+    <ion-label>Sugar</ion-label>
+    <ion-checkbox color="warning" mode="md" checked slot="start"></ion-checkbox>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label>Bread</ion-label>
+    <ion-checkbox color="warning" mode="md" slot="start"></ion-checkbox>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label>Vegan</ion-label>
+    <ion-checkbox color="warning" mode="md" slot="start"></ion-checkbox>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label>Meat</ion-label>
+    <ion-checkbox color="warning" mode="md" slot="start"></ion-checkbox>
+  </ion-item>
+
+  <ion-button class="content_button" (click)="checkout()" expand="block">
+    Done
+  </ion-button>
+
+</ion-content>

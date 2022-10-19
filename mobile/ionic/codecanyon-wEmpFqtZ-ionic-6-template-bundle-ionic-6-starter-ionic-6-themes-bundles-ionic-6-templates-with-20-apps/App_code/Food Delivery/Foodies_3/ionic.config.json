@@ -1,0 +1,7 @@
+{
+  "name": "gofood",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

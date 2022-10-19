@@ -1,0 +1,147 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onClick()">
+        <ion-icon slot="start" name="chevron-back" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Result</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClick()">
+        <ion-icon slot="start" name="share-social" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClick()">
+        <ion-icon slot="start" name="ellipsis-horizontal" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-segment value="photo" mode="ios" color="primary"  [(ngModel)]="current">
+    <ion-segment-button value="1">
+      <ion-label>Photo</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="2">
+      <ion-label>Statistic</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <div *ngIf="current ==='1'">
+    <div class="upper_div">
+      <div class="progress">
+        <ion-label class="head_lbl">Average Progress</ion-label>
+        <ion-label class="green_lbl">Good</ion-label>
+      </div>
+      <ion-progress-bar color="primary" value="0.62"></ion-progress-bar>
+    </div>
+    <div class="content">
+      <div class="month">
+        <ion-label class="left_lbl">May</ion-label>
+        <ion-label class="right_lbl">June</ion-label>
+      </div>
+      <div class="facing" *ngFor="let item of [1,2,3,4]">
+        <ion-label class="exerc_lbl">Front Facing</ion-label>
+        <ion-row>
+          <ion-col size="6">
+            <img src="assets/images/woman.jpg" alt="">
+          </ion-col>
+          <ion-col size="6">
+            <img src="assets/images/woman.jpg" alt="">
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+    <div class="button">
+      <ion-button (click)="onClick()" expand="block"  shape="round">
+        Back To Home
+      </ion-button>
+    </div>
+  </div>
+  <div *ngIf="current ==='2'">
+    <div class="state">
+      <div class="barchart">
+        <canvas id="barChart" #barChart></canvas>
+      </div>
+      <div class="month">
+        <ion-label class="left_lbl">May</ion-label>
+        <ion-label class="right_lbl">June</ion-label>
+      </div>
+
+      <div class="change">
+        <ion-label class="program_lbl">Lose Weight</ion-label>
+
+        <div class="progress_content">
+          <div class="lbl">
+            <ion-label>33%</ion-label>
+          </div>
+          <div class="progress">
+            <ion-progress-bar color="primary" value="0.33"></ion-progress-bar>
+          </div>
+          <div class="lbl">
+            <ion-label>67%</ion-label>
+          </div>
+        </div>
+
+      </div>
+      <div class="change">
+        <ion-label class="program_lbl">Height Increase</ion-label>
+
+        <div class="progress_content">
+          <div class="lbl">
+            <ion-label>88%</ion-label>
+          </div>
+          <div class="progress">
+            <ion-progress-bar color="primary" value="0.33"></ion-progress-bar>
+          </div>
+          <div class="lbl">
+            <ion-label>12%</ion-label>
+          </div>
+        </div>
+      </div>
+      <div class="change">
+        <ion-label class="program_lbl">Muscle Mass Increase</ion-label>
+
+        <div class="progress_content">
+          <div class="lbl">
+            <ion-label>57%</ion-label>
+          </div>
+          <div class="progress">
+            <ion-progress-bar color="primary" value="0.33"></ion-progress-bar>
+          </div>
+          <div class="lbl">
+            <ion-label>43%</ion-label>
+          </div>
+        </div>
+      </div>
+      <div class="change">
+        <ion-label class="program_lbl">Abs</ion-label>
+
+        <div class="progress_content">
+          <div class="lbl">
+            <ion-label>89%</ion-label>
+          </div>
+          <div class="progress">
+            <ion-progress-bar color="primary" value="0.33"></ion-progress-bar>
+          </div>
+          <div class="lbl">
+            <ion-label>11%</ion-label>
+          </div>
+        </div>
+      </div>
+      <div class="btn">
+        <ion-button (click)="onClick()" expand="block"  shape="round">
+         Back To Home
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

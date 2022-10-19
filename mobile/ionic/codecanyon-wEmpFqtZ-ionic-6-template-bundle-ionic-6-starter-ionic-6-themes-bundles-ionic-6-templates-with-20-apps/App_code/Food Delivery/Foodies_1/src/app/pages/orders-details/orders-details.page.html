@@ -1,0 +1,132 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar lines="none" mode="md">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>My Order</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="main_content">
+    <ion-row>
+      <ion-col size="5">
+        <div class="img" [style.backgroundImage]="'url(assets/images/4.jpg)'"></div>
+      </ion-col>
+      <ion-col size="7">
+        <div class="title">
+          <ion-label class="ttl">Korean Sushi</ion-label>
+          <ion-label class="sub_ttl">Shushi - Korean Sushi</ion-label>
+          <div class="icon_title">
+            <ion-icon slot="start" name="star"></ion-icon>
+            <ion-label>4.9 (124 Ratings)</ion-label>
+          </div>
+          <div class="icon_title">
+            <ion-icon slot="start" name="location-sharp"></ion-icon>
+            <ion-label>No 03, 4th Lane, Newyork</ion-label>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="item_div">
+    <ion-item lines="none">
+      <ion-label>Beer Burger X1</ion-label>
+      <ion-buttons slot="end">
+        <ion-button color="medium">
+          $ 16
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <div class="line"></div>
+
+    <ion-item lines="none">
+      <ion-label>Classic Burger X1</ion-label>
+      <ion-buttons slot="end">
+        <ion-button color="medium">
+          $ 14
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <div class="line"></div>
+
+    <ion-item lines="none">
+      <ion-label>Chees Chicken Burger X1</ion-label>
+      <ion-buttons slot="end">
+        <ion-button color="medium">
+          $ 17
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <div class="line"></div>
+
+    <ion-item lines="none">
+      <ion-label>Chicken Legs Basket X1</ion-label>
+      <ion-buttons slot="end">
+        <ion-button color="medium">
+          $ 15
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+    <div class="line"></div>
+
+    <ion-item lines="none">
+      <ion-label>French Fries Large X1</ion-label>
+      <ion-buttons slot="end">
+        <ion-button color="medium">
+          $ 6
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+
+  </div>
+
+  <div class="price_div">
+
+    <div class="discount_div">
+      <ion-label style="color: black;">Delivery Instructions :</ion-label>
+      <ion-label><span>+ Add Notes</span></ion-label>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="discount_div">
+      <ion-label style="color: black;">Sub Total :</ion-label>
+      <ion-label>$ 68</ion-label>
+    </div>
+
+    <div class="discount_div">
+      <ion-label style="color: black;">Delivery Cost :</ion-label>
+      <ion-label>$ 2</ion-label>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="total">
+      <ion-label>Total</ion-label>
+      <ion-label>$ 70.00</ion-label>
+    </div>
+
+  </div>
+
+  <ion-button class="content_button" (click)="checkout()" expand="block">
+    Track Order
+  </ion-button>
+
+</ion-content>

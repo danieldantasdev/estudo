@@ -1,0 +1,27 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+    <div class="main_content_div" [ngStyle]="{'height' : height+'px'}">
+        <div class="map_div" [ngStyle]="{'height': (height-195)+'px'}">
+            <div class="title_div">
+                <ion-button (click)="goBack()" fill="clear">
+                    <ion-icon name="arrow-back" color="dark"></ion-icon>
+                </ion-button>
+                <ion-label>Delivery Address</ion-label>
+            </div>
+        </div>
+        <div class="content_div">
+            <ion-label>Type your address</ion-label>
+            <ion-input placeholder="Enter address"></ion-input>
+            <ion-button expand="block" class="block_btn">
+                Add new address
+            </ion-button>
+        </div>
+    </div>
+</ion-content>

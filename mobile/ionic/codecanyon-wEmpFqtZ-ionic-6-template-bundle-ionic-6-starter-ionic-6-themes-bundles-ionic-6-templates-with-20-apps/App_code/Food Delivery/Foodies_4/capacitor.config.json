@@ -1,0 +1,6 @@
+{
+	"appId": "io.initappz.foodies4",
+	"appName": "Foodies4",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

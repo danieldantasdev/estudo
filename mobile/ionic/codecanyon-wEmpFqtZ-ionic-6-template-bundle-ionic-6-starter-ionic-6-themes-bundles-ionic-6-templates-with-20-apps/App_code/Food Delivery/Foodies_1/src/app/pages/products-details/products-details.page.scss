@@ -1,0 +1,96 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-header {
+  ion-toolbar {
+    ion-title {
+      padding: 0px;
+      font-family: "bold";
+    }
+    ion-buttons {
+      padding: 5px 2px 5px 2px;
+      margin: 10px;
+      ion-button {
+        height: 40px;
+        width: 40px;
+        border: 1px solid lightgray;
+        --border-radius: 50%;
+        border-radius: 50%;
+        ion-icon {
+          color: gray;
+        }
+      }
+    }
+  }
+}
+
+.item_div {
+  ion-row {
+    .scroll_div {
+      overflow: scroll;
+      .item {
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        ion-chip {
+          height: 50px;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+.main_content {
+  padding: 10px;
+  border-radius: 10px;
+  ion-row {
+    ion-col {
+      .img {
+        height: 120px;
+        width: 120px;
+        border-radius: 10px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .title {
+        display: flex;
+        flex-direction: column;
+        margin-top: 12px;
+        .ttl {
+          font-size: 20px;
+          font-family: "bold";
+        }
+        .sub_ttl {
+          font-size: 13px;
+          margin: 3px 0px 3px 0px;
+          color: gray;
+        }
+        .icon_title {
+          display: flex;
+          align-items: center;
+          color: #ff7c31;
+          margin: 2px 0px 2px 0px;
+          ion-icon {
+            font-size: 20px;
+            margin-right: 5px;
+          }
+          ion-label {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .line {
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    margin: 20px 0px 0px 0px;
+  }
+}

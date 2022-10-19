@@ -1,0 +1,226 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-toolbar {
+  --background: var(--ion-color-primary);
+
+  .tool_flex {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+    padding-right: 8px;
+
+    ion-input {
+      background: white;
+      font-family: "regular";
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    ion-button {
+      font-family: "medium";
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+ion-content {
+  --background: #f8f9fd;
+}
+
+.main_content_div {
+  .general_content {
+    padding: 16px;
+    background: white;
+
+    .title_flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+
+      .bold_lbl {
+        font-family: "medium";
+      }
+      .grey_lbl {
+        font-size: 14px;
+        color: #a2aac1;
+      }
+      .color_lbl {
+        font-size: 14px;
+        color: var(--ion-color-primary);
+      }
+    }
+
+    .search_item_flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ccd1e2;
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+      ion-label {
+        font-size: 16px;
+        color: #a2aac1;
+      }
+      ion-icon {
+        color: #a2aac1;
+      }
+    }
+
+    .view_more {
+      display: flex;
+      align-items: center;
+      margin-top: 8px;
+      margin-bottom: 16px;
+
+      ion-label {
+        color: var(--ion-color-primary);
+        font-size: 14px;
+        margin-right: 8px;
+      }
+      ion-icon {
+        color: var(--ion-color-primary);
+      }
+    }
+
+    .food_slider {
+      display: flex;
+      width: 100%;
+      overflow: scroll;
+      margin-bottom: 16px;
+
+      .single_food {
+        width: 200px;
+        min-width: 200px;
+        display: flex;
+        align-items: center;
+
+        .back_image {
+          height: 60px;
+          width: 60px;
+          min-width: 60px;
+          border-radius: 8px;
+        }
+
+        ion-label {
+          font-size: 15px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .main_content {
+    padding: 16px;
+    .count_lbl {
+      font-size: 16px;
+      color: grey;
+      margin-bottom: 16px;
+
+      span {
+        font-family: "semi-bold";
+        color: var(--ion-color-primary);
+      }
+    }
+
+    .rest_div {
+      display: flex;
+      background: white;
+      border-radius: 5px;
+      margin-bottom: 16px;
+
+      .back_image {
+        height: 96px;
+        width: 90px;
+        min-width: 90px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      .rest_detail {
+        padding: 8px;
+        width: 100%;
+
+        .name_flex {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 5px;
+
+          ion-label {
+            font-family: "medium";
+          }
+          ion-icon {
+            color: #ccd1e2;
+            font-size: 20px;
+          }
+        }
+
+        .address_flex {
+          display: flex;
+          align-items: center;
+          margin-bottom: 7px;
+
+          ion-icon {
+            color: #a2aac1;
+            font-size: 14px;
+            margin-bottom: 3px;
+          }
+
+          ion-label {
+            font-size: 12.5px;
+            color: #a2aac1;
+            margin-left: 8px;
+          }
+        }
+
+        .bottom_flex {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .rate_flex {
+            display: flex;
+            align-items: center;
+
+            ion-icon {
+              color: var(--ion-color-primary);
+              font-size: 14px;
+              margin-bottom: 3px;
+            }
+
+            ion-label {
+              font-size: 12.5px;
+              margin-left: 2px;
+            }
+            span {
+              font-size: 12.5px;
+              margin-left: 2px;
+              color: #a2aac1;
+              white-space: nowrap;
+            }
+          }
+
+          .time_flex {
+            display: flex;
+            align-items: center;
+
+            ion-label {
+              font-size: 12.5px;
+              white-space: nowrap;
+              color: var(--ion-color-primary);
+            }
+          }
+        }
+      }
+    }
+  }
+}

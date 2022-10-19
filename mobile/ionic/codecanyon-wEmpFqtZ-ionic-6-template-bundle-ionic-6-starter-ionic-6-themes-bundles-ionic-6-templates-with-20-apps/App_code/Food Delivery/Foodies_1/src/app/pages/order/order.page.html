@@ -1,0 +1,97 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar lines="none" mode="md">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>My Order</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-segment [(ngModel)]="current" >
+    <ion-segment-button [value]="1">
+      <ion-label>Upcoming</ion-label>
+    </ion-segment-button>
+    <ion-segment-button [value]="2" >
+      <ion-label>History</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div *ngIf="current == 1">
+
+    <div class="main_content" *ngFor="let item of [1,2,3,4,5]">
+      <ion-row>
+        <ion-col size="5">
+          <div class="img" [style.backgroundImage]="'url(assets/images/4.jpg)'"></div>
+        </ion-col>
+        <ion-col size="7">
+          <div class="title">
+            <ion-label class="ttl">Korean Sushi</ion-label>
+            <ion-label class="sub_ttl">Shushi - Korean Sushi</ion-label>
+            <div class="icon_title">
+              <ion-icon slot="start" name="star"></ion-icon>
+              <ion-label>4.9 (124 Ratings)</ion-label>
+            </div>
+            <div class="icon_title">
+              <ion-icon slot="start" name="location-sharp"></ion-icon>
+              <ion-label>No 03, 4th Lane, Newyork</ion-label>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-button class="content_button" (click)="onOrder()" expand="block">
+        Check Order
+      </ion-button>
+    </div>
+
+  </div>
+
+  <div *ngIf="current == 2">
+
+    <div class="main_content" *ngFor="let item of [1,2]">
+      <ion-row>
+        <ion-col size="5">
+          <div class="img" [style.backgroundImage]="'url(assets/images/4.jpg)'"></div>
+        </ion-col>
+        <ion-col size="7">
+          <div class="title">
+            <ion-label class="ttl">Korean Sushi</ion-label>
+            <ion-label class="sub_ttl">Shushi - Korean Sushi</ion-label>
+            <div class="icon_title">
+              <ion-icon slot="start" name="star"></ion-icon>
+              <ion-label>4.9 (124 Ratings)</ion-label>
+            </div>
+            <div class="icon_title">
+              <ion-icon slot="start" name="location-sharp"></ion-icon>
+              <ion-label>No 03, 4th Lane, Newyork</ion-label>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <div class="btn">
+        <ion-button class="content_button" (click)="onOrder()" expand="block">
+          Rate
+        </ion-button>
+        <ion-button class="content_second_button" (click)="onOrder()" expand="block">
+          Re - Order
+        </ion-button>
+      </div>
+
+    </div>
+
+  </div>
+
+</ion-content>

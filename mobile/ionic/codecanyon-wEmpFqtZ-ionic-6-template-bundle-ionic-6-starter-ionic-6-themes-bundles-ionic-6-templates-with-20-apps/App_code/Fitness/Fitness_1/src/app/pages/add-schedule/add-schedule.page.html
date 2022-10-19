@@ -1,0 +1,91 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon slot="start" name="chevron-back" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Add Schedule</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClick()">
+        <ion-icon slot="start" name="ellipsis-horizontal" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item lines="none">
+    <ion-label>Date</ion-label>
+    <ion-input type="date" placeholder="Add schedule"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label>Time</ion-label>
+    <ion-input type="time" placeholder="Add time"></ion-input>
+  </ion-item>
+
+  <div class="details">
+    <ion-label class="head_lbl">Details workout</ion-label>
+
+    <ion-item  lines="none">
+      <ion-icon slot="start" name="barbell-outline" color="medium"></ion-icon>
+      <ion-label>Choose Workout</ion-label>
+       <ion-buttons slot="end" >
+         <ion-button (click)="onClick()" color="dark">
+           <ion-icon slot="end" name="chevron-forward" color="medium"></ion-icon>
+           Upperbody
+         </ion-button>
+       </ion-buttons>
+    </ion-item>
+
+    <ion-item  lines="none">
+      <ion-icon slot="start" name="swap-vertical-outline" color="medium"></ion-icon>
+      <ion-label>Difficulity</ion-label>
+       <ion-buttons slot="end" >
+         <ion-button (click)="onClick()" color="dark">
+           <ion-icon slot="end" name="chevron-forward" color="medium"></ion-icon>
+           Biginner
+         </ion-button>
+       </ion-buttons>
+    </ion-item>
+
+    <ion-item  lines="none">
+      <ion-icon slot="start" name="stats-chart-outline" color="medium"></ion-icon>
+      <ion-label>Custom Repetitions</ion-label>
+       <ion-buttons slot="end" >
+         <ion-button (click)="onClick()" color="dark">
+           <ion-icon slot="end" name="chevron-forward" color="medium"></ion-icon>
+         </ion-button>
+       </ion-buttons>
+    </ion-item>
+
+    <ion-item  lines="none">
+      <ion-icon slot="start" name="stats-chart-outline" color="medium"></ion-icon>
+      <ion-label>Custom Weights</ion-label>
+       <ion-buttons slot="end" >
+         <ion-button (click)="onClick()" color="dark">
+           <ion-icon slot="end" name="chevron-forward" color="medium"></ion-icon>
+         </ion-button>
+       </ion-buttons>
+    </ion-item>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+      <ion-button (click)="onClick()" expand="block" shape="round">
+        Save
+      </ion-button>
+  </ion-toolbar>
+</ion-footer>

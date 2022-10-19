@@ -1,0 +1,67 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear">
+            <ion-icon name="arrow-back" color="dark"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" size="small" slot="end" mode="ios">
+            Edit
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <ion-label class="page_title">Payment Methods</ion-label>
+
+        <ion-radio-group value="visa" mode="md">
+            <div class="pay_card">
+                <img src="assets/imgs/visa.png" />
+                <div>
+                    <ion-label class="bold_lbl">**** **** **** 4242</ion-label>
+                    <ion-label class="grey_lbl">June 10, 2020</ion-label>
+                </div>
+                <ion-radio value="visa"></ion-radio>
+            </div>
+
+            <div class="pay_card">
+                <img src="assets/imgs/mastercard.png" />
+                <div>
+                    <ion-label class="bold_lbl">**** **** **** 4242</ion-label>
+                    <ion-label class="grey_lbl">Aug 10, 2020</ion-label>
+                </div>
+                <ion-radio value="master"></ion-radio>
+            </div>
+        </ion-radio-group>
+
+        <ion-label class="page_title">Add Payment Methods</ion-label>
+
+        <ion-select placeholder="Choose Method">
+            <ion-select-option value="visa">Visa</ion-select-option>
+            <ion-select-option value="master">Master Card</ion-select-option>
+        </ion-select>
+
+        <ion-input type="text" placeholder="Card Number"></ion-input>
+
+        <ion-row>
+            <ion-col size="6" style="padding-left: 0px;">
+                <input type="date" placeholder="Valid Thru">
+            </ion-col>
+            <ion-col size="6" style="padding-right: 0px;">
+                <ion-input type="text" placeholder="CVV"></ion-input>
+            </ion-col>
+        </ion-row>
+
+        <ion-button expand="block" class="block_btn">
+            Complete
+        </ion-button>
+
+    </div>
+</ion-content>

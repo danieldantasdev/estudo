@@ -1,0 +1,91 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar lines="none" mode="md">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Checkout</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-label class="heading">Delivery Address</ion-label>
+
+  <div class="title">
+    <ion-label class="sub_heading">No 110, 5th Parcke, <br> New York City</ion-label>
+    <ion-label>Change</ion-label>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="title">
+    <ion-label class="sub_heading">Payment Method</ion-label>
+    <ion-label (click)="openPay()">+ Add Cart</ion-label>
+  </div>
+
+  <div class="item_div">
+
+    <ion-item lines="none">
+      <ion-label>Cash Delivery</ion-label>
+      <ion-checkbox color="warning"></ion-checkbox>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-thumbnail>
+        <img src="assets/images/6.jpg" />
+      </ion-thumbnail>
+      <ion-label>**** **** **** 2187</ion-label>
+      <ion-checkbox color="warning"></ion-checkbox>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-thumbnail>
+        <img src="assets/images/6.jpg" />
+      </ion-thumbnail>
+      <ion-label>rahuljograna@gmail.com</ion-label>
+      <ion-checkbox color="warning"></ion-checkbox>
+    </ion-item>
+
+  </div>
+
+  <div class="line"></div>
+
+  <div class="price_div">
+
+    <div class="discount_div">
+      <ion-label style="color: black;">Sub Total</ion-label>
+      <ion-label>$ 68.00</ion-label>
+    </div>
+
+    <div class="discount_div">
+      <ion-label style="color: black;">Delivery Cost</ion-label>
+      <ion-label>$ 2</ion-label>
+    </div>
+
+    <div class="discount_div">
+      <ion-label style="color: black;">Discount</ion-label>
+      <ion-label>- $ 4</ion-label>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="total">
+      <ion-label>Total</ion-label>
+      <ion-label>$ 66.00</ion-label>
+    </div>
+
+  </div>
+
+  <ion-button class="content_button" (click)="checkout()" expand="block">
+    Send Order
+  </ion-button>
+
+</ion-content>

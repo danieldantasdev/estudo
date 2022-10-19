@@ -1,0 +1,84 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar lines="none" mode="md">
+    <ion-buttons slot="start">
+      <ion-button (click)="util.openSideMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Order Details</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClick()">
+        <ion-icon name="notifications"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-row *ngFor="let item of [1,2,3,4,5]">
+
+    <ion-col size="4">
+      <div class="featured_img" [style.backgroundImage]="'url(assets/images/11.jpg)'"></div>
+    </ion-col>
+
+    <ion-col size="8">
+
+      <div class="text">
+        <ion-label class="ttl">Mexican Salade</ion-label>
+        <ion-label class="sub_ttl">Maxical Salade - Fast</ion-label>
+        <div class="price">
+          <ion-label>$ 35.00</ion-label>
+        </div>
+        <div class="btn">
+          <ion-buttons slot="start">
+            <ion-button (click)="onClick()">
+              <ion-icon name="remove" color="light"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+
+          <ion-buttons class="label_number">
+            <ion-button>
+              <ion-label>1</ion-label>
+            </ion-button>
+          </ion-buttons>
+
+          <ion-buttons slot="end">
+            <ion-button (click)="onClick()">
+              <ion-icon name="add" color="light"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </div>
+      </div>
+
+    </ion-col>
+
+  </ion-row>
+
+  <div class="line"></div>
+
+  <div class="discount_div">
+    <ion-label style="color: black;">Discount</ion-label>
+    <ion-label>$ 5.00</ion-label>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="total">
+    <ion-label>Total</ion-label>
+    <ion-label>$ 110.00</ion-label>
+  </div>
+
+  <ion-button class="content_button" (click)="checkout()" expand="block">
+    Checkout
+  </ion-button>
+
+</ion-content>

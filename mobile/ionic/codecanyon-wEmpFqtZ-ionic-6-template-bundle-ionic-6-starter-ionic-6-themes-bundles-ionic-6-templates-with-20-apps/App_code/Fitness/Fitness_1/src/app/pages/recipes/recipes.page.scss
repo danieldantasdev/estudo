@@ -1,0 +1,245 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-content {
+  --background: linear-gradient(#92a3fd, #92a3fd);
+  --background-repeat: no-repeat;
+  --background-size: contain;
+  height: 50vh;
+  width: 100%;
+  .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 16px;
+    ion-label {
+      font-size: 16px;
+      font-family: "semi-bold";
+      color: #ffff;
+    }
+    ion-buttons {
+      ion-button {
+        height: 30px;
+        width: 30px;
+        background: #ffff;
+        border-radius: 5px;
+        margin: 0 16px;
+      }
+    }
+  }
+  .image {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    img {
+      height: 200px;
+      width: 200px;
+    }
+  }
+  .content {
+    height: max-content;
+    width: 100%;
+    background: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-top: 16px;
+    .text {
+      --padding-start: 0;
+      .food {
+        .name_lbl {
+          margin-bottom: 0;
+          font-family: "bold";
+        }
+        .prgrm_lbl {
+          margin-top: 5px;
+          font-size: 12px;
+          margin-bottom: 16px;
+          span {
+            color: #92a3fd;
+          }
+        }
+      }
+      ion-icon {
+        color: red;
+      }
+    }
+    .nutrition {
+      .head_lbl {
+        font-family: "semi-bold";
+        margin-top: 16px;
+        font-size: 18px;
+      }
+      .category_div {
+        overflow: scroll;
+        display: flex;
+        flex-direction: row;
+        margin: 30px 0px 10px 0px;
+        .menu {
+          width: max-content;
+          display: flex;
+          flex-direction: row;
+          .item {
+            background: #92a4fd57;
+            padding: 5px 20px;
+            border-radius: 10px;
+            margin: 0px 10px;
+            width: max-content;
+            .imgs {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              text-align: center;
+              img {
+                height: 20px;
+                width: 20px;
+              }
+              .clry_lab {
+                font-size: 14px;
+                width: max-content;
+                margin: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .ingredients {
+      .need {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .head_lbl {
+          font-family: "semi-bold";
+          margin-top: 16px;
+          font-size: 18px;
+        }
+        .sub_lbl {
+          font-size: 14px;
+        }
+      }
+      .category {
+        overflow: scroll;
+        display: flex;
+        flex-direction: row;
+        margin: 10px 0px 10px 0px;
+        .menu {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          .item {
+            background: transparent !important;
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: start;
+            background: #f4f5f8;
+            padding: 15px 25px;
+            img {
+              height: 40px;
+              width: 40px;
+            }
+            .cntnt_lbl {
+              font-size: 14px;
+              margin-top: 5px;
+              font-family: "medium";
+            }
+            .qlt_lbl {
+              font-size: 12px;
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+    }
+    .last_div {
+      .steps {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .head_lbl {
+          font-family: "semi-bold";
+          margin-top: 16px;
+          font-size: 18px;
+        }
+        .sub_lbl {
+          font-size: 14px;
+        }
+      }
+      .track {
+        margin-top: 2rem;
+        ion-row {
+          ion-col {
+            position: relative;
+            .left {
+              ion-label {
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                font-size: 16px;
+                color: #c58bf2;
+              }
+            }
+            .right {
+              display: flex;
+              flex-direction: column;
+              font-size: 14px;
+              .uppr_lbl {
+                margin: 0;
+                font-size: 16px;
+              }
+              .lwr_lbl {
+                margin: 0;
+                font-size: 14px;
+              }
+            }
+          }
+          .lines {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            ion-icon {
+              font-size: 21px;
+            }
+            .timeliner {
+              width: 2px;
+              height: 80%;
+              border: 1px dotted #c58bf2;
+            }
+          }
+          .right {
+            h5 {
+              font-size: 16px;
+            }
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    background: transparent;
+    position: absolute;
+    bottom: 10px;
+    left: 25px;
+    width: 100%;
+    width: 100%;
+    ion-button {
+      height: 50px;
+      width: 85%;
+      --border-radius: 30px;
+    }
+  }
+}

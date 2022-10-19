@@ -1,0 +1,47 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear">
+          <ion-icon name="arrow-back" color="dark"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <ion-label class="page_title">Address</ion-label>
+
+        <div class="address_div" *ngFor="let item of [1,2]">
+            <ion-label class="name_lbl">Home</ion-label>
+
+            <div class="address_flex" style="align-items: flex-start;">
+                <ion-icon name="location" style="margin-top: 3px;"></ion-icon>
+                <ion-label class="complete_addr">76A Eighth Avenue, Andora Mercy, New York City, US.</ion-label>
+            </div>
+
+            <div class="address_flex">
+                <ion-icon name="person"></ion-icon>
+                <ion-label>Beatrice Owen</ion-label>
+            </div>
+
+            <div class="address_flex" style="margin-bottom: 0px;">
+                <ion-icon name="call"></ion-icon>
+                <ion-label>9876543212</ion-label>
+            </div>
+
+            <ion-icon name="chevron-forward-outline" class="arrow_icn"></ion-icon>
+        </div>
+
+        <div class="add_btn" (click)="goToAddAddress()">
+            <ion-label>Add New Address</ion-label>
+        </div>
+
+    </div>
+</ion-content>

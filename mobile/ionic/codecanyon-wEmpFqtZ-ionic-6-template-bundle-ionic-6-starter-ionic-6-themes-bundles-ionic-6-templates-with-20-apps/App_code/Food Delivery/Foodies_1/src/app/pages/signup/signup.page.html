@@ -1,0 +1,52 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+
+  <div class="title">
+    <ion-label class="heading">Let's Start With Your <br> Basic Details!</ion-label>
+    <ion-label class="sub_heading">Create an account so you can order you <br> favorite products easily and quickly.</ion-label>
+  </div>
+
+  <div class="main_div">
+    <ion-item lines="none">
+      <ion-input type="text" placeholder="Your Full Name"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-input type="email" placeholder="Your Email Address"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-input type="password" placeholder="Password"></ion-input>
+      <ion-icon slot="end" name="eye" color="medium"></ion-icon>
+    </ion-item>
+
+    <ion-button class="content_button" (click)="onRegister()" expand="block">
+      Register Now
+    </ion-button>
+
+    <div class="orDiv">
+      <div class="line"></div>
+      <ion-label class="sub_heading">Or Sign in With</ion-label>
+      <div class="line"></div>
+    </div>
+
+    <ion-button class="fb_button" (click)="facebook()" expand="block">
+      <ion-icon slot="start" name="logo-facebook"></ion-icon>
+      Continue With Facebook
+    </ion-button>
+    <ion-button class="google_button" (click)="google()" expand="block" fill="outline" color="dark">
+      <ion-icon slot="start" name="logo-google"></ion-icon>
+      Continue With Google
+    </ion-button>
+
+    <div class="title">
+      <ion-label class="sub_heading"> Already Have Account? <span (click)="login()">Login Now</span></ion-label>
+    </div>
+  </div>
+
+</ion-content>

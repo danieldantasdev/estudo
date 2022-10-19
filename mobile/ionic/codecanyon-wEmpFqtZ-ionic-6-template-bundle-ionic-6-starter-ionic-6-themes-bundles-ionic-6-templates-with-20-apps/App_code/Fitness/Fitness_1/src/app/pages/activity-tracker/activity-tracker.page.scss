@@ -1,0 +1,123 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-header {
+  ion-toolbar {
+    --border-width: 0;
+  }
+}
+
+ion-content {
+  .main_div {
+    margin-top: 1.5rem;
+    padding: 10px;
+    background: #92a4fd34;
+    border-radius: 10px;
+    height: 130px;
+    .target {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .target_lbl {
+        font-size: 16px;
+        font-family: "semi-bold";
+      }
+      ion-buttons {
+        ion-button {
+          ion-icon {
+            background: #92a3fd;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+    ion-row {
+      ion-col {
+        ion-item {
+          img {
+            height: 32px;
+            width: 32px;
+            margin-right: 5px;
+          }
+          .inside {
+            display: flex;
+            flex-direction: column;
+            .size {
+              font-size: 16px;
+              color: #92a3fd;
+            }
+            .water {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .second_div {
+    margin-top: 2rem;
+    .progress {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      .head_lbl {
+        font-size: 18px;
+        font-family: "semi-bold";
+      }
+      ion-chip {
+        background: #92a3fd;
+        margin-top: 10px;
+        ion-label {
+          font-size: 12px;
+        }
+        ion-icon {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .bottom_div {
+    margin-top: 2rem;
+    .latest {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .left_lbl {
+        font-size: 18px;
+        font-family: "semi-bold";
+      }
+
+      .right_lbl {
+        font-size: 14px;
+      }
+    }
+  }
+  ion-item {
+    margin-top: 32px;
+    ion-thumbnail {
+      img {
+        height: 50px;
+        width: 50px;
+      }
+    }
+    .activity {
+      .uppr_lbl {
+        font-size: 16px;
+        font-family: "medium";
+      }
+      .bttm_lbl {
+        font-size: 12px;
+      }
+    }
+    ion-icon {
+      font-size: 16px;
+    }
+  }
+}

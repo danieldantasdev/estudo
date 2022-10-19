@@ -1,0 +1,127 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-header {
+  ion-toolbar {
+    ion-title {
+      padding: 0px;
+      font-family: "bold";
+    }
+    ion-buttons {
+      border-radius: 50%;
+      // border: 1px solid lightgray;
+      padding: 5px 2px 5px 2px;
+      margin: 10px;
+      ion-button {
+        --border-radius: 50%;
+      }
+    }
+  }
+}
+
+ion-row {
+  margin: 10px 0px 10px 0px;
+  ion-col {
+    .featured_img {
+      height: 120px;
+      width: 120px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 10px;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      padding-left: 15px;
+      margin-top: 7px;
+      ion-label {
+        margin: 1px 0px 1px 0px;
+      }
+      .ttl {
+        font-family: "bold";
+        font-size: 18px;
+      }
+      .sub_ttl {
+        font-family: "regular";
+        color: gray;
+        font-size: 13px;
+      }
+      .price {
+        position: absolute;
+        bottom: 20px;
+        ion-label {
+          font-family: "bold";
+          font-size: 18px;
+          color: #ff7c31;
+        }
+      }
+      .btn {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 15px;
+        right: 0px;
+        ion-buttons {
+          display: flex;
+          text-align: center;
+          margin: 0px 0px 0px 0px;
+          ion-button {
+            background: linear-gradient(#ffa124, #ff7c31);
+            border-radius: 30%;
+            height: 35px;
+            width: 40px;
+          }
+        }
+        .label_number {
+          display: flex;
+          justify-content: center;
+          ion-button {
+            border: 1px solid #ff7c31;
+            background: #ffff;
+          }
+          ion-label {
+            color: #ff7c31;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+.line {
+  width: 100%;
+  border-bottom: 1px solid #f4f5f8;
+  margin: 20px 0px 20px 0px;
+}
+
+.discount_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  ion-label {
+    font-family: "bold";
+    font-size: 18px;
+    color: #ff7c31;
+  }
+}
+
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 3rem;
+  ion-label {
+    font-family: "bold";
+    font-size: 22px;
+    color: #ff7c31;
+  }
+}

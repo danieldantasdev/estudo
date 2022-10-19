@@ -1,0 +1,51 @@
+  <!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+  <div class="row">
+    <img src="assets/logo.png">
+    <ion-card>
+      <div class="title-div">
+        <ion-label class="title">Register</ion-label>
+      </div>
+      <div class="textbox">
+        <ion-label position="stacked">Name</ion-label>
+        <ion-input class="ion-no-padding" type="text"></ion-input>
+      </div>
+      <div class="textbox">
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input class="ion-no-padding" type="email"></ion-input>
+      </div>
+      <div class="textbox">
+        <ion-label position="stacked">phone</ion-label>
+        <ion-input class="ion-no-padding" type="phone"></ion-input>
+      </div>
+      <div class="textbox">
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input class="ion-no-padding" type="password"></ion-input>
+      </div>
+      <div class="textbox">
+        <ion-label position="stacked">Confirm Password</ion-label>
+        <ion-input class="ion-no-padding" type="password"></ion-input>
+      </div>
+      <ion-button (click)="goToAddress()" shape="round">
+        Register
+      </ion-button>
+      <div class="text-div">
+        <ion-label class="text">Already have an account?
+          <span (click)="goToLogin()">Sign In</span>
+        </ion-label>
+      </div>
+    </ion-card>
+  </div>
+  <div class="image">
+    <img class="top-img" src="assets/img/5.png" alt="">
+    <img class="bottom-left" src="assets/img/3.png" alt="">
+    <img class="bottom-right" src="assets/img/4.png" alt="">
+  </div>
+</ion-content>

@@ -1,0 +1,114 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-toolbar {
+  --background: var(--ion-color-primary);
+}
+.color_div {
+  background: var(--ion-color-primary);
+  padding: 16px;
+
+  .grey_lbl {
+    text-transform: uppercase;
+    font-family: "medium";
+    opacity: 0.3;
+  }
+  .loc_flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    ion-icon {
+      color: white;
+    }
+    ion-label {
+      color: white;
+      margin-left: 5px;
+      font-size: 15px;
+    }
+  }
+  .search_flex {
+    display: flex;
+    align-items: center;
+    margin-right: -16px;
+
+    ion-input {
+      background: white;
+      font-family: "regular";
+      border-radius: 8px;
+      width: 100%;
+    }
+  }
+}
+ion-content {
+  --background: #f8f9fd;
+}
+
+.main_content_div {
+  .title_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+
+    .title_lbl {
+      font-family: "medium";
+
+      span {
+        color: grey;
+        margin-left: 5px;
+        font-size: 14px;
+      }
+    }
+    .see_lbl {
+      font-size: 14px;
+      color: var(--ion-color-primary);
+      display: flex;
+      align-items: center;
+
+      ion-icon {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .cat_slider {
+    display: flex;
+    width: 100%;
+    overflow: scroll;
+    padding: 0px 16px !important;
+    margin-bottom: 16px;
+
+    .main_cat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 16px;
+
+      .cat_box {
+        height: 80px;
+        width: 80px;
+        border-radius: 5px;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 60px;
+        }
+      }
+
+      ion-label {
+        font-family: "medium";
+        margin-top: 8px;
+        font-size: 14px;
+      }
+    }
+  }
+}

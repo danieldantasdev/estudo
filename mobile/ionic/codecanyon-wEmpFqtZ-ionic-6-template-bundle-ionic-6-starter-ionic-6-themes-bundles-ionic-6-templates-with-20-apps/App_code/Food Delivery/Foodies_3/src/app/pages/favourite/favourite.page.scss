@@ -1,0 +1,116 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-toolbar {
+  --background: #f8f9fd;
+}
+ion-segment {
+  ion-label {
+    font-family: "medium";
+    text-transform: capitalize;
+    font-size: 16px;
+  }
+}
+ion-content {
+  --background: #f8f9fd;
+}
+
+.main_content_div {
+  padding: 16px;
+
+  .rest_div {
+    display: flex;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 16px;
+
+    .back_image {
+      height: 96px;
+      width: 90px;
+      min-width: 90px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    .rest_detail {
+      padding: 8px;
+      width: 100%;
+
+      .name_flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5px;
+
+        ion-label {
+          font-family: "medium";
+        }
+        ion-icon {
+          color: #ccd1e2;
+          font-size: 20px;
+        }
+      }
+
+      .address_flex {
+        display: flex;
+        align-items: center;
+        margin-bottom: 7px;
+
+        ion-icon {
+          color: #a2aac1;
+          font-size: 14px;
+          margin-bottom: 3px;
+        }
+
+        ion-label {
+          font-size: 12.5px;
+          color: #a2aac1;
+          margin-left: 8px;
+        }
+      }
+
+      .bottom_flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .rate_flex {
+          display: flex;
+          align-items: center;
+
+          ion-icon {
+            color: var(--ion-color-primary);
+            font-size: 14px;
+            margin-bottom: 3px;
+          }
+
+          ion-label {
+            font-size: 12.5px;
+            margin-left: 2px;
+          }
+          span {
+            font-size: 12.5px;
+            margin-left: 2px;
+            color: #a2aac1;
+            white-space: nowrap;
+          }
+        }
+
+        .time_flex {
+          display: flex;
+          align-items: center;
+
+          ion-label {
+            font-size: 12.5px;
+            white-space: nowrap;
+            color: var(--ion-color-primary);
+          }
+        }
+      }
+    }
+  }
+}

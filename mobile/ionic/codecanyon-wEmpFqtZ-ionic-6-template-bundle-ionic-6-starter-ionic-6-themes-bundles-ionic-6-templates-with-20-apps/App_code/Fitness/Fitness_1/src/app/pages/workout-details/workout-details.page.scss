@@ -1,0 +1,115 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-header {
+  ion-toolbar {
+    --border-width: 0;
+  }
+}
+
+ion-content {
+  .upper_div {
+    ion-row {
+      background: #92a3fd;
+      border-radius: 20px;
+      ion-col {
+        display: flex;
+        justify-content: center;
+        padding: 25px;
+        img {
+          height: 100px;
+          width: 100px;
+        }
+      }
+    }
+  }
+  .info {
+    margin-top: 1.5rem;
+    .head_lbl {
+      font-size: 18px;
+      font-family: "semi-bold";
+    }
+    .sub_lbl {
+      margin-top: 5px;
+      font-size: 14px;
+      span {
+        color: #92a3fd;
+      }
+    }
+  }
+  .steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    .left_lbl {
+      font-size: 18px;
+      font-family: "semi-bold";
+    }
+  }
+  .track {
+    margin-top: 2rem;
+    ion-row {
+      ion-col {
+        position: relative;
+        .left {
+          ion-label {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            font-size: 16px;
+            color: #c58bf2;
+          }
+        }
+        .right {
+          display: flex;
+          flex-direction: column;
+          font-size: 14px;
+          .frst_lbl {
+            font-size: 16px;
+            margin-bottom: 5px;
+          }
+          .scnd_lbl {
+            font-size: 14px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .lines {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        ion-icon {
+          font-size: 21px;
+        }
+        .timeliner {
+          width: 2px;
+          height: 80%;
+          border: 1px dotted #c58bf2;
+        }
+      }
+      .right {
+        h5 {
+          font-size: 16px;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .last_div {
+    margin-top: 2rem;
+  }
+  ion-button {
+    margin-top: 1rem;
+  }
+}

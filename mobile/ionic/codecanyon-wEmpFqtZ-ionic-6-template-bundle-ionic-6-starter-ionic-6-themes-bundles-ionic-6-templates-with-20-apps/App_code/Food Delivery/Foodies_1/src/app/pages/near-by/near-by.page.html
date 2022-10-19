@@ -1,0 +1,80 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar lines="none" mode="md">
+    <ion-buttons slot="start">
+      <ion-button (click)="util.openSideMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="onFav()">
+        <ion-icon name="notifications"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="searchBar">
+    <ion-item lines="none">
+      <ion-input type="text" placeholder="Search for meals..."></ion-input>
+      <ion-icon slot="end" name="search-outline" style="margin-right: 60px;"></ion-icon>
+      <div class="icon">
+        <ion-icon slot="end" name="funnel-outline" class="icn"></ion-icon>
+      </div>
+    </ion-item>
+  </div>
+
+  <div class="title">
+    <ion-icon slot="start" name="location-sharp"></ion-icon>
+    <ion-label class="heading">Near By Restaurants</ion-label>
+  </div>
+  <ion-label class="sub_heading">+25 Restaurants Found Near You.</ion-label>
+
+  <ion-row *ngFor="let item of [1,2,3,4,5]">
+
+    <ion-col size="4" (click)="openRest()">
+      <div class="featured_img" [style.backgroundImage]="'url(assets/images/4.jpg)'"></div>
+    </ion-col>
+
+    <ion-col size="8">
+
+      <div class="text" >
+        <ion-label class="ttl">Mexican Food</ion-label>
+        <ion-label class="sub_ttl">Maxical Food - Fast</ion-label>
+
+        <div class="icn_ttl" (click)="openRest()">
+          <ion-icon slot="start" name="star"></ion-icon>
+          <ion-label>4.9 (10)</ion-label>
+        </div>
+
+        <div class="icn_ttl" (click)="openRest()">
+          <ion-icon slot="start" name="location-sharp"></ion-icon>
+          <ion-label>Paris, France</ion-label>
+        </div>
+
+        <div class="icn_ttl" (click)="openRest()">
+          <ion-icon slot="start" name="bicycle-sharp"></ion-icon>
+          <ion-label>Free Delivery</ion-label>
+        </div>
+
+        <ion-buttons>
+          <ion-button (click)="onFav()">
+            <ion-icon slot="start" name="bookmark-outline" color="light"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+
+    </ion-col>
+
+  </ion-row>
+
+</ion-content>

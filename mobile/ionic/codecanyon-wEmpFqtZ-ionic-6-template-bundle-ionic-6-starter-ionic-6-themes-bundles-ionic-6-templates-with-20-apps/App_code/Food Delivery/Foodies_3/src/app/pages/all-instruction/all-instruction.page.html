@@ -1,0 +1,53 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear">
+            <ion-icon name="arrow-back" color="dark"></ion-icon>
+        </ion-button>
+        <ion-title>All Instructor</ion-title>
+        <ion-button slot="end" fill="clear">
+            <ion-icon name="filter" color="dark"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div *ngFor="let item of users">
+            <div class="rest_div">
+                <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                <div class="rest_detail">
+                    <ion-label class="name_lbl">{{item.name}}</ion-label>
+                    <ion-label class="grey_lbl">{{item.designation}}</ion-label>
+
+                    <div class="bottom_flex">
+                        <ion-icon name="star"></ion-icon>
+                        <ion-label>4.3</ion-label>
+                        <span>(1200 Reviews)</span>
+                    </div>
+                </div>
+                <ion-button class="block_btn blue_btn" size="small" *ngIf="item.status == '1'">
+                    Following
+                </ion-button>
+                <ion-button class="block_btn grey_btn" size="small" *ngIf="item.status == '0'">
+                    Follow
+                </ion-button>
+            </div>
+            <div class="border_div">
+                <div class="blank_div"></div>
+                <div class="line_div"></div>
+            </div>
+        </div>
+
+
+
+    </div>
+</ion-content>

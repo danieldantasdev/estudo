@@ -1,0 +1,111 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="content_div">
+
+      <ion-label class="title_lbl">Add New Item</ion-label>
+
+      <div class="food_div">
+        <div class="bg_image back_image"></div>
+        <div class="food_detail">
+          <div>
+            <ion-label class="name_lbl">Lemon Juice Fresh</ion-label>
+            <div class="food_flex">
+              <ion-label>
+                <ion-icon name="bag-outline"></ion-icon>
+                25
+                <ion-icon name="add"></ion-icon>
+              </ion-label>
+              &nbsp;|&nbsp;
+              <ion-label>
+                <ion-icon name="thumbs-up-outline"></ion-icon>
+                25
+              </ion-label>
+            </div>
+            <div class="qty_flex">
+              <ion-label class="price_lbl">$2.9</ion-label>
+              <div class="qty_div">
+                <div style="background: #f3f3f3;">
+                  <ion-icon name="remove"></ion-icon>
+                </div>
+                <ion-label>1</ion-label>
+                <div style="background: var(--ion-color-primary);">
+                  <ion-icon name="add" style="color: white"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="title_div">
+      <ion-label>Size</ion-label>
+      <ion-label>Price</ion-label>
+    </div>
+
+    <div class="content_div">
+      <ion-radio-group mode="md">
+        <div class="flex_div" *ngFor="let item of sizes">
+          <div>
+            <ion-radio value="{{item.size}}"></ion-radio>
+            <ion-label style="margin-left: 16px;">Size {{item.size}} <span>({{item.qty}})</span></ion-label>
+          </div>
+          <ion-label>$ {{item.price}}</ion-label>
+        </div>
+      </ion-radio-group>
+    </div>
+
+    <div class="title_div">
+      <ion-label>Options</ion-label>
+    </div>
+
+    <div class="content_div">
+      <ion-radio-group mode="md">
+        <div class="flex_div">
+          <div>
+            <ion-radio value="1"></ion-radio>
+            <ion-label style="margin-left: 16px;">Add Lemon</ion-label>
+          </div>
+        </div>
+        <div class="flex_div">
+          <div>
+            <ion-radio value="2"></ion-radio>
+            <ion-label style="margin-left: 16px;">Add Ice</ion-label>
+          </div>
+        </div>
+      </ion-radio-group>
+    </div>
+
+    <div class="title_div">
+      <ion-label>Note</ion-label>
+    </div>
+
+    <div class="content_div">
+      <ion-textarea placeholder="Type note here!" rows="3"></ion-textarea>
+    </div>
+
+
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="footer_div">
+    <div>
+      <ion-label class="no_lbl">1 Item</ion-label>
+      <ion-label class="price_lbl">$3.0</ion-label>
+    </div>
+    <div>
+      <ion-label class="cart_lbl">Add to Cart</ion-label>
+    </div>
+  </div>
+</ion-footer>

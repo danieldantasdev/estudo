@@ -1,0 +1,7 @@
+{
+  "name": "fooddoor",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

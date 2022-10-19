@@ -1,0 +1,94 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear">
+            <ion-icon name="arrow-back" color="dark"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <ion-label class="bold_title">Rating</ion-label>
+
+        <ion-label class="grey_title">Restaurants</ion-label>
+
+        <div class="card_div">
+            <div class="rest_flex">
+                <div class="bg_image back_image"></div>
+                <div class="rest_detail">
+                    <ion-label class="name_lbl">Kichi Coffee & Drink</ion-label>
+                    <div class="address_flex">
+                        <ion-icon name="location"></ion-icon>
+                        <ion-label>76A Eighth Avenue, New York.</ion-label>
+                    </div>
+                </div>
+                <ion-icon class="bookmark_icn" name="bookmark"></ion-icon>
+            </div>
+            <div class="rate_content">
+                <ion-label class="bold_lbl">What do you think about this restaurants?</ion-label>
+                <ion-label class="grey_lbl">
+                    Your feedback will help us improve restaurants experiance better.
+                </ion-label>
+
+                <div class="rate_flex">
+                    <ion-icon name="star" [class.active]="rate >= 1" (click)="changeRate(1)"></ion-icon>
+                    <ion-icon name="star" [class.active]="rate >= 2" (click)="changeRate(2)"></ion-icon>
+                    <ion-icon name="star" [class.active]="rate >= 3" (click)="changeRate(3)"></ion-icon>
+                    <ion-icon name="star" [class.active]="rate >= 4" (click)="changeRate(4)"></ion-icon>
+                    <ion-icon name="star" [class.active]="rate >= 5" (click)="changeRate(5)"></ion-icon>
+                </div>
+
+                <ion-textarea rows="3" [(ngModel)]="reviewRest"></ion-textarea>
+
+            </div>
+        </div>
+
+        <ion-label class="grey_title">Foods</ion-label>
+
+        <div class="card_div">
+            <div class="rest_flex">
+                <div class="bg_image back_image"></div>
+                <div class="rest_detail">
+                    <ion-label class="name_lbl">Kichi Coffee & Drink</ion-label>
+                    <div class="address_flex">
+                        <ion-icon name="location"></ion-icon>
+                        <ion-label>76A Eighth Avenue, New York.</ion-label>
+                    </div>
+                </div>
+                <ion-icon class="bookmark_icn" name="bookmark"></ion-icon>
+            </div>
+            <div class="rate_content">
+                <ion-label class="bold_lbl">What do you think about this restaurants?</ion-label>
+                <ion-label class="grey_lbl">
+                    Your feedback will help us improve restaurants experiance better.
+                </ion-label>
+
+                <div class="rate_flex">
+                    <ion-icon name="star" [class.active]="rate >= 1" (click)="changeRate(1)"></ion-icon>
+                    <ion-icon name="star" [class.active]="rate >= 2" (click)="changeRate(2)"></ion-icon>
+                    <ion-icon name="star" [class.active]="rate >= 3" (click)="changeRate(3)"></ion-icon>
+                    <ion-icon name="star" [class.active]="rate >= 4" (click)="changeRate(4)"></ion-icon>
+                    <ion-icon name="star" [class.active]="rate >= 5" (click)="changeRate(5)"></ion-icon>
+                </div>
+
+                <ion-textarea rows="3" [(ngModel)]="reviewRest"></ion-textarea>
+            </div>
+        </div>
+
+    </div>
+</ion-content>
+<ion-footer>
+    <div class="footer_div">
+        <ion-button expand="block" class="block_btn">
+            Complete
+        </ion-button>
+    </div>
+</ion-footer>

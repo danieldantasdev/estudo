@@ -1,0 +1,51 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+  <div class="upper_div">
+    <ion-label class="head_lbl">What is your goal ?</ion-label>
+    <ion-label class="sub_lbl">It will help us to choose a best <br> program for you.</ion-label>
+  </div>
+
+  <div class="slider">
+    <ion-slides mode="ios" pager="ios" scrollbar="ios">
+      <ion-slide>
+        <div class="images">
+          <img src="assets/images/e1.png" alt="">
+          <ion-label class="frst_lbl">Lose a fat</ion-label>
+          <ion-label class="scnd_lbl">I have over 20 lbs to lose. I want to <br> drop all this fat and gain muscle <br>
+            mass.</ion-label>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="images">
+          <img src="assets/images/e2.png" alt="">
+          <ion-label class="frst_lbl">Improve shape</ion-label>
+          <ion-label class="scnd_lbl">I have a low amount of body fat <br> and need / want to build more <br> muscle
+          </ion-label>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="images">
+          <img src="assets/images/e3.png" alt="">
+          <ion-label class="frst_lbl">Lean & Tone</ion-label>
+          <ion-label class="scnd_lbl">I am 'skinny fat'. look thin but have <br> no shape. I want to add learn <br>
+            muscle in the right way</ion-label>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="onClick()" expand="block" shape="round">
+      Confirm
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

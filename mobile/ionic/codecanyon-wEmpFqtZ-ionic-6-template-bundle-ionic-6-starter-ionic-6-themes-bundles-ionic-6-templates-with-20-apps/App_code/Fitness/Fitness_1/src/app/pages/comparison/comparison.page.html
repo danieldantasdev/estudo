@@ -1,0 +1,73 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon slot="start" name="chevron-back" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Comparison</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClick()">
+        <ion-icon slot="start" name="ellipsis-horizontal" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item lines="none">
+    <ion-icon slot="start" name="calendar-outline" color="medium"></ion-icon>
+    <ion-label>Select Month 1</ion-label>
+    <ion-select placeholder="Month" interface="popover">
+      <ion-select-option value="1">January</ion-select-option>
+      <ion-select-option value="2">February</ion-select-option>
+      <ion-select-option value="3">March</ion-select-option>
+      <ion-select-option value="4">April</ion-select-option>
+      <ion-select-option value="5">May</ion-select-option>
+      <ion-select-option value="6">June</ion-select-option>
+      <ion-select-option value="7">July</ion-select-option>
+      <ion-select-option value="8">August</ion-select-option>
+      <ion-select-option value="9">September</ion-select-option>
+      <ion-select-option value="10">October</ion-select-option>
+      <ion-select-option value="11">November</ion-select-option>
+      <ion-select-option value="12">December</ion-select-option>
+    </ion-select>
+    <ion-icon slot="end" name="chevron-forward-outline" color="medium"></ion-icon>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-icon slot="start" name="calendar-outline" color="medium"></ion-icon>
+    <ion-label>Select Month 2</ion-label>
+    <ion-select placeholder="Month" interface="popover">
+      <ion-select-option value="1">January</ion-select-option>
+      <ion-select-option value="2">February</ion-select-option>
+      <ion-select-option value="3">March</ion-select-option>
+      <ion-select-option value="4">April</ion-select-option>
+      <ion-select-option value="5">May</ion-select-option>
+      <ion-select-option value="6">June</ion-select-option>
+      <ion-select-option value="7">July</ion-select-option>
+      <ion-select-option value="8">August</ion-select-option>
+      <ion-select-option value="9">September</ion-select-option>
+      <ion-select-option value="10">October</ion-select-option>
+      <ion-select-option value="11">November</ion-select-option>
+      <ion-select-option value="12">December</ion-select-option>
+    </ion-select>
+    <ion-icon slot="end" name="chevron-forward-outline" color="medium"></ion-icon>
+  </ion-item>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="onResult()" expand="block" shape="round">
+      Compare
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

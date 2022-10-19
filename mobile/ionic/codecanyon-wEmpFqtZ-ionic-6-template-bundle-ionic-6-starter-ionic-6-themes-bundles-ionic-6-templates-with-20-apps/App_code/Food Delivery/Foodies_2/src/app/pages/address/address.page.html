@@ -1,0 +1,32 @@
+  <!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+  <div class="main-content">
+    <div class="map">
+      <div class="map-item">
+        <div class="map-picture">
+          <img src="assets/map.png">
+        </div>
+        <ion-label class="map-info">Current Location</ion-label>
+        <ion-label class="location">184 python Street, Javascript 20</ion-label>
+      </div>
+    </div>
+    <ion-card>
+      <ion-label class="title">Confirm Delivery Address</ion-label>
+      <ion-label class="text">Do you want to delivery to this current location?</ion-label>
+
+      <ion-button (click)="goToHome()" shape="round">
+        Yes
+      </ion-button>
+      <ion-button (click)="goToHome()" color="light" shape="round">
+        No
+      </ion-button>
+    </ion-card>
+  </div>
+</ion-content>

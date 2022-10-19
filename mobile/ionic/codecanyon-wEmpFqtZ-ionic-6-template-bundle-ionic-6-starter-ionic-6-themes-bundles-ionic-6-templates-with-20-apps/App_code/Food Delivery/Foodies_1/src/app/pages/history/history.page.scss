@@ -1,0 +1,111 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-header {
+  ion-toolbar {
+    ion-buttons {
+      border-radius: 50%;
+      // border: 1px solid lightgray;
+      padding: 5px 2px 5px 2px;
+      margin: 10px;
+      ion-button {
+        --border-radius: 50%;
+      }
+    }
+  }
+}
+
+.searchBar {
+  margin: 20px 0px 20px 0px;
+  ion-item {
+    --background: #f4f5f8;
+    --border-radius: 10px;
+    ion-input {
+      margin: 10px 0px 10px 0px;
+      font-family: "regular";
+      color: gray;
+    }
+    .icon {
+      height: 60px;
+      width: 60px;
+      background: linear-gradient(#ffa124, #ff7c31);
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      position: absolute;
+      right: 0px;
+      .icn {
+        font-size: 28px;
+        color: #ffff;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.item_div {
+  ion-item {
+    --padding-start: 0px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    ion-label {
+      color: rgb(51, 51, 51);
+    }
+  }
+}
+
+.more_div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 40px 0px 20px 0px;
+  color: gray;
+  ion-label {
+    margin-right: 10px;
+  }
+  ion-icon {
+    font-size: 20px;
+  }
+}
+
+.category_div {
+  overflow: scroll;
+  display: flex;
+  flex-direction: row;
+  .menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    .item {
+      margin: 5px;
+      padding: 7px 20px 7px 20px;
+      border-radius: 10px;
+      width: max-content;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: center;
+      background: #f4f5f8;
+      ion-label {
+        margin-top: 2px;
+        color: gray;
+        font-size: 15px;
+        padding-bottom: 3px;
+        font-family: "regular";
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <ion-label class="page_title">Profile</ion-label>
+
+    <div class="user_div" (click)="goToEditProfile()">
+      <div class="bg_image back_img" [style.backgroundImage]="'url(assets/imgs/user1.jpg)'"></div>
+      <div class="user_detail">
+        <ion-label class="name_lbl">Fannie Jackson</ion-label>
+        <ion-label class="no_lbl">9876543212</ion-label>
+      </div>
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+    </div>
+
+    <div class="menu_box">
+      <div (click)="goToPayment()">
+        <ion-icon name="card-outline"></ion-icon>
+        <ion-label>Payment Methods</ion-label>
+        <ion-icon name="chevron-forward-outline" class="arrow_icn"></ion-icon>
+      </div>
+      <div (click)="goToAddress()">
+        <ion-icon name="location-outline"></ion-icon>
+        <ion-label>Address</ion-label>
+        <ion-icon name="chevron-forward-outline" class="arrow_icn"></ion-icon>
+      </div>
+      <div>
+        <ion-icon name="pricetag-outline"></ion-icon>
+        <ion-label>My Vouchers</ion-label>
+        <ion-icon name="chevron-forward-outline" class="arrow_icn"></ion-icon>
+      </div>
+    </div>
+
+    <div class="menu_box">
+      <div>
+        <ion-icon name="notifications-outline"></ion-icon>
+        <ion-label>Notification</ion-label>
+        <ion-icon name="chevron-forward-outline" class="arrow_icn"></ion-icon>
+      </div>
+      <div>
+        <ion-icon name="globe-outline"></ion-icon>
+        <ion-label>Language</ion-label>
+        <ion-icon name="chevron-forward-outline" class="arrow_icn"></ion-icon>
+      </div>
+      <div>
+        <ion-icon name="settings-outline"></ion-icon>
+        <ion-label>Settings</ion-label>
+        <ion-icon name="chevron-forward-outline" class="arrow_icn"></ion-icon>
+      </div>
+      <div>
+        <ion-icon name="people-outline"></ion-icon>
+        <ion-label>Invite Friends</ion-label>
+        <ion-icon name="chevron-forward-outline" class="arrow_icn"></ion-icon>
+      </div>
+      <div>
+        <ion-icon name="briefcase-outline"></ion-icon>
+        <ion-label>Support</ion-label>
+        <ion-icon name="chevron-forward-outline" class="arrow_icn"></ion-icon>
+      </div>
+    </div>
+
+    <div class="menu_box" style="padding: 16px;">
+      <div style="padding: 0px;">
+        <ion-icon name="exit-outline"></ion-icon>
+        <ion-label>Log Out</ion-label>
+        <ion-icon name="chevron-forward-outline" class="arrow_icn"></ion-icon>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

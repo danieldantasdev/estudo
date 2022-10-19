@@ -1,0 +1,227 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content mode="ios" class="ion-no-border">
+  <div class="title">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()" color="dark">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClick()" color="dark">
+        <ion-icon name="ellipsis-horizontal"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+
+  <div class="image">
+    <img src="assets/images/pancake.png" alt="">
+  </div>
+
+  <div class="content ion-padding">
+    <ion-item lines="none" class="text">
+      <div class="food">
+        <ion-label class="name_lbl">Bluberry Pancake</ion-label>
+        <ion-label class="prgrm_lbl">By <span>James Ruth</span></ion-label>
+      </div>
+      <ion-icon slot="end" name="heart"></ion-icon>
+    </ion-item>
+
+
+    <div class="nutrition">
+      <ion-label class="head_lbl">Nutrition</ion-label>
+      <div class="category_div">
+        <div class="menu">
+          <div class="item" *ngFor="let item of [1,2,3,4,5]">
+            <div class="imgs">
+              <img src="assets/images/cal.png" alt="">
+              <ion-label class="clry_lab">130kCal</ion-label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ingredients">
+      <div class="need">
+        <ion-label class="head_lbl">Ingredients That You <br> Will Need</ion-label>
+        <ion-label class="sub_lbl">6 items</ion-label>
+      </div>
+      <div class="category">
+        <div class="menu">
+          <div class="item" *ngFor="let item of [1,2,3,4,5,6]">
+            <img src="assets/images/sugar.png" />
+            <ion-label class="cntnt_lbl">Sugar</ion-label>
+            <ion-label class="qlt_lbl">3 tbsp</ion-label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="last_div">
+      <div class="steps">
+        <ion-label class="head_lbl">Step by Step</ion-label>
+        <ion-label class="sub_lbl">8 Steps</ion-label>
+      </div>
+
+      <div class="track">
+        <ion-row>
+          <ion-col size="2">
+            <div class="left">
+              <ion-label>01</ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="1" class="lines">
+            <ion-icon name="radio-button-on-outline" color="danger"></ion-icon>
+            <div class="timeliner"></div>
+          </ion-col>
+          <ion-col size="9">
+            <div class="right">
+              <ion-label class="uppr_lbl">Step 1</ion-label>
+              <ion-label class="lwr_lbl">Prepare all of the ingredients that needed</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="2">
+            <div class="left">
+              <ion-label>02</ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="1" class="lines">
+            <ion-icon name="radio-button-on-outline" color="danger"></ion-icon>
+            <div class="timeliner"></div>
+          </ion-col>
+          <ion-col size="9">
+            <div class="right">
+              <ion-label class="uppr_lbl">Step 2</ion-label>
+              <ion-label class="lwr_lbl">Prepare all of the ingredients that needed</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="2">
+            <div class="left">
+              <ion-label>03</ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="1" class="lines">
+            <ion-icon name="radio-button-on-outline" color="danger"></ion-icon>
+            <div class="timeliner"></div>
+          </ion-col>
+          <ion-col size="9">
+            <div class="right">
+              <ion-label class="uppr_lbl">Step 3</ion-label>
+              <ion-label class="lwr_lbl">Prepare all of the ingredients that needed</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="2">
+            <div class="left">
+              <ion-label>04</ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="1" class="lines">
+            <ion-icon name="radio-button-on-outline" color="danger"></ion-icon>
+            <div class="timeliner"></div>
+          </ion-col>
+          <ion-col size="9">
+            <div class="right">
+              <ion-label class="uppr_lbl">Step 4</ion-label>
+              <ion-label class="lwr_lbl">Prepare all of the ingredients that needed</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="2">
+            <div class="left">
+              <ion-label>05</ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="1" class="lines">
+            <ion-icon name="radio-button-on-outline" color="danger"></ion-icon>
+            <div class="timeliner"></div>
+          </ion-col>
+          <ion-col size="9">
+            <div class="right">
+              <ion-label class="uppr_lbl">Step 5</ion-label>
+              <ion-label class="lwr_lbl">Prepare all of the ingredients that needed</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="2">
+            <div class="left">
+              <ion-label>06</ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="1" class="lines">
+            <ion-icon name="radio-button-on-outline" color="danger"></ion-icon>
+            <div class="timeliner"></div>
+          </ion-col>
+          <ion-col size="9">
+            <div class="right">
+              <ion-label class="uppr_lbl">Step 6</ion-label>
+              <ion-label class="lwr_lbl">Prepare all of the ingredients that needed</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="2">
+            <div class="left">
+              <ion-label>07</ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="1" class="lines">
+            <ion-icon name="radio-button-on-outline" color="danger"></ion-icon>
+            <div class="timeliner"></div>
+          </ion-col>
+          <ion-col size="9">
+            <div class="right">
+              <ion-label class="uppr_lbl">Step 7</ion-label>
+              <ion-label class="lwr_lbl">Prepare all of the ingredients that needed</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="2">
+            <div class="left">
+              <ion-label>08</ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="1" class="lines">
+            <ion-icon name="radio-button-on-outline" color="danger"></ion-icon>
+            <div class="timeliner"></div>
+          </ion-col>
+          <ion-col size="9">
+            <div class="right">
+              <ion-label class="uppr_lbl">Step 8</ion-label>
+              <ion-label class="lwr_lbl">Prepare all of the ingredients that needed</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer" slot="fixed">
+    <ion-button (click)="onClick()">
+      Add to Breakfast Meal
+    </ion-button>
+  </div>
+
+</ion-content>

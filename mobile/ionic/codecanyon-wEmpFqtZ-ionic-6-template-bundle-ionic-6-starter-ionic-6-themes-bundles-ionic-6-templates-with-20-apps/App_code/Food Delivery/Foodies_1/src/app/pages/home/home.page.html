@@ -1,0 +1,168 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar lines="none" mode="md">
+    <ion-buttons slot="start">
+      <ion-button (click)="util.openSideMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="onClick()">
+        <ion-icon name="notifications"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-label class="sub_heading">Hello Amy!</ion-label>
+  <ion-label class="heading">Hungry Today? <br> Find Your Meals</ion-label>
+
+  <div class="searchBar">
+    <ion-item lines="none">
+      <ion-input type="text" placeholder="Search for meals..."></ion-input>
+      <ion-icon slot="end" name="search-outline" style="margin-right: 60px;"></ion-icon>
+      <div class="icon">
+        <ion-icon slot="end" name="funnel-outline" class="icn"></ion-icon>
+      </div>
+    </ion-item>
+  </div>
+
+  <ion-slides mode="ios" scrollbar="ios">
+    <ion-slide>
+      <div class="bg_img" [style.backgroundImage]="'url(assets/images/b1.jpg)'">
+        <div class="text">
+          <ion-label class="heading">Best Healthy <br> food near you!</ion-label>
+          <ion-label class="sub_heading">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </ion-label>
+          <ion-button class="content_button" (click)="onProducts()">
+            Explore
+          </ion-button>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="bg_img" [style.backgroundImage]="'url(assets/images/b2.jpg)'">
+        <div class="text">
+          <ion-label class="sub_heading">Best Healthy <br> food near you!</ion-label>
+          <ion-label class="heading">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          </ion-label>
+          <ion-button class="content_button" (click)="onProducts()">
+            Explore
+          </ion-button>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <div class="category_div">
+    <div class="menu">
+      <div class="item" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+        <ion-icon name="apps"></ion-icon>
+        <ion-label>All Item</ion-label>
+      </div>
+    </div>
+  </div>
+
+  <div class="title">
+    <ion-label class="heading">Popular</ion-label>
+    <ion-label class="sub_heading">See All</ion-label>
+  </div>
+
+  <ion-slides mode="ios" scrollbar="ios" [options]="slideOpts">
+    <ion-slide *ngFor="let item of [1,2,3,4]" (click)="onProducts()">
+
+      <div class="main_content">
+        <ion-row>
+          <ion-col size="12">
+            <div class="bg_img" [style.backgroundImage]="'url(assets/images/b4.jpg)'">
+              <ion-buttons>
+                <ion-button (click)="onFavorite()">
+                  <ion-icon slot="start" name="bookmark-outline" color="light"></ion-icon>
+                </ion-button>
+              </ion-buttons>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="description">
+          <ion-col size="12">
+            <div class="title">
+              <ion-label>Hot Pizza</ion-label>
+              <ion-label style="color: #ff7c31;">$ 50.00</ion-label>
+            </div>
+            <div class="sub_title">
+              <ion-label>Pizza - Fast Food - Italian Pizza</ion-label>
+            </div>
+            <div class="rate">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+            <div class="review">
+              <ion-label>4.8 (112 Review)</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+
+    </ion-slide>
+  </ion-slides>
+
+  <div class="title">
+    <ion-label class="heading">Nearyou</ion-label>
+    <ion-label class="sub_heading">See All</ion-label>
+  </div>
+
+  <ion-slides mode="ios" scrollbar="ios" [options]="slideOptstwo" (click)="onProducts()">
+    <ion-slide *ngFor="let item of [1,2,3,4,5]">
+      <ion-row>
+        <ion-col size="12">
+          <div class="near_img" [style.backgroundImage]="'url(assets/images/7.jpg)'"></div>
+          <div class="title_content">
+            <ion-label class="ttl">Egg Salade</ion-label>
+            <ion-label class="sub_ttl">$ 22.00</ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-slide>
+  </ion-slides>
+
+  <div class="title">
+    <ion-label class="heading">Featured</ion-label>
+  </div>
+
+  <ion-row style="margin-bottom: 10px;" *ngFor="let item of [1,2,3,4,5,6]">
+    <ion-col size="4">
+      <div class="featured_img" (click)="onProducts()" [style.backgroundImage]="'url(assets/images/2.jpg)'"></div>
+    </ion-col>
+    <ion-col size="8">
+      <div class="title">
+        <ion-label (click)="onProducts()">Korean Food</ion-label>
+        <ion-buttons slot="end">
+          <ion-button (click)="onFavorite()">
+            <ion-icon name="bookmark" color="light"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+      <ion-label class="cate">Egg - Salade</ion-label>
+      <div class="sub_title" (click)="onProducts()">
+        <ion-icon name="star"></ion-icon>
+        <ion-label> 4.8 (112)</ion-label>
+        <ion-label class="price">$ 55.00</ion-label>
+      </div>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

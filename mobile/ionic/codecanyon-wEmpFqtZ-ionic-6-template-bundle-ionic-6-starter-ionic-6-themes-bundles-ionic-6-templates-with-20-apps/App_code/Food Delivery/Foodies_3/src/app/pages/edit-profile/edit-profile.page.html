@@ -1,0 +1,86 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear">
+            <ion-icon name="arrow-back" color="dark"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" size="small" slot="end" mode="ios" (click)="onClick()">
+            Save
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="bg_image back_user" [style.backgroundImage]="'url(assets/imgs/user1.jpg)'"></div>
+
+        <div class="detail_box">
+            <div class="f_div">
+                <ion-label>Full Name</ion-label>
+            </div>
+            <div class="m_div">
+                <ion-input type="text" placeholder="Full Name" [(ngModel)]="name"></ion-input>
+            </div>
+            <div class="l_div">
+                <ion-icon name="chevron-forward-outline" class="arrow_icn"></ion-icon>
+            </div>
+        </div>
+
+        <div class="detail_box">
+            <div class="f_div">
+                <ion-label>Password</ion-label>
+            </div>
+            <div class="m_div">
+                <ion-input type="text" placeholder="Password" [(ngModel)]="password"></ion-input>
+            </div>
+            <div class="l_div">
+                <ion-icon name="chevron-forward-outline" class="arrow_icn"></ion-icon>
+            </div>
+        </div>
+
+        <div class="detail_box">
+            <div class="f_div">
+                <ion-label>Phone Number</ion-label>
+            </div>
+            <div class="m_div">
+                <ion-input type="text" placeholder="Phone Number"  [(ngModel)]="phone"></ion-input>
+            </div>
+            <div class="l_div">
+                <ion-icon name="chevron-forward-outline" class="arrow_icn"></ion-icon>
+            </div>
+        </div>
+
+        <div class="detail_box">
+            <div class="f_div">
+                <ion-label>Email</ion-label>
+            </div>
+            <div class="m_div">
+                <ion-input type="text" placeholder="Email"  [(ngModel)]="email"></ion-input>
+            </div>
+            <div class="l_div">
+                <ion-icon name="chevron-forward-outline" class="arrow_icn"></ion-icon>
+            </div>
+        </div>
+
+        <div class="detail_box" style="padding: 16px;">
+            <div class="f_div">
+                <ion-label>Date of Birth</ion-label>
+            </div>
+            <div class="m_div">
+                <input type="date" placeholder="Date of Birth">
+            </div>
+            <div class="l_div">
+                <ion-icon name="chevron-forward-outline" class="arrow_icn"></ion-icon>
+            </div>
+        </div>
+
+    </div>
+</ion-content>

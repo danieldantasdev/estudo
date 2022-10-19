@@ -1,0 +1,55 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+  <div class="image">
+    <img src="assets/images/yoga.webp" alt="">
+  </div>
+  <div class="name">
+    <ion-label class="bold_lbl">Let's complete your profile</ion-label>
+    <ion-label class="smpl_lbl">It will help us to know more about you</ion-label>
+  </div>
+
+    <ion-item lines="none">
+      <ion-icon name="people-outline" color="medium" style="margin-right: 10px;"></ion-icon>
+      <ion-select value="" multiple="true" placeholder="Choose Gender">
+        <ion-select-option value="male">Male</ion-select-option>
+        <ion-select-option value="female">Female</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-input type="date" placeholder="Date of birth"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-icon name="scale-outline" color="medium" style="margin-right: 10px;"></ion-icon>
+      <ion-input type="number" placeholder="Your Weight"></ion-input>
+      <ion-button (click)="onClick()" expand="block" slot="end" shape="round" color="danger">
+        KG
+      </ion-button>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-icon name="swap-vertical-outline" color="medium" style="margin-right: 10px;"></ion-icon>
+      <ion-input type="number" placeholder="Your Height"></ion-input>
+      <ion-button (click)="onClick()" expand="block" slot="end" shape="round" color="danger">
+        CM
+      </ion-button>
+    </ion-item>
+
+    <div class="button">
+      <ion-button (click)="onWelcome()" expand="block" shape="round">
+        Next
+        <ion-icon name="chevron-forward" style="margin-left: 10px;"></ion-icon>
+      </ion-button>
+    </div>
+
+
+
+</ion-content>

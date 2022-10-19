@@ -1,0 +1,79 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="map_div" [ngStyle]="{'height' : (height-220) + 'px'}">
+      <div class="title_div">
+        <ion-button (click)="goBack()" fill="clear">
+          <ion-icon name="arrow-back" color="dark"></ion-icon>
+        </ion-button>
+        <ion-label>Delivery Address</ion-label>
+      </div>
+    </div>
+
+    <ion-bottom-sheet [(state)]="sheetState" [minHeight]="minHeight" [dockedHeight]="dockedHeight" [canBounce]=true
+      [topDistance]="topDistance" [hideDragIcon]=false [roundBorderOnTop]=true [useSmoothScrolling]=true
+      [hideHeader]=false [hideTitle]=true [hideCloseButton]=true [hideSeparator]=true>
+      <div class="lower_div">
+        <ion-label class="title_lbl">Your food is coming in 05:30 PM</ion-label>
+
+        <div class="rest_div">
+          <div class="bg_image back_image" [style.backgroundImage]="'url(assets/imgs/food1.jpg)'"></div>
+          <div class="rest_detail">
+            <ion-label class="name_lbl">Coco Restaurants</ion-label>
+            <ion-label class="id_lbl">ID: <span>4567343</span></ion-label>
+
+            <div class="bottom_flex">
+              <ion-label class="no_lbl">1 Item</ion-label>
+              <ion-label class="color_lbl">Shipping</ion-label>
+            </div>
+          </div>
+        </div>
+
+        <div class="user_flex">
+          <div class="bg_image back_image" [style.backgroundImage]="'url(assets/imgs/user5.jpg)'"></div>
+          <div class="user_detail">
+            <div>
+              <ion-label class="name_lbl">Devin Stokes</ion-label>
+              <div class="rate_flex">
+                <ion-icon name="star"></ion-icon>
+                <ion-label>4.5</ion-label>
+              </div>
+            </div>
+            <div class="btn_flex">
+              <ion-button class="blue_btn">
+                <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+              </ion-button>
+              <ion-button class="green_btn" style="margin-left: 10px;">
+                <ion-icon name="call"></ion-icon>
+              </ion-button>
+            </div>
+          </div>
+        </div>
+
+        <div class="review_content">
+          <ion-label class="bold_lbl">HOW IS YOUR SHIPPER?</ion-label>
+          <ion-label class="grey_lbl">Your feedback will help us improve shipping experiance.</ion-label>
+
+          <div class="rate_flex">
+            <ion-icon name="star" [class.active]="rate >= 1" (click)="changeRate(1)"></ion-icon>
+            <ion-icon name="star" [class.active]="rate >= 2" (click)="changeRate(2)"></ion-icon>
+            <ion-icon name="star" [class.active]="rate >= 3" (click)="changeRate(3)"></ion-icon>
+            <ion-icon name="star" [class.active]="rate >= 4" (click)="changeRate(4)"></ion-icon>
+            <ion-icon name="star" [class.active]="rate >= 5" (click)="changeRate(5)"></ion-icon>
+          </div>
+
+        </div>
+
+      </div>
+    </ion-bottom-sheet>
+
+  </div>
+</ion-content>

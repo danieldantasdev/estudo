@@ -1,0 +1,51 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+    <ion-toolbar>
+        <ion-title>Favourite</ion-title>
+    </ion-toolbar>
+    <ion-segment value="foods" (ionChange)="segmentChanged($event)" mode="md">
+        <ion-segment-button value="foods">
+            <ion-label>Foods</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="restaurants">
+            <ion-label>Restaurants</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+      <div class="rest_div" *ngFor="let item of foods">
+          <div class="bg_image back_image"  [style.backgroundImage]="'url('+ item.img +')'"></div>
+          <div class="rest_detail">
+              <div class="name_flex">
+                  <ion-label>{{item.name}}</ion-label>
+                  <ion-icon name="bookmark-outline"></ion-icon>
+              </div>
+              <div class="address_flex">
+                  <ion-icon name="location"></ion-icon>
+                  <ion-label>Royal Drink & Coffee</ion-label>
+              </div>
+              <div class="bottom_flex">
+                  <div class="rate_flex">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-label>4.3</ion-label>
+                      <span>(120 Reviews)</span>
+                  </div>
+                  <div class="time_flex">
+                      <ion-label>$5.6</ion-label>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+</ion-content>

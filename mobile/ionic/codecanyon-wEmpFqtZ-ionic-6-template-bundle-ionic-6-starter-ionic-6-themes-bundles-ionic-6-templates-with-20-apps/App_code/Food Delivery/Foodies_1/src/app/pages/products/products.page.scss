@@ -1,0 +1,149 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.bg_img {
+  height: 250px;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .back_div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    ion-buttons {
+      padding: 5px 2px 5px 2px;
+      margin: 10px;
+      ion-button {
+        height: 40px;
+        width: 40px;
+        border: 1px solid white;
+        --border-radius: 50%;
+        border-radius: 50%;
+        ion-icon {
+          color: white;
+        }
+      }
+    }
+    .btn {
+      ion-button {
+        border: none;
+      }
+    }
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  .sub_heading {
+    font-family: "bold";
+    font-size: 20px;
+  }
+  .sub_ttl {
+    position: absolute;
+    right: 5px;
+    top: 45px;
+    font-size: 13px;
+    color: #ff7c31;
+  }
+}
+
+.rate {
+  ion-icon {
+    margin-right: 5px;
+    font-size: 20px;
+    color: #ff7c31;
+  }
+}
+
+.sub_heading {
+  font-family: "bold";
+  color: #ff7c31;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.main_title {
+  font-family: "bold";
+  color: black;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+p {
+  font-family: "regular";
+}
+
+ion-item {
+  --background: transparent;
+  background: #f8f9fff3;
+  padding: 10px 0px 10px 0px;
+  margin: 20px 0px 20px 0px;
+  border-radius: 10px;
+  ion-label {
+    font-family: "bold";
+    font-size: 15px;
+    --background: #f8f9fff3;
+    margin-bottom: 11px;
+  }
+  ion-select {
+    font-size: 13px;
+    --background: #f8f9fff3;
+    ion-select-option {
+      --background: #f8f9fff3;
+    }
+  }
+}
+
+ion-row {
+  ion-col {
+    position: relative;
+    padding: 0px;
+    .btn {
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      bottom: 5px;
+      right: 0px;
+      ion-buttons {
+        display: flex;
+        text-align: center;
+        margin: 0px 0px 0px 0px;
+        ion-button {
+          background: linear-gradient(#ffa124, #ff7c31);
+          border-radius: 30%;
+          height: 35px;
+          width: 40px;
+        }
+      }
+      .label_number {
+        display: flex;
+        justify-content: center;
+        ion-button {
+          border: 1px solid #ff7c31;
+          background: #ffff;
+        }
+        ion-label {
+          color: #ff7c31;
+          font-family: "bold";
+        }
+      }
+    }
+  }
+}
+
+.content_button {
+  margin-top: 30px;
+}
