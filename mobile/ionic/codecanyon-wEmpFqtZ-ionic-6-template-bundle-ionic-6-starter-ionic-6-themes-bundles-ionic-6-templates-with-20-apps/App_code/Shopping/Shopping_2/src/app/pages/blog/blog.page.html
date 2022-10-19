@@ -1,0 +1,129 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="util.openMenu()" color="dark">
+        <ion-icon name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <div class="logo">
+      <ion-label>logo</ion-label>
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-button color="dark">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button color="dark">
+        <ion-icon name="bag-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <div class="main-content">
+
+    <div class="heading">
+      <ion-label>blog</ion-label>
+    </div>
+    <div class="line">
+      <div class="border"></div>
+      <ion-icon name="square-outline"></ion-icon>
+    </div>
+    <div class="scrollbar">
+      <ion-chip class="scroll-item" *ngFor="let item of [1,2,3,4,5,6,7]">
+        <ion-label>#2021</ion-label>
+      </ion-chip>
+    </div>
+
+    <div class="blog">
+      <div class="img" [style.backgroundImage]="'url(assets/collection.jpg)'">
+        <ion-icon class="icon" name="bookmark-outline"></ion-icon>
+        <div class="text">
+          <ion-label>2021 style guide: the biggest fall trends</ion-label>
+        </div>
+      </div>
+      <div class="tag">
+        <div>
+          <div class="tag-name">
+            <ion-label>#fashion</ion-label>
+          </div>
+
+        </div>
+        <div class="time">
+          4 day ago
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-row">
+      <ion-row>
+        <ion-col size="4">
+          <img class="blog-img" src="assets/14.jpg">
+        </ion-col>
+        <ion-col size="8">
+          <div class="blog-info">
+            <ion-label class="blog-name">2021 style guide the biggest fall trends</ion-label>
+            <ion-label class="blog-detail">the exvitement of fall fashion is here and i'm already loving some of the
+              trend forecasts</ion-label>
+            <ion-label class="blog-time">5 days ago</ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="load-btn">
+      <ion-button expand="full" color="light">load more
+      </ion-button>
+    </div>
+
+
+    <div class="footer">
+      <div class="page-center">
+        <ion-icon name="logo-twitter"></ion-icon>
+        <ion-icon name="logo-instagram"></ion-icon>
+        <ion-icon name="logo-youtube"></ion-icon>
+      </div>
+
+      <div>
+        <div class="line">
+          <div class="border"></div>
+          <ion-icon name="square-outline"></ion-icon>
+        </div>
+
+        <div class="contact">
+          <ion-label>admin@admin.com</ion-label>
+          <ion-label>+1 2234 4574</ion-label>
+          <ion-label>08:00 - 22:00 - Everyday</ion-label>
+        </div>
+
+        <div class="line">
+          <div class="border"></div>
+          <ion-icon name="square-outline"></ion-icon>
+        </div>
+      </div>
+
+      <div class="page-center">
+        <ion-label>About</ion-label>
+        <ion-label>Contact</ion-label>
+        <ion-label>Blog</ion-label>
+      </div>
+
+      <div class="copyright">
+        <ion-label>Copyright &copy; OpenUI All Rights Reserved.</ion-label>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

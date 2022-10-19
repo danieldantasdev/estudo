@@ -1,0 +1,274 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="util.openMenu()" color="dark">
+        <ion-icon name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <div class="logo">
+      <ion-label>logo</ion-label>
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-button color="dark">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button color="dark">
+        <ion-icon name="bag-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-slides pager="ios">
+    <ion-slide>
+      <div class="img" [style.backgroundImage]="'url(assets/13.jpg)'">
+        <div class="text">
+          <ion-label>Luxury fashion & Accessories</ion-label>
+        </div>
+        <div class="btn">
+          <ion-button expand="block" color="secondary" shape="round">EXPLORE COLLECTION</ion-button>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="img" [style.backgroundImage]="'url(assets/13.jpg)'">
+        <div class="text">
+          <ion-label>Luxury fashion & Accessories</ion-label>
+        </div>
+        <div class="btn">
+          <ion-button expand="block" color="secondary" shape="round">EXPLORE COLLECTION</ion-button>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <div class="main-content">
+
+    <div class="heading">
+      <ion-label>New Arrival</ion-label>
+    </div>
+    <div class="line">
+      <div class="border"></div>
+      <ion-icon name="square-outline"></ion-icon>
+    </div>
+
+    <div class="segment">
+      <ion-row>
+        <ion-col size="2.4" (click)="segmentChange(1)" class="ion-text-center" [class.active]="seg_id == 1">All
+        </ion-col>
+        <ion-col size="2.4" (click)="segmentChange(2)" class="ion-text-center" [class.active]="seg_id == 2">Apparel
+        </ion-col>
+        <ion-col size="2.4" (click)="segmentChange(3)" class="ion-text-center" [class.active]="seg_id == 3">Dress
+        </ion-col>
+        <ion-col size="2.4" (click)="segmentChange(4)" class="ion-text-center" [class.active]="seg_id == 4">Tshirt
+        </ion-col>
+        <ion-col size="2.4" (click)="segmentChange(5)" class="ion-text-center" [class.active]="seg_id == 5">Bag
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="items" *ngIf="seg_id == 1">
+      <ion-row>
+        <ion-col size="6" *ngFor="let item of [1,2,3,4]">
+          <div class="products-segment">
+            <div class="img" [style.backgroundImage]="'url(assets/12.jpg)'">
+            </div>
+            <div class="name">
+              <ion-label>Harris Tweed Three eye reven Jacket</ion-label>
+            </div>
+            <div class="price">
+              <ion-label>$ 25.90</ion-label>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="items" *ngIf="seg_id == 2">
+      2
+    </div>
+
+    <div class="heading">
+      <ion-label class="title">Explore More <ion-icon name="arrow-forward-outline"></ion-icon>
+      </ion-label>
+    </div>
+
+    <div class="company-logos">
+      <div class="line">
+        <div class="border"></div>
+        <ion-icon name="square-outline"></ion-icon>
+      </div>
+
+      <ion-row>
+        <ion-col size="4">PADA</ion-col>
+        <ion-col size="4">GUCCI</ion-col>
+        <ion-col size="4">Burberi</ion-col>
+        <ion-col size="4">PADA</ion-col>
+        <ion-col size="4">GUCCI</ion-col>
+        <ion-col size="4">Tiffino & co</ion-col>
+      </ion-row>
+
+      <div class="line">
+        <div class="border"></div>
+        <ion-icon name="square-outline"></ion-icon>
+      </div>
+    </div>
+
+    <div class="heading">
+      <ion-label>collections</ion-label>
+    </div>
+
+    <div class="banner">
+      <div class="img" [style.backgroundImage]="'url(assets/collection.jpg)'">
+        <div class="text">
+          <ion-label>October</ion-label>
+          <div class="info">
+            <ion-label>collection</ion-label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="banner2">
+      <div class="img" [style.backgroundImage]="'url(assets/11.jpg)'">
+        <div class="text">
+          <ion-label>Autumn</ion-label>
+          <div class="info">
+            <ion-label>collection</ion-label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="banner3">
+      <div class="img" [style.backgroundImage]="'url(assets/collection1.jpg)'">
+        <ion-buttons>
+          <ion-button color="dark">
+            <ion-icon name="play"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+    </div>
+
+    <div class="heading">
+      <ion-label>Just for You</ion-label>
+    </div>
+    <div class="line">
+      <div class="border"></div>
+      <ion-icon name="square-outline"></ion-icon>
+    </div>
+
+    <div class="scroll-product">
+      <div class="menu">
+        <div class="card" *ngFor="let item of [1,2,3,4]">
+          <div class="products">
+            <div class="img" [style.backgroundImage]="'url(assets/12.jpg)'">
+            </div>
+            <div class="name">
+              <ion-label>Harris Tweed Three eye reven Jacket</ion-label>
+            </div>
+            <div class="price">
+              <ion-label>$ 25.90</ion-label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="heading">
+      <ion-label>@Trending</ion-label>
+    </div>
+
+    <div class="tag">
+      <ion-chip *ngFor="let item of [1,2,3,4,5,6,7]">
+        <ion-label>#2021</ion-label>
+      </ion-chip>
+    </div>
+
+    <div class="service">
+      <div class="content">
+        <div class="logo">
+          Logo
+        </div>
+        <div class="text">
+          <ion-label>Making a luxurious lifestyle accessible for a generous group of women is our daily drive.
+          </ion-label>
+        </div>
+        <div class="line">
+          <div class="border"></div>
+          <ion-icon name="square-outline"></ion-icon>
+        </div>
+        <ion-row>
+          <ion-col size="6" *ngFor="let item of [1,2,3,4]">
+            <img src="assets/icon/fast.png">
+            <ion-label>Fast shipping. Free on orders over $25.</ion-label>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+
+    <div class="heading">
+      <ion-label>Follow Us</ion-label>
+    </div>
+    <div class="heading">
+     <ion-icon name="logo-instagram"></ion-icon>
+    </div>
+
+    <div class="instagram">
+      <ion-row>
+        <ion-col size="6" *ngFor="let item of [1,2,3,4]">
+          <img src="assets/iya.jpg">
+          <ion-label class="name">@Bunch</ion-label>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="footer">
+      <div class="page-center">
+        <ion-icon name="logo-twitter"></ion-icon>
+        <ion-icon name="logo-instagram"></ion-icon>
+        <ion-icon name="logo-youtube"></ion-icon>
+      </div>
+
+      <div>
+        <div class="line">
+          <div class="border"></div>
+          <ion-icon name="square-outline"></ion-icon>
+        </div>
+
+      <div class="contact">
+        <ion-label>admin@admin.com</ion-label>
+        <ion-label>+1 2234 4574</ion-label>
+        <ion-label>08:00 - 22:00 - Everyday</ion-label>
+      </div>
+
+        <div class="line">
+          <div class="border"></div>
+          <ion-icon name="square-outline"></ion-icon>
+        </div>
+      </div>
+
+      <div class="page-center">
+        <ion-label>About</ion-label>
+        <ion-label>Contact</ion-label>
+        <ion-label>Blog</ion-label>
+      </div>
+
+      <div class="copyright">
+        <ion-label>Copyright &copy; OpenUI All Rights Reserved.</ion-label>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
+
+

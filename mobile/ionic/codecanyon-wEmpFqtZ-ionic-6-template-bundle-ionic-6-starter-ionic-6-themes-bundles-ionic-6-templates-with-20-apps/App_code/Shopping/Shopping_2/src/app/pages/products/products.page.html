@@ -1,0 +1,178 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="util.openMenu()" color="dark">
+        <ion-icon name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <div class="logo">
+      <ion-label>logo</ion-label>
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-button  color="dark">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button  color="dark">
+        <ion-icon name="bag-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <div class="main-content">
+
+    <div class="search-bar">
+      <ion-input type="text" placeholder="Search Product"></ion-input>
+      <ion-buttons>
+        <ion-button  color="dark">
+          <ion-icon name="search-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+
+    <div class="filter">
+      <div>
+      <ion-label>8 Result of Dress</ion-label>
+      </div>
+      <div class="filter-btn">
+        <ion-select placeholder="men"  interface="popover">
+          <ion-select-option value="nes">New</ion-select-option>
+          <ion-select-option value="n64">Old</ion-select-option>
+        </ion-select>
+
+          <ion-select [(ngModel)]="view" interface="popover">
+            <ion-select-option value="grid">
+              <ion-label>grid</ion-label>
+            </ion-select-option>
+            <ion-select-option value="list">
+              <ion-label>list</ion-label>
+            </ion-select-option>
+            <ion-select-option value="two">
+              <ion-label>two</ion-label>
+            </ion-select-option>
+          </ion-select>
+
+        <ion-buttons>
+          <ion-button  color="dark">
+            <ion-icon name="bag-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+    </div>
+
+    <div class="items-grid" *ngIf="view == 'grid'">
+        <div class="products-grid" *ngFor="let item of [1,2,3,4]">
+          <div class="img" [style.backgroundImage]="'url(assets/12.jpg)'">
+            <ion-icon class="icon-heart" name="heart-outline"></ion-icon>
+          </div>
+          <div class="info">
+            <div>
+              <ion-label class="name">Jacket</ion-label>
+            </div>
+            <div class="text">
+              <ion-label class="detail">Recycle Boucle Knit Cardigan Pink</ion-label>
+              <ion-label class="price">$120</ion-label>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="items-list" *ngIf="view == 'list'">
+        <ion-row *ngFor="let item of [1,2]">
+          <ion-col size="4">
+            <img class="product-img" src="assets/14.jpg">
+          </ion-col>
+          <ion-col size="8">
+            <div class="product-detail">
+              <ion-label class="name">Jacket</ion-label>
+              <ion-label class="detail">Recycle Boucle Knit Cardigan Pink</ion-label>
+              <ion-label class="price">$120</ion-label>
+            </div>
+
+            <div class="rating">
+              <ion-icon class="star" name="star"></ion-icon>
+              <ion-label>4.8 Rating</ion-label>
+            </div>
+            <div class="size-icon">
+              <div class="size">
+                <ion-label>size</ion-label>
+                <div class="size-label">
+                  S
+                </div>
+                <div class="size-label">
+                  M
+                </div>
+              </div>
+              <ion-icon class="heart" name="heart-outline"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+
+    </div>
+
+    <div class="items-two" *ngIf="view == 'two'">
+      <ion-row>
+        <ion-col size="6" *ngFor="let item of [1,2,3,4]">
+          <div class="products">
+            <div class="img" [style.backgroundImage]="'url(assets/12.jpg)'">
+            </div>
+            <div class="info">
+              <ion-label class="name">Jacket</ion-label>
+              <ion-label class="detail">Recycle Boucle Knit Cardigan Pink</ion-label>
+              <ion-label class="price">$120</ion-label>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div class="footer">
+      <div class="page-center">
+        <ion-icon name="logo-twitter"></ion-icon>
+        <ion-icon name="logo-instagram"></ion-icon>
+        <ion-icon name="logo-youtube"></ion-icon>
+      </div>
+
+      <div>
+        <div class="line">
+          <div class="border"></div>
+          <ion-icon name="square-outline"></ion-icon>
+        </div>
+
+        <div class="contact">
+          <ion-label>admin@admin.com</ion-label>
+          <ion-label>+1 2234 4574</ion-label>
+          <ion-label>08:00 - 22:00 - Everyday</ion-label>
+        </div>
+
+        <div class="line">
+          <div class="border"></div>
+          <ion-icon name="square-outline"></ion-icon>
+        </div>
+      </div>
+
+      <div class="page-center">
+        <ion-label>About</ion-label>
+        <ion-label>Contact</ion-label>
+        <ion-label>Blog</ion-label>
+      </div>
+
+      <div class="copyright">
+        <ion-label>Copyright &copy; OpenUI All Rights Reserved.</ion-label>
+      </div>
+    </div>
+  </div>
+</ion-content>

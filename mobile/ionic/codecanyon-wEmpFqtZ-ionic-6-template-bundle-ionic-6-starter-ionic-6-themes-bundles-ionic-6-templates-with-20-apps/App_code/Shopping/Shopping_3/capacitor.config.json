@@ -1,0 +1,6 @@
+{
+  "appId": "io.initappz.shopping3",
+  "appName": "Shopping 3",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}

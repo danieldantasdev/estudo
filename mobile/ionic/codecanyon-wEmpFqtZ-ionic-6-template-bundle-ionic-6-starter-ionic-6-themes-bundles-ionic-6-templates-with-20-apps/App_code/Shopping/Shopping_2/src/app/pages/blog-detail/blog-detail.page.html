@@ -1,0 +1,108 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="util.openMenu()" color="dark">
+        <ion-icon name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <div class="logo">
+      <ion-label>logo</ion-label>
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-button color="dark">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button color="dark">
+        <ion-icon name="bag-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+  <div class="main-content">
+    <div class="banner">
+      <div class="img" [style.backgroundImage]="'url(assets/collection.jpg)'">
+      </div>
+    </div>
+
+    <div class="lower-div">
+      <div class="blog-name">
+        2021 style guide: the biggest fall trends
+      </div>
+      <div class="blog-detail">
+        You guys know how much i love mixing high and low-end it's the best way to get hte most bang for your buck while still elevating your wardrobe. the same goes for handbangs And honestyly the are probably the best pieces to mix and match I truly think the key to completing a look is with a great bag and I found so many this year that i wanted to share a round-up of my most worn handbags.
+      </div>
+
+      <ion-slides pager="ios">
+        <ion-slide>
+          <div class="img" [style.backgroundImage]="'url(assets/13.jpg)'">
+          </div>
+        </ion-slide>
+      </ion-slides>
+
+      <div class="blog-detail">
+        You guys know how much i love mixing high and low-end it's the best way to get hte most bang for your buck while still elevating your wardrobe. the same goes for handbangs And honestyly the are probably the best pieces to mix and match I truly think the key to completing a look is with a great bag and I found so many this year that i wanted to share a round-up of my most worn handbags.
+      </div>
+
+      <div class="author blog-detail">
+        Posted by OpenFashion  |  3 Days ago
+      </div>
+
+      <div class="tag">
+        <div class="tag-name">
+          <ion-label>#fashion</ion-label>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer">
+      <div class="page-center">
+        <ion-icon name="logo-twitter"></ion-icon>
+        <ion-icon name="logo-instagram"></ion-icon>
+        <ion-icon name="logo-youtube"></ion-icon>
+      </div>
+
+      <div>
+        <div class="line">
+          <div class="border"></div>
+          <ion-icon name="square-outline"></ion-icon>
+        </div>
+
+      <div class="contact">
+        <ion-label>admin@admin.com</ion-label>
+        <ion-label>+1 2234 4574</ion-label>
+        <ion-label>08:00 - 22:00 - Everyday</ion-label>
+      </div>
+
+        <div class="line">
+          <div class="border"></div>
+          <ion-icon name="square-outline"></ion-icon>
+        </div>
+      </div>
+
+      <div class="page-center">
+        <ion-label>About</ion-label>
+        <ion-label>Contact</ion-label>
+        <ion-label>Blog</ion-label>
+      </div>
+
+      <div class="copyright">
+        <ion-label>Copyright &copy; OpenUI All Rights Reserved.</ion-label>
+      </div>
+    </div>
+  </div>
+</ion-content>
