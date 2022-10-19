@@ -1,0 +1,140 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="current" mode="md">
+      <ion-segment-button [value]="1">
+        <ion-label>Ongoing</ion-label>
+      </ion-segment-button>
+      <ion-segment-button [value]="2">
+        <ion-label>Old</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="current == 1">
+    <div class="head">
+      <ion-button fill="clear" (click)="back()">
+        <ion-icon name="chevron-back-outline" slot="icon-only" color="dark"></ion-icon>
+      </ion-button>
+      <p>{{ viewTitle }}</p>
+      <ion-button fill="clear" (click)="next()">
+        <ion-icon name="chevron-forward-outline" slot="icon-only" color="dark"></ion-icon>
+      </ion-button>
+    </div>
+
+    <calendar [eventSource]="eventSource" calendarMode="month" [currentDate]="calendar.currentDate"
+      (onEventSelected)="onEventSelected($event)" (onCurrentDateChanged)="onDateSelected($event)"
+      noEventsLabel="No Bookings Found" (onTitleChanged)="onViewTitleChanged($event)" [startHour]="6" [endHour]="20"
+      [step]="30" [startingDayWeek]="1" [monthviewDisplayEventTemplate]="template" [showEventDetail]="false">
+    </calendar>
+
+    <ng-template #template let-view="view" let-row="row" let-col="col">
+      <div [class.with-event]="view.dates[row*7+col].events.length">
+        {{view.dates[row*7+col].label}}
+        <div class="indicator-container">
+          <div class="event-indicator" *ngFor="let e of view.dates[row*7+col].events"></div>
+        </div>
+      </div>
+    </ng-template>
+
+    <div *ngFor="let item of bookings" class="bookings">
+      <ion-row style="padding-bottom: 10px; border-bottom: 1px solid lightgray;">
+        <ion-col size="4">
+          <div class="user_image" [ngStyle]="{'background-image':'url(assets/imgs/sliders/3.jpg)'}">
+          </div>
+        </ion-col>
+        <ion-col size="8">
+          <ion-label class="salon-name">Mint Salon Drive-in UniSex Famous</ion-label>
+          <ion-label class="salon-address">
+            <ion-icon slot="end" name="location"></ion-icon> Akshya Nagar 1st Block 1st Cross, Rammurthy nagar,
+            Bangalore-560016
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row style="padding: 10px; border-bottom: 1px solid lightgray;">
+        <ion-col size="6">
+          <ion-label class="salon-name">Men's Haircuts</ion-label>
+          <ion-label class="salon-address">
+            <ion-icon slot="end" name="person"></ion-icon> Lisa T. Plum
+          </ion-label>
+
+          <ion-label class="salon-name">Men's Haircuts</ion-label>
+          <ion-label class="salon-address">
+            <ion-icon slot="end" name="person"></ion-icon> Lisa T. Plum
+          </ion-label>
+
+          <ion-label class="salon-name">Men's Haircuts</ion-label>
+          <ion-label class="salon-address">
+            <ion-icon slot="end" name="person"></ion-icon> Lisa T. Plum
+          </ion-label>
+
+        </ion-col>
+        <ion-col size="6">
+          <ion-label class="date-time">December 26, 2021</ion-label>
+          <ion-label class="date-time">01:30 - 02:30 PM</ion-label>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="10">
+          <ion-label class="salon-name">Remind me 1h in advance</ion-label>
+        </ion-col>
+        <ion-col size="2">
+          <ion-toggle></ion-toggle>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+
+
+  <div *ngIf="current == 2">
+    <div *ngFor="let item of [1,2,3,4,5,6,7,8]" class="bookings">
+      <ion-row style="padding-bottom: 10px; border-bottom: 1px solid lightgray;">
+        <ion-col size="4">
+          <div class="user_image" [ngStyle]="{'background-image':'url(assets/imgs/sliders/3.jpg)'}">
+          </div>
+        </ion-col>
+        <ion-col size="8">
+          <ion-label class="salon-name">Mint Salon Drive-in UniSex Famous</ion-label>
+          <ion-label class="salon-address">
+            <ion-icon slot="end" name="location"></ion-icon> Akshya Nagar 1st Block 1st Cross, Rammurthy nagar,
+            Bangalore-560016
+          </ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row style="padding: 10px; border-bottom: 1px solid lightgray;">
+        <ion-col size="6">
+          <ion-label class="salon-name">Men's Haircuts</ion-label>
+          <ion-label class="salon-address">
+            <ion-icon slot="end" name="person"></ion-icon> Lisa T. Plum
+          </ion-label>
+
+          <ion-label class="salon-name">Men's Haircuts</ion-label>
+          <ion-label class="salon-address">
+            <ion-icon slot="end" name="person"></ion-icon> Lisa T. Plum
+          </ion-label>
+
+          <ion-label class="salon-name">Men's Haircuts</ion-label>
+          <ion-label class="salon-address">
+            <ion-icon slot="end" name="person"></ion-icon> Lisa T. Plum
+          </ion-label>
+
+        </ion-col>
+        <ion-col size="6">
+          <ion-label class="date-time">December 26, 2021</ion-label>
+          <ion-label class="date-time">01:30 - 02:30 PM</ion-label>
+        </ion-col>
+      </ion-row>
+
+    </div>
+  </div>
+</ion-content>

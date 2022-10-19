@@ -1,0 +1,66 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+
+  <div class="img" [style.backgroundImage]="'url(assets/imgs/h2.jpg)'">
+    
+    <div class="title">
+      <ion-buttons slot="start">
+        <ion-button (click)="onBack()" color="light">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  
+  </div>
+
+  <div class="main_content ion-padding">
+
+    <div class="header">
+      <h5>Personality Girl Event</h5>
+      <div class="price">
+        <ion-label><span>$100</span>$89</ion-label>
+      </div>
+    </div>
+
+    <h6>Time To Event</h6>
+
+    <div  class="text">
+      <ion-label><span>From :</span>7:30 AM - June 10,2020</ion-label>
+      <ion-label><span>To :</span>5:30 AM - June 10,2020</ion-label>
+    </div>
+   
+    <h6>Services Include</h6>
+
+    <ion-row class="services" *ngFor="let item of [1,2,3,4]">
+      <ion-col size="3">
+        <div class="img" [style.backgroundImage]="'url(assets/imgs/h1.jpg)'"></div>
+      </ion-col>
+      <ion-col size="9">
+        <h6>Hair Styling</h6>
+        <div class="sub_text">
+          <ion-label>45 Min</ion-label>
+          <span>:</span>
+          <ion-label class="price">$17.5</ion-label>
+        </div>
+        <ion-checkbox color="primary"></ion-checkbox>
+      </ion-col>
+    </ion-row>
+
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="onBook()" expand="block" shape="round" class="login-btn">
+      Booked Appointment
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

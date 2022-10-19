@@ -1,0 +1,182 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.title-name {
+    color: var(--ion-color-primary);
+    font-weight: bold;
+}
+.address {
+    font-size: 12px;
+}
+
+ion-toolbar {
+    ion-button {
+        ion-badge {
+            position: absolute;
+            opacity: 0.9;
+            top: 0px;
+            right: -10px;
+            & ~ ion-icon {
+                margin-right: 1.2rem;
+            }
+        }
+    }
+}
+
+.searbar {
+    ion-col {
+        --padding-start: 0px;
+        --padding-end: 0px;
+        padding: 0px;
+    }
+    ion-searchbar {
+        --padding-start: 0px;
+        --padding-end: 0px;
+        padding: 0px;
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px 0px;
+    ion-label {
+        font-size: 12px;
+    }
+}
+
+.sliders2 {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 10px 0px;
+
+    .categoryIcon {
+        text-align: center;
+        margin: 0px 5px;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        .imgs {
+            // border-radius: 10px;
+            height: 100px;
+            width: 100px;
+
+            .back_image {
+                height: 100px;
+                width: 100px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                background-position: top;
+            }
+        }
+
+        .icon {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+        }
+        .name {
+            color: black;
+            margin: 10px 0px;
+            font-size: 14px;
+            font-family: 'bold';
+        }
+        .kind{
+            color: black;
+            margin: 10px 0px;
+            font-size: 12px;
+        }
+    }
+}
+
+.slider_div {
+    .card {
+        margin-top: 15px;
+        width: 100%;
+        margin-right: 15px;
+
+        .back_image {
+            height: 130px;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 10px;
+            position: relative;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+
+            .time_lbl {
+                padding: 10px;
+                position: absolute;
+                background: white;
+                bottom: 15px;
+                right: 15px;
+                border-radius: 25px;
+                font-size: 12px;
+            }
+        }
+
+        .salon_detail_div {
+            border: 1px solid lightgray;
+            padding: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            position: relative;
+
+            .heading_lbl {
+                font-size: 15px;
+                display: block;
+                text-align: left;
+                font-family: "semi-bold";
+            }
+
+            .addr {
+                color: gray;
+                font-size: 13px;
+                text-align: left;
+                display: block;
+            }
+
+            .book_class {
+                background: var(--ion-color-primary);
+                color: white;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                padding: 5px;
+                font-size: 14px;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+
+            .price_rating {
+                display: flex;
+                height: 25px;
+                align-items: flex-start;
+
+                .rating {
+                    color: var(--ion-color-primary);
+                    font-size: 15px;
+                    margin-left: 10px;
+                }
+
+                .red_lbl {
+                    color: var(--ion-color-primary);
+                    font-size: 12px;
+                }
+                .small_lbl {
+                    font-size: 12px;
+                    color: black;
+                }
+            }
+        }
+    }
+}

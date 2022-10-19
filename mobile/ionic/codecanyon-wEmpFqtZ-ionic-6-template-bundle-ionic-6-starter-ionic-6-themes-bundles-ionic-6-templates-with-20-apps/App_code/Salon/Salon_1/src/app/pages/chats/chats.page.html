@@ -1,0 +1,61 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    <ion-button slot="start" fill="clear" (click)="goBack()" mode="ios">
+      <img src="assets/imgs/arrow_grey.png">
+    </ion-button>
+    <div class="user_flex">
+      <div class="bg_image user_image" [style.backgroundImage]="'url('+cover+')'"></div>
+      <div class="user_content">
+        <ion-label class="name_lbl"> {{name}} </ion-label>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollEvents]="true">
+
+  <div class="main_content_div">
+    <span *ngFor="let item of messages">
+
+      <div class="left_div" *ngIf="item.side =='right'">
+        <div class="inner_div">
+          <div class="msg_div" *ngIf="item.type == 'text'">
+            <ion-label>{{item.msg}}</ion-label>
+          </div>
+          <div class="bg_image img_div" *ngIf="item.type == 'img' " [style.backgroundImage]="'url('+ item.msg +')'">
+          </div>
+          <ion-label class="time_lbl">{{getTimestmap(item.time)}}</ion-label>
+        </div>
+      </div>
+
+      <div class="right_div" *ngIf="item.side == 'left'">
+        <div class="inner_div">
+          <div class="msg_div" *ngIf="item.type == 'text'">
+            <ion-label>{{item.msg}}</ion-label>
+          </div>
+          <div class="bg_image img_div" *ngIf="item.type == 'img' " [style.backgroundImage]="'url('+ item.msg +')'">
+          </div>
+          <ion-label class="time_lbl">{{getTimestmap(item.time)}}</ion-label>
+        </div>
+      </div>
+
+    </span>
+  </div>
+</ion-content>
+
+<ion-footer mode="md">
+  <div class="footer_div">
+    <img src="assets/imgs/attach_icn.png" style="margin-left: 0px;margin-right: 10px;" (click)="takeImage()">
+    <ion-textarea type="text" rows="1" placeholder="Type something...">
+    </ion-textarea>
+    <img src="assets/imgs/send_icn.png">
+  </div>
+</ion-footer>

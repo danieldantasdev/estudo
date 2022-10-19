@@ -1,0 +1,85 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-title>
+      <ion-label>Hi <span class="title-name">Rahul,</span> </ion-label> <br>
+      <ion-label class="address">
+        <ion-icon slot="start" name="location"></ion-icon> Bhavnagar 364270, Gujarat India
+      </ion-label>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+        <ion-badge color="primary" mode="ios">4</ion-badge>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-row class="searbar">
+    <ion-col size="10">
+      <ion-searchbar mode="ios" placeholder="Find a salon, specialists,..." inputmode="text" type="text">
+      </ion-searchbar>
+    </ion-col>
+    <ion-col size="2">
+      <ion-button fill="clear">
+        <ion-icon slot="icon-only" color="dark" name="filter-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <div class="header">
+    <ion-label>Best Specialist</ion-label>
+    <ion-label color="primary">View All >
+    </ion-label>
+  </div>
+
+  <div class="sliders2">
+    <div class="categoryIcon" (click)="goToBarberProfile()" *ngFor="let item of userList">
+      <div class="imgs">
+        <div class="back_image bg_image" [style.backgroundImage]="'url( assets/imgs/selfies.jpg )'"></div>
+      </div>
+      <p class="name">{{item.name}}</p>
+      <p class="kind">Hair Stylist</p>
+    </div>
+  </div>
+
+
+  <div class="header">
+    <ion-label>Special Offers</ion-label>
+    <ion-label color="primary">View All >
+    </ion-label>
+  </div>
+
+  <div class="slider_div">
+    <ion-slides [options]="slideOpts">
+
+      <ion-slide *ngFor="let item of salon">
+        <div class="card" (click)="openSalon()">
+          <div class="back_image" [style.backgroundImage]="'url( '+item.img+' )'">
+            <ion-label class="time_lbl">
+              <ion-icon name="star" color="warning"></ion-icon>
+              4.0
+            </ion-label>
+          </div>
+          <div class="salon_detail_div">
+            <ion-label class="heading_lbl">{{item.name}}</ion-label>
+            <ion-label class="addr">Eva Surbhi Complex</ion-label>
+            <ion-label class="book_class">Book</ion-label>
+          </div>
+
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+</ion-content>
