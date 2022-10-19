@@ -1,0 +1,34 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+    <ion-toolbar>
+        <ion-button fill="clear" slot="start" (click)="goBack()">
+            <ion-icon name="arrow-back"></ion-icon>
+        </ion-button>
+        <ion-title>Gallery</ion-title>
+        <ion-button fill="clear" slot="end">
+            <ion-icon name="share-social-sharp"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <ion-row>
+            <ion-col size="12" *ngFor="let item of (gallery | slice : 0 :1)">
+                <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="6" *ngFor="let item of (gallery | slice : 1)">
+                <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>

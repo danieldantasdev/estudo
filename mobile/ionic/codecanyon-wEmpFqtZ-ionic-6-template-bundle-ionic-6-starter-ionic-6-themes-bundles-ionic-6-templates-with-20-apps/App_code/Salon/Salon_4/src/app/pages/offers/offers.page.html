@@ -1,0 +1,42 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+    <ion-toolbar>
+        <ion-button fill="clear" slot="start" (click)="goBack()">
+            <ion-icon name="arrow-back"></ion-icon>
+        </ion-button>
+        <ion-title>Offers</ion-title>
+        <ion-button fill="clear" slot="end">
+            <ion-icon name="share-social-sharp"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="main_offer_div" *ngFor="let item of (services | slice :0 :4)">
+            <div class="offer_div">
+                <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                <div class="offer_detail">
+                    <ion-label class="name_lbl">Flat 30% off on bridal services</ion-label>
+                    <ion-label class="small_lbl">Coupon code</ion-label>
+                    <ion-label class="code_lbl">Beautyspa30bdl</ion-label>
+                </div>
+            </div>
+            <div class="detail_div">
+                <ion-label>Valid till 01 Feb 2022</ion-label>
+                <ion-label>Details
+                    <span><ion-icon name="chevron-down"></ion-icon></span>
+                </ion-label>
+            </div>
+        </div>
+
+    </div>
+</ion-content>

@@ -1,0 +1,50 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-tabs (ionTabsWillChange)="tabChange($event)">
+
+  <ion-tab-bar slot="bottom">
+
+    <ion-tab-button tab="featured">
+      <img src="assets/imgs/tabs/star_active.png" *ngIf="tabID == 'featured'">
+      <img src="assets/imgs/tabs/star_deactive.png" *ngIf="tabID !== 'featured'">
+      <ion-label>Featured</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="services">
+      <img src="assets/imgs/tabs/serv_active.png" *ngIf="tabID == 'services'">
+      <img src="assets/imgs/tabs/serv_deactive.png" *ngIf="tabID !== 'services'">
+      <ion-label>Services</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="book-appointment">
+
+    </ion-tab-button>
+
+    <ion-tab-button tab="products">
+      <img src="assets/imgs/tabs/pro_active.png" *ngIf="tabID == 'products'">
+      <img src="assets/imgs/tabs/pro_deactive.png" *ngIf="tabID !== 'products'">
+      <ion-label>Products</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="more">
+      <img src="assets/imgs/tabs/more_active.png" *ngIf="tabID == 'more'">
+      <img src="assets/imgs/tabs/more_deactive.png" *ngIf="tabID !== 'more'">
+      <ion-label>More</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed" (click)="onClick()">
+    <ion-fab-button>
+      <img src="assets/imgs/tabs/check.png" style="width: 30px;" *ngIf="tabID == 'book-appointment'">
+      <img src="assets/imgs/tabs/add2.png" style="width: 30px;" *ngIf="tabID !== 'book-appointment'">
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-tabs>

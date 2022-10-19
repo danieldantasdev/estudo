@@ -1,0 +1,63 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="slider_div">
+            <ion-slides mode="ios" pager="ios">
+                <ion-slide *ngFor="let item of features">
+                    <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'">
+                        <div class="overlay">
+                            <ion-label>Flat 30% discount of {{item.name}}</ion-label>
+                        </div>
+                    </div>
+                </ion-slide>
+            </ion-slides>
+        </div>
+
+        <div class="content_div">
+
+            <div class="flex_div">
+                <ion-label class="bold_lbl">Featured Services</ion-label>
+                <ion-label class="view_lbl">View All</ion-label>
+            </div>
+
+            <div class="service_slider">
+                  <div class="single_slider" *ngFor="let item of services">
+                      <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                      <div class="slide_flex">
+                          <ion-label>Herbal facial</ion-label>
+                          <div class="btn_div">
+                              <span>$15</span>$12
+                          </div>
+                      </div>
+                  </div>
+            </div>
+
+            <div class="flex_div">
+                <ion-label class="bold_lbl">Featured Products</ion-label>
+                <ion-label class="view_lbl">View All</ion-label>
+            </div>
+
+            <div class="service_slider">
+                <div class="single_slider single_slider2" *ngFor="let item of products">
+                    <div class="bg_image back_image" style="background-size: contain;" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                    <div class="slide_flex">
+                        <ion-label style="font-size: 14px;">Herbal facial</ion-label>
+                        <div class="btn_div">
+                            <span>$15</span>$12
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</ion-content>

@@ -1,0 +1,78 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+    <ion-toolbar>
+        <ion-title>Book Appointment</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="title_flex">
+            <ion-label class="bold_lbl">Choose Date & Time</ion-label>
+            <ion-label>{{month}}</ion-label>
+        </div>
+
+        <div class="white_div">
+            <ion-slides #slideDate>
+                <ion-slide>
+                    <ion-row class="row_cal">
+                        <ion-col size="0.75" (click)="previousWeek()">
+                            <ion-icon name="arrow-back-outline" mode="md" class="icon_change center_item"
+                                *ngIf="currentWeek !== 0">
+                            </ion-icon>
+                        </ion-col>
+                        <ion-col *ngFor="let day of days" [class.disabled]="initDate.split('T')[0] > day.val.split('T')"
+                              size="1.5" [class.img_select_date] = "day.val.split('T')[0] === selectedDate"
+                              (click)="selectDate(day)">
+                              <ion-label class="lbl_day"
+                                  [class.selectedDay]="day.val.split('T')[0] === selectedDate">{{ day.day }}
+                              </ion-label>
+                            <ion-label class="lbl_date"
+                                [class.selectedDate]="day.val.split('T')[0] === selectedDate">{{ day.date }}
+                            </ion-label>
+                            <!-- <img src="assets/imgs/pills.png" class="img_select_date"
+                                *ngIf="day.val.split('T')[0] === selectedDate "/>
+                            -->
+                        </ion-col>
+                        <ion-col size="0.75" (click)="nextWeek()">
+                            <ion-icon name="arrow-forward-outline" mode="md" class="icon_change center_item"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+                </ion-slide>
+            </ion-slides>
+        </div>
+
+        <div class="slot_container">
+            <div [class.active]="activeSlot == i" *ngFor="let item of slots; let i = index" (click)="activeSlot = i">
+                <ion-label>{{item}}</ion-label>
+            </div>
+        </div>
+
+        <div class="title_flex">
+            <ion-label class="bold_lbl">Added Services</ion-label>
+            <div class="box_div">
+                <img src="assets/imgs/woman.png">
+            </div>
+        </div>
+        <div class="service_list">
+            <div class="service_div" *ngFor="let item of (services| slice: 0: 3)">
+                <div class="inner_flex">
+                    <div class="bg_image back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                    <ion-label>{{item.name}}</ion-label>
+                </div>
+                <div class="action_div">
+                    <ion-icon name="remove"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</ion-content>

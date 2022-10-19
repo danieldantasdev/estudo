@@ -1,0 +1,43 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+    <ion-toolbar>
+        <ion-title>Products</ion-title>
+        <ion-button fill="clear" slot="end">
+            <ion-icon name="search"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-segment value="sort" (ionChange)="segmentChanged($event)" mode="md">
+        <ion-segment-button value="sort">
+          <ion-label>Sort By</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="filter">
+          <ion-label>Filter By</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+    <div class="main_content_div">
+        <ion-row>
+            <ion-col size="6" [class.left]="i%2==1" [class.right]="i%2==0" *ngFor="let item of products; let i = index">
+                <div class="col_div">
+                    <div class="bg_image image_div" [style.backgroundImage]="'url('+ item.img +')'">
+                        <!-- <img [src]="item.img"> -->
+                    </div>
+                    <ion-label class="simp_lbl">Lorem ipsum dolor</ion-label>
+                    <div class="btn">
+                        <span>$20.00</span>
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>

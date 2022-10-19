@@ -1,0 +1,60 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar></ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <img src="assets/imgs/logo.png" class="logo_img">
+
+    <ion-label class="logo_text">Natural Beauty</ion-label>
+
+    <ion-label class="ip_lbl">Email-ID</ion-label>
+    <ion-input type="text" placeholder="Email ID" [(ngModel)]="email"></ion-input>
+
+    <ion-label class="ip_lbl">Password</ion-label>
+    <ion-input type="text" placeholder="Password" [(ngModel)]="password"></ion-input>
+
+    <ion-button expand="block" mode="ios" class="block_btn" (click)="goToTabs()">
+      Login
+    </ion-button>
+
+    <div class="or_flex_div">
+      <div class="line_div"></div>
+      <ion-label>OR WITH</ion-label>
+      <div class="line_div"></div>
+    </div>
+
+    <div class="btn_flex">
+      <div class="btn_div fb_btn">
+        <div class="img_box" style="background: #3c5b9a;">
+          <img src="assets/imgs/fb.png">
+        </div>
+        <ion-label>Facebook</ion-label>
+      </div>
+
+      <div style="width: 16px;"></div>
+
+      <div class="btn_div gp_btn">
+        <div class="img_box" style="background: #f53f3e;">
+          <img src="assets/imgs/gp.png">
+        </div>
+        <ion-label>Google</ion-label>
+      </div>
+    </div>
+
+  </div>
+</ion-content>
+<ion-footer>
+  <div class="footer_div">
+    <ion-label>Don't have an account? <span (click)="goToRegister()">Register</span> </ion-label>
+  </div>
+</ion-footer>

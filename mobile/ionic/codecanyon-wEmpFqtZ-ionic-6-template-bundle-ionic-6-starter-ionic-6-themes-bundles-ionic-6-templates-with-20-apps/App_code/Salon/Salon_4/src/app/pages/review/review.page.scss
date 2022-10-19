@@ -1,0 +1,94 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-content {
+  --background: #d3d3d3;
+}
+.main_content_div {
+  .add_review {
+    background: white;
+
+    ion-textarea {
+      padding: 16px;
+    }
+
+    .rate_div {
+      background: #f7f7f7;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+
+      .rate_flex {
+        display: flex;
+        align-items: center;
+
+        ion-icon {
+          color: var(--ion-color-primary);
+          margin-right: 5px;
+          font-size: 20px;
+        }
+        ion-label {
+          font-family: "medium";
+          font-size: 20px;
+          margin-left: 16px;
+          color: var(--ion-color-primary);
+        }
+      }
+      .plane_icn {
+        color: var(--ion-color-primary);
+        font-size: 20px;
+      }
+    }
+  }
+
+  .content_div {
+    padding: 16px;
+
+    .review_div {
+      background: white;
+      border-radius: 5px;
+      padding: 16px;
+      margin-bottom: 16px;
+      display: flex;
+
+      .back_image {
+        height: 50px;
+        width: 50px;
+        min-width: 50px;
+        border-radius: 100%;
+      }
+      .review_detail {
+        padding-left: 16px;
+        width: 100%;
+
+        .user_detail {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 8px;
+
+          ion-label {
+            font-family: "medium";
+            font-size: 18px;
+          }
+
+          ion-icon {
+            color: var(--ion-color-primary);
+            font-size: 14px;
+            margin-left: 3px;
+          }
+        }
+        .review_content {
+          font-size: 14px;
+          color: grey;
+        }
+      }
+    }
+  }
+}
