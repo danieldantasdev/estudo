@@ -1,0 +1,65 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-header mode="md" class="ion-no-border">
+        <ion-toolbar></ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <div class="menu_content">
+          <div class="user_detail">
+            <div>
+              <ion-label class="name_lbl">Jonh Doe</ion-label>
+              <ion-label class="no_lbl">9876543212</ion-label>
+            </div>
+            <ion-icon name="close" (click)="close()"></ion-icon>
+          </div>
+
+
+          <ion-menu-toggle auto-hide="false">
+            <div class="flex_div" (click)="goToProfile()">
+              <ion-icon name="person-circle-outline"></ion-icon>
+              <ion-label>Profile</ion-label>
+            </div>
+            <div class="flex_div" (click)="openPayment()">
+              <ion-icon name="wallet-outline"></ion-icon>
+              <ion-label>Payment</ion-label>
+            </div>
+            <div class="flex_div" (click)="openBookLater()">
+              <ion-icon name="calendar-outline"></ion-icon>
+              <ion-label>Book Later</ion-label>
+            </div>
+            <div class="flex_div" (click)="goToMyTrips()">
+              <ion-icon name="location-outline"></ion-icon>
+              <ion-label>My Trips</ion-label>
+            </div>
+            <div class="flex_div" (click)="goToRateCard()">
+              <ion-icon name="star-outline"></ion-icon>
+              <ion-label>Rate Card</ion-label>
+            </div>
+            <div class="flex_div" (click)="goToNews()">
+              <ion-icon name="gift-outline"></ion-icon>
+              <ion-label>News and Offes</ion-label>
+            </div>
+            <div class="flex_div" (click)="openContacts()">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+              <ion-label>Emergency Contacts</ion-label>
+            </div>
+            <div class="flex_div">
+              <ion-icon name="call-outline"></ion-icon>
+              <ion-label>Help and Support</ion-label>
+            </div>
+          </ion-menu-toggle>
+        </div>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

@@ -1,0 +1,170 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+    font-family: 'regular';
+    src: url(assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'medium';
+    src: url(assets/fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'semi-bold';
+    src: url(assets/fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'bold';
+    src: url(assets/fonts/Poppins-Bold.ttf);
+}
+
+* {
+    font-family: 'regular';
+}
+
+ion-label {
+    display: block;
+}
+
+.block_btn {
+    margin: 0px;
+    font-family: 'medium';
+    letter-spacing: 0.5px;
+    font-size: 16px;
+    height: 48px;
+    color: black;
+    text-transform: capitalize;
+}
+
+ion-toolbar {
+    --background: white;
+}
+
+ion-title {
+    font-size: 18px;
+    font-weight: normal;
+    font-family: 'medium';
+}
+
+ion-modal.delete_modal {
+    --height: 170px;
+    align-items: flex-end;
+    --border-radius: 15px 15px 0px 0px;
+    .modal-wrapper {
+        width: 100% !important;
+    }
+}
+
+ion-modal.payment_modal {
+    --height: 196px;
+    align-items: flex-start;
+    --border-radius: 0px 0px 15px 15px;
+    .modal-wrapper {
+        width: 100% !important;
+    }
+}
+
+ion-modal.promo_modal {
+    --height: 260px;
+    align-items: flex-start;
+    --border-radius: 0px 0px 15px 15px;
+    .modal-wrapper {
+        width: 100% !important;
+    }
+}
+
+ion-modal.fare_modal {
+    --height: 270px;
+    align-items: flex-end;
+    --border-radius: 15px 15px 0px 0px;
+    .modal-wrapper {
+        width: 100% !important;
+    }
+}
+
+ion-modal.driver_modal {
+    --height: 80%;
+    align-items: flex-end;
+    --border-radius: 15px 15px 0px 0px;
+    .modal-wrapper {
+        width: 100% !important;
+    }
+}
+
+ion-modal.modal-default:not(.overlay-hidden) ~ ion-modal.modal-default {
+    --backdrop-opacity: var(--ion-backdrop-opacity, 0.4);
+}
+
+.welcome_page {
+    padding: 16px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    .bold_lbl {
+        font-family: 'medium';
+        font-size: 18px;
+    }
+    .small_lbl {
+        color: grey;
+        margin-bottom: 20px;
+    }
+    .ip_input {
+        font-family: 'regular';
+        border: 1px solid lightgrey;
+        border-radius: 8px;
+        --padding-start: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+.otp-input {
+    width: 80px !important;
+    height: 50px !important;
+    border: 1px solid lightgrey !important;
+    font-size: 24px !important;
+    font-family: 'medium';
+}
+
+.otp-input:not(:last-child) {
+    margin-right: 12px !important;
+}
+
+.otp-input:focus-visible {
+    outline: none !important;
+}

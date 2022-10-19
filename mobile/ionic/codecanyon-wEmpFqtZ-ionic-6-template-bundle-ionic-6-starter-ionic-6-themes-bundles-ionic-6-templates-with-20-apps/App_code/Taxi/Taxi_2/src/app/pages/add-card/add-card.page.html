@@ -1,0 +1,44 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar></ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="flex_title">
+      <ion-label>Add card</ion-label>
+      <ion-icon name="close" (click)="close()"></ion-icon>
+    </div>
+
+    <ion-input type="text" placeholder="Card Holder Name"></ion-input>
+
+    <ion-input type="text" placeholder="Card Number"></ion-input>
+
+    <ion-row>
+      <ion-col size="3" style="padding-left: 0px;">
+        <ion-input type="text" placeholder="day"></ion-input>
+      </ion-col>
+      <ion-col size="3">
+        <ion-input type="text" placeholder="Month"></ion-input>
+      </ion-col>
+      <ion-col size="6" style="padding-right: 0px;">
+        <ion-input type="text" placeholder="CVC"></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <div class="flex_div">
+      <ion-fab-button>
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-fab-button>
+    </div>
+
+  </div>
+</ion-content>
