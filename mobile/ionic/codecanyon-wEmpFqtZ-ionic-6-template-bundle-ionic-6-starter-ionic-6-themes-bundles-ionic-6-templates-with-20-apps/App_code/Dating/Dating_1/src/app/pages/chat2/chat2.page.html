@@ -1,0 +1,75 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+
+  <div class="title">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()" color="dark">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-label>Chat</ion-label>
+  </div>
+
+  <ion-segment value="1" mode="md" color="danger" [(ngModel)]="current">
+    <ion-segment-button value="1">
+      <ion-label>Recent Chat</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="2">
+      <ion-label>Active</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div class="searchbar">
+    <ion-input type="text" placeholder="Search for Partner.."></ion-input>
+    <ion-icon name="search"></ion-icon>
+  </div>
+
+  <div *ngIf="current == 1">
+    <ion-row (click)="onMsg()" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+      <ion-col size="2">
+        <ion-thumbnail>
+          <img src="assets/images/p4.jpg" />
+          <ion-icon name="ellipse" color="success"></ion-icon>
+        </ion-thumbnail>
+      </ion-col>
+      <ion-col size="7">
+        <h6>Darien Don</h6>
+        <ion-label>Great! do you love it..</ion-label>
+      </ion-col>
+      <ion-col size="3">
+        <ion-label>30 mins</ion-label>
+        <ion-buttons>
+          <ion-button color="light">
+            5
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div *ngIf="current == 2">
+    <ion-row (click)="onMsg()" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+      <ion-col size="2">
+        <ion-thumbnail>
+          <img src="assets/images/p5.jpg" />
+          <ion-icon name="ellipse" color="success"></ion-icon>
+        </ion-thumbnail>
+      </ion-col>
+      <ion-col size="7">
+        <h6>Darien Don</h6>
+        <ion-label>Great! do you love it..</ion-label>
+      </ion-col>
+      <ion-col size="3">
+        <ion-label>Active Now</ion-label>
+      </ion-col>
+    </ion-row>
+  </div>
+
+</ion-content>

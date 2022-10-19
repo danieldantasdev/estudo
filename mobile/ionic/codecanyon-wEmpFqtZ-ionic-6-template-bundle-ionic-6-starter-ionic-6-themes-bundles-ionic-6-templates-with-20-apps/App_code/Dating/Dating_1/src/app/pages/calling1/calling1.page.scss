@@ -1,0 +1,134 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  h5 {
+    font-size: 25px;
+  }
+  h6 {
+    margin: 0px;
+    font-size: 20px;
+    color: #f32879;
+  }
+}
+
+.buttons {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    ion-buttons {
+      margin: 10px;
+      ion-button {
+        height: 60px;
+        width: 60px;
+        --border-radius: 50%;
+        --background: #ffff;
+      }
+    }
+  }
+}
+
+.ripple-container {
+  position: relative;
+  width: 95px;
+  height: 95px;
+}
+.rounded_img {
+  background: white !important;
+  border: 0px !important;
+  border-radius: 50%;
+}
+.ripple-trigger {
+  position: absolute;
+  z-index: 9;
+  transition: transform 250ms ease-out;
+  animation: beating 2s infinite ease-out;
+  &:active {
+    transform: scale3d(1.2, 1.2, 1);
+  }
+}
+.ripple-1,
+.ripple-2 {
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  left: 2px;
+  width: 92px;
+  height: 92px;
+  border-radius: 999em;
+  background-color: var(--ion-color-tertiary);
+  border: solid 1px var(--ion-color-tertiary);
+  animation: rippling 2s infinite ease-out;
+}
+.ripple-2 {
+  animation-delay: 350ms;
+}
+@keyframes beating {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  10% {
+    transform: scale3d(1.2, 1.2, 1);
+  }
+  20% {
+    transform: scale3d(0.95, 0.95, 1);
+  }
+  30% {
+    transform: scale3d(1.05, 1.05, 1);
+  }
+  40% {
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes rippling {
+  0% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(5, 5, 1);
+  }
+}
+
+.center_div {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 320px) {
+  .buttons {
+    .btn {
+      ion-buttons {
+        ion-button {
+          height: 30px;
+          width: 30px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+
+  <div class="img" [style.backgroundImage]="'url(assets/images/p4.jpg)'">
+    <div class="text ion-padding">
+      <ion-buttons slot="start">
+        <ion-button (click)="onMenu()" color="light">
+          <ion-icon slot="start" name="chevron-down"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+
+    <div class="title">
+      <h5>Anny Kitty</h5>
+      <h6>Calling...</h6>
+    </div>
+  </div>
+
+  <div class="buttons">
+    <div class="btn">
+      <ion-buttons>
+        <ion-button (click)="onClick()">
+          <ion-icon name="camera-reverse" color="light"></ion-icon>
+        </ion-button>
+        Flip
+      </ion-buttons>
+      <ion-buttons>
+        <ion-button (click)="onClick()">
+          <ion-icon name="videocam-off" color="light"></ion-icon>
+        </ion-button>
+        Stop Video
+      </ion-buttons>
+      <ion-buttons>
+        <ion-button (click)="onClick()">
+          <ion-icon name="mic-off" color="light"></ion-icon>
+        </ion-button>
+        Mute
+      </ion-buttons>
+      <ion-buttons>
+        <ion-button (click)="onClick()">
+          <ion-icon name="call" color="light"></ion-icon>
+        </ion-button>
+        End Call
+      </ion-buttons>
+    </div>
+  </div>
+
+</ion-content>

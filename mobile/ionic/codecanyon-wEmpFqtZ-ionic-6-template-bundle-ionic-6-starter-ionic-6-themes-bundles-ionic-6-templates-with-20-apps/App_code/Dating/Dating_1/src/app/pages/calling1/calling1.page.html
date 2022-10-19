@@ -1,0 +1,54 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+
+  <div class="center_div">
+    <div class="ripple-container">
+      <div class="thumb-lg ripple-trigger">
+        <img
+        src="assets/images/p2.jpg"
+          onError="this.src='assets/images/p2.jpg'" style="height:100px;width: 100px"
+          class="rounded_img b b-2x box-shadow">
+      </div>
+      <div class="ripple-1"></div>
+      <div class="ripple-2"></div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h5>Jhon Smith</h5>
+    <h6>25:14</h6>
+  </div>
+
+  <div class="buttons">
+    <div class="btn">
+      <ion-buttons>
+        <ion-button (click)="onCancle()" style="--background: linear-gradient(#ff80b3,#f32879);">
+          <ion-icon name="close" color="light"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons>
+        <ion-button (click)="onMsg()">
+          <ion-icon name="chatbox-ellipses" color="success"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons>
+        <ion-button (click)="onMute()">
+          <ion-icon name="volume-high" color="tertiary"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons>
+        <ion-button (click)="onAdd()">
+          <ion-icon name="person-add" color="warning"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </div>
+
+</ion-content>

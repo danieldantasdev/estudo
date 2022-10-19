@@ -1,0 +1,82 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+
+  <div class="title">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()" color="dark">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-label>Rahul jograna</ion-label>
+  </div>
+
+  <div class="conversation">
+    <div class="first-selection">
+     <div class="your-massage">
+       hii !
+     </div>
+     <ion-label>8:25 AM</ion-label>
+    </div>
+
+    <div class="second-massage">
+      <div class="other-massage">
+        hello ?
+      </div>
+     <ion-label>8:27 AM <ion-icon name="checkmark-done-sharp" color="success"></ion-icon></ion-label>
+    </div>
+
+    <div class="first-selection">
+      <div class="your-massage">
+        how are you ?
+      </div>
+     <ion-label>8:28 AM</ion-label>
+     </div>
+
+     <div class="second-massage">
+      <div class="other-massage">
+        fine
+      </div>
+     <ion-label>8:27 AM <ion-icon name="checkmark-done-sharp" color="success"></ion-icon></ion-label>
+    </div>
+  </div>
+
+  <div class="footer" slot="fixed">
+    <ion-item lines="none">
+      <ion-input type="text" placeholder="Type something.."></ion-input>
+      <ion-buttons slot="end">
+        <ion-button (click)="onSend()" color="danger">
+          <ion-icon name="send-sharp"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+    <ion-fab>
+      <ion-fab-button color="dark">
+        <ion-icon md="caret-up" ios="add"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button color="light">
+          <ion-icon name="close-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="light">
+          <ion-icon name="mic"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="light">
+          <ion-icon name="camera"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="light">
+          <ion-icon name="link-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+  </div>
+
+</ion-content>
+
+
