@@ -1,0 +1,225 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+  <div class="upper_div">
+    <div class="bg_image" [style.backgroundImage]="'url(assets/images/salon.webp)'"></div>
+
+    <div class="buttons">
+      <div class="btn">
+
+        <ion-buttons slot="start">
+          <ion-button (click)="goBackSalonDetail()">
+            <ion-icon name="arrow-back-outline" color="light"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+
+        <ion-buttons slot="end">
+          <ion-button (click)="onClick()">
+            <ion-icon name="heart-outline" color="light"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+    </div>
+  </div>
+
+  <div class="main_content">
+    <div class="content_div ion-padding">
+      <div class="intro_div">
+        <div class="bg_image" [style.backgroundImage]="'url(assets/images/g1.jpg)'"></div>
+        <div class="about">
+          <ion-label class="name">Kathryn Murphy</ion-label>
+          <ion-label class="from">Hair stylist at <span>Bella Rinova</span></ion-label>
+          <div class="review">
+            <ion-icon name="star" color="warning"></ion-icon>
+            <ion-icon name="star" color="warning"></ion-icon>
+            <ion-icon name="star" color="warning"></ion-icon>
+            <ion-icon name="star" color="warning"></ion-icon>
+            <ion-icon name="star" color="medium"></ion-icon>
+            <ion-label color="medium" class="rat_lbl">(25 reviews)</ion-label>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact">
+        <div class="info_div" (click)="goToMessage()">
+          <ion-icon name="chatbubble-outline"></ion-icon>
+          <ion-label>Chat</ion-label>
+        </div>
+        <div class="info_div" (click)="goToCall()">
+          <ion-icon name="call-outline"></ion-icon>
+          <ion-label>Call</ion-label>
+        </div>
+        <div class="info_div">
+          <ion-icon name="videocam-outline"></ion-icon>
+          <ion-label>Video</ion-label>
+        </div>
+        <div class="info_div">
+          <ion-button (click)="onClick()">
+            Book
+          </ion-button>
+        </div>
+      </div>
+
+      <ion-label class="info_lbl">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s.... <span>Readmore</span>
+      </ion-label>
+
+      <div class="segment_div">
+        <ion-segment [(ngModel)]="selectTabs" mode="ios">
+          <ion-segment-button value="gallery">
+            <ion-label>Gallery</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="portfolio">
+            <ion-label>Portfolio</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="review">
+            <ion-label>Review</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+
+      <div class="gallery" *ngIf="selectTabs == 'gallery'">
+        <ion-grid fixed>
+
+          <ion-row>
+            <ion-col size="8">
+              <div class="bg_img" [style.backgroundImage]="'url(assets/images/g1.jpg)'"></div>
+            </ion-col>
+            <ion-col size="4" class="second_col">
+              <div class="bg_img" [style.backgroundImage]="'url(assets/images/g2.jpg)'"></div>
+            </ion-col>
+          </ion-row>
+          <ion-row class="middel_content" *ngFor="let item of [1,2]">
+            <ion-col size="6">
+              <div class="bg_img" [style.backgroundImage]="'url(assets/images/g2.jpg)'"></div>
+            </ion-col>
+            <ion-col size="6">
+              <div class="bg_img" [style.backgroundImage]="'url(assets/images/g1.jpg)'"></div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4" class="second_col">
+              <ion-row>
+                <ion-col size="12">
+                  <div class="bg_img" [style.backgroundImage]="'url(assets/images/g2.jpg)'"></div>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="12">
+                  <div class="bg_img" [style.backgroundImage]="'url(assets/images/g1.jpg)'"></div>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+            <ion-col size="8">
+              <div class="bg_img" [style.backgroundImage]="'url(assets/images/g1.jpg)'"></div>
+            </ion-col>
+          </ion-row>
+          <ion-row class="middel_content" *ngFor="let item of [1,2]">
+            <ion-col size="8">
+              <div class="bg_img" [style.backgroundImage]="'url(assets/images/g2.jpg)'"></div>
+            </ion-col>
+            <ion-col size="4">
+              <div class="bg_img" [style.backgroundImage]="'url(assets/images/g1.jpg)'"></div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+
+      <div class="review" *ngIf="selectTabs == 'review'">
+        <div class="upper_div">
+          <div>
+            <ion-label class="review_lbl">All Reviews</ion-label>
+          </div>
+          <div>
+            <ion-icon name="star" color="warning"></ion-icon>
+            <ion-icon name="star" color="warning"></ion-icon>
+            <ion-icon name="star" color="warning"></ion-icon>
+            <ion-icon name="star" color="warning"></ion-icon>
+            <ion-icon name="star" color="medium"></ion-icon>
+          </div>
+        </div>
+
+        <div class="read_review">
+          <div class="bg_image" [style.backgroundImage]="'url(assets/images/men.jpg)'"></div>
+          <div class="inside">
+            <div class="start_div">
+              <ion-label class="name_lbl">Hardik Gohil</ion-label>
+              <div>
+                <ion-icon name="star" color="warning"></ion-icon>
+                <ion-icon name="star" color="warning"></ion-icon>
+                <ion-icon name="star" color="medium"></ion-icon>
+                <ion-icon name="star" color="medium"></ion-icon>
+                <ion-icon name="star" color="medium"></ion-icon>
+              </div>
+            </div>
+            <div class="end_div">
+              <ion-label class="time_lbl">2 days ago</ion-label>
+            </div>
+          </div>
+        </div>
+
+        <ion-label class="write_lbl">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+        </ion-label>
+
+        <div class="review_img">
+          <div class="bg_image" [style.backgroundImage]="'url(assets/images/g1.jpg)'">
+          </div>
+          <div class="bg_image" [style.backgroundImage]="'url(assets/images/g1.jpg)'">
+          </div>
+        </div>
+
+        <div class="reply">
+          <div class="from_div">
+            <ion-label class="from_lbl">Bella Rinova</ion-label>
+            <ion-label class="time_lbl">2 days ago</ion-label>
+          </div>
+          <ion-label class="msg_lbl">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been
+          </ion-label>
+        </div>
+
+        <ion-label class="head_lbl">All reviews (76)</ion-label>
+
+        <div class="all_reviews" *ngFor="let item of [1,2,3,4,5]">
+          <div class="read_review">
+            <div class="bg_image" [style.backgroundImage]="'url(assets/images/men.jpg)'"></div>
+            <div class="inside">
+              <div class="start_div">
+                <ion-label class="name_lbl">Hardik Gohil</ion-label>
+                <div>
+                  <ion-icon name="star" color="warning"></ion-icon>
+                  <ion-icon name="star" color="warning"></ion-icon>
+                  <ion-icon name="star" color="warning"></ion-icon>
+                  <ion-icon name="star" color="warning"></ion-icon>
+                  <ion-icon name="star" color="warning"></ion-icon>
+                </div>
+              </div>
+              <div class="end_div">
+                <ion-label class="time_lbl">2 days ago</ion-label>
+              </div>
+            </div>
+          </div>
+          <ion-label class="read_cmnt">
+            The people working here are just so nice and helpful and make you feel so comfortable!
+          </ion-label>
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+</ion-content>

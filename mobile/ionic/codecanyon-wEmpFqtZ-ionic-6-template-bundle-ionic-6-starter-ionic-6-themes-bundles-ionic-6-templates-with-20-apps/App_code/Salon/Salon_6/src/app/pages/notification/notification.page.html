@@ -1,0 +1,56 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title color="dark">Notifications</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onBack()">
+        <ion-icon slot="start" name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <div class="flex_div">
+    <div>
+      <ion-label class="mark_lbl">Mark all as read</ion-label>
+    </div>
+    <div class="check">
+      <ion-label class="lable">Do not disturb</ion-label>
+      <ion-toggle></ion-toggle>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="main_div">
+    <div class="content">
+      <div class="first_div">
+        <span class="point active"></span>
+      </div>
+
+      <div class="text_div">
+        <ion-label class="text_lbl">You have an <strong>appointment</strong> at the Galleria hair saloon at 08:00 pm today</ion-label>
+      </div>
+    </div>
+    <ion-label class="time_lbl">Just now</ion-label>
+  </div>
+
+  <div class="main_div" *ngFor="let item of [1,2,3,4,5,6]">
+    <div class="content">
+      <div class="first_div">
+        <span class="point"></span>
+      </div>
+
+      <div class="text_div">
+        <ion-label class="text_lbl">You have an <strong>appointment</strong> at the Galleria hair saloon at 08:00 pm today</ion-label>
+      </div>
+    </div>
+    <ion-label class="time_lbl">2 days ago</ion-label>
+  </div>
+
+</ion-content>

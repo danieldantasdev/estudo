@@ -1,0 +1,93 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+  <div class="segment">
+    <div class="category_div">
+      <div class="menu">
+        <ion-segment [(ngModel)]="selectTabs">
+          <ion-segment-button value="man">
+            <ion-label>Man</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="woman">
+            <ion-label>Woman</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+        <ion-buttons slot="end">
+          <ion-button (click)="goBackService()">
+            <ion-icon name="close-outline" color="dark"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+    </div>
+  </div>
+
+<div *ngIf="selectTabs == 'man'">
+  <div class="select selected">
+    <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/men.jpg)'"></div>
+    <div class="info">
+      <ion-label class="name_lbl">Temple fade</ion-label>
+      <ion-label class="simp_lbl">1030 Booked</ion-label>
+      <ion-label class="price_lbl">$5.00</ion-label>
+    </div>
+    <div class="btn">
+      <ion-checkbox checked></ion-checkbox>
+    </div>
+  </div>
+
+  <div class="select" *ngFor="let item of [1,2,3,4,5]">
+    <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/men.jpg)'"></div>
+    <div class="info">
+      <ion-label class="name_lbl">Temple fade</ion-label>
+      <ion-label class="simp_lbl">1030 Booked</ion-label>
+      <ion-label class="price_lbl">$5.00</ion-label>
+    </div>
+    <div class="btn">
+      <ion-checkbox></ion-checkbox>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="selectTabs == 'woman'">
+  <div class="select selected">
+    <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/salon.webp)'"></div>
+    <div class="info">
+      <ion-label class="name_lbl">Temple fade</ion-label>
+      <ion-label class="simp_lbl">1030 Booked</ion-label>
+      <ion-label class="price_lbl">$5.00</ion-label>
+    </div>
+    <div class="btn">
+      <ion-checkbox checked></ion-checkbox>
+    </div>
+  </div>
+
+  <div class="select" *ngFor="let item of [1,2,3,4,5]">
+    <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/salon.webp)'"></div>
+    <div class="info">
+      <ion-label class="name_lbl">Temple fade</ion-label>
+      <ion-label class="simp_lbl">1030 Booked</ion-label>
+      <ion-label class="price_lbl">$5.00</ion-label>
+    </div>
+    <div class="btn">
+      <ion-checkbox></ion-checkbox>
+    </div>
+  </div>
+</div>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="footer" >
+      <ion-button (click)="goBackService()" expand="block">
+        Done
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>

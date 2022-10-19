@@ -1,0 +1,63 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header >
+  <ion-toolbar>
+    <div class="location">
+      <ion-icon slot="start" name="location-outline"></ion-icon>
+      <ion-label>6391 Elgin St. Celina Delaware 10299</ion-label>
+    </div>
+
+    <div class="search_bar">
+      <ion-item  lines="none">
+        <ion-icon slot="start" name="search-outline"></ion-icon>
+        <ion-input type="text" placeholder="Search by salons"></ion-input>
+        <ion-icon slot="end" name="options-outline" (click)="goToFilter()"></ion-icon>
+      </ion-item>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div #map id="map" class="map"></div>
+
+  <div class="category_div">
+    <div class="menu">
+      <div class="item" *ngFor="let item of [1,2,3,4]">
+
+        <div class="shop">
+          <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/salon.webp)'"></div>
+          <div class="shop_detail">
+
+            <ion-label class="name">Green Apple</ion-label>
+
+            <ion-label class="sub_lbl">6391 Elgin St. Celina,Dela...</ion-label>
+
+            <div class="rate">
+              <div>
+                <ion-icon name="star" color="warning"></ion-icon>
+                <ion-icon name="star" color="warning"></ion-icon>
+                <ion-icon name="star" color="warning"></ion-icon>
+                <ion-icon name="star" color="warning"></ion-icon>
+              </div>
+
+              <div class="distance">
+                <ion-icon name="location-outline"></ion-icon>
+                <ion-label class="dis_lbl">5 km</ion-label>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
+

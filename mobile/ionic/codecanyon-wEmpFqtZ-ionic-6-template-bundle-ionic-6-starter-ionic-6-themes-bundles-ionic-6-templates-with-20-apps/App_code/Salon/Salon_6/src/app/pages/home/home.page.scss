@@ -1,0 +1,209 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.main_content_div {
+  width: 100%;
+  padding-top: 40px;
+  .upper_div {
+    ion-item {
+      --padding-start: 0;
+
+      ion-thumbnail {
+        height: 36px;
+        width: 36px;
+
+        img {
+          border-radius: 10px;
+        }
+      }
+
+      ion-buttons {
+        ion-button {
+          border: 1px solid lightgrey;
+          border-radius: 10px;
+
+          ion-icon {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .name_div {
+    .name_lbl {
+      margin-top: 20px;
+      font-size: 22px;
+      font-family: "bold";
+    }
+
+    .location {
+      display: flex;
+      align-items: center;
+
+      ion-label {
+        margin-left: 5px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .search_bar {
+    margin-top: 20px;
+
+    ion-item {
+      --background: #f4f5f8;
+      --border-radius: 10px;
+      ion-input {
+        margin: 10px 0;
+      }
+
+      ion-icon {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .appoinment {
+    .flex_div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 32px;
+
+      .start {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .end {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+
+    ion-item {
+      margin-top: 1rem;
+      --background: var(--ion-color-primary);
+      border-radius: 10px;
+
+      ion-icon {
+        font-size: 20px;
+      }
+
+      ion-label {
+        font-size: 14px;
+        color: white;
+        padding: 10px 0;
+      }
+    }
+  }
+
+  .services {
+    .flex_div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 32px;
+
+      .start {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .end {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .category_div {
+    overflow: scroll;
+    margin: 10px 0;
+
+    .menu {
+      width: max-content;
+      display: flex;
+      flex-direction: row;
+
+      .item {
+        border-radius: 50%;
+        background: transparent !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background: #f4f5f8;
+        margin: 0 5px;
+
+        img {
+          height: 90px;
+          width: 90px;
+          border-radius: 20px;
+          padding: 0 10px;
+        }
+
+        ion-label {
+          font-size: 14px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  .voucher {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    .book {
+      margin-top: 20px;
+      .first_lbl {
+        font-size: 26px;
+        font-family: "bold";
+        margin-bottom: 10px;
+      }
+      .sec_lbl {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      .btn {
+        height: 40px;
+        width: 100px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .back_image {
+      width: 90px;
+      min-width: 140px;
+      height: 170px;
+      border-radius: 20px;
+    }
+  }
+
+  .find_salon {
+    .flex_div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 32px;
+
+      .start {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .end {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+  }
+}

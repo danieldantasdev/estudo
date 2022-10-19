@@ -1,0 +1,66 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+  <div class="ion-padding">
+    <ion-label class="welcome_lbl">Welcome!</ion-label>
+
+    <ion-label class="simp_lbl">Sign in to continue</ion-label>
+
+
+
+    <ion-item lines="none">
+      <ion-icon slot="start" name="mail-outline"></ion-icon>
+      <ion-input type="email" placeholder="Email"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+      <ion-input type="password" placeholder="Password"></ion-input>
+    </ion-item>
+
+    <div class="check">
+      <ion-checkbox mode="md" checked></ion-checkbox>
+      <ion-label>Remember me</ion-label>
+    </div>
+
+    <ion-button expand="block" (click)="goToHome()">
+      Sign in
+    </ion-button>
+
+    <ion-label class="or_lbl">or Continue with</ion-label>
+
+    <div class="button">
+      <ion-buttons>
+        <ion-button (click)="onClick()">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+      <ion-buttons>
+        <ion-button (click)="onClick()">
+          <ion-icon name="logo-google"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+      <ion-buttons>
+        <ion-button (click)="onClick()">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+
+    <ion-label class="forgot_lbl" (click)="goToForgot()">Forgot your password ?</ion-label>
+
+    <ion-label class="last_lbl" (click)="goToRegister()">Don't have an account? <span>Sign Up</span></ion-label>
+  </div>
+
+
+
+
+</ion-content>

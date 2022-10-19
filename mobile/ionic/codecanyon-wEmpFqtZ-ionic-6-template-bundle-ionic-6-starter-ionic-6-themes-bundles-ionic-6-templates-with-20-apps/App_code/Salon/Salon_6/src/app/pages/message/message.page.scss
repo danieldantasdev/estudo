@@ -1,0 +1,101 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-header {
+  ion-toolbar {
+    .btn {
+      border: 1px solid lightgrey;
+      border-radius: 10px;
+
+      ion-icon {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+ion-content {
+  .msg_div {
+    margin-bottom: 20px;
+    .bg_image {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      position: relative;
+      .online {
+        position: absolute;
+        height: 12px;
+        width: 12px;
+        background: green;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        bottom: 8px;
+        right: -5px;
+      }
+    }
+
+    .left_div {
+      float: left;
+      .left {
+        font-size: 16px;
+        padding: 15px 0 0 40px;
+        border-radius: 0px 20px 20px 20px;
+        background: #fff;
+      }
+
+      .time_lbl {
+        font-size: 12px;
+        color: grey;
+        text-align: right;
+        margin-top: 10px;
+      }
+    }
+
+    .right_div {
+      float: right;
+      padding: 30px 0;
+
+      .right {
+        font-size: 16px;
+        padding: 15px;
+        background: #6d5ae7;
+        color: #fff;
+        border-radius: 20px 0px 20px 20px;
+        margin-bottom: 10px;
+      }
+
+      .time_lbl {
+        font-size: 12px;
+        color: grey;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+ion-footer {
+  ion-toolbar {
+    padding: 10px;
+    ion-buttons {
+      ion-button {
+        .button {
+          background: lightgrey;
+          border-radius: 50%;
+          padding: 3px;
+          font-size: 22px;
+        }
+        ion-icon {
+          font-size: 22px;
+        }
+      }
+    }
+    ion-input {
+      --padding-start: 10px;
+    }
+  }
+}

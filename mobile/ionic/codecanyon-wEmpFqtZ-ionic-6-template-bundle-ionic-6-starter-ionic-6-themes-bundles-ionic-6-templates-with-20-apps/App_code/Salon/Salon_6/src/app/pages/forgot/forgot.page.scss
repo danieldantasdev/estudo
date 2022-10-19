@@ -1,0 +1,127 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-header {
+  ion-toolbar {
+    --background: white;
+  }
+}
+
+ion-content {
+  .welcome_lbl {
+    font-size: 32px;
+    font-family: "bold";
+    margin-top: 3rem;
+  }
+  .simp_lbl {
+    margin-top: 16px;
+    letter-spacing: 1.2;
+  }
+  ion-item {
+    margin-top: 3.5rem;
+    --background: #f7f7f7;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    ion-label {
+      font-size: 16px;
+    }
+    ion-icon {
+      font-size: 22px;
+    }
+  }
+  ion-button {
+    --border-radius: 10px;
+    margin-top: 2.5rem;
+    height: 50px;
+  }
+  .reset {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    ion-icon {
+      font-size: 60px;
+      margin-bottom: 2rem;
+    }
+
+    .code_lbl {
+      font-family: "bold";
+      font-size: 24px;
+    }
+    .simp_lbl {
+      letter-spacing: 1.2;
+    }
+    .done {
+      height: 50px;
+      width: 100px;
+    }
+  }
+}
+
+// .content {
+
+//     ion-buttons{
+//         padding-top: 16px;
+//     }
+//     .main_content {
+//         padding: 24px;
+
+//         h1 {
+//             margin-top: 3rem;
+//             font-size: 32px;
+//             font-weight: 700;
+//         }
+
+//         p {
+//             margin-top: 0;
+//             font-size: 14px;
+//         }
+
+//         ion-item {
+//             margin-top: 3rem;
+//             ion-icon {
+//                 font-size: 20px;
+//             }
+
+//             ion-label {
+//                 font-size: 16px;
+//             }
+//         }
+//         ion-button {
+//             --border-radius: 10px;
+//             margin-top: 2.5rem;
+//             height: 50px;
+//         }
+//     }
+//     .reset {
+//         display: flex;
+//         flex-direction: column;
+//         text-align: center;
+//         justify-content: center;
+//         align-items: center;
+//         margin-top: 12rem;
+//         padding: 32px;
+
+//         ion-icon {
+//             font-size: 80px;
+//         }
+
+//         h4 {
+//             font-size: 24px;
+//             font-weight: 700;
+//             margin-top: 2rem;
+//         }
+
+//         ion-button {
+//             height: 50px;
+//             width: 100px;
+//         }
+//     }
+// }

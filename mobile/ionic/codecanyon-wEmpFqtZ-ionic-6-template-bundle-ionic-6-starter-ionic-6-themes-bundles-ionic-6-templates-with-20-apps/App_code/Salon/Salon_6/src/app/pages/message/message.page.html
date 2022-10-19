@@ -1,0 +1,66 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBackChat()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="color: black;">Angela Young <br>
+    <span style="font-size: 10px !important; color: green;">Online</span> </ion-title>
+
+    <ion-buttons slot="end" >
+      <ion-button (click)="onClick()" class="btn">
+        <ion-icon name="call-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="onClick()" class="btn">
+        <ion-icon  name="videocam-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="msg_div" *ngFor="let item of [1,2,3]">
+
+      <div class="left_div">
+        <div class="bg_image" [style.backgroundImage]="'url(assets/images/g1.jpg)'">
+          <div class="online"></div>
+        </div>
+        <ion-label class="left">Hello, how can i help you </ion-label>
+        <ion-label class="time_lbl">08:22 pm</ion-label>
+      </div>
+      <div class="right_div">
+        <ion-label class="right">ohh, hello Angela Young </ion-label>
+        <ion-label class="right">I feeling better than before. <br>
+          Shoud i need haircut ?</ion-label>
+        <ion-label class="time_lbl">08:22 pm</ion-label>
+      </div>
+  </div>
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onClick()">
+        <ion-icon  name="add" class="button" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-input type="text" placeholder="Write a message"></ion-input>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClick()">
+        <ion-icon name="paper-plane-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

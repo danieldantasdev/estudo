@@ -1,0 +1,433 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.main_div {
+  position: relative;
+  ion-slides {
+    ion-slide {
+      .bg_image {
+        height: 300px;
+        width: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+  .buttons {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    padding: 10px;
+    .btn {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.content_div {
+  background: #ffff;
+  position: absolute;
+  border-radius: 20px 20px 0px 0px;
+  top: 30vh;
+  z-index: 1;
+  width: 100%;
+
+  .main_content {
+    .name_div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 0px;
+
+      .salon_name {
+        font-size: 24px;
+        font-family: "bold";
+        margin-bottom: 10px;
+      }
+
+      ion-button {
+        height: 30px;
+        width: 80px;
+      }
+    }
+
+    .address {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .rating {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-top: 10px;
+      ion-icon {
+        margin-right: 8px;
+        font-size: 20px;
+      }
+
+      .rat_lbl {
+        margin-left: 14px;
+        font-size: 14px;
+      }
+    }
+
+    .details {
+      margin-top: 1rem;
+
+      ion-row {
+        ion-col {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+
+          ion-icon {
+            font-size: 24px;
+          }
+
+          ion-label {
+            margin-top: 10px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .artist {
+      margin-top: 1rem;
+
+      .head_div {
+        font-size: 18px;
+        font-family: "semi-bold";
+        margin-bottom: 10px;
+      }
+
+      .category_div {
+        overflow: scroll;
+        margin: 10px 0;
+
+        .menu {
+          width: max-content;
+          display: flex;
+          flex-direction: row;
+
+          .item {
+            border-radius: 50%;
+            background: transparent !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: #f4f5f8;
+            margin: 0 10px;
+
+            img {
+              height: 60px;
+              width: 60px;
+              border-radius: 50%;
+            }
+
+            ion-label {
+              font-size: 14px;
+              margin-top: 10px;
+            }
+            .style {
+              font-size: 12px;
+              color: #c2c2cb;
+            }
+          }
+        }
+      }
+    }
+
+    .segment {
+      margin-top: 1rem;
+      .category_div {
+        overflow: scroll;
+        margin: 30px 0;
+
+        .menu {
+          width: max-content;
+          display: flex;
+          flex-direction: row;
+
+          ion-segment {
+            background: transparent;
+            ion-segment-button {
+              padding: 5px;
+              --border-radius: 30px;
+              --indicator-color: #000 !important;
+              --indicator-box-shadow: transparent !important;
+              --color-checked: white;
+              --background: #ffff;
+              margin: 5px;
+            }
+          }
+        }
+      }
+    }
+    .about {
+      .text_lbl {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      span {
+        color: #92949c;
+      }
+
+      .open_lbl {
+        font-size: 16px;
+        font-family: "semi-bold";
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .time {
+        margin-bottom: 14px;
+        font-size: 14px;
+      }
+
+      .contact {
+        font-size: 16px;
+        color: #6d5ae7;
+        border-bottom: 1px solid #6d5ae7;
+      }
+
+      .address {
+        font-size: 15px;
+      }
+
+      .map {
+        margin-top: 1rem;
+        width: 100%;
+        height: 230px;
+        border-radius: 20px;
+      }
+
+      ion-button {
+        margin-top: 1rem;
+        height: 50px;
+      }
+    }
+
+    .service {
+      ion-item {
+        margin-top: 1.5rem;
+        ion-label {
+          font-size: 15px;
+          color: #92949c;
+        }
+
+        ion-buttons {
+          ion-button {
+            font-size: 15px;
+            font-weight: 500;
+
+            ion-icon {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      .select_item {
+        margin-top: 1.5rem;
+        border: 1px solid #6d5ae7;
+        border-radius: 15px;
+        padding: 5px;
+        .style {
+          font-size: 15px;
+          color: var(--ion-color-primary);
+        }
+
+        .selected {
+          .type {
+            font-size: 14px;
+            font-family: "semi-bold";
+            color: black;
+          }
+          .price {
+            font-size: 14px;
+            text-align: end;
+            color: var(--ion-color-primary);
+          }
+        }
+        .icn {
+          font-size: 18px;
+          margin-left: 5px;
+        }
+      }
+
+      .book_btn {
+        margin-top: 1rem;
+        --background: #6d5ae7;
+        border-radius: 10px;
+
+        .lbl {
+          color: #ffff;
+          padding: 8px 0px;
+        }
+      }
+    }
+  }
+  .package {
+    .shop {
+      .back_image {
+        width: 110px;
+        min-width: 110px;
+        height: 110px;
+        border-radius: 20px;
+      }
+      .rate {
+        .price_lbl {
+          font-size: 14px;
+          color: var(--ion-color-primary);
+        }
+        ion-button {
+          height: 30px;
+        }
+      }
+    }
+  }
+  .gallery {
+    ion-grid {
+      ion-row {
+        ion-col {
+          height: 24vh;
+          .bg_img {
+            width: 100%;
+            height: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+        .second_col {
+          padding: 0px;
+          ion-row {
+            padding: 0px;
+            ion-col {
+              padding: 5px;
+              height: 12vh;
+              .bg_img {
+                height: 100%;
+                width: 100%;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+              }
+            }
+          }
+        }
+      }
+      .middel_content {
+        ion-col {
+          height: 18vh;
+        }
+      }
+    }
+  }
+  .review {
+    .upper_div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      .review_lbl {
+        font-size: 14px;
+        font-family: "semi-bold";
+      }
+
+      ion-icon {
+        margin-right: 4px;
+      }
+    }
+    ion-item {
+      margin-bottom: 10px;
+      ion-icon {
+        font-size: 22px;
+      }
+    }
+    .write_lbl {
+      font-size: 14px;
+      line-height: 1.5;
+      padding-left: 16px;
+    }
+    .review_img {
+      padding-left: 18px;
+      margin-top: 10px;
+      display: flex;
+      .bg_image {
+        height: 70px;
+        width: 70px;
+        border-radius: 10px;
+        position: relative;
+        margin-right: 14px;
+
+        ion-icon {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          background: #ffff;
+          border-radius: 50%;
+        }
+      }
+    }
+    .head_lbl {
+      font-size: 14px;
+      font-family: "bold";
+      margin-top: 32px;
+      margin-bottom: 16px;
+    }
+    .all_reviews {
+      margin-bottom: 10px;
+      .read_review {
+        width: 100%;
+        display: flex;
+        .bg_image {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          margin-right: 16px;
+        }
+        .inside {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          .start_div {
+            .name_lbl {
+              margin-left: 0;
+              font-size: 16px;
+              font-family: "semi-bold";
+              margin-bottom: 2px;
+            }
+            ion-icon {
+              font-size: 14px;
+              margin-right: 3px;
+            }
+          }
+          .end_div {
+            .time_lbl {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .read_cmnt {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-button (click)="onClick()" mode="ios" fill="clear">
+      <ion-icon name="arrow-back-outline" color="dark"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div *ngIf="tab == 1" class="ion-padding">
+
+    <ion-label class="welcome_lbl">Forgot password</ion-label>
+
+    <ion-label class="simp_lbl">Select which contact details should we use to reset your password:</ion-label>
+
+        <ion-item lines="none">
+          <ion-icon slot="start" name="mail-outline"></ion-icon>
+          <ion-label (click)="tab = 2">Via email</ion-label>
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-icon slot="start" name="phone-portrait-outline"></ion-icon>
+          <ion-label>Via sms</ion-label>
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+  </div>
+
+  <div *ngIf="tab == 2" class="ion-padding">
+
+    <ion-label class="welcome_lbl">Forgot password</ion-label>
+
+    <ion-label class="simp_lbl">Please enter your email address to reset your password instruction</ion-label>
+
+        <ion-item lines="none">
+          <ion-icon slot="start" name="mail-outline"></ion-icon>
+          <ion-input type="email" placeholder="Email"></ion-input>
+        </ion-item>
+
+        <ion-button (click)="tab = 3" expand="block">
+          Send link
+        </ion-button>
+  </div>
+
+  <div *ngIf="tab == 3" class="ion-padding">
+      <div class="reset">
+        <ion-icon  name="mail-outline"></ion-icon>
+        <ion-label class="code_lbl">Code has been sent</ion-label>
+        <ion-label class="simp_lbl">you'll shortly receive an email with a code to setup a new password.</ion-label>
+        <ion-button expand="block" class="done">
+          Done
+        </ion-button>
+      </div>
+  </div>
+
+
+
+</ion-content>

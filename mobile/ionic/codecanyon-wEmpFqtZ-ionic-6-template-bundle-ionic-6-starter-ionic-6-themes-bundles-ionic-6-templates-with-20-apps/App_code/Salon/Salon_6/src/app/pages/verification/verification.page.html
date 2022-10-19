@@ -1,0 +1,75 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-button (click)="onClick()" mode="ios" fill="clear">
+      <ion-icon name="arrow-back-outline" color="dark"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="ion-padding">
+
+    <div *ngIf="tab == 1">
+
+      <ion-label class="welcome_lbl">Your Phone!</ion-label>
+
+      <ion-label class="simp_lbl">A 4 digit security code will be sent via SMS to verify your mobile number!</ion-label>
+
+      <ion-row>
+        <ion-col size="4" class="code">
+          <div class="item">
+            <img src="assets/images/india.png" />
+            <ion-select placeholder="+91">
+              <ion-select-option>+91</ion-select-option>
+              <ion-select-option>+81</ion-select-option>
+            </ion-select>
+          </div>
+        </ion-col>
+        <ion-col size="6">
+          <ion-input type="number" placeholder="Enter Number"></ion-input>
+        </ion-col>
+        <ion-col size="2">
+          <ion-buttons>
+            <ion-button (click)="onClick()">
+              <ion-icon name="close-outline" color="danger"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+
+      <ion-button expand="block" (click)="tab = 2" class="btn">
+        Continue
+      </ion-button>
+    </div>
+
+    <div *ngIf="tab == 2">
+
+      <ion-label class="welcome_lbl">Verify phone</ion-label>
+
+      <ion-label class="simp_lbl">Please enter 4 digit security code we just sent you at <span>913-444-xxxx</span>
+      </ion-label>
+
+      <div class="otp">
+        <ng-otp-input [config]="{length:4}"></ng-otp-input>
+      </div>
+
+      <ion-label class="last_lbl">Resend in 40 sec</ion-label>
+
+      <ion-button (click)="goToHome()" expand="block" class="verify">
+        Verify
+      </ion-button>
+
+    </div>
+
+  </div>
+
+</ion-content>

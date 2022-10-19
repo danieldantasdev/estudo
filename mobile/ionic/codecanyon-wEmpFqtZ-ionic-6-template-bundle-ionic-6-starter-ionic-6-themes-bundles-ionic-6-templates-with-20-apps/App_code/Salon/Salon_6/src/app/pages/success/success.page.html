@@ -1,0 +1,28 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+  <div class="content ion-padding">
+    <div class="success">
+      <ion-icon name="checkmark-circle-outline" color="success"></ion-icon>
+      <ion-label class="title_lbl">
+        Your appointment <br> booking is successfully.
+      </ion-label>
+      <ion-label class="sub_lbl">
+        You can view the appointment booking <br> info in the "appointment" section.
+      </ion-label>
+    </div>
+    <ion-button (click)="onClick()" expand="block">
+      Continue Booking
+    </ion-button>
+    <ion-button (click)="goToAppointment()" expand="block" fill="clear" shape="round">
+      Go to appointment
+    </ion-button>
+  </div>
+
+</ion-content>

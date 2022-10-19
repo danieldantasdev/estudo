@@ -1,0 +1,124 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+
+<ion-content class="ion-padding">
+
+  <div class="main_content_div">
+
+    <div class="upper_div">
+      <ion-item lines="none">
+        <ion-thumbnail (click)="util.menuOpen()">
+          <img src="assets/images/profile.webp" />
+        </ion-thumbnail>
+        <ion-buttons slot="end">
+          <ion-button (click)="goToNotification()">
+            <ion-icon name="notifications-outline" color="dark"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+          <ion-button (click)="goToFind()">
+            <ion-icon name="search-outline" color="dark"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+    </div>
+
+    <div class="name_div">
+      <ion-label class="name_lbl">Hi, Jenny Wilson</ion-label>
+      <h4></h4>
+      <div class="location">
+        <ion-icon slot="start" name="location-outline"></ion-icon>
+        <ion-label (click)="goToEnableLocation()">6391 Elgin St. Celina, Delaware 10299</ion-label>
+      </div>
+    </div>
+
+    <div class="search_bar">
+      <ion-item lines="none">
+        <ion-icon slot="start" name="search-outline"></ion-icon>
+        <ion-input type="text" placeholder="Search by salons"></ion-input>
+        <ion-icon slot="end" name="options-outline"></ion-icon>
+      </ion-item>
+    </div>
+
+    <div class="appoinment">
+      <div class="flex_div">
+        <ion-label class="start">Appointment</ion-label>
+        <ion-label class="end">Today, Morning</ion-label>
+      </div>
+
+      <ion-item lines="none">
+        <ion-icon slot="start" name="calendar" color="light"></ion-icon>
+        <ion-label>At The Galleria Hair Salon</ion-label>
+        <ion-label slot="end">09:00 AM</ion-label>
+      </ion-item>
+    </div>
+
+    <div class="services">
+      <div class="flex_div">
+        <ion-label class="start">Service</ion-label>
+        <ion-label class="end">View All</ion-label>
+      </div>
+
+      <div class="category_div">
+        <div class="menu">
+          <div class="item" *ngFor="let item of [1,2,3,4,5,6]">
+            <img src="assets/images/service.jpg" />
+            <ion-label>Haircuts</ion-label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="voucher">
+      <div class="book">
+        <ion-label class="first_lbl">-40%</ion-label>
+        <ion-label class="sec_lbl">Voucher for you next <br> haircut service</ion-label>
+        <ion-button (click)="onClick()" expand="block" class="btn">
+          Book now
+        </ion-button>
+      </div>
+      <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/voucher.webp)'"></div>
+    </div>
+
+    <div class="find_salon">
+      <div class="flex_div">
+        <ion-label class="start">Nearest salon</ion-label>
+        <ion-label class="end">View All</ion-label>
+      </div>
+
+      <div class="shop" *ngFor="let item of [1,2,3,4,5]" (click)="goToSalonDetail()">
+        <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/salon.webp)'"></div>
+        <div class="shop_detail">
+
+          <ion-label class="name">Green Apple</ion-label>
+
+          <ion-label class="sub_lbl">6391 Elgin St. Celina,Dela...</ion-label>
+
+          <div class="rate">
+            <div>
+              <ion-icon name="star" color="warning"></ion-icon>
+              <ion-icon name="star" color="warning"></ion-icon>
+              <ion-icon name="star" color="warning"></ion-icon>
+              <ion-icon name="star" color="warning"></ion-icon>
+              <ion-icon name="star" color="warning"></ion-icon>
+            </div>
+
+            <div class="distance">
+              <ion-icon name="location-outline"></ion-icon>
+              <ion-label class="dis_lbl">5 km</ion-label>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

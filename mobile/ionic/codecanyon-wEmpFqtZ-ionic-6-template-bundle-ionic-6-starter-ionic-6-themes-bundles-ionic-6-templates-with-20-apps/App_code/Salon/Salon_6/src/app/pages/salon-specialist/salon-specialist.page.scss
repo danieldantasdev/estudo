@@ -1,0 +1,300 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-content {
+  .upper_div {
+    position: relative;
+    .bg_image {
+      height: 250px;
+      width: 100%;
+    }
+    .buttons {
+      position: absolute;
+      top: 40px;
+      width: 100%;
+      padding: 10px;
+      .btn {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  .main_content {
+    .content_div {
+      background: #fff;
+      position: absolute;
+      border-radius: 20px 20px 0 0;
+      top: 20vh;
+      z-index: 1;
+      width: 100%;
+
+      .intro_div {
+        display: flex;
+        margin-bottom: 32px;
+        .bg_image {
+          height: 90px;
+          width: 90px;
+          border-radius: 50%;
+          position: absolute;
+          top: -45px;
+        }
+        .about {
+          margin-left: 7rem;
+
+          .name {
+            font-size: 18px;
+            font-family: "bold";
+            margin-bottom: 5px;
+          }
+          .from {
+            font-size: 14px;
+            margin-bottom: 10px;
+            span {
+              color: var(--ion-color-primary);
+              font-family: "semi-bold";
+            }
+          }
+          .review {
+            display: flex;
+            align-items: center;
+
+            ion-icon {
+              margin-right: 3px;
+            }
+            .rat_lbl {
+              margin-left: 5px;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .contact {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 32px;
+        padding: 0 5px;
+        .info_div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+
+          ion-icon {
+            margin-bottom: 5px;
+            font-size: 22px;
+          }
+          ion-label {
+            font-size: 14px;
+          }
+          ion-button {
+            width: 100%;
+          }
+        }
+      }
+      .info_lbl {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 26px;
+        span {
+          font-family: "semi-bold";
+        }
+      }
+      .segment_div {
+        ion-segment {
+          background: transparent;
+          ion-segment-button {
+            padding: 5px;
+            --border-radius: 30px;
+            --indicator-color: #000 !important;
+            --indicator-box-shadow: transparent !important;
+            --color-checked: white;
+            --background: #ffff;
+            margin: 5px;
+          }
+        }
+      }
+      .gallery {
+        ion-grid {
+          ion-row {
+            ion-col {
+              height: 24vh;
+              .bg_img {
+                width: 100%;
+                height: 100%;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+              }
+            }
+            .second_col {
+              padding: 0px;
+              ion-row {
+                padding: 0px;
+                ion-col {
+                  padding: 5px;
+                  height: 12vh;
+                  .bg_img {
+                    height: 100%;
+                    width: 100%;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                  }
+                }
+              }
+            }
+          }
+          .middel_content {
+            ion-col {
+              height: 18vh;
+            }
+          }
+        }
+      }
+      .review {
+        margin-top: 20px;
+        .upper_div {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 20px;
+
+          .review_lbl {
+            font-size: 14px;
+            font-family: "semi-bold";
+          }
+
+          ion-icon {
+            margin-right: 4px;
+          }
+        }
+        .read_review {
+          width: 100%;
+          display: flex;
+          margin-bottom: 16px;
+          .bg_image {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            margin-right: 16px;
+          }
+          .inside {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            .start_div {
+              .name_lbl {
+                margin-left: 0;
+                font-size: 16px;
+                font-family: "semi-bold";
+                margin-bottom: 2px;
+              }
+              ion-icon {
+                font-size: 14px;
+                margin-right: 3px;
+              }
+            }
+            .end_div {
+              .time_lbl {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        .write_lbl {
+          font-size: 14px;
+          line-height: 1.5;
+          padding-left: 16px;
+        }
+        .review_img {
+          padding-left: 18px;
+          margin-top: 10px;
+          display: flex;
+          .bg_image {
+            height: 70px;
+            width: 70px;
+            border-radius: 10px;
+            margin-right: 14px;
+          }
+        }
+        .reply {
+          margin-top: 16px;
+          margin-left: 20px;
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+          padding: 5px;
+          .from_div {
+            display: flex;
+            justify-content: space-between;
+
+            .from_lbl {
+              font-size: 14px;
+              font-family: "semi-bold";
+              color: var(--ion-color-primary);
+            }
+
+            .time_lbl {
+              font-size: 12px;
+            }
+          }
+          .msg_lbl {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-top: 5px;
+          }
+        }
+        .head_lbl {
+          font-size: 14px;
+          font-family: "bold";
+          margin-top: 32px;
+          margin-bottom: 16px;
+        }
+        .all_reviews {
+          margin-bottom: 10px;
+          .read_review {
+            width: 100%;
+            display: flex;
+            .bg_image {
+              height: 40px;
+              width: 40px;
+              border-radius: 50%;
+              margin-right: 16px;
+            }
+            .inside {
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+              .start_div {
+                .name_lbl {
+                  margin-left: 0;
+                  font-size: 16px;
+                  font-family: "semi-bold";
+                  margin-bottom: 2px;
+                }
+                ion-icon {
+                  font-size: 14px;
+                  margin-right: 3px;
+                }
+              }
+              .end_div {
+                .time_lbl {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+          .read_cmnt {
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 24px;
+          }
+        }
+      }
+    }
+  }
+}
