@@ -1,0 +1,113 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.img {
+  height: 200px;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    .btn {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  h5 {
+    color: #ffff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+  .rate {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    .first_btn {
+      ion-button {
+        color: #ffff;
+        font-size: 15px;
+
+        ion-icon {
+          font-size: 15px;
+          margin-left: 10px;
+          color: rgb(255, 153, 36);
+        }
+      }
+    }
+    .second_btn {
+      ion-button {
+        color: #ffff;
+        height: 20px;
+        width: 50px;
+        font-size: 10px;
+        background: rgb(32, 255, 99);
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+.cate_title {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  box-shadow: 0px 10px 20px var(--box-color);
+  --box-color: #e9e9e9;
+}
+
+.text {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px var(--box-color);
+  --box-color: #e9e9e9;
+  h5 {
+    font-weight: bold;
+  }
+  ion-row {
+    display: flex;
+    align-items: center;
+    .days {
+      display: flex;
+      justify-content: flex-start;
+      h6 {
+        font-size: 13px;
+      }
+    }
+    ion-col {
+      display: flex;
+      justify-content: center;
+    }
+    .time {
+      display: flex;
+      justify-content: flex-end;
+      h6 {
+        font-size: 13px;
+      }
+    }
+  }
+}
+ion-footer {
+  ion-toolbar {
+    --border-width: 0px;
+    .login-btn {
+      --border-radius: 14px;
+    }
+  }
+}

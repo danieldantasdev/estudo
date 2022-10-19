@@ -1,0 +1,86 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-content {
+    --background: var(--ion-color-primary);
+}
+.main-content {
+    .top-content {
+        height: 30vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .logo {
+            height: 150px;
+        }
+    }
+
+    .bottom-content {
+        height: 70vh;
+        background: white;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+        padding: 30px 14px 14px 14px;
+        .toggle_btn {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            z-index: 9999;
+        }
+        .reset {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+        .ripple-parent {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-btn {
+            --border-radius: 14px;
+            margin-top: 20px;
+        }
+
+        .or-text {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid gray;
+            line-height: 0.1em;
+            color: gray;
+            margin-top: 30px;
+        }
+
+        .or-text span {
+            background: #fff;
+            padding: 0 10px;
+        }
+
+        .social {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .register {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            font-size: 14px;
+            .regiterBtn {
+                margin-left: 10px;
+                color: var(--ion-color-primary);
+            }
+        }
+    }
+}

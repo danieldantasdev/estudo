@@ -1,0 +1,247 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+
+  <div class="img" [style.backgroundImage]="'url(assets/imgs/call_bg.jpg)'">
+
+    <div class="title">
+      <ion-buttons slot="start">
+        <ion-button (click)="onBack()" color="light">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <div class="btn">
+        <ion-buttons slot="end">
+          <ion-button color="light">
+            <ion-icon name="call-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+          <ion-button color="light">
+            <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+    </div>
+
+    <h5>Marguerite Cross <br> Day Salon</h5>
+
+    <div class="rate">
+      <ion-buttons slot="end" class="first_btn">
+        <ion-button>
+          4.5
+          <ion-icon name="star"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end" class="second_btn">
+        <ion-button>
+          OPEN
+        </ion-button>
+      </ion-buttons>
+    </div>
+
+  </div>
+
+  <div class="cate_title">
+    <div class="category">
+      <ion-segment value="about" mode="md" [(ngModel)]="current">
+        <ion-segment-button value="specialist" [value]="1">
+          <ion-label>Specialist</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="service" [value]="2">
+          <ion-label>Service</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="gallary" [value]="3">
+          <ion-label>Gallary</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="review" [value]="4">
+          <ion-label>Review</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="salon" [value]="5">
+          <ion-label>Salon</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="about" [value]="6">
+          <ion-label>About</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+  </div>
+
+  <div *ngIf="current == 2">
+    <div class="sliders2">
+      <div class="categoryIcon" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+        <div class="imgs">
+          <div class="back_image bg_image" [style.backgroundImage]="'url( assets/imgs/h1.jpg )'"></div>
+        </div>
+        <p class="kind">Skin Care</p>
+      </div>
+    </div>
+
+    <div class="main_content ion-padding">
+      <h5>Package & Offers</h5>
+
+      <ion-slides mode="ios" scrollbar="ios" [options]="slideOpts">
+        <ion-slide *ngFor="let item of [1,2,3,4]">
+
+          <div class="content">
+            <ion-row>
+              <ion-col size="12">
+                <div class="bg_img" [style.backgroundImage]="'url(assets/imgs/h1.jpg)'">
+                </div>
+              </ion-col>
+            </ion-row>
+
+            <ion-row class="description">
+              <ion-col size="12">
+                <div class="sub_title">
+                  <ion-label>Personalist Girl Event</ion-label>
+                </div>
+                <div class="review">
+                  <ion-label>June 10 - June 25</ion-label>
+                </div>
+                <div class="price">
+                  <ion-label><span>$100</span>$89</ion-label>
+                </div>
+              </ion-col>
+            </ion-row>
+          </div>
+
+        </ion-slide>
+      </ion-slides>
+
+      <h5>Popular Services</h5>
+
+      <ion-row class="services" *ngFor="let item of [1,2,3,4]">
+        <ion-col size="3">
+          <div class="img" [style.backgroundImage]="'url(assets/imgs/h1.jpg)'"></div>
+        </ion-col>
+        <ion-col size="9">
+          <h6>Hair Styling</h6>
+          <div class="sub_text">
+            <ion-label>45 Min</ion-label>
+            <span>:</span>
+            <ion-label class="price">$17.5</ion-label>
+          </div>
+          <ion-checkbox color="primary"></ion-checkbox>
+        </ion-col>
+      </ion-row>
+
+    </div>
+  </div>
+
+  <div *ngIf="current == 3">
+
+    <div class="gallary">
+      <ion-row>
+        <ion-col size="6" *ngFor="let item of [1,2,3,4,5]">
+          <div class="imgs" [style.backgroundImage]="'url(assets/imgs/h2.jpg)'"></div>
+        </ion-col>
+      </ion-row>
+    </div>
+
+  </div>
+
+  <div *ngIf="current == 4">
+
+    <div class="reviews">
+      <div class="rating">
+        <h5>Your Review</h5>
+        <h6>What are you feel about this salon?</h6>
+        <div class="rate_div">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+        </div>
+        <ion-item lines="none">
+          <ion-input type="text" placeholder="Say something..."></ion-input>
+          <ion-buttons slot="end">
+            <ion-button>
+              <ion-icon name="send" color="light"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+      </div>
+      <div class="comments" *ngFor="let item of [1,2,3]">
+        <ion-item lines="none">
+          <ion-thumbnail>
+            <img src="assets/imgs/h1.jpg" />
+          </ion-thumbnail>
+          <div class="text">
+            <h6>Carlos Rows</h6>
+            <ion-label>5 Day ago</ion-label>
+          </div>
+          <ion-buttons slot="end">
+            <ion-button>
+              <ion-icon slot="end" name="star"></ion-icon>
+              4.0
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+        <div class="cmnt_text">
+          <p>It is a long established fact that a reader will be distracted by the readable content of
+            a page when looking at its layout.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="ion-padding" *ngIf="current == 1">
+
+    <div class="specialist">
+      <h6>Hair Stylist</h6>
+      <ion-slides mode="ios" scrollbar="ios" [options]="slideOpts2">
+        <ion-slide *ngFor="let item of [1,2,3,4,5]">
+          <div class="specialist_profile">
+            <div class="images" [style.backgroundImage]="'url(assets/imgs/h2.jpg)'"></div>
+            <ion-label>Rose Hansen</ion-label>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+    <div class="specialist">
+      <h6>Mackup Artist</h6>
+      <ion-slides mode="ios" scrollbar="ios" [options]="slideOpts2">
+        <ion-slide *ngFor="let item of [1,2,3,4,5]">
+          <div class="specialist_profile">
+            <div class="images" [style.backgroundImage]="'url(assets/imgs/h2.jpg)'"></div>
+            <ion-label>Rose Hansen</ion-label>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+    <div class="specialist">
+      <h6>S.b Barber</h6>
+      <ion-slides mode="ios" scrollbar="ios" [options]="slideOpts2">
+        <ion-slide *ngFor="let item of [1,2,3,4,5]">
+          <div class="specialist_profile">
+            <div class="images" [style.backgroundImage]="'url(assets/imgs/h2.jpg)'"></div>
+            <ion-label>Rose Hansen</ion-label>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+  </div>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="onBooking()" expand="block" shape="round" class="login-btn">
+      Booked Appointment
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

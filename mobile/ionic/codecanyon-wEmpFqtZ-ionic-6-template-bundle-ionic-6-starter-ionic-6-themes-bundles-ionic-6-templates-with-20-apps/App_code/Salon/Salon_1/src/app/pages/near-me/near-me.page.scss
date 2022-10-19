@@ -1,0 +1,232 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.main_content_div {
+    width: 100%;
+    height: 100vh;
+
+    .map {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .div1 {
+        padding: 20px;
+        -webkit-box-shadow: 0px -4px 3px #d7d8da;
+        -moz-box-shadow: 0px -4px 3px #d7d8da;
+        box-shadow: 0px -4px 3px #d7d8da;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        position: absolute;
+        width: 100%;
+        z-index: 99999;
+        margin-top: -25px;
+        background: white;
+
+        .cateLbl {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10px 0px;
+
+            .all {
+                font-family: "semi-bold";
+            }
+            .view {
+                font-family: "medium";
+                font-size: 14px;
+                color: var(--ion-color-primary);
+            }
+        }
+
+        .sliders2 {
+            display: flex;
+            flex-direction: row;
+            overflow-x: auto;
+            padding: 10px 0px;
+
+            .categoryIcon {
+                padding: 0px 10px;
+                text-align: center;
+
+                .imgs {
+                    border-radius: 50%;
+                    padding: 5px;
+                    line-height: 60px;
+                    height: 65px;
+                    width: 65px;
+                    box-shadow: 0px 1px 6px 5px #d7d8da;
+
+                    .back_image {
+                        height: 55px;
+                        width: 55px;
+                        border-radius: 50%;
+                        background-position: top;
+                    }
+                }
+
+                .icon {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 50%;
+                }
+                .name {
+                    color: gray;
+                    margin: 10px 0px;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .slider_div {
+            .card {
+                margin-top: 15px;
+                width: 100%;
+                margin-right: 15px;
+
+                .back_image {
+                    height: 130px;
+                    width: 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 10px;
+                    position: relative;
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
+
+                    .time_lbl {
+                        padding: 10px;
+                        position: absolute;
+                        background: white;
+                        bottom: 15px;
+                        right: 15px;
+                        border-radius: 25px;
+                        font-size: 12px;
+                    }
+                }
+
+                .salon_detail_div {
+                    border: 1px solid lightgray;
+                    padding: 10px;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    position: relative;
+
+                    .heading_lbl {
+                        font-size: 15px;
+                        display: block;
+                        text-align: left;
+                        font-family: "semi-bold";
+                    }
+
+                    .addr {
+                        color: gray;
+                        font-size: 13px;
+                        text-align: left;
+                        display: block;
+                    }
+
+                    .book_class {
+                        background: var(--ion-color-primary);
+                        color: white;
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        padding: 5px;
+                        font-size: 14px;
+                        border-top-left-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                    }
+
+                    .price_rating {
+                        display: flex;
+                        height: 25px;
+                        align-items: flex-start;
+
+                        .rating {
+                            color: var(--ion-color-primary);
+                            font-size: 15px;
+                            margin-left: 10px;
+                        }
+
+                        .red_lbl {
+                            color: var(--ion-color-primary);
+                            font-size: 12px;
+                        }
+                        .small_lbl {
+                            font-size: 12px;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .radio_img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .loc_lbl {
+        margin-left: 10px;
+        width: 100%;
+        // border-bottom: 1px solid lightgray;
+    }
+    .line_img {
+        width: 20px;
+        height: 25px;
+    }
+    .loc_lbl {
+        margin-left: 10px;
+    }
+    .small_lbl {
+        font-size: 12px;
+        color: lightgray;
+    }
+    ion-input {
+        --padding-top: 0px;
+    }
+    .flex_div {
+        display: flex;
+        margin-top: 10px;
+
+        .gray_line {
+            border: 1px solid lightgray;
+            height: 1px;
+            width: 100%;
+        }
+    }
+}
+
+#item {
+    height: 40vh;
+    transition: 1s;
+    border-top-left-radius: 30px !important;
+    border-top-right-radius: 30px !important;
+    padding: 20px;
+    background: white;
+}
+
+.active {
+    height: 90vh !important;
+    padding: 20px !important;
+    position: absolute !important;
+    width: 100% !important;
+    margin-top: -25px !important;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5) !important;
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+    padding: 20px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+    background-color: white !important;
+    padding-bottom: 200px;
+}

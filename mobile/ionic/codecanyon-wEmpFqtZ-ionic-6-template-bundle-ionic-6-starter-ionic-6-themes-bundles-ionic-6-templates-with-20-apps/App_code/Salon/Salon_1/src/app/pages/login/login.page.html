@@ -1,0 +1,67 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md" color="primary">
+
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="main-content">
+    <div class="top-content">
+      <img src="assets/imgs/logo.png" alt="" class="logo">
+    </div>
+
+    <div class="bottom-content">
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input [type]="viewPassword== true?'text':'password'" [(ngModel)]="password"></ion-input>
+        <ion-button (click)="changeType()" fill="clear" slot="end" class="toggle_btn">
+          <ion-icon slot="icon-only" [name]="viewPassword == true? 'eye-outline':'eye-off-outline'">
+          </ion-icon>
+        </ion-button>
+      </ion-item>
+
+      <div class="reset ion-activatable ripple-parent" (click)="reset()">
+        <p>Forgot Password?</p>
+        <ion-ripple-effect></ion-ripple-effect>
+      </div>
+
+      <ion-button (click)="onLogin()" expand="block" shape="round" class="login-btn">
+        Sign In
+      </ion-button>
+
+      <p class="or-text"> <span>or sign in with</span> </p>
+
+      <div class="social">
+        <ion-button (click)="onSocial()" fill="clear">
+          <ion-icon slot="icon-only" name="logo-facebook" style="color: blue;"></ion-icon>
+        </ion-button>
+        <ion-button (click)="onSocial()" fill="clear">
+          <ion-icon slot="icon-only" name="logo-twitter" style="color: #1DA1F2;"></ion-icon>
+        </ion-button>
+        <ion-button (click)="onSocial()" fill="clear">
+          <ion-icon slot="icon-only" name="logo-google" style="color:tomato"></ion-icon>
+        </ion-button>
+      </div>
+
+      <div class="register">
+        <p>Don't have an account ? </p>
+        <div class="regiterBtn ion-activatable ripple-parent" (click)="onRegister()">
+          <p>Sign Up</p>
+          <ion-ripple-effect></ion-ripple-effect>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

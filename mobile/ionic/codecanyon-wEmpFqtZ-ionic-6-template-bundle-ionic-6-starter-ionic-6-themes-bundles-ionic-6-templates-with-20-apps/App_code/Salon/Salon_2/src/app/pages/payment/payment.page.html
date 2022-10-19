@@ -1,0 +1,62 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToBack()">
+        <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Payment</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="start" name="calendar-clear-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div class="main-content">
+
+    <ion-radio-group class="payment" value="1" mode="md">
+      <ion-item class="ion-no-padding" *ngFor="let item of [1,2,3]" lines="none">
+        <ion-radio class="ion-no-margin" slot="start" value="1"></ion-radio>
+        <ion-thumbnail>
+          <img src="assets/payment.png" />
+        </ion-thumbnail>
+        <div>
+          <h6>Axis Bank</h6>
+          <p>Upi</p>
+        </div>
+      </ion-item>
+    </ion-radio-group>
+
+    <div class="title">
+      <ion-label>Other Methods</ion-label>
+    </div>
+
+    <ion-radio-group value="1" mode="md" class="other">
+      <ion-item class="ion-no-padding" *ngFor="let item of [1,2,3]" lines="none">
+        <ion-radio class="ion-no-margin" slot="start" value="1"></ion-radio>
+
+        <ion-label class="text">Net Banking</ion-label>
+
+      </ion-item>
+    </ion-radio-group>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="footer">
+    <ion-button class="btn" expand="block" (click)="openHistory()">
+      Proceed to Pay
+    </ion-button>
+  </div>
+</ion-footer>

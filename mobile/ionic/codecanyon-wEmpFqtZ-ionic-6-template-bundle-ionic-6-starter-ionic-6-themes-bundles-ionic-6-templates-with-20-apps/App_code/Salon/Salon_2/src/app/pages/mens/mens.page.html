@@ -1,0 +1,73 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToBack()">
+        <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Mens</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="start" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main-content">
+    <div class="segments">
+      <div class="item">
+        <ion-segment value="1">
+          <ion-segment-button value="1">
+            <ion-label>Hair</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="2">
+            <ion-label>Beard</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="3">
+            <ion-label>Face</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="4">
+            <ion-label>Massage</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="5">
+            <ion-label>mask</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+    </div>
+    <div class="services">
+      <div class="card" *ngFor="let item of [1,2,3,4]">
+        <div class="img" [style.backgroundImage]="'url(assets/beard.jpg)'">
+          <div class="title">
+            <ion-label class="name">Regular Hair Cut</ion-label>
+            <ion-label class="price">$ 10.12</ion-label>
+          </div>
+          <ion-label class="add-btn">Add Service</ion-label>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="footer">
+
+    <ion-button (click)="goToSlot()" expand="block">
+      <ion-icon name="cart"></ion-icon>
+    </ion-button>
+    <ion-button class="btn" (click)="goToSlot()" expand="block">
+      Book Appointmet
+    </ion-button>
+  </div>
+
+</ion-footer>

@@ -1,0 +1,61 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToBack()">
+        <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Pick your Slot</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="start" name="calendar-clear-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="main-content">
+    <div class="heading">
+      list of stylist availabel at your selected slot
+    </div>
+
+    <ion-radio-group value="biff" mode="md">
+      <ion-item class="ion-no-padding" *ngFor="let item of [1,2,3]">
+        <ion-radio class="ion-no-margin" slot="start" value="1"></ion-radio>
+        <ion-thumbnail>
+          <img src="assets/beard2.jpg" />
+        </ion-thumbnail>
+        <div>
+          <h5>Jon Snow</h5>
+          <p>Experience - 8 year</p>
+        </div>
+        <div slot="end" class="reting">
+          <div>
+            <p class="star"> <span>
+                <ion-icon name="star"></ion-icon>
+              </span> 4.5</p>
+          </div>
+          <ion-label>12 reviews</ion-label>
+        </div>
+      </ion-item>
+    </ion-radio-group>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="footer">
+    <ion-button class="btn" (click)="goToStylist()" expand="block">
+      Proceed to Checkout
+    </ion-button>
+  </div>
+</ion-footer>

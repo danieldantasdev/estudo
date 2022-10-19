@@ -1,0 +1,52 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+  <ion-slides (ionSlideDidChange)="slideChanged($event)" #slides>
+    <ion-slide>
+      <div class="slide-content">
+        <div [style.backgroundImage]="'url(assets/imgs/sliders/1.jpg)'" class="back_img">
+        </div>
+        <ion-label class="head-title">Find barbarshop nearby</ion-label>
+        <ion-label class="sub-title">Lorem Ipsum is simply dummy text of the printing and typesetting industry
+        </ion-label>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide-content">
+        <div [style.backgroundImage]="'url(assets/imgs/sliders/2.jpg)'" class="back_img">
+        </div>
+        <ion-label class="head-title">Attractive promotions</ion-label>
+        <ion-label class="sub-title">Lorem Ipsum is simply dummy text of the printing and typesetting industry
+        </ion-label>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide-content">
+        <div [style.backgroundImage]="'url(assets/imgs/sliders/3.jpg)'" class="back_img">
+        </div>
+        <ion-label class="head-title">Professional specialist</ion-label>
+        <ion-label class="sub-title">Lorem Ipsum is simply dummy text of the printing and typesetting industry
+        </ion-label>
+
+        <ion-button (click)="onLogin()" expand="block" shape="round">
+          Get Started
+        </ion-button>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <div class="pagers">
+    <div *ngFor="let item of items" [class]="item == index ?'active':'deactive'"></div>
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" *ngIf="isLast == false">
+    <ion-fab-button (click)="onLogin()">
+      Skip
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

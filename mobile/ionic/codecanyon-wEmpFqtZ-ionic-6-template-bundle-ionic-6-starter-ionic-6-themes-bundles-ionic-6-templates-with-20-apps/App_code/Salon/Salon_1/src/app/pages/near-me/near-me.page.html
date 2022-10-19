@@ -1,0 +1,67 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Salon Near You</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="loader">
+    <ion-spinner name="crescent" *ngIf="loading === true" color="primary"></ion-spinner>
+  </div>
+  <div class="main_content_div">
+    <div #map id="map" class="map"></div>
+
+    <div class="div1" id='item'>
+      <div class="cateLbl">
+        <ion-label class="all">Service at home </ion-label>
+        <ion-label class="view" (click)="allIndividuals()">View All
+          <ion-icon name="chevron-forward-outline" color="primary"></ion-icon>
+        </ion-label>
+      </div>
+      <div class="sliders2">
+        <div class="categoryIcon" (click)="goToBarberProfile()" *ngFor="let item of userList">
+          <div class="imgs">
+            <div class="back_image bg_image" [style.backgroundImage]="'url( '+ item.img +' )'"></div>
+          </div>
+          <p class="name">{{item.name}}</p>
+        </div>
+      </div>
+      <div class="cateLbl">
+        <ion-label class="all">Top Salons</ion-label>
+        <ion-label class="view" (click)="allSalon()">View All
+          <ion-icon name="chevron-forward-outline" color="primary"></ion-icon>
+        </ion-label>
+      </div>
+      <div class="slider_div">
+        <ion-slides [options]="slideOpts">
+
+          <ion-slide *ngFor="let item of salon">
+            <div class="card" (click)="openSalon()">
+              <div class="back_image" [style.backgroundImage]="'url( '+item.img+' )'">
+                <ion-label class="time_lbl">
+                  <ion-icon name="star" color="warning"></ion-icon>
+                  4.0
+                </ion-label>
+              </div>
+              <div class="salon_detail_div">
+                <ion-label class="heading_lbl">{{item.name}}</ion-label>
+                <ion-label class="addr">Eva Surbhi Complex</ion-label>
+                <ion-label class="book_class">Book</ion-label>
+              </div>
+
+            </div>
+          </ion-slide>
+        </ion-slides>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

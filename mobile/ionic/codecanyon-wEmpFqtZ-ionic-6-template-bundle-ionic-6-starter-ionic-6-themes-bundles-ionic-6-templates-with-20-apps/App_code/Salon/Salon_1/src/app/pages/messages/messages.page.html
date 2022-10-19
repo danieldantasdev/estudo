@@ -1,0 +1,72 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header class="ion-no-border">
+  <ion-toolbar mode="md">
+    <ion-segment [(ngModel)]="current" (ionChange)="segmentChanged($event)" mode="md">
+      <ion-segment-button value="chats">
+        <ion-label>Messages <ion-badge color="primary" mode="ios">5</ion-badge>
+        </ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="calls">
+        <ion-label>Chat</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <ion-searchbar mode="ios" placeholder="Search" inputmode="text" type="text" style="margin-top: 20px;">
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="main_content_div" *ngIf="current == 'chats'">
+    <div class="msg_box" *ngFor="let item of list; let i = index" (click)="openChat(item)">
+      <div class="bg_image user_back" [style.backgroundImage]="'url('+ item.avtar +')'">
+      </div>
+      <div class="msg_content">
+        <div class="flex_div">
+          <ion-label class="name_lbl">{{item.receiver_name +' '+ item.receiver_last_name}}</ion-label>
+          <ion-label class="time_lbl">{{item.updated_at}}</ion-label>
+        </div>
+        <div class="flex_div2">
+          <ion-label class="msg_lbl"> {{item.last_message}} </ion-label>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="main_content_div" *ngIf="current == 'calls'">
+    <div class="msg_box" *ngFor="let item of list; let i = index" (click)="openCall(item)">
+      <div class="bg_image user_back" [style.backgroundImage]="'url('+ item.avtar +')'">
+      </div>
+      <div class="msg_content">
+        <div class="flex_div">
+          <ion-label class="name_lbl">{{item.receiver_name +' '+ item.receiver_last_name}}</ion-label>
+          <div>
+            <ion-icon slot="end" style="background: #2B75FE;" class="btns" name="videocam"></ion-icon>
+            <ion-icon slot="end" style="background: #4FDB66;" class="btns" name="call"></ion-icon>
+          </div>
+        </div>
+        <div class="flex_div2">
+          <ion-label class="msg_lbl">
+            <span *ngIf="0 === i % 2">
+              <ion-icon slot="start" name="arrow-redo" color="success"></ion-icon> You called them
+            </span>
+            <span *ngIf="0 !== i % 2">
+              <ion-icon slot="start" name="arrow-undo" color="danger"></ion-icon> You missed call
+            </span>
+          </ion-label>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</ion-content>

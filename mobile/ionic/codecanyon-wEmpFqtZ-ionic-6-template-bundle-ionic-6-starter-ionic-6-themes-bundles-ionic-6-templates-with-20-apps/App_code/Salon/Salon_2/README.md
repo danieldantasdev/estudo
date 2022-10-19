@@ -1,0 +1,2 @@
+# salon2_marketplace_capacitor
+salon2_marketplace_capacitor

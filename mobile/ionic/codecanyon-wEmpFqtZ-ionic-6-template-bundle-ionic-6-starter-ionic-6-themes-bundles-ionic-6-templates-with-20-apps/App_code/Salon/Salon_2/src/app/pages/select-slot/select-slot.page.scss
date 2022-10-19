@@ -1,0 +1,94 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+
+
+ion-content {
+  .main-content {
+    .calender {
+      .month {
+        padding-top: 20px;
+        ion-row {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          ion-label {
+            font-size: 18px;
+            font-weight: 600;
+            padding: 0px 20px;
+          }
+        }
+      }
+      .select-date {
+        text-align: center;
+        border-radius: 10px;
+        padding: 0px 20px 10px 10px;
+
+        .row_cal {
+          margin-top: 15px;
+          width: 100%;
+          padding-bottom: 10px;
+        }
+        ion-icon {
+          margin-top: 30px;
+        }
+
+        .disabled {
+          color: #ababab !important;
+        }
+        .lbl_day {
+          display: block;
+          margin-bottom: 20px;
+          font-size: 13px;
+          padding-top: 10px;
+        }
+        .lbl_date {
+          display: block;
+          position: relative;
+          z-index: 1;
+          font-size: 14px;
+          padding: 30px 5px 10px 5px;
+        }
+
+        .selectedDay {
+          background: var(--ion-color-primary);
+          color: white;
+          border-radius: 10px;
+          font-weight: bold;
+        }
+      }
+    }
+    .slot-name{
+      padding: 10px 15px;
+      font-weight: 600;
+      font-size: 18px;
+
+    }
+    .slot{
+      padding: 5px 14px;
+      ion-chip{
+
+        background-color: white;
+        border: 2px solid lightgray;
+        border-radius: 8px;
+        padding: 5px 8px;
+        font-weight: 500;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+ion-footer {
+  padding: 15px 20px;
+  .footer {
+    .btn {
+      width: 100%;
+    }
+  }
+}

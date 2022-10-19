@@ -1,0 +1,39 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+  <div class="bg_image cover-image" [style.backgroundImage]="'url(assets/imgs/call_bg.jpg)'">
+    <div class="header">
+      <ion-button (click)="onBack()" fill="clear">
+        <ion-icon slot="icon-only" name="arrow-back" color="light"></ion-icon>
+      </ion-button>
+      <p>Alba S. Chapman</p>
+      <ion-button fill="clear">
+        <ion-icon slot="icon-only" name="camera-reverse-outline" color="light"></ion-icon>
+      </ion-button>
+    </div>
+
+    <div class="bg_image mine-image" [style.backgroundImage]="'url(assets/imgs/selfies.jpg)'">
+
+    </div>
+    <div class="footer">
+      <ion-button (click)="onBack()" color="dark" class="btns">
+        <ion-icon slot="icon-only" name="mic-off-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="onBack()" color="danger" class="center_btns">
+        <ion-icon slot="icon-only" name="power-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="onBack()" color="dark" class="btns">
+        <ion-icon slot="icon-only" name="videocam-off-outline"></ion-icon>
+      </ion-button>
+
+    </div>
+  </div>
+</ion-content>
