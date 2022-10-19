@@ -1,0 +1,53 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear">
+            <ion-icon name="arrow-back" color="dark"></ion-icon>
+        </ion-button>
+        <ion-title>Delivery Address</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <div class="address_box" *ngFor="let item of [1,2]">
+            <div class="title_flex">
+                <ion-label>Home</ion-label>
+                <ion-icon name="ellipsis-horizontal"></ion-icon>
+            </div>
+            <div class="detail_div">
+                <div>
+                    <ion-icon name="location"></ion-icon>
+                </div>
+                <ion-label>123, eva surbhi complex, bhavnagar</ion-label>
+            </div>
+            <div class="detail_div">
+                <div>
+                    <ion-icon name="person"></ion-icon>
+                </div>
+                <ion-label>Jonh Doe</ion-label>
+            </div>
+            <div class="detail_div">
+                <div>
+                    <ion-icon name="call"></ion-icon>
+                </div>
+                <ion-label>9876543210</ion-label>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer mode="ios">
+    <div class="footer_div">
+        <ion-button expand="block" mode="ios" (click)="goToAddAddress()">
+            Add New Address
+        </ion-button>
+    </div>
+</ion-footer>

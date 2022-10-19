@@ -1,0 +1,114 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear">
+            <ion-icon name="arrow-back" color="dark"></ion-icon>
+        </ion-button>
+        <ion-title>Confirm Bill</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="bottom_border_div">
+
+            <div class="title_flex">
+                <ion-label class="bold_lbl">Delivery Address</ion-label>
+                <!-- <ion-label class="simp_lbl" (click)="goToAddresses()">Change</ion-label> -->
+                <ion-label class="orange_lbl">Change</ion-label>
+            </div>
+
+            <ion-label class="small_lbl">Home</ion-label>
+            <div class="simp_flex">
+                <div>
+                    <ion-icon name="location"></ion-icon>
+                </div>
+                <ion-label>123, Eva surbhi, Bhavnagar</ion-label>
+            </div>
+            <div class="simp_flex">
+                <div>
+                    <ion-icon name="person"></ion-icon>
+                </div>
+                <ion-label>Jonh Doe</ion-label>
+            </div>
+            <div class="simp_flex">
+                <div>
+                    <ion-icon name="call"></ion-icon>
+                </div>
+                <ion-label>9876543210</ion-label>
+            </div>
+
+        </div>
+
+        <div class="bottom_border_div">
+
+            <div class="title_flex">
+                <ion-label class="bold_lbl">Order Bill</ion-label>
+                <ion-icon name="chevron-down"></ion-icon>
+            </div>
+
+            <div class="display_flex">
+                <ion-label class="grey_lbl">Product</ion-label>
+                <ion-label class="simp_lbl">2 Items</ion-label>
+            </div>
+
+            <div class="display_flex">
+                <ion-label class="grey_lbl">Price</ion-label>
+                <ion-label class="simp_lbl">$70.00</ion-label>
+            </div>
+
+            <div class="display_flex">
+                <ion-label class="grey_lbl">Shipping Fee</ion-label>
+                <ion-label class="simp_lbl">$10.00</ion-label>
+            </div>
+
+            <div class="display_flex">
+                <ion-label class="grey_lbl">Have a promo code ?</ion-label>
+                <ion-icon name="chevron-forward"></ion-icon>
+            </div>
+
+            <div class="display_flex">
+                <ion-label class="last_lbl">Total</ion-label>
+                <ion-label class="last_lbl">$10.00</ion-label>
+            </div>
+
+        </div>
+
+        <div class="bottom_border_div" style="border: 0px;">
+
+            <div class="title_flex">
+                <ion-label class="bold_lbl">Payment Method</ion-label>
+                <ion-label class="orange_lbl" (click)="goToAddPaymentMethod()">Add New</ion-label>
+            </div>
+
+            <ion-radio-group value="1" mode="md">
+                <div class="border_div">
+                    <ion-label>•••• •••• •••• 4242</ion-label>
+                    <ion-radio value="1"></ion-radio>
+                </div>
+                <div class="border_div">
+                    <ion-label>•••• •••• •••• 4242</ion-label>
+                    <ion-radio value="2"></ion-radio>
+                </div>
+            </ion-radio-group>
+
+        </div>
+
+    </div>
+</ion-content>
+
+<ion-footer mode="ios">
+    <div class="footer_div">
+        <ion-button expand="block" mode="ios" (click)="goToHome()">
+            Complete
+        </ion-button>
+    </div>
+</ion-footer>

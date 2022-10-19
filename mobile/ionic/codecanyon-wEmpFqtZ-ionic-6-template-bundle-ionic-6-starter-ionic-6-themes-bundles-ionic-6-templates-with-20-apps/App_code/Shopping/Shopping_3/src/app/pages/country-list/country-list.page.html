@@ -1,0 +1,30 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-button (click)="goBack()" fill="clear">
+      <ion-icon name="arrow-back" color="dark"></ion-icon>
+    </ion-button>
+    <ion-title>Country/Region</ion-title>
+  </ion-toolbar>
+  <div class="input_box">
+    <ion-input type="text" placeholder="Type name here"></ion-input>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <ion-radio-group mode="md">
+      <ion-item *ngFor="let item of countries">
+        <ion-label>{{item.country_name}}</ion-label>
+        <ion-radio value="{{item.dialling_code}}"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </div>
+</ion-content>

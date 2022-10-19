@@ -1,0 +1,50 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear">
+            <ion-icon name="arrow-back" color="dark"></ion-icon>
+        </ion-button>
+        <ion-title>Account Information</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <ion-label class="simp_lbl">Full Name</ion-label>
+        <ion-input type="text" placeholder="Full Name"></ion-input>
+
+        <ion-label class="simp_lbl">Email ID</ion-label>
+        <ion-input type="text" placeholder="Email ID"></ion-input>
+
+        <ion-label class="simp_lbl">Date of Birth</ion-label>
+        <ion-datetime display-format="DD/MM/YYYY" placeholder="Date of Birth"></ion-datetime>
+
+        <ion-label class="simp_lbl">Password</ion-label>
+        <ion-input type="text" placeholder="Password"></ion-input>
+
+        <ion-label class="simp_lbl">Mostly Interested:</ion-label>
+        <ion-radio-group value="women" mode="md">
+            <div class="radio_flex">
+                <ion-radio value="women"></ion-radio>
+                <ion-label>Product for Women's</ion-label>
+            </div>
+            <div class="radio_flex">
+                <ion-radio value="men"></ion-radio>
+                <ion-label>Product for Men's</ion-label>
+            </div>
+        </ion-radio-group>
+
+        <ion-button expand="block">
+            Save Changes
+        </ion-button>
+
+    </div>
+</ion-content>

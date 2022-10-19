@@ -1,0 +1,38 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear">
+            <ion-icon name="arrow-back" color="dark"></ion-icon>
+        </ion-button>
+        <ion-title>Add Address</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <ion-label class="simp_lbl">Your Country</ion-label>
+        <ion-input type="text" placeholder="Your Country"></ion-input>
+
+        <ion-label class="simp_lbl">Address</ion-label>
+        <ion-input type="text" placeholder="Address"></ion-input>
+
+        <ion-label class="simp_lbl">Name of Consignee</ion-label>
+        <ion-input type="text" placeholder="Name of Consignee"></ion-input>
+
+        <ion-label class="simp_lbl">Phone Number</ion-label>
+        <ion-input type="text" placeholder="Phone Number"></ion-input>
+
+        <ion-button expand="block">
+            Save Address
+        </ion-button>
+
+    </div>
+</ion-content>
