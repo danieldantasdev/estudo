@@ -1,0 +1,130 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-items: center;
+  width: 100%;
+  ion-buttons {
+    ion-button {
+      height: 40px;
+      width: 40px;
+      background: #ffff;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+  }
+  .end_btn {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 20px;
+    ion-buttons {
+      ion-button {
+        margin: 0px 0px 0px 10px;
+      }
+    }
+  }
+}
+
+.category_div {
+  overflow: scroll;
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0px;
+  .menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    .item {
+      padding: 7px 20px 7px 20px;
+      margin: 5px;
+      border-radius: 30px;
+      width: max-content;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: center;
+      background: #ffffff;
+      ion-label {
+        margin-top: 2px;
+        font-size: 15px;
+        padding-bottom: 3px;
+      }
+    }
+  }
+}
+
+.main_content {
+  background: #ffff;
+  padding: 20px 20px 50px 20px;
+  border-radius: 20px;
+  position: relative;
+  .img {
+    height: 60vh;
+    width: 100%;
+    border-radius: 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    .btn {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .sub_btn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  .buttons {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    .social_btn {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 100%;
+      ion-buttons {
+        border-radius: 50%;
+        ion-button {
+          --border-radius: 50%;
+          height: 40px;
+          width: 40px;
+          ion-icon {
+            color: #ffff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .main_content {
+    .sub_btn {
+      ion-button {
+        width: max-content;
+        font-size: 7px;
+      }
+    }
+  }
+}

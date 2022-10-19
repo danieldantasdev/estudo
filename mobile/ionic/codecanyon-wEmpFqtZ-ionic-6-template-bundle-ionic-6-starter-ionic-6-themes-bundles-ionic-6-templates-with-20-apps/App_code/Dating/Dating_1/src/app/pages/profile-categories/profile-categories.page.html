@@ -1,0 +1,73 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+
+  <div class="btn">
+    <ion-buttons>
+      <ion-button (click)="util.openSideMenu()">
+        <ion-icon name="grid"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button (click)="onList()">
+        <ion-icon name="sparkles"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button (click)="onFav()">
+        <ion-icon name="heart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button (click)="onVideo()">
+        <ion-icon name="tv"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button (click)="onSettings()">
+        <ion-icon name="options"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button (click)="onMessage()">
+        <ion-icon name="chatbubbles"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+
+  <ion-row>
+    <ion-col size="6" *ngFor="let item of [1,2,3,4,5]">
+      <div class="profile">
+        <div class="img" [style.backgroundImage]="'url(assets/images/p5.jpg)'">
+          <ion-buttons>
+            <ion-button (click)="onClick()">
+              <ion-icon name="star"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </div>
+        <div class="text">
+          <h5>Jack Thomas</h5>
+          <ion-button (click)="onClick()" size="small" shape="round" color="warning">
+            Software Engineer
+          </ion-button>
+          <div class="rating">
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-label>4.5</ion-label>
+          </div>
+          <h6>$20.00/hr</h6>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

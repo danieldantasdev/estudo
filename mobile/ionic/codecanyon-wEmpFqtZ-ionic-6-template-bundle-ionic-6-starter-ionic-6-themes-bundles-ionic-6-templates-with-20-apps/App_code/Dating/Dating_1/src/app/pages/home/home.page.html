@@ -1,0 +1,72 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+
+  <div class="btn">
+    <ion-buttons>
+      <ion-button (click)="util.openSideMenu()">
+        <ion-icon name="grid"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button (click)="onList()">
+        <ion-icon name="sparkles"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button (click)="onFav()">
+        <ion-icon name="heart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button (click)="onVideo()">
+        <ion-icon name="tv"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button (click)="onSettings()">
+        <ion-icon name="options"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button (click)="onMessage()">
+        <ion-icon name="chatbubbles"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+
+  <div class="category_div">
+    <div class="menu">
+      <div class="item" (click)="onProfile()">
+        <ion-thumbnail>
+          <img src="assets/images/p5.jpg" />
+          <ion-icon name="add" color="light"></ion-icon>
+        </ion-thumbnail>
+        <ion-label>You</ion-label>
+      </div>
+    </div>
+    <div class="menu">
+      <div class="item" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+        <ion-thumbnail>
+          <img src="assets/images/p2.jpg" />
+        </ion-thumbnail>
+        <ion-label>Dodiya Talli</ion-label>
+      </div>
+    </div>
+  </div>
+
+  <h5>Populares</h5>
+
+  <ion-row>
+    <ion-col size="6" *ngFor="let item of [1,2,3,4,5,6,7]">
+      <div class="img" [style.backgroundImage]="'url(assets/images/p5.jpg)'"></div>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

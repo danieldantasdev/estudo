@@ -1,0 +1,106 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+
+  <div class="title">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()" color="dark">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+   <ion-label>Profile Timeline</ion-label>
+    <ion-buttons slot="end">
+      <ion-button (click)="onNotification()" color="dark">
+        <ion-icon name="notifications"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="icn">
+      <ion-button (click)="onNotification()" color="light">
+        3
+      </ion-button>
+    </ion-buttons>
+  </div>
+
+  <div class="profile">
+    <ion-thumbnail>
+      <img src="assets/images/p2.jpg" />
+    </ion-thumbnail>
+    <h5>Josan Nikki</h5>
+    <ion-label>New York</ion-label>
+    <div class="btn">
+      <ion-button (click)="onClick()" size="small" shape="round" style="--background: linear-gradient(#9da5ff,#5260ff);">
+        Follow
+      </ion-button>
+      <ion-button (click)="onClick()" size="small" shape="round" style="--background: linear-gradient(#a6e3ff,#3dc2ff);">
+        Add Friend
+      </ion-button>
+    </div>
+  </div>
+
+  <div class="text">
+    <ion-row>
+      <ion-col size="4">
+        <h6>735</h6>
+        <ion-label>Post</ion-label>
+      </ion-col>
+      <ion-col size="3" class="border">
+        <h6>886</h6>
+        <ion-label>Following</ion-label>
+      </ion-col>
+      <ion-col size="4">
+        <h6>567</h6>
+        <ion-label>Follower</ion-label>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="category_div2">
+    <div class="menu">
+      <div class="item" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+        <ion-label>Photos</ion-label>
+      </div>
+    </div>
+  </div>
+
+  <div class="title2">
+    <h5>Photos</h5>
+    <ion-label>Show All</ion-label>
+  </div>
+
+  <div class="photos">
+    <ion-slides mode="ios" scrollbar="ios" [options]="slideOpts2">
+      <ion-slide  *ngFor="let item of [1,2,3,4,5]">
+       <div class="specialist_profile">
+         <div class="images" [style.backgroundImage]="'url(assets/images/p2.jpg)'"></div>
+         <div class="btn">
+           <ion-buttons>
+             <ion-button (click)="onClick()" color="dark">
+               <ion-icon name="heart" color="medium"></ion-icon>
+               2K
+             </ion-button>
+           </ion-buttons>
+           <ion-buttons>
+            <ion-button (click)="onClick()" color="dark">
+              <ion-icon name="chatbox-ellipses" color="medium"></ion-icon>
+              180
+            </ion-button>
+          </ion-buttons>
+          <ion-buttons>
+            <ion-button (click)="onClick()" color="dark">
+              <ion-icon name="share-social" color="medium"></ion-icon>
+              5
+            </ion-button>
+          </ion-buttons>
+         </div>
+       </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+</ion-content>

@@ -1,0 +1,48 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+
+  <h5>Friends</h5>
+
+  <ion-item lines="none" *ngFor="let item of [1,2,3,4]">
+    <ion-thumbnail>
+      <img src="assets/images/p5.jpg" />
+    </ion-thumbnail>
+    <div class="text">
+      <h6>Jaydeep Dodiya</h6>
+      <ion-label>10 Mutual Friends</ion-label>
+    </div>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClick()">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="btn">
+      <ion-button (click)="onClick()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
+
+  <h5>Suggest Friends</h5>
+
+  <ion-item lines="none" *ngFor="let item of [1,2,3,4]">
+    <ion-thumbnail>
+      <img src="assets/images/p4.jpg" />
+    </ion-thumbnail>
+    <div class="text">
+      <h6>Jaydeep Dodiya</h6>
+      <ion-label>10 Mutual Friends</ion-label>
+    </div>
+    <ion-button slot="end" shape="round" class="add" (click)="onClick()">
+      Add Friend
+    </ion-button>
+  </ion-item>
+
+</ion-content>

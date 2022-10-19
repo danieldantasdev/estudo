@@ -1,0 +1,87 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+
+  <div class="title">
+    <ion-buttons slot="start">
+      <ion-button (click)="util.openSideMenu()" color="dark">
+        <ion-icon name="grid"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-label>Hi Alex Smith</ion-label>
+    <div class="end_btn">
+      <ion-buttons slot="end">
+        <ion-button (click)="onSettings()" color="danger">
+          <ion-icon name="options"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button (click)="onMsg()" color="success">
+          <ion-icon name="chatbubble-ellipses"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </div>
+
+  <div class="category_div">
+    <div class="menu">
+      <div class="item" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+        <ion-label>#Like Me</ion-label>
+      </div>
+    </div>
+  </div>
+
+  <div class="main_content">
+    <div class="img" [style.backgroundImage]="'url(assets/images/p5.jpg)'">
+      <div class="btn">
+        <ion-button size="small" shape="round" expand="block" style="--background: rgba(0, 0, 0, 0.226); width: max-content;">
+          Alexa Jeny, 22
+        </ion-button>
+        <div class="sub_btn">
+          <ion-button size="small" shape="round" expand="block" style="--background: rgba(47, 255, 255, 0.801); width: 30%;">
+            India
+          </ion-button>
+          <ion-button size="small" shape="round" expand="block" style="--background: rgba(255, 60, 60, 0.842); width: 35%;">
+            Students
+          </ion-button>
+          <ion-button size="small" shape="round" expand="block" style="--background: rgba(255, 23, 178, 0.815); width: 30%;">
+            Age 29
+          </ion-button>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <div class="social_btn">
+        <ion-buttons>
+          <ion-button (click)="onClick()" style="--background: linear-gradient( rgba(255, 238, 0, 0.445), rgb(255, 191, 14));">
+            <ion-icon name="star"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-buttons>
+          <ion-button (click)="onClick()" style="--background: linear-gradient( rgba(255, 20, 243, 0.445), rgb(255, 14, 215));">
+            <ion-icon name="heart"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-buttons>
+          <ion-button (click)="onClick()" style="--background: rgba(255, 50, 204, 0.144); height: 50px; width: 50px;">
+            <ion-icon name="close-sharp" style="color: rgb(255, 14, 215);"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-buttons>
+          <ion-button (click)="onClick()" style="--background: linear-gradient( rgba(169, 20, 255, 0.445), rgb(187, 14, 255));">
+            <ion-icon name="flash"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+    </div>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,62 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+
+  <div class="title">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()" color="dark">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+   <ion-label>My Friends</ion-label>
+    <ion-buttons slot="end">
+      <ion-button (click)="onSearch()" color="dark">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+
+  <div class="header">
+    <h5>Favorites</h5>
+    <ion-label>See All</ion-label>
+  </div>
+
+  <div class="category_div">
+    <div class="menu">
+      <div class="item" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+        <ion-thumbnail>
+          <img src="assets/images/p2.jpg" />
+        </ion-thumbnail>
+        <ion-label>Dodiya Talli</ion-label>
+      </div>
+    </div>
+  </div>
+
+  <div class="item">
+    <ion-row (click)="onProfile()" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+      <ion-col size="2">
+        <ion-thumbnail>
+          <img src="assets/images/p5.jpg" />
+        </ion-thumbnail>
+      </ion-col>
+      <ion-col size="7">
+        <h6>Darien Don</h6>
+        <ion-label>Great! do you love it..</ion-label>
+      </ion-col>
+      <ion-col size="3">
+        <ion-buttons>
+          <ion-button color="dark">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </div>
+
+</ion-content>

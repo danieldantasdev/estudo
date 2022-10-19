@@ -1,0 +1,91 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  ion-buttons {
+    ion-button {
+      border-radius: 50%;
+      height: 45px;
+      width: 45px;
+      background: #ffff;
+      ion-icon {
+        color: black;
+      }
+    }
+  }
+}
+
+ion-row {
+  margin: 20px 0px;
+  ion-col {
+    .profile {
+      height: 200px;
+      width: 160px;
+      background: #ffff;
+      border-radius: 20px;
+      .img {
+        height: 100px;
+        width: 160px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 20px 20px 0px 0px;
+        position: relative;
+        ion-buttons {
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          --border-radius: 50%;
+          ion-button {
+            background: #ffff;
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            ion-icon {
+              color: #f32879;
+            }
+          }
+        }
+      }
+      .text {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        h5 {
+          margin: 10px 0px 0px 0px;
+          font-weight: bold;
+        }
+        ion-button {
+          font-size: 10px;
+          width: max-content;
+        }
+        .rating {
+          font-size: 10px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          ion-icon {
+            color: #ffc409;
+          }
+          ion-label {
+            margin-left: 10px;
+          }
+        }
+        h6 {
+          margin: 0px;
+          color: #f32879;
+        }
+      }
+    }
+  }
+}

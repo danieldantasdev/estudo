@@ -1,0 +1,94 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+
+  <div class="bg_img ion-padding" [style.backgroundImage]="'url(assets/images/p4.jpg)'">
+
+  <div class="title">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()" color="dark">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClick()" color="success">
+        <ion-icon name="contract"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+
+  </div>
+
+  <div class="main_div ion-padding">
+
+    <ion-row>
+      <ion-col size="2">
+        <ion-thumbnail>
+          <img src="assets/images/p4.jpg" />
+        </ion-thumbnail>
+      </ion-col>
+      <ion-col size="7">
+        <div class="title">
+        <h6>Darien Don</h6>
+        </div>
+        <ion-label>12K Followers</ion-label>
+      </ion-col>
+      <ion-col size="3">
+        <ion-buttons>
+          <ion-button (click)="onLive()" color="light" style="background: linear-gradient(#ff7acc, #cf3c97);">
+            Live
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="second_row">
+      <ion-col size="6">
+       <div class="comments">
+         <ion-icon name="chatbox-ellipses" color="danger"></ion-icon>
+         <ion-label>180 <span>Comments</span></ion-label>
+       </div>
+      </ion-col>
+      <ion-col size="6" class="waching">
+        <div class="text">
+          <h6>163 People</h6>
+          <ion-label>Waching</ion-label>
+        </div>
+        <ion-thumbnail>
+          <img src="assets/images/p2.jpg" />
+        </ion-thumbnail>
+      </ion-col>
+    </ion-row>
+
+    <hr>
+
+    <ion-row class="third_row" *ngFor="let item of [1,2,3,4,5,6]">
+      <ion-col size="12">
+        <h5>Naymer Jr</h5>
+        <p>Wow...it's awesome! can't wait to see more live stream from you.</p>
+        <ion-label>5:30 PM</ion-label>
+      </ion-col>
+    </ion-row>
+
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-item lines="none">
+      <ion-input type="text" placeholder="Type something.."></ion-input>
+      <ion-buttons slot="end">
+        <ion-button (click)="onClick()" color="danger">
+          <ion-icon name="send-sharp"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>

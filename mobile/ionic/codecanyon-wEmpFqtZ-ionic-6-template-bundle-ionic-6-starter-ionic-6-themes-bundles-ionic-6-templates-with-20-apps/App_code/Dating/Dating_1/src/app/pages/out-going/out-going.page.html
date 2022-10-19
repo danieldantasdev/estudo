@@ -1,0 +1,43 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+
+  <div  class="main_div">
+    <h5>Jhon Smith</h5>
+    <h6>Calling...</h6>
+
+    <div class="img" [style.backgroundImage]="'url(assets/images/p5.jpg)'"></div>
+
+  </div>
+
+  <ion-buttons class="main_btn">
+    <ion-button (click)="onClick()" color="light">
+      <ion-icon name="call"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <div class="btn">
+    <ion-buttons>
+      <ion-button (click)="onClick()">
+        <ion-icon name="videocam" color="tertiary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button (click)="onClick()">
+        <ion-icon name="volume-high" color="danger"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button (click)="onClick()">
+        <ion-icon name="mic" color="secondary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+
+</ion-content>

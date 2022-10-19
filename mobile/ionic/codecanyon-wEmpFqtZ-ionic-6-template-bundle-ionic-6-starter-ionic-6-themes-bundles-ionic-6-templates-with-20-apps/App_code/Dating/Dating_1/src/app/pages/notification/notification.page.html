@@ -1,0 +1,96 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+
+  <div class="title">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()" color="dark">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+   <ion-label>Notification</ion-label>
+    <ion-buttons slot="end">
+      <ion-button color="success">
+        <ion-icon name="notifications"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="icn">
+      <ion-button color="light">
+        3
+      </ion-button>
+    </ion-buttons>
+  </div>
+
+  <div class="main_content">
+    <ion-row>
+      <ion-col size="2">
+        <ion-thumbnail>
+          <img src="assets/images/p2.jpg" />
+        </ion-thumbnail>
+      </ion-col>
+      <ion-col size="10">
+        <div class="title">
+        <h6>Jonson Joy</h6>
+        <ion-label>Love your post</ion-label>
+        </div>
+        <ion-label>5 mins ago</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="2">
+        <ion-thumbnail>
+          <img src="assets/images/p4.jpg" />
+        </ion-thumbnail>
+      </ion-col>
+      <ion-col size="7">
+        <div class="title">
+        <h6>Darien Don</h6>
+        <ion-label>Follow You</ion-label>
+        </div>
+        <ion-label>10 mins ago</ion-label>
+      </ion-col>
+      <ion-col size="3">
+        <ion-buttons>
+          <ion-button (click)="onClick()" color="light" style="background: linear-gradient(#939cff, #5260ff);">
+            Follow
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let item of [1,2,3]">
+      <ion-col size="2">
+        <ion-thumbnail>
+          <img src="assets/images/p5.jpg" />
+        </ion-thumbnail>
+      </ion-col>
+      <ion-col size="7">
+        <div class="title">
+        <h6>Jaydeep Hirani</h6>
+        <ion-label>Send you a friend request</ion-label>
+        </div>
+        <ion-label>Yesterday, 12:30 AM</ion-label>
+      </ion-col>
+      <ion-col size="3">
+        <ion-buttons>
+          <ion-button (click)="onClick()" color="light" style="background: linear-gradient(#97ffc1, #2dd36f);">
+            Accept
+          </ion-button>
+        </ion-buttons>
+        <ion-buttons>
+          <ion-button (click)="onClick()" color="light" style="background: linear-gradient(#ffabb6, #cf3c4f);">
+            Delete
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </div>
+
+</ion-content>

@@ -1,0 +1,102 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  ion-label {
+    font-size: 15px;
+  }
+  ion-buttons {
+    ion-button {
+      height: 40px;
+      width: 40px;
+      background: #ffff;
+      border-radius: 50%;
+    }
+  }
+  .icn {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    ion-button {
+      border-radius: 30px;
+      background: linear-gradient(rgb(255, 145, 218), rgb(255, 9, 202));
+      height: 15px;
+      width: 15px;
+      font-weight: bold;
+      font-size: 10px;
+    }
+  }
+}
+
+.searchbar {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  position: relative;
+  background: #ffff;
+  padding: 0px 15px 0px 0px;
+  border-radius: 30px;
+  ion-input {
+    --background: #ffff;
+    --padding-start: 20px;
+    border-radius: 30px;
+  }
+  ion-icon {
+    margin: 6px 0px 0px 0px;
+    font-size: 25px;
+    color: rgba(255, 60, 190, 0.973);
+  }
+}
+
+.item {
+  margin: 2rem 0px;
+  ion-row {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin: 10px 0px 10px 0px;
+    background: #ffff;
+    border-radius: 10px;
+    ion-col {
+      ion-thumbnail {
+        --border-radius: 50%;
+      }
+      h6 {
+        margin: 0px 0px 5px 0px;
+        padding-left: 10px;
+      }
+      ion-label {
+        font-size: 10px;
+        color: gray;
+        padding-left: 10px;
+      }
+      ion-buttons {
+        margin-left: 12px;
+        --border-radius: 50%;
+        ion-button {
+          background: linear-gradient(rgb(255, 133, 208), rgb(255, 28, 168));
+          height: 25px;
+          width: 25px;
+          border-radius: 50%;
+        }
+      }
+    }
+    ion-buttons {
+      ion-button {
+        height: 30px;
+        width: 30px;
+        background: #ffff;
+      }
+    }
+  }
+}

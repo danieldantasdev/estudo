@@ -1,0 +1,183 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  ion-item {
+    --background: transparent;
+    ion-icon {
+      font-size: 17px;
+      margin: 0px 3px 2px 0px;
+      color: rgb(255, 0, 119);
+    }
+    ion-label {
+      font-size: 15px;
+    }
+    ion-select {
+      font-size: 12px;
+      margin-right: 20px;
+    }
+  }
+  ion-buttons {
+    ion-button {
+      height: 40px;
+      width: 40px;
+      background: #ffff;
+      border-radius: 50%;
+    }
+  }
+}
+
+.searchbar {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  position: relative;
+  background: #ffff;
+  padding: 0px 15px 0px 0px;
+  border-radius: 30px;
+
+  ion-input {
+    --background: #ffff;
+    --padding-start: 20px;
+    border-radius: 30px;
+  }
+  ion-icon {
+    margin: 6px 0px 0px 0px;
+    font-size: 25px;
+    color: rgba(255, 60, 190, 0.973);
+  }
+}
+
+.category_div {
+  overflow: scroll;
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0px 10px 0px;
+  .menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    .item {
+      border-radius: 50%;
+      background: transparent !important;
+      width: max-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: #f4f5f8;
+      ion-label {
+        font-size: 10px;
+        margin-top: 10px;
+      }
+      ion-thumbnail {
+        border-radius: 50%;
+        padding: 2px;
+        margin: 2px;
+        height: 60px;
+        width: 60px;
+        --background: transparent;
+        border: 2px solid rgb(255, 95, 122);
+        position: relative;
+        ion-icon {
+          background: rgb(255, 102, 209);
+          border-radius: 20px;
+          position: absolute;
+          bottom: -22px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 23px;
+        }
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+.header_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  h5 {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    ion-icon {
+      font-size: 20px;
+      margin: 3px 0px 0px 5px;
+      color: #ff4fbb;
+    }
+  }
+  ion-label {
+    font-size: 13px;
+    color: gray;
+  }
+}
+
+.sliders {
+  margin: 10px 0px;
+  ion-slides {
+    ion-slide {
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+      align-items: flex-start;
+      margin: 5px;
+      .img {
+        height: 105px;
+        width: 110px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+      }
+      h6 {
+        font-size: 12px;
+        margin: 5px 0px 2px 0px;
+      }
+      ion-label {
+        font-size: 10px;
+        color: gray;
+      }
+    }
+  }
+}
+
+.sliders2 {
+  margin: 10px 0px;
+  ion-slides {
+    ion-slide {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      margin: 5px;
+      .img2 {
+        height: 80px;
+        width: 80px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+      }
+      ion-label {
+        font-size: 10px;
+        margin: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+
+  <div class="title">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()" color="dark">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-label>Refer & Earn</ion-label>
+  </div>
+
+  <div class="images">
+    <div class="bg_img" [style.backgroundImage]="'url(assets/images/f2.png)'"></div>
+  </div>
+
+  <div class="text">
+    <h5>Refer And Earn</h5>
+    <p>Share this code with your friend and <br> both of you will get $12</p>
+  </div>
+
+  <ion-item lines="none">
+    <ion-label>GGF325AD54</ion-label>
+    <ion-buttons slot="end">
+      <ion-button (click)="onCode()" color="danger">
+        <ion-icon slot="start" name="copy-outline"></ion-icon>
+        Copy Code
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
+
+  <ion-button class="content_button" (click)="onInvite()" expand="block">
+    Invite Friends
+  </ion-button>
+
+</ion-content>

@@ -1,0 +1,93 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  ion-label {
+    font-size: 15px;
+  }
+  ion-buttons {
+    ion-button {
+      height: 40px;
+      width: 40px;
+      background: #ffff;
+      border-radius: 50%;
+    }
+  }
+  .icn {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    ion-button {
+      border-radius: 30px;
+      background: linear-gradient(rgb(255, 145, 218), rgb(255, 9, 202));
+      height: 15px;
+      width: 15px;
+      font-weight: bold;
+      font-size: 10px;
+    }
+  }
+}
+
+.main_content {
+  margin: 2rem 0px 2rem 0px;
+  ion-row {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin: 10px 0px;
+    background: #ffff;
+    border-radius: 10px;
+    ion-col {
+      ion-thumbnail {
+        --border-radius: 50%;
+      }
+      h6 {
+        margin: 0px;
+        padding-left: 5px;
+        font-size: 15px;
+        white-space: nowrap;
+      }
+      ion-label {
+        font-size: 10px;
+        color: gray;
+        padding-left: 5px;
+        white-space: nowrap;
+      }
+      ion-buttons {
+        margin-left: 12px;
+        padding: 3px 0px;
+        ion-button {
+          height: 25px;
+          width: max-content;
+          font-size: 10px;
+          border-radius: 20px;
+          padding: 3px 10px;
+        }
+      }
+      .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        h6 {
+          white-space: nowrap;
+        }
+        ion-label {
+          margin-top: 2px;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

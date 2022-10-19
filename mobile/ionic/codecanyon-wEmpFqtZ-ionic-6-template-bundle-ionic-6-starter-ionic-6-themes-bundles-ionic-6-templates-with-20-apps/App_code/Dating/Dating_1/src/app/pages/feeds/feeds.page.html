@@ -1,0 +1,173 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+
+  <div class="btn">
+    <ion-buttons>
+      <ion-button (click)="util.openSideMenu()">
+        <ion-icon name="grid"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button (click)="onList()">
+        <ion-icon name="sparkles"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button (click)="onFav()">
+        <ion-icon name="heart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button (click)="onVideo()">
+        <ion-icon name="tv"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button (click)="onSettings()">
+        <ion-icon name="options"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons>
+      <ion-button (click)="onMessage()">
+        <ion-icon name="chatbubbles"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+
+  <div class="category_div">
+    <div class="menu">
+      <div class="item" (click)="onHome()">
+        <ion-thumbnail>
+          <img src="assets/images/p5.jpg" />
+          <ion-icon name="add" color="light"></ion-icon>
+        </ion-thumbnail>
+        <ion-label>You</ion-label>
+      </div>
+    </div>
+    <div class="menu">
+      <div class="item" (click)="onStory()" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+        <ion-thumbnail>
+          <img src="assets/images/p2.jpg" />
+        </ion-thumbnail>
+        <ion-label>Dodiya Talli</ion-label>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="main_content" *ngFor="let item of [1,2]">
+    <div class="profile">
+     <ion-item lines="none">
+       <ion-thumbnail>
+         <img src="assets/images/p5.jpg" />
+       </ion-thumbnail>
+       <ion-label>Alisha Jems</ion-label>
+       <ion-icon slot="end" (click)="onMenu()" name="ellipsis-vertical"></ion-icon>
+     </ion-item>
+    </div>
+
+    <ion-slides mode="ios" pager="ios" scrollbar="ios">
+      <ion-slide *ngFor="let item of [1,2,3,4,5,6,7]">
+        <div class="img" [style.backgroundImage]="'url(assets/images/p4.jpg)'"></div>
+      </ion-slide>
+    </ion-slides>
+
+    <div class="content_btn">
+      <ion-buttons>
+        <ion-button (click)="onProfile()">
+          <ion-icon name="eye"></ion-icon>
+          4567
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons>
+        <ion-button (click)="onFav()" color="danger">
+          <ion-icon name="heart"></ion-icon>
+          50
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons>
+        <ion-button (click)="onComment()">
+          <ion-icon name="chatbox-ellipses"></ion-icon>
+          20
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons>
+        <ion-button (click)="onShare()">
+          <ion-icon name="share-social"></ion-icon>
+          5
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons class="save">
+        <ion-button (click)="onSave()">
+          <ion-icon name="bookmark-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+
+  </div>
+
+  <div class="main_content" *ngFor="let item of [1,2]">
+    <div class="profile">
+     <ion-item lines="none">
+       <ion-thumbnail>
+         <img src="assets/images/p4.jpg" />
+       </ion-thumbnail>
+       <ion-label>Alexa Anny</ion-label>
+       <ion-button (click)="onConfirm()" size="small" shape="round" expand="block"
+       style="--background: linear-gradient( rgba(169, 20, 255, 0.445), rgb(187, 14, 255)); width: max-content; font-size: 10px;">
+        Add Friends
+      </ion-button>
+       <ion-icon slot="end" name="ellipsis-vertical"></ion-icon>
+     </ion-item>
+    </div>
+
+    <ion-slides mode="ios" pager="ios" scrollbar="ios">
+      <ion-slide *ngFor="let item of [1,2,3,4,5,6,7]">
+        <div class="img" [style.backgroundImage]="'url(assets/images/p5.jpg)'"></div>
+      </ion-slide>
+    </ion-slides>
+
+    <div class="content_btn">
+      <ion-buttons>
+        <ion-button (click)="onProfile()">
+          <ion-icon name="eye"></ion-icon>
+          4567
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons>
+        <ion-button (click)="onFav()" color="danger">
+          <ion-icon name="heart"></ion-icon>
+          50
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons>
+        <ion-button (click)="onComment()">
+          <ion-icon name="chatbox-ellipses"></ion-icon>
+          20
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons>
+        <ion-button (click)="onShare()">
+          <ion-icon name="share-social"></ion-icon>
+          5
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons class="save">
+        <ion-button (click)="onSave()">
+          <ion-icon name="bookmark-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+
+  </div>
+
+
+</ion-content>

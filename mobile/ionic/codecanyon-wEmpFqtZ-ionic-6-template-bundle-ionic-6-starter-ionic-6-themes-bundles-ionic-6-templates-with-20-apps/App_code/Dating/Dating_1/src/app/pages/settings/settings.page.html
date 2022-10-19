@@ -1,0 +1,194 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+
+  <div class="title">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()" color="dark">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-label>Settings</ion-label>
+  </div>
+
+  <div class="item">
+    <ion-row (click)="onProfile()">
+      <ion-col size="2">
+        <ion-thumbnail>
+          <img src="assets/images/p5.jpg" />
+        </ion-thumbnail>
+      </ion-col>
+      <ion-col size="7">
+        <h6>Darien Don</h6>
+        <ion-label>Basic Member</ion-label>
+      </ion-col>
+      <ion-col size="3">
+        <ion-buttons>
+          <ion-button color="dark">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="content">
+
+    <div class="title">
+      <h6>Accounts</h6>
+    </div>
+
+    <div class="items">
+      <ion-item lines="none" (click)="onClick()">
+        <ion-buttons slot="start">
+          <ion-button color="dark">
+            <ion-icon name="lock-closed"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label>Change Password</ion-label>
+        <ion-buttons slot="end">
+          <ion-button color="dark">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+      <ion-item lines="none" (click)="onClick()">
+        <ion-buttons slot="start">
+          <ion-button color="dark">
+            <ion-icon name="notifications"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label>Order Management</ion-label>
+        <ion-buttons slot="end">
+          <ion-button color="dark">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+      <ion-item lines="none" (click)="onClick()">
+        <ion-buttons slot="start">
+          <ion-button color="dark">
+            <ion-icon name="settings"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label>Document Management</ion-label>
+        <ion-buttons slot="end">
+          <ion-button color="dark">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+      <ion-item lines="none" (click)="onPayments()">
+        <ion-buttons slot="start">
+          <ion-button color="dark">
+            <ion-icon name="card"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label>Payments</ion-label>
+        <ion-buttons slot="end">
+          <ion-button color="dark">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+      <ion-item lines="none" (click)="onClick()">
+        <ion-buttons slot="start">
+          <ion-button color="dark">
+            <ion-icon name="log-out"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label>Sign Out</ion-label>
+        <ion-buttons slot="end">
+          <ion-button color="dark">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+    </div>
+
+    <div class="ttl2">
+      <h6>More Options</h6>
+    </div>
+
+    <div class="items">
+      <ion-item lines="none">
+        <ion-buttons slot="start">
+          <ion-button color="dark">
+            <ion-icon name="newspaper"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label>Newsletter</ion-label>
+        <ion-toggle color="danger" mode="md"></ion-toggle>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-buttons slot="start">
+          <ion-button color="dark">
+            <ion-icon name="chatbox-ellipses"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label>Text Message</ion-label>
+        <ion-toggle color="danger" mode="md"></ion-toggle>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-buttons slot="start">
+          <ion-button color="dark">
+            <ion-icon name="settings"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label>Phone Call</ion-label>
+        <ion-toggle color="danger" mode="md"></ion-toggle>
+      </ion-item>
+      <ion-item lines="none" (click)="onClick()">
+        <ion-buttons slot="start">
+          <ion-button color="dark">
+            <ion-icon name="card"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label>Currency</ion-label>
+        <ion-buttons slot="end">
+          $USD
+          <ion-button color="dark">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+      <ion-item lines="none" (click)="onClick()">
+        <ion-buttons slot="start">
+          <ion-button color="dark">
+            <ion-icon name="language"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label>Language</ion-label>
+        <ion-buttons slot="end">
+          English
+          <ion-button color="dark">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+      <ion-item lines="none" (click)="onClick()">
+        <ion-buttons slot="start">
+          <ion-button color="dark">
+            <ion-icon name="link"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label>Linked Account</ion-label>
+        <ion-buttons slot="end">
+          Facebook
+          <ion-button color="dark">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+    </div>
+
+  </div>
+
+
+</ion-content>

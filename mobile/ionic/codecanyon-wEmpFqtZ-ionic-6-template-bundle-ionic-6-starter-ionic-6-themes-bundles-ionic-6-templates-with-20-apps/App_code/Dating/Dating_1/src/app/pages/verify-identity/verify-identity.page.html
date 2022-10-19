@@ -1,0 +1,48 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+
+  <div class="title">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()" color="dark">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-label>Verify Identity</ion-label>
+  </div>
+
+  <div class="dentity_div">
+    <div class="img" [style.backgroundImage]="'url(assets/images/h1.png)'"></div>
+    <h5>Government ID</h5>
+    <ion-label>Take a driver's license, national identity <br> card or password photo.</ion-label>
+    <ion-buttons>
+      <ion-button (click)="onClick()" color="danger">
+        <ion-icon name="camera-outline" ></ion-icon>
+        Take New Photo
+      </ion-button>
+    </ion-buttons>
+  </div>
+
+  <div class="dentity_div">
+    <div class="img" [style.backgroundImage]="'url(assets/images/h2.png)'"></div>
+    <h5>Selfi Photo</h5>
+    <ion-label>Take a driver's license, national identity <br> card or password photo.</ion-label>
+    <ion-buttons>
+      <ion-button (click)="onClick()" color="danger">
+        <ion-icon name="people-outline" ></ion-icon>
+        Take New Selfi
+      </ion-button>
+    </ion-buttons>
+  </div>
+
+  <ion-button class="content_button" (click)="onConfirm()" expand="block">
+    Confirm
+  </ion-button>
+
+</ion-content>

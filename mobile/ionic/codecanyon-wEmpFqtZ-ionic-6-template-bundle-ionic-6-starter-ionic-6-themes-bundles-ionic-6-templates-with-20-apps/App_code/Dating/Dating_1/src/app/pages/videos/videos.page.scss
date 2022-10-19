@@ -1,0 +1,132 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  ion-buttons {
+    ion-button {
+      border-radius: 50%;
+      height: 45px;
+      width: 45px;
+      background: #ffff;
+      ion-icon {
+        color: black;
+      }
+    }
+  }
+}
+
+.category_div {
+  overflow: scroll;
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0px 10px 0px;
+  .menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    .item {
+      border-radius: 50%;
+      background: transparent !important;
+      width: max-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: #f4f5f8;
+      ion-label {
+        font-size: 10px;
+        margin-top: 10px;
+      }
+      ion-thumbnail {
+        border-radius: 50%;
+        padding: 2px;
+        margin: 2px;
+        height: 60px;
+        width: 60px;
+        --background: transparent;
+        border: 2px solid rgb(255, 95, 122);
+        position: relative;
+        ion-icon {
+          background: rgb(255, 102, 209);
+          border-radius: 20px;
+          position: absolute;
+          bottom: -22px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 23px;
+        }
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+.main_content {
+  padding: 10px 20px 10px 20px;
+  background: #ffff;
+  border-radius: 20px;
+  margin: 20px 0px 20px 0px;
+  ion-slides {
+    --bullet-background: white;
+    --bullet-background-active: #ffff;
+    ion-slide {
+      padding: 0px 10px 0px 10px;
+      .img {
+        height: 300px;
+        width: 350px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 20px;
+      }
+    }
+  }
+  .profile {
+    margin-top: 10px;
+    ion-item {
+      --background: transparent;
+      margin-bottom: 10px;
+      ion-thumbnail {
+        --border-radius: 50%;
+      }
+      ion-label {
+        margin-left: 10px;
+      }
+      ion-icon {
+        font-size: 17px;
+      }
+    }
+  }
+  .content_btn {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    ion-buttons {
+      ion-button {
+        color: black;
+        font-size: 15px;
+        ion-icon {
+          font-size: 15px;
+          margin-right: 5px;
+        }
+      }
+    }
+    .save {
+      position: absolute;
+      right: 40px;
+      ion-icon {
+        font-size: 20px;
+      }
+    }
+  }
+}

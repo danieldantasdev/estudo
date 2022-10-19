@@ -1,0 +1,43 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<div class="tinder" [hidden]="!cards.length" style="padding: 24px;">
+
+  <div class="tinder_cards" (pan)="handlePan($event)" (panend)="handlePanEnd($event)">
+    <div #tinderCard class="tinder_card" (transitionend)="handleShift()" *ngFor="let card of cards; let i = index"
+      [ngStyle]="{ zIndex: cards.length - i, transform: 'scale(' + (30 - i) / 30 + ') translateY(-' + 30 * i + 'px)' }">
+      <div [style.backgroundImage]="'url('+ card.img+')'" class="user_image">
+
+        <div class="overlay" [class.orange_overlay]="crossVisible == true" [class.green_overlay]="heartVisible == true">
+          <!-- <img src="assets/imgs/cross_btn.png" *ngIf="crossVisible == true"> -->
+          <ion-icon color="primary" name="close" *ngIf="crossVisible == true"></ion-icon>
+          <!-- <img src="assets/imgs/favorite_btn.png" *ngIf="heartVisible == true"> -->
+          <ion-icon color="primary" name="heart" *ngIf="heartVisible == true"></ion-icon>
+        </div>
+
+
+      </div>
+      <div class="user_detail">
+        <ion-label>{{card.name}}, {{card.age}}</ion-label>
+      </div>
+    </div>
+  </div>
+
+  <div class="tinder_buttons">
+    <div (click)="userClickedButton($event, 'dislike')">
+      <ion-icon color="primary" name="close"></ion-icon>
+    </div>
+    <div (click)="userClickedButton($event, 'superlike')">
+      <ion-icon color="medium" name="chatbubble-outline"></ion-icon>
+    </div>
+    <div (click)="userClickedButton($event, 'like')">
+      <ion-icon color="primary" name="heart"></ion-icon>
+    </div>
+  </div>
+
+</div>
