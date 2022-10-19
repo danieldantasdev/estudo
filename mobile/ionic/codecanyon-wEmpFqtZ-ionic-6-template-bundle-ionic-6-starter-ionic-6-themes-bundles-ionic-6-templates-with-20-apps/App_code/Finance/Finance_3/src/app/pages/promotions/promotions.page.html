@@ -1,0 +1,84 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+        Back
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Promotion</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onHelp()">
+        <ion-icon name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="background">
+    <span class="curve"></span>
+  </div>
+
+  <div class="image">
+    <div class="img" [style.backgroundImage]="'url(assets/images/s1.jpg)'"></div>
+  </div>
+
+  <div class="content ion-padding">
+    <ion-label class="heading">E-voucher - Travel with more people and save more!</ion-label>
+    <ion-label class="sub_txt">5:30pm - Jun 24 2019</ion-label>
+
+    <ion-label class="sub_heading"> <span>E - Voucher SUMMER :</span> Enjoy VND 400.000 off add domestic flights.</ion-label>
+
+    <ion-label class="content_heading">Terms & Conditions</ion-label>
+
+    <ion-row>
+      <ion-col size="1">
+        <div class="text">
+          <ion-label>1</ion-label>
+        </div>
+      </ion-col>
+      <ion-col size="11">
+        <ion-label class="txt1">Promotion Period : From 8:00 am Jun, 23 to 11:59 pm Jun 26,2019</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="1">
+        <div class="text">
+          <ion-label>2</ion-label>
+        </div>
+      </ion-col>
+      <ion-col size="11">
+        <ion-label class="txt1">This e - voucher cannot be combined with other e - vouchers.</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="1">
+        <div class="text">
+          <ion-label>3</ion-label>
+        </div>
+      </ion-col>
+      <ion-col size="11">
+        <ion-label class="txt1">Valid for transactions in USD only.</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-button class="content_button" (click)="onVoucher()" expand="block" shape="round">
+      Use Voucher Now
+    </ion-button>
+
+    <ion-button class="content_sec_button" (click)="onVoucher()" expand="block" shape="round">
+      Make as unread
+    </ion-button>
+  </div>
+
+</ion-content>

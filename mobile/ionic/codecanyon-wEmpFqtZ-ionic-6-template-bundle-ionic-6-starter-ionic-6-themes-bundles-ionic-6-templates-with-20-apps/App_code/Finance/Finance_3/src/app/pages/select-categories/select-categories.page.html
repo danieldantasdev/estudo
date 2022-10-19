@@ -1,0 +1,176 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon name="chevron-back"></ion-icon>
+         Back
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Select Categories</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onNew()">
+         Add New
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="background">
+    <span class="curve"></span>
+
+    <div class="segment">
+      <ion-segment value="1" mode="ios" [(ngModel)]="current">
+        <ion-segment-button value="1">
+          <ion-label>EXPENSE</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="2">
+          <ion-label>INCOME</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+  </div>
+
+  <div class="main_content" *ngIf="current == 1">
+    <div class="content">
+      <div class="categories">
+        <div class="item">
+          <ion-buttons slot="start">
+            <ion-button color="danger">
+              <ion-icon name="restaurant"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>Food & Beverage</ion-label>
+        </div>
+        <div class="checkbox">
+          <ion-checkbox color="primary" mode="md"></ion-checkbox>
+        </div>
+      </div>
+
+      <div class="sub_cate">
+        <div class="item">
+          <ion-buttons slot="start">
+            <ion-button color="danger">
+              <ion-icon name="storefront"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>Restaurant</ion-label>
+        </div>
+        <div class="checkbox">
+          <ion-checkbox color="primary" mode="md"></ion-checkbox>
+        </div>
+      </div>
+      <div class="sub_cate">
+        <div class="item">
+          <ion-buttons slot="start">
+            <ion-button color="danger">
+              <ion-icon name="cafe"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>Coffee Shop</ion-label>
+        </div>
+        <div class="checkbox">
+          <ion-checkbox color="primary" mode="md"></ion-checkbox>
+        </div>
+      </div>
+      <div class="sub_cate">
+        <div class="item">
+          <ion-buttons slot="start">
+            <ion-button color="danger">
+              <ion-icon name="fast-food"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>Fast Food</ion-label>
+        </div>
+        <div class="checkbox">
+          <ion-checkbox color="primary" mode="md"></ion-checkbox>
+        </div>
+      </div>
+      <div class="sub_cate">
+        <div class="item">
+          <ion-buttons slot="start">
+            <ion-button color="danger">
+              <ion-icon name="beer"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>Beer & Wine</ion-label>
+        </div>
+        <div class="checkbox">
+          <ion-checkbox color="primary" mode="md"></ion-checkbox>
+        </div>
+      </div>
+
+      <div class="categories2">
+        <div class="item">
+          <ion-buttons slot="start">
+            <ion-button color="primary">
+              <ion-icon name="ticket"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>Entertaiment</ion-label>
+        </div>
+        <div class="checkbox">
+          <ion-checkbox color="primary" mode="md"></ion-checkbox>
+        </div>
+      </div>
+
+      <div class="sub_cate">
+        <div class="item">
+          <ion-buttons slot="start">
+            <ion-button color="primary">
+              <ion-icon name="videocam"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>Cinema Movies</ion-label>
+        </div>
+        <div class="checkbox">
+          <ion-checkbox color="primary" mode="md"></ion-checkbox>
+        </div>
+      </div>
+      <div class="sub_cate">
+        <div class="item">
+          <ion-buttons slot="start">
+            <ion-button color="primary">
+              <ion-icon name="musical-notes"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>Music</ion-label>
+        </div>
+        <div class="checkbox">
+          <ion-checkbox color="primary" mode="md"></ion-checkbox>
+        </div>
+      </div>
+      <div class="sub_cate">
+        <div class="item">
+          <ion-buttons slot="start">
+            <ion-button color="primary">
+              <ion-icon name="game-controller"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-label>Games</ion-label>
+        </div>
+        <div class="checkbox">
+          <ion-checkbox color="primary" mode="md"></ion-checkbox>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button class="content_button" (click)="onDone()" expand="block" shape="round">
+      Done
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

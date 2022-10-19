@@ -1,0 +1,114 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.background {
+  height: 130px;
+  width: 100%;
+  background: var(--ion-color-primary);
+  position: relative;
+  .lbl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    color: #ffff;
+  }
+  .slider {
+    position: absolute;
+    bottom: -150px;
+    width: 100%;
+    ion-slides {
+      padding: 20px 30px;
+      ion-slide {
+        .imgs {
+          height: 200px;
+          width: 100%;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+.background .curve {
+  position: relative;
+  display: block;
+  height: 140px;
+  bottom: -70px;
+  overflow: hidden;
+}
+.background .curve::after {
+  border-radius: 50%;
+  height: 100px;
+  bottom: 0px;
+  transform: translate(-5%, -100%);
+  -ms-transform: translate(-5%, -100%);
+  -webkit-transform: translate(-5%, -100%);
+  content: "";
+  position: absolute;
+  width: 110%;
+  z-index: -1;
+  background: var(--ion-color-primary);
+}
+
+.content {
+  margin: 12rem 0px 10px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .lbl1 {
+    color: var(--ion-color-medium);
+  }
+  .lbl2 {
+    color: var(--ion-color-secondary);
+  }
+}
+
+.scan_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0px;
+  .images {
+    height: 60px;
+    width: 60px;
+    box-shadow: 0px 0px 20px var(--box-color);
+    --box-color: #d7d8da;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .imgs {
+      height: 50px;
+      width: 50px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.price_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px 30px 0px 0px;
+  margin: 7rem 0px 0px 0px;
+  box-shadow: 0px 0px 20px var(--box-color);
+  --box-color: #d7d8da;
+  height: 30vh;
+  ion-label {
+    margin: 10px 0px;
+  }
+}

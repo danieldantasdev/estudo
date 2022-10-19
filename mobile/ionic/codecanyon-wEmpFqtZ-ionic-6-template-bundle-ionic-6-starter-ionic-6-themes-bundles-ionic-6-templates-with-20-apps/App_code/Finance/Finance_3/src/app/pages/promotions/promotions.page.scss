@@ -1,0 +1,104 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.background {
+  height: 130px;
+  width: 100%;
+  background: var(--ion-color-primary);
+  position: relative;
+}
+
+.background .curve {
+  position: relative;
+  display: block;
+  height: 140px;
+  bottom: -130px;
+  overflow: hidden;
+}
+.background .curve::after {
+  border-radius: 50%;
+  height: 100px;
+  bottom: 0px;
+  transform: translate(-5%, -100%);
+  -ms-transform: translate(-5%, -100%);
+  -webkit-transform: translate(-5%, -100%);
+  content: "";
+  position: absolute;
+  width: 110%;
+  z-index: -1;
+  background: var(--ion-color-primary);
+}
+
+.image {
+  position: absolute;
+  top: -20px;
+  width: 100%;
+  padding: 20px;
+  .img {
+    margin: 20px 0px;
+    height: 200px;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px var(--box-color);
+    --box-color: #d7d8da;
+  }
+}
+
+.content {
+  margin-top: 7rem;
+  .sub_txt {
+    font-size: 15px;
+    color: var(--ion-color-secondary);
+  }
+  .sub_heading {
+    color: var(--ion-color-medium);
+    font-size: 15px;
+    span {
+      color: var(--ion-color-primary);
+    }
+  }
+  .content_heading {
+    font-family: "bold";
+  }
+  ion-row {
+    padding: 10px;
+    ion-col {
+      .text {
+        height: 17px;
+        width: 17px;
+        background: var(--ion-color-primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffff;
+        font-size: 13px;
+        margin-top: 2px;
+      }
+      .txt1 {
+        font-size: 14px;
+        color: var(--ion-color-medium);
+      }
+    }
+  }
+  .content_button {
+    margin-top: 3rem;
+  }
+  .content_sec_button {
+    height: 40px;
+    --background: #ffff;
+    --border-radius: 30px;
+    font-family: "regular";
+    letter-spacing: 0.7px;
+    margin: 10px 40px;
+    color: var(--ion-color-secondary);
+  }
+}

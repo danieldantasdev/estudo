@@ -1,0 +1,43 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end" (click)="goToBack()">
+      <ion-button>
+        <ion-icon name="close-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <div class="search">
+    <ion-searchbar placeholder="Search" showCancelButton="never" class="ion-no-padding"></ion-searchbar>
+    </div>
+
+    <ion-label class="heading">Top search</ion-label>
+
+    <div class="card_div">
+      <div class="card" *ngFor="let item of [1,2,3]">
+        <div class="name">
+        <img src="assets/icon/bitcoin.png">
+        <ion-label>&nbsp; Bitcoin</ion-label>
+        </div>
+        <img class="chart" src="assets/img/LineChart.jpg">
+       <div class="price">
+         <ion-label class="rate">$54,274,22</ion-label>
+         <ion-label class="status">-0.68$</ion-label>
+       </div>
+      </div>
+    </div>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,249 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios">
+  <ion-toolbar color="primary">
+    <div class="segment">
+      <ion-segment value="1" mode="ios" [(ngModel)]="current">
+        <ion-segment-button value="1">
+          <ion-label>REPORT</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="2">
+          <ion-label>PLANNING</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="3">
+          <ion-label>HISTORY</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="background">
+    <span class="curve"></span>
+  </div>
+
+  <div class="main_content">
+
+    <div *ngIf="current == 1">
+      <div class="graph_content">
+        <div class="ttl">
+          <ion-item lines="none" (click)="onModal()">
+            <div class="txt">
+              <ion-label> <span>This Week</span> 23 Jun - 29 Jun 2019</ion-label>
+              <ion-label style="color: blue;">All expenses reported</ion-label>
+            </div>
+            <ion-buttons slot="end">
+              <ion-button>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </ion-item>
+        </div>
+
+        <div class="chart">
+          <canvas id="lineChart" #lineChart></canvas>
+        </div>
+
+        <div class="price">
+          <ion-row>
+            <ion-col size="5">
+              <ion-label> <span class="income"></span> Income </ion-label>
+              <ion-label class="txt">$2,250.00</ion-label>
+            </ion-col>
+            <ion-col size="2">
+              <div class="line"></div>
+            </ion-col>
+            <ion-col size="5">
+              <ion-label> <span class="expenses"></span> Expenses </ion-label>
+              <ion-label class="txt">$2,250.00</ion-label>
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="current == 2">
+      <div class="planning_div">
+        <div class="content">
+          <div class="btn">
+            <ion-buttons slot="start">
+              <ion-button color="secondary">
+                <ion-icon name="add-circle"></ion-icon>
+                Create new plan
+              </ion-button>
+            </ion-buttons>
+          </div>
+          <div class="btn">
+            <ion-buttons slot="end">
+              <ion-button color="secondary">
+                <ion-icon name="information-circle"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+          </div>
+        </div>
+        <div class="segment2">
+          <div>
+            <ion-segment value="1" mode="md">
+              <ion-segment-button value="1">
+                <ion-label>WEEKLY</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="2">
+                <ion-label>MONTLY</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="3">
+                <ion-label>YEARLY</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="4">
+                <ion-label>OTHER</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </div>
+        </div>
+        </div>
+
+        <div class="items" *ngFor="let item of [1,2,3]">
+          <div class="itm">
+            <ion-label>Food & Beverage</ion-label>
+            <ion-buttons>
+              <ion-button color="secondary">
+                On track
+              </ion-button>
+            </ion-buttons>
+          </div>
+
+          <ion-progress-bar color="secondary" value="0.5"></ion-progress-bar>
+
+          <div class="itm2">
+            <ion-label>$663 / $1.000</ion-label>
+            <ion-buttons>
+              <ion-button color="secondary">
+                63.8 %
+              </ion-button>
+            </ion-buttons>
+          </div>
+        </div>
+        <div class="items">
+          <div class="itm">
+            <ion-label>Entertainment</ion-label>
+            <ion-buttons>
+              <ion-button color="warning" style="background: #febb3434;">
+                Warning
+              </ion-button>
+            </ion-buttons>
+          </div>
+
+          <ion-progress-bar color="warning" value="0.5"></ion-progress-bar>
+
+          <div class="itm2">
+            <ion-label>$702 / $750</ion-label>
+            <ion-buttons>
+              <ion-button color="warning">
+                93.6 %
+              </ion-button>
+            </ion-buttons>
+          </div>
+        </div>
+        <div class="items">
+          <div class="itm">
+            <ion-label>Shopping</ion-label>
+            <ion-buttons>
+              <ion-button color="danger" style="background: #eb445a3a;">
+                Over Expenses
+              </ion-button>
+            </ion-buttons>
+          </div>
+
+          <ion-progress-bar color="danger" value="0.5"></ion-progress-bar>
+
+          <div class="itm2">
+            <ion-label>$1920 / $17.00</ion-label>
+            <ion-buttons>
+              <ion-button color="danger">
+                114.6 %
+              </ion-button>
+            </ion-buttons>
+          </div>
+        </div>
+    </div>
+
+    <div *ngIf="current == 3">
+      <div class="content3">
+        <ion-row>
+          <ion-col size="6" class="date">
+            <ion-label>From date</ion-label>
+            <ion-input type="date"></ion-input>
+          </ion-col>
+          <ion-col size="6">
+            <ion-label>From date</ion-label>
+            <ion-input type="date"></ion-input>
+          </ion-col>
+        </ion-row>
+        <div class="segment3">
+          <div>
+            <ion-segment value="1" mode="md">
+              <ion-segment-button value="1">
+                <ion-label>ALL</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="2">
+                <ion-label>EXPENSES</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="3">
+                <ion-label>INCOME</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="4">
+                <ion-label>OTHER</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          </div>
+        </div>
+      </div>
+
+      <div class="item2">
+        <ion-item lines="none" *ngFor="let item of [1,2,3]">
+          <ion-buttons slot="start" class="btn1">
+            <ion-button color="danger">
+              <ion-icon name="arrow-down-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <div class="itm">
+            <ion-label class="txt1">The 1985 Cafe - Tea & Cakes</ion-label>
+            <ion-label class="txt2">9:30 pm - 28 Jun 2019</ion-label>
+          </div>
+          <ion-buttons slot="end" class="btn2">
+            <ion-button color="danger">
+              -$318
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+
+        <ion-item lines="none" *ngFor="let item of [1,2,3]">
+          <ion-buttons slot="start" class="btn1">
+            <ion-button color="secondary" style="background: #3dc2ff41;">
+              <ion-icon name="arrow-up-outline"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <div class="itm">
+            <ion-label class="txt1">May Parking Service Free</ion-label>
+            <ion-label class="txt2">5:30 pm - 20 Jun 2019</ion-label>
+          </div>
+          <ion-buttons slot="end" class="btn2">
+            <ion-button color="secondary">
+              +$277
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+      </div>
+    </div>
+
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,135 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+        Back
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Cash in</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-label class="sub_heading">Enter The Amount</ion-label>
+
+  <ion-item lines="none">
+      <ion-select value="usd" placeholder="Currency">
+        <ion-select-option value="usd">USD</ion-select-option>
+        <ion-select-option value="dollar">Dollar</ion-select-option>
+      </ion-select>
+      <ion-label slot="end" class="price">$ 1250.00</ion-label>
+  </ion-item>
+
+  <ion-label class="sub_heading">From Bank Accounts</ion-label>
+
+  <div class="main_categories ion-padding">
+    <ion-row>
+      <ion-col size="4">
+        <div class="icn_div" (click)="onCode()">
+          <div class="back">
+            <div class="logo" [style.backgroundImage]="'url(assets/images/k2.png)'"></div>
+          </div>
+          <div class="text">
+            <ion-label>VietcomBank</ion-label>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <div class="icn_div" (click)="onPayment()">
+          <div class="back">
+            <div class="logo" [style.backgroundImage]="'url(assets/images/k2.png)'"></div>
+          </div>
+          <div class="text">
+            <ion-label>VletinBank</ion-label>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <div class="icn_div" (click)="onBank()">
+          <div class="back">
+            <div class="logo" [style.backgroundImage]="'url(assets/images/k2.png)'"></div>
+          </div>
+          <div class="text">
+            <ion-label>AgriBank</ion-label>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <div class="icn_div">
+          <div class="back">
+            <div class="logo" [style.backgroundImage]="'url(assets/images/k2.png)'"></div>
+          </div>
+          <div class="text">
+            <ion-label>ShinhanBank</ion-label>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <div class="icn_div">
+          <div class="back">
+            <div class="logo" [style.backgroundImage]="'url(assets/images/k2.png)'"></div>
+          </div>
+          <div class="text">
+            <ion-label>ACB Bank</ion-label>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <ion-label class="sub_heading">From Bank Accounts</ion-label>
+
+  <div class="main_categories ion-padding">
+    <ion-row>
+      <ion-col size="4">
+        <div class="icn_div">
+          <div class="back">
+            <div class="logo" [style.backgroundImage]="'url(assets/images/v1.png)'"></div>
+          </div>
+          <div class="text">
+            <ion-label>Visa Card</ion-label>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <div class="icn_div">
+          <div class="back">
+            <div class="logo" [style.backgroundImage]="'url(assets/images/v1.png)'"></div>
+          </div>
+          <div class="text">
+            <ion-label>Master Card </ion-label>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <div class="icn_div">
+          <div class="back">
+            <div class="logo" [style.backgroundImage]="'url(assets/images/v1.png)'"></div>
+          </div>
+          <div class="text">
+            <ion-label> JCB Card </ion-label>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button class="content_button" (click)="onSend()" expand="block" shape="round">
+      Send Request
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,60 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+        Back
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Payment</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onHelp()">
+        Help
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="background">
+    <ion-label class="lbl">Select your method of payment below</ion-label>
+    <span class="curve"></span>
+
+    <div class="slider">
+      <ion-slides mode="ios" pager="ios" [options]="slideOpts">
+        <ion-slide *ngFor="let item of [1,2,3,4,5]">
+          <div class="imgs" [style.backgroundImage]="'url(assets/images/c1.png)'"></div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+
+  <div class="content">
+    <ion-label class="lbl1">Confirm the payment with face ID</ion-label>
+    <ion-label class="lbl2">or tap here for other method</ion-label>
+  </div>
+
+  <div class="scan_div">
+    <div class="images">
+      <div class="imgs" [style.backgroundImage]="'url(assets/images/s1.png)'"></div>
+    </div>
+  </div>
+
+  <div class="price_content">
+    <ion-label>You're paying</ion-label>
+    <ion-chip color="warning" mode="ios">
+      <ion-label>$ 170.50</ion-label>
+    </ion-chip>
+    <ion-label>at san fu lou cantonese - phan xich long</ion-label>
+  </div>
+
+</ion-content>

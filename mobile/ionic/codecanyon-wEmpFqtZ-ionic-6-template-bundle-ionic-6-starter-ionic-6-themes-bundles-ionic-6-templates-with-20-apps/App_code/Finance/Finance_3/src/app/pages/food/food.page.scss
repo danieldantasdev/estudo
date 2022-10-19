@@ -1,0 +1,196 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.items {
+  box-shadow: 0px 10px 20px var(--box-color);
+  --box-color: #d7d8da;
+  .categories {
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    .cate {
+      display: flex;
+      flex-direction: row;
+      .item {
+        padding: 5px 10px;
+        color: gray;
+      }
+      .all_item {
+        padding: 5px 10px;
+        color: var(--ion-color-danger);
+        border-bottom: 1px solid var(--ion-color-danger);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        .text {
+          height: 20px;
+          width: 20px;
+          background: #eb445a2a;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 5px;
+          border-radius: 50%;
+          ion-label {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.main_content {
+  .sub_heading {
+    color: var(--ion-color-medium);
+    margin: 25px 0px 10px 0px;
+  }
+
+  ion-slides {
+    ion-slide {
+      padding: 0px 10px;
+      .slide_content {
+        margin: 20px 0px;
+        height: 25vh;
+        width: 25vh;
+        box-shadow: 0px 0px 20px var(--box-color);
+        --box-color: #d7d8da;
+        border-radius: 10px;
+        .img {
+          height: 130px;
+          width: 100%;
+          border-radius: 10px 10px 0px 0px;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .text {
+          display: flex;
+          text-align: start;
+          flex-direction: column;
+          padding: 5px 10px;
+          .text1 {
+            font-size: 13px;
+            font-family: "bold";
+            display: block;
+          }
+          .text2 {
+            font-size: 10px;
+            color: var(--ion-color-medium);
+            display: block;
+          }
+        }
+        .rating {
+          padding: 5px 10px;
+          display: flex;
+          justify-content: space-between;
+          .rate {
+            ion-icon {
+              color: var(--ion-color-primary);
+              font-size: 12px;
+              margin-left: 2px;
+            }
+          }
+          .kms_div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20px;
+            width: 70px;
+            background: rgba(47, 154, 255, 0.185);
+            border-radius: 30px;
+            ion-label {
+              font-size: 10px;
+              color: var(--ion-color-secondary);
+            }
+          }
+        }
+      }
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 0px 20px var(--box-color);
+    --box-color: #d7d8da;
+    border-radius: 10px;
+    margin: 15px 0px;
+    .images {
+      .img {
+        height: 70px;
+        width: 90px;
+        border-radius: 10px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+    .content_div {
+      .text {
+        display: flex;
+        text-align: start;
+        flex-direction: column;
+        padding: 5px 10px;
+        .text1 {
+          font-size: 13px;
+          font-family: "bold";
+          display: block;
+          width: 27vh;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        .text2 {
+          font-size: 10px;
+          color: var(--ion-color-medium);
+          display: block;
+          width: 27vh;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+      .time {
+        padding: 5px 10px;
+        display: flex;
+        justify-content: space-between;
+        .kms_div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 20px;
+          width: 70px;
+          background: rgba(47, 154, 255, 0.185);
+          border-radius: 30px;
+          ion-label {
+            font-size: 10px;
+            color: var(--ion-color-secondary);
+          }
+        }
+        .time_div {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          text-align: center;
+          ion-label {
+            font-size: 13px;
+            color: var(--ion-color-danger);
+          }
+          ion-icon {
+            color: var(--ion-color-danger);
+            font-size: 13px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

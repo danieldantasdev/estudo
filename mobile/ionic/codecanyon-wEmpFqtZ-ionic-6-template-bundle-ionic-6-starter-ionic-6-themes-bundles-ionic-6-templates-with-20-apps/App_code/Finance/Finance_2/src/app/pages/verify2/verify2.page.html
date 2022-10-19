@@ -1,0 +1,37 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Verification</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="main_content_div">
+
+    <div class="textbox">
+      <ion-label>Street and house number</ion-label>
+      <ion-input type="text"></ion-input>
+    </div>
+
+    <div class="textbox">
+      <ion-label>City</ion-label>
+      <ion-input type="text"></ion-input>
+    </div>
+
+    <div class="textbox">
+      <ion-label>Postal code</ion-label>
+      <ion-input type="text" placeholder="dd/mm/yyy"></ion-input>
+    </div>
+
+    <ion-button (click)="goToNext()" expand="block" style="margin-top: 60px;">
+      next
+    </ion-button>
+  </div>
+</ion-content>

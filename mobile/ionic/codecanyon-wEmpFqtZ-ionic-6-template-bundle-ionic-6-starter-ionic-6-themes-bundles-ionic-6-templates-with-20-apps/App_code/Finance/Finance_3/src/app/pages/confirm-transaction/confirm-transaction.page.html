@@ -1,0 +1,93 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+        Back
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="title">
+    <ion-label class="heading">Confirm Transaction</ion-label>
+    <ion-label class="sub_heading">Please enter OTP sent to your phone number to confirm the transactions.</ion-label>
+  </div>
+
+  <div class="code_div">
+    <div class="code">
+      <ion-input type="number" [(ngModel)]="num1"></ion-input>
+    </div>
+    <div class="code">
+      <ion-input type="number"  [(ngModel)]="num2"></ion-input>
+    </div>
+    <div class="code">
+      <ion-input type="number"  [(ngModel)]="num3"></ion-input>
+    </div>
+    <div class="code">
+      <ion-input type="number"  [(ngModel)]="num4"></ion-input>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="item" (click)="onPress('1')">
+      <ion-label>1</ion-label>
+    </div>
+    <div class="item" (click)="onPress('2')">
+      <ion-label>2</ion-label>
+    </div>
+    <div class="item" (click)="onPress('3')">
+      <ion-label>3</ion-label>
+    </div>
+  </div>
+  <div class="content">
+    <div class="item" (click)="onPress('4')">
+      <ion-label>4</ion-label>
+    </div>
+    <div class="item" (click)="onPress('5')">
+      <ion-label>5</ion-label>
+    </div>
+    <div class="item" (click)="onPress('6')">
+      <ion-label>6</ion-label>
+    </div>
+  </div>
+  <div class="content">
+    <div class="item" (click)="onPress('7')">
+      <ion-label>7</ion-label>
+    </div>
+    <div class="item" (click)="onPress('8')">
+      <ion-label>8</ion-label>
+    </div>
+    <div class="item" (click)="onPress('9')">
+      <ion-label>9</ion-label>
+    </div>
+  </div>
+  <div class="content">
+    <div class="items" >
+      <ion-label></ion-label>
+    </div>
+    <div class="item" (click)="onPress('0')">
+      <ion-label>0</ion-label>
+    </div>
+    <div class="items" (click)="onDelete()">
+      <ion-label>Delete</ion-label>
+    </div>
+  </div>
+
+  <div class="btn">
+    <ion-button class="content_button" (click)="onConfirm()" expand="block" shape="round">
+      Confirm
+    </ion-button>
+  </div>
+
+</ion-content>

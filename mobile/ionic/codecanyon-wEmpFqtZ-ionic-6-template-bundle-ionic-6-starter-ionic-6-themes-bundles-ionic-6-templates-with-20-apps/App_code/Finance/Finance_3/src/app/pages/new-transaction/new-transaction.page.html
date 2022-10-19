@@ -1,0 +1,79 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+        Back
+      </ion-button>
+    </ion-buttons>
+    <ion-title>New Transaction</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-label class="sub_heading">DATE</ion-label>
+
+  <div class="content">
+  <ion-item lines="none">
+    <ion-label slot="start">9:41 am - Tuesday, 18 June 2019</ion-label>
+    <ion-input slot="end" type="date"></ion-input>
+  </ion-item>
+  </div>
+
+  <ion-label class="sub_heading">AMOUNT</ion-label>
+
+  <div class="content">
+    <ion-item lines="none">
+      <ion-select value="usd">
+        <ion-select-option value="usd">USD</ion-select-option>
+        <ion-select-option value="dollar">Dollar</ion-select-option>
+      </ion-select>
+    <ion-label slot="end" class="price">27.00</ion-label>
+  </ion-item>
+  </div>
+
+  <ion-label class="sub_heading">CATEGORY</ion-label>
+
+  <div class="content">
+    <ion-item lines="none">
+      <ion-buttons slot="start">
+        <ion-button color="danger">
+          <ion-icon name="fast-food"></ion-icon>
+          Food & Beverage
+        </ion-button>
+      </ion-buttons>
+      <div class="btn" slot="end">
+        <ion-icon name="chevron-forward"></ion-icon>
+      </div>
+    </ion-item>
+  </div>
+
+  <ion-label class="sub_heading">NOTE</ion-label>
+
+  <div class="content">
+    <ion-item lines="none">
+     <ion-input type="text" placeholder="Enter note.."></ion-input>
+     <ion-buttons slot="end">
+      <ion-button color="primary">
+        <ion-icon name="image"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
+  </div>
+
+  <div class="btns">
+    <ion-button class="content_button" (click)="onAdd()" expand="block" shape="round">
+      Add
+    </ion-button>
+  </div>
+
+</ion-content>

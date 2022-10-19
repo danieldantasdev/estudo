@@ -1,0 +1,72 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="ion-padding" (click)="util.openMenu()">
+      <ion-avatar>
+        <img src="assets/img/man.png" />
+      </ion-avatar>
+    </ion-buttons>
+    <ion-buttons slot="end" (click)="goToSearch()">
+      <ion-button>
+        <ion-icon name="search-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <ion-label class="heading">Leading</ion-label>
+
+    <div class="card_div" (click)="goToCurrency()">
+      <div class="card" *ngFor="let item of [1,2,3]">
+        <div class="name">
+          <img src="assets/icon/bitcoin.png">
+          <ion-label>&nbsp; Bitcoin</ion-label>
+        </div>
+        <img class="chart" src="assets/img/LineChart.jpg">
+        <!-- <canvas id="incomeChart" #incomeChart></canvas> -->
+        <div class="price">
+          <ion-label class="rate">$54,274,22</ion-label>
+          <ion-label class="status">-0.68$</ion-label>
+        </div>
+      </div>
+    </div>
+
+    <ion-label class="heading">Change 24h</ion-label>
+
+    <div class="card_div">
+      <div class="card" *ngFor="let item of [1,2,3]" (click)="goToCurrency()">
+        <div class="name">
+          <img src="assets/icon/bitcoin.png">
+          <ion-label>&nbsp; Bitcoin</ion-label>
+        </div>
+        <img class="chart" src="assets/img/LineChart.jpg">
+        <!-- <canvas id="incomeChart" #incomeChart></canvas> -->
+        <div class="price">
+          <ion-label class="rate">$54,274,22</ion-label>
+          <ion-label class="status">-0.68$</ion-label>
+        </div>
+      </div>
+    </div>
+
+    <ion-label class="heading">News and events</ion-label>
+
+    <div class="news_div" *ngFor="let item of [1,2,3,4,5,6]" (click)="goToCurrency()">
+      <div class="img" [style.backgroundImage]="'url(assets/img/bitcoin2.jpg)'">
+      </div>
+      <div class="news_detail">
+        <ion-label class="title">Analysts expect Bitcoin to plunge by 20%. Here are the reasons</ion-label>
+        <ion-label class="time">1 hour ago</ion-label>
+      </div>
+    </div>
+  </div>
+</ion-content>

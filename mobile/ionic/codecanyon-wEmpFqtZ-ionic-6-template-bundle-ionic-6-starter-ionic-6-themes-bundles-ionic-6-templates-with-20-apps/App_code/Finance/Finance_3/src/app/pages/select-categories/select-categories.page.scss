@@ -1,0 +1,143 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.background {
+  height: 130px;
+  width: 100%;
+  background: var(--ion-color-primary);
+  position: relative;
+  .segment {
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    padding: 0px 20px;
+    ion-segment {
+      background: transparent;
+      ion-segment-button {
+        --border-radius: 5px;
+        --indicator-color: #ffffff38 !important;
+        --indicator-box-shadow: transparent !important;
+        --color-checked: white;
+        margin: 5px;
+        color: #ffff;
+      }
+    }
+  }
+}
+
+.background .curve {
+  position: relative;
+  display: block;
+  height: 140px;
+  bottom: -130px;
+  overflow: hidden;
+}
+.background .curve::after {
+  border-radius: 50%;
+  height: 100px;
+  bottom: 0px;
+  transform: translate(-5%, -100%);
+  -ms-transform: translate(-5%, -100%);
+  -webkit-transform: translate(-5%, -100%);
+  content: "";
+  position: absolute;
+  width: 110%;
+  z-index: -1;
+  background: var(--ion-color-primary);
+}
+
+.main_content {
+  position: absolute;
+  top: 50px;
+  width: 90%;
+  .content {
+    background: #ffff;
+    width: 100%;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px var(--box-color);
+    --box-color: #d7d8da;
+    .categories {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      .item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        ion-buttons {
+          margin-right: 10px;
+          ion-button {
+            height: 40px;
+            width: 40px;
+            background: #ff413336;
+            border-radius: 50%;
+          }
+        }
+        ion-label {
+          color: var(--ion-color-danger);
+        }
+      }
+    }
+    .categories2 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      .item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        ion-buttons {
+          margin-right: 10px;
+          ion-button {
+            height: 40px;
+            width: 40px;
+            background: #febb342d;
+            border-radius: 50%;
+          }
+        }
+        ion-label {
+          color: var(--ion-color-primary);
+        }
+      }
+    }
+    .checkbox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sub_cate {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin: 10px 0px 10px 20px;
+      .item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        ion-buttons {
+          margin-right: 10px;
+          ion-button {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+          }
+        }
+        ion-label {
+          color: var(--ion-color-dark);
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

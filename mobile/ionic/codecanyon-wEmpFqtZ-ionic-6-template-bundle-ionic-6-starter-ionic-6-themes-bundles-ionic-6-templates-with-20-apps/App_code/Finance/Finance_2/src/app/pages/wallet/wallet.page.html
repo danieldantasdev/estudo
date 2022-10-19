@@ -1,0 +1,82 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="ion-padding">
+      <ion-avatar>
+        <img src="assets/img/man.png" />
+      </ion-avatar>
+    </ion-buttons>
+    <ion-buttons slot="end" (click)="goToSearch()">
+      <ion-button>
+        <ion-icon name="search-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="card">
+      <ion-label class="text">My total balance</ion-label>
+      <ion-label class="rate">$4,322.22</ion-label>
+      <ion-label class="status" color="danger">-0.68$</ion-label>
+    </div>
+
+    <div class="btn">
+      <ion-button (click)="goToDeposit()" color="primary">
+        <ion-label>Deposit</ion-label>
+      </ion-button>
+      <ion-button (click)="goToDeposit()" fill="outline" color="primary">
+        <ion-label>Withdraw</ion-label>
+      </ion-button>
+    </div>
+
+    <ion-label class="heading">My assets</ion-label>
+
+    <div class="btn_segment">
+      <ion-button (click)="btnChange(1)" [class.active]="btn_id == 1" fill="clear" color="medium" size="small">
+        <ion-label>Open</ion-label>
+      </ion-button>
+      <ion-button (click)="btnChange(2)" [class.active]="btn_id == 2" fill="clear" color="medium" size="small">
+        <ion-label>pending</ion-label>
+      </ion-button>
+      <ion-button (click)="btnChange(3)" [class.active]="btn_id == 3" fill="clear" color="medium" size="small">
+        <ion-label>Closed</ion-label>
+      </ion-button>
+      <ion-button (click)="btnChange(4)" [class.active]="btn_id == 4" fill="clear" color="medium" size="small">
+        <ion-label>History</ion-label>
+      </ion-button>
+    </div>
+
+    <div class="card" *ngFor="let item of [1,2,3]">
+      <div class="icon">
+      <ion-icon name="close" color="medium"></ion-icon>
+      </div>
+      <div class="currency_accet" (click)="goToCurrency()">
+        <img class="img" src="assets/icon/bitcoin.png" alt="">
+        <div class="detail">
+          <div class="up_div">
+            <ion-label class="title">Bitcoin</ion-label>
+            <ion-label class="price">$54 254,320</ion-label>
+          </div>
+          <div class="down_div">
+            <ion-label class="type">BTC/USD</ion-label>
+            <ion-label class="status" color="danger">+2.33%</ion-label>
+          </div>
+        </div>
+      </div>
+      <div class="btc_div">
+        <ion-label class="text">0.0067 BTC</ion-label>
+        <ion-label class="status" color="danger">+5.22$</ion-label>
+      </div>
+    </div>
+  </div>
+</ion-content>

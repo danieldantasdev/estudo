@@ -1,0 +1,89 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-header {
+  ion-avatar {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.header-ios ion-toolbar:last-of-type {
+  --background: var(--ion-color-light);
+}
+
+.header-md:after {
+  background: none;
+}
+
+.main_content_div {
+  background-color: var(--ion-color-light);
+  padding: 14px;
+
+  .card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px var(--box-shadow-color);
+    --box-shadow-color: #d7d8da;
+    margin: 7px 0px;
+    .text {
+      font-family: "medium";
+      font-size: 14px;
+    }
+    .rate {
+      font-family: "medium";
+      font-size: 34px;
+    }
+    .status {
+      font-family: "semi-bold";
+      font-size: 14px;
+    }
+
+    .currency_accet {
+        padding: 10px 0px;
+        border-bottom: 2px solid var(--ion-color-light);
+      }
+      .btc_div{
+          display: flex;
+          justify-content: space-between;
+          padding-top: 5px;
+      }
+      .icon{
+          display: flex;
+          justify-content: flex-end;
+      }
+  }
+  .heading{
+    padding: 0px;
+
+  }
+  .btn_segment {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+    ion-button {
+      height: 28px;
+      border-radius: 10px !important;
+      background-color: var(--ion-color-light-shade);
+    }
+    .active {
+      background-color: var(--ion-color-primary);
+      border-radius: 15px;
+      ion-label {
+        color: white !important;
+      }
+    }
+  }
+
+
+
+
+}
