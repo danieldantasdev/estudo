@@ -1,0 +1,70 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+    <ion-toolbar>
+        <ion-button slot="start" mode="ios" fill="clear" (click)="onBackadditems()">
+            <ion-icon name="chevron-back-outline" color="dark"></ion-icon>
+        </ion-button>
+        <ion-title>Reviews</ion-title>
+        <ion-button slot="end" mode="ios" fill="clear">
+            <ion-icon name="notifications-outline" color="dark"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+    <div class="rating">
+        <ion-label class="no_lbl">4.1</ion-label>
+        <div class="icn">
+            <ion-icon name="star" color="warning"></ion-icon>
+            <ion-icon name="star" color="warning"></ion-icon>
+            <ion-icon name="star" color="warning"></ion-icon>
+            <ion-icon name="star" color="warning"></ion-icon>
+            <ion-icon name="star-outline" color="medium"></ion-icon>
+            <ion-label>150 reviews</ion-label>
+        </div>
+    </div>
+
+    <div class="review">
+
+        <div class="single_review" *ngFor="let item of [1,2,3,4]">
+            <div class="user_flex">
+                <div class="first_flex">
+                    <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/user.jpg)'"></div>
+                    <div style="padding-left: 12px;">
+                        <ion-label class="name">Maxime Breatho</ion-label>
+                        <ion-label class="date">17 Dec 2021</ion-label>
+                    </div>
+                </div>
+                <div class="star_flex">
+                    <ion-icon name="star" color="warning"></ion-icon>
+                    <ion-icon name="star" color="warning"></ion-icon>
+                    <ion-icon name="star" color="warning"></ion-icon>
+                    <ion-icon name="star" color="warning"></ion-icon>
+                    <ion-icon name="star" color="warning"></ion-icon>
+                </div>
+            </div>
+            <div class="detail_flex">
+                <div class="review_lbl">
+                    It is a long established fact that a reader will be distracted
+                    by the readable content of a page when looking at its layout...
+                </div>
+                <ion-label class="show_lbl">Show more</ion-label>
+                <div class="images_flex">
+                    <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/pizza.jpg)'" *ngFor="let item of [1,2,3]">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</ion-content>

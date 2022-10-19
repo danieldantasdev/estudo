@@ -1,0 +1,59 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-button (click)="onClick()" mode="ios" fill="clear">
+      <ion-icon name="chevron-back" color="dark"></ion-icon>
+    </ion-button>
+    <ion-title>Sign In</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-label class="welcome_lbl">Welcome to</ion-label>
+
+  <ion-label class="simp_lbl">Enter your phone number or email <br>address for sign in. Enjoy your food</ion-label>
+
+  <ion-item lines="none">
+    <ion-icon name="person-outline" color="medium"></ion-icon>
+    <ion-input type="text" placeholder="Username"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-icon name="lock-open-outline" color="medium"></ion-icon>
+    <ion-input type="password" placeholder="password"></ion-input>
+    <ion-icon slot="end" name="eye-off-outline" color="medium"></ion-icon>
+  </ion-item>
+
+  <div class="forgot">
+    <div class="toggle">
+      <ion-toggle checked mode="md"></ion-toggle>
+      <ion-label>Remember me</ion-label>
+    </div>
+    <ion-label color="primary" (click)="onForgotPassword()">Forgot Password ?</ion-label>
+  </div>
+
+  <ion-button (click)="onHome()" expand="block" mode="ios" class="block_btn">
+    Sign in
+  </ion-button>
+
+  <ion-label class="sign_in_lbl">Don't have an account ? <span (click)="onSignUp()">SignUp</span></ion-label>
+  <ion-label class="or_lbl">OR</ion-label>
+
+  <ion-button expand="block" mode="ios" class="block_btn fb_btn">
+    <ion-icon name="logo-facebook" slot="start"></ion-icon>
+    Connect with facebook
+  </ion-button>
+
+  <ion-button expand="block" mode="ios" class="block_btn gp_btn">
+    <ion-icon name="logo-google" slot="start"></ion-icon>
+    Connect with google
+  </ion-button>
+
+</ion-content>

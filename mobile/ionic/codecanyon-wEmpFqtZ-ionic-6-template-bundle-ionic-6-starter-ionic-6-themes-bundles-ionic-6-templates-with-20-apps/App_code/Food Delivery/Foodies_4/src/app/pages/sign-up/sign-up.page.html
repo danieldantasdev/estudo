@@ -1,0 +1,58 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-button (click)="goBack()" mode="ios" fill="clear">
+      <ion-icon name="chevron-back" color="dark"></ion-icon>
+    </ion-button>
+    <ion-title>Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-label class="welcome_lbl">Create Account</ion-label>
+
+  <ion-label class="simp_lbl">Enter your Name, Email and Password<br> for sign up.
+    <span (click)="goBack()">Already have an account ?</span>
+  </ion-label>
+
+  <ion-item lines="none">
+    <ion-icon name="person-outline" color="medium"></ion-icon>
+    <ion-input type="text" placeholder="Username"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-icon name="mail-outline" color="medium"></ion-icon>
+    <ion-input type="email" placeholder="Email address"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-icon name="lock-open-outline" color="medium"></ion-icon>
+    <ion-input type="password" placeholder="password"></ion-input>
+    <ion-icon slot="end" name="eye-off-outline" color="medium"></ion-icon>
+  </ion-item>
+
+  <ion-button expand="block" mode="ios" class="block_btn" (click)="onSignIn()">
+    Create Account
+  </ion-button>
+
+  <ion-label class="or_lbl">OR</ion-label>
+
+  <ion-button expand="block" mode="ios" class="block_btn fb_btn">
+    <ion-icon name="logo-facebook" slot="start"></ion-icon>
+    Connect with facebook
+  </ion-button>
+
+  <ion-button expand="block" mode="ios" class="block_btn gp_btn">
+    <ion-icon name="logo-google" slot="start"></ion-icon>
+    Connect with google
+  </ion-button>
+
+</ion-content>

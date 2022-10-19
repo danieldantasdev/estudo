@@ -1,0 +1,103 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-content {
+  .searchBar {
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ion-input {
+      background: #f4f5f8;
+      border-radius: 30px;
+      height: 50px;
+      font-family: "regular";
+      position: relative;
+      --padding-start: 10px;
+
+      .search_icn {
+        margin-left: 16px;
+        font-size: 20px;
+      }
+      .option_icn {
+        position: absolute;
+        right: 16px;
+        font-size: 20px;
+      }
+    }
+
+    ion-label {
+      font-size: 16px;
+      margin-left: 10px;
+    }
+  }
+
+  .history {
+    .title_flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      .bold_lbl {
+        font-family: "medium";
+        font-size: 17px;
+      }
+      .color_lbl {
+        color: var(--ion-color-primary);
+        font-size: 14px;
+      }
+    }
+
+    .flex_div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #c2c2cb;
+      padding: 10px 0px;
+      ion-label {
+        color: #c2c2cb;
+      }
+      ion-icon {
+        color: #c2c2cb;
+      }
+    }
+
+    .load {
+      display: flex;
+      align-items: center;
+      margin-top: 2px;
+      margin-bottom: 16px;
+
+      ion-label {
+        color: var(--ion-app-yellow-color);
+        font-family: "medium";
+        font-size: 15px;
+        margin-right: 3px;
+      }
+
+      ion-icon {
+        color: var(--ion-app-yellow-color);
+      }
+    }
+
+    .alltag {
+      display: flex;
+      flex-wrap: wrap;
+      div {
+        border: 1px solid lightgrey;
+        border-radius: 20px;
+        margin-right: 12px;
+        margin-bottom: 16px;
+        font-size: 14px;
+        padding: 4px 12px;
+      }
+    }
+  }
+}

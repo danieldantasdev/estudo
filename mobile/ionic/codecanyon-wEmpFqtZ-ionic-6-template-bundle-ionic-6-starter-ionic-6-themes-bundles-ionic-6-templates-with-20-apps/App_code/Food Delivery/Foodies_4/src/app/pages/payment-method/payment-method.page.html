@@ -1,0 +1,59 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+    <ion-toolbar>
+        <ion-button slot="start" fill="clear" mode="ios" (click)="onBackCheckout()">
+            <ion-icon name="chevron-back-outline" color="dark"></ion-icon>
+        </ion-button>
+        <ion-title>Add Payment Method</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <ion-label class="grey_lbl">Choose payment method to add</ion-label>
+
+    <ion-list>
+        <ion-radio-group name="auto" value="2">
+
+            <div>
+                <ion-item lines="none">
+                    <ion-icon slot="start" name="logo-paypal"></ion-icon>
+                    <ion-label>PayPal</ion-label>
+                    <ion-radio value="1"></ion-radio>
+                </ion-item>
+            </div>
+
+            <div>
+                <ion-item lines="none">
+                    <ion-icon slot="start" name="card-outline"></ion-icon>
+                    <ion-label>Credit Card</ion-label>
+                    <ion-radio value="2"></ion-radio>
+                </ion-item>
+            </div>
+
+            <div>
+                <ion-item lines="none">
+                    <ion-icon slot="start" name="logo-bitcoin"></ion-icon>
+                    <ion-label>Bitcoin Wallet</ion-label>
+                    <ion-radio value="3"></ion-radio>
+                </ion-item>
+            </div>
+
+        </ion-radio-group>
+    </ion-list>
+
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-button (click)="onMyCards()" expand="block" mode="ios" class="block_btn">
+            Next
+        </ion-button>
+    </ion-toolbar>
+</ion-footer>

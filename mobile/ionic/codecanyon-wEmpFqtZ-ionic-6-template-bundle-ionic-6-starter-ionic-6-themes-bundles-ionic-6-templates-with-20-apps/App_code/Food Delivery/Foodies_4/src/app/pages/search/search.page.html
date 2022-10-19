@@ -1,0 +1,47 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+  <div class="searchBar">
+    <ion-input type="text" placeholder="Search for meals...">
+      <ion-icon name="search" class="search_icn"></ion-icon>
+      <ion-icon name="options-outline" class="option_icn"></ion-icon>
+    </ion-input>
+    <ion-label (click)="onbackHome()">Exit</ion-label>
+  </div>
+
+  <div class="history">
+    <div class="title_flex">
+      <ion-label class="bold_lbl">History</ion-label>
+      <ion-label class="color_lbl">Clear All</ion-label>
+    </div>
+
+    <div class="flex_div" *ngFor="let item of history">
+      <ion-label>{{item}}</ion-label>
+      <ion-icon name="close"></ion-icon>
+    </div>
+
+    <div class="load">
+      <ion-label>View More</ion-label>
+      <ion-icon slot="start" name="chevron-down"></ion-icon>
+    </div>
+
+    <div class="title_flex">
+      <ion-label class="bold_lbl">Popular Tags</ion-label>
+      <ion-label class="color_lbl">View All</ion-label>
+    </div>
+
+    <div class="alltag">
+      <div *ngFor="let item of tags">
+        {{item}}
+      </div>
+    </div>
+  </div>
+
+
+</ion-content>

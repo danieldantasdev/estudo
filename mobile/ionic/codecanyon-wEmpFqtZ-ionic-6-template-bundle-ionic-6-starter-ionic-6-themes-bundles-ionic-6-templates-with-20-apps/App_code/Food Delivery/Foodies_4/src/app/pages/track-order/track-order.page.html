@@ -1,0 +1,80 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+    <ion-toolbar>
+        <ion-button slot="start" fill="clear" mode="ios" (click)="onBackOrdertrack()">
+            <ion-icon name="chevron-back-outline" color="dark"></ion-icon>
+        </ion-button>
+        <ion-title>Track Order</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="bg_image map" [style.backgroundImage]="'url(assets/images/map.jpg)'"></div>
+
+    <div class="content">
+
+        <div class="inner_content">
+            <ion-label class="title_lbl">Trip Route</ion-label>
+
+            <div class="address_flex">
+                <ion-label style="text-align: right;">Pizza hut, Street 5</ion-label>
+                <div class="line"></div>
+                <ion-label>Nascr city, Street 7</ion-label>
+            </div>
+
+            <div class="info">
+                <div class="distance">
+                    <ion-label><ion-icon name="location-outline"></ion-icon></ion-label>
+                    <ion-label>4.5Km</ion-label>
+                </div>
+                <div class="distance">
+                    <ion-label><ion-icon name="time-outline"></ion-icon></ion-label>
+                    <ion-label>(5 minutes)</ion-label>
+                </div>
+            </div>
+
+            <div class="driver_div">
+                <div>
+                    <div class="inner_flex">
+                        <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/user.jpg)'"></div>
+                        <div class="driver_detail">
+                            <ion-label class="name_lbl">Driver 1</ion-label>
+                            <div class="star">
+                                <ion-icon name="star" color="warning"></ion-icon>
+                                <ion-icon name="star" color="warning"></ion-icon>
+                                <ion-icon name="star" color="warning"></ion-icon>
+                                <ion-icon name="star" color="warning"></ion-icon>
+                                <ion-icon name="star" color="warning"></ion-icon>
+                            </div>
+                            <div class="location_div">
+                                <ion-icon name="location" color="warning"></ion-icon>
+                                <ion-label>Colen,Egypt</ion-label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn_div">
+                    <ion-button size="small" mode="ios" shape="round" style="margin-bottom: 10px;--background: #f54133;">
+                      Call
+                    </ion-button>
+                    <ion-button size="small" mode="ios" shape="round" style="--background: #4cd968;">
+                      Chat
+                    </ion-button>
+                </div>
+            </div>
+        </div>
+
+      <ion-button (click)="onClick()" mode="ios" expand="block" color="warning" class="block_btn">
+          Order Details
+      </ion-button>
+
+    </div>
+</ion-content>
