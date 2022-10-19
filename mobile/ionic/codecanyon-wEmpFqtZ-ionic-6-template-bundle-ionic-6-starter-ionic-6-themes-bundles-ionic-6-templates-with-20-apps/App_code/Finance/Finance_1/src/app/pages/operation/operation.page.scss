@@ -1,0 +1,216 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.main_content_div {
+  .payment_detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    ion-label {
+      font-family: "medium";
+      color: var(--ion-color-medium);
+      padding-bottom: 10px;
+    }
+    .price {
+      font-family: "medium";
+      font-size: 24px;
+      color: var(--ion-color-black);
+    }
+  }
+
+  .segment {
+    display: flex;
+    justify-content: center;
+    .segment_name {
+      display: flex;
+      justify-content: center;
+      border: 1px solid var(--ion-color-light);
+      border-radius: 15px;
+      ion-button {
+        margin: 0px;
+        height: 40px;
+        width: 130px;
+        .down {
+          background-color: #fbdade;
+          color: var(--ion-color-danger);
+          border-radius: 50%;
+          font-size: 14px;
+          padding: 3px;
+        }
+        .up {
+          background-color: #e1eeec;
+          color: var(--ion-color-primary);
+          border-radius: 50%;
+          font-size: 14px;
+          padding: 3px;
+        }
+        ion-label {
+          color: black;
+        }
+      }
+    }
+  }
+
+  .active {
+    background-color: var(--ion-color-primary);
+    border-radius: 15px;
+    ion-icon {
+      color: white !important;
+      background-color: var(--ion-color-primary-tint) !important;
+      border-radius: 50%;
+      font-size: 14px;
+      padding: 3px;
+    }
+    ion-label {
+      color: white !important;
+    }
+  }
+  .active2 {
+    background-color: var(--ion-color-secondary);
+    border-radius: 15px;
+    ion-icon {
+      color: white !important;
+      background-color: var(--ion-color-secondary-tint) !important;
+      border-radius: 50%;
+      font-size: 14px;
+      padding: 3px;
+    }
+    ion-label {
+      color: white !important;
+    }
+  }
+
+  .lower_div {
+    background-color: var((--ion-color-light));
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 30px 20px;
+    margin-top: 20px;
+    height: 100%;
+
+    .time_segment {
+      display: flex;
+      justify-content: space-between;
+      ion-button {
+        height: 30px;
+        border-radius: 10px !important;
+      }
+      .active {
+        background-color: var(--ion-color-black);
+        border-radius: 15px;
+        ion-label {
+          color: white !important;
+        }
+      }
+    }
+
+    canvas {
+      margin: 20px 0px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+      margin-bottom: 10px;
+      .icon {
+        background-color: var(--ion-color-secondary);
+        margin-right: 10px;
+        padding: 5px;
+        display: flex;
+        border-radius: 50%;
+
+        ion-icon {
+          border: 1px solid white;
+          border-radius: 50%;
+          padding: 2px;
+          font-size: 14px;
+        }
+      }
+      .title {
+        display: flex;
+        flex-direction: column;
+        .name {
+          font-size: 13px;
+          color: var(--ion-color-medium);
+          font-family: "medium";
+        }
+        .dollar {
+          font-size: 16px;
+          font-weight: bold;
+          padding-bottom: 5px;
+        }
+      }
+      .date {
+        position: absolute;
+        right: 20px;
+        font-size: 14px;
+        color: var(--ion-color-medium);
+        font-weight: bold;
+      }
+    }
+    .card_title {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      display: block;
+      background-color: var(--ion-color-light);
+    }
+    .category_div {
+      display: flex;
+      flex-direction: row;
+      background-color: var(--ion-color-light);
+      .card {
+        width: 100%;
+        background-color: white;
+        border-radius: 15px;
+        padding: 15px;
+        margin: 7px;
+        display: flex;
+        flex-direction: column;
+        .item {
+          .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+          }
+        }
+        .name {
+          font-size: 16px;
+          font-family: "medium";
+          padding: 5px 0px;
+        }
+        .text {
+          font-size: 12px;
+          font-family: "medium";
+          color: var(--ion-color-medium);
+          padding: 5px 0px;
+        }
+        .dolar {
+          font-size: 14px;
+          font-family: "medium";
+        }
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,132 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToBack()">
+        <ion-icon slot="start" name="chevron-back" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Operations</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <div class="payment_detail">
+      <ion-label>Total balance:</ion-label>
+      <ion-label class="price">$3,623.64</ion-label>
+    </div>
+
+
+    <div class="segment">
+      <div class="segment_name">
+        <ion-button (click)="segmentChange(1)" [class.active]="seg_id == 1" fill="clear">
+          <ion-icon class="up" name="caret-up"></ion-icon>
+          <ion-label>&nbsp;Income</ion-label>
+        </ion-button>
+        <ion-button (click)="segmentChange(2)" [class.active2]="seg_id == 2" fill="clear">
+          <ion-icon class="down" name="caret-down"></ion-icon>
+          <ion-label>&nbsp;Expense</ion-label>
+        </ion-button>
+      </div>
+    </div>
+
+    <div class="lower_div" *ngIf="seg_id == 1">
+      <div class="time_segment">
+        <ion-button (click)="timeChange(1)" [class.active]="time_id == 1" fill="clear" color="medium">
+          <ion-label>Year</ion-label>
+        </ion-button>
+        <ion-button (click)="timeChange(2)" [class.active]="time_id == 2" fill="clear" color="medium">
+          <ion-label>Month</ion-label>
+        </ion-button>
+        <ion-button (click)="timeChange(3)" [class.active]="time_id == 3" fill="clear" color="medium">
+          <ion-label>Week</ion-label>
+        </ion-button>
+        <ion-button (click)="timeChange(4)" [class.active]="time_id == 4" fill="clear" color="medium">
+          <ion-label>Day</ion-label>
+        </ion-button>
+      </div>
+
+      <canvas id="incomeChart" #incomeChart></canvas>
+
+      <ion-label class="card_title">Transactions</ion-label>
+
+      <div class="card" *ngFor="let item of [1,2,3,4,5,6,7]">
+        <div class="icon">
+          <ion-icon name="logo-usd" color="light"></ion-icon>
+        </div>
+        <div class="title">
+          <ion-label class="dollar">+&nbsp;$380.00</ion-label>
+          <ion-label class="name">
+            <ion-icon name="caret-forward" color="primary"></ion-icon>
+            Income: Pay for project
+          </ion-label>
+        </div>
+        <div class="date">
+          <ion-label>24.08.2022</ion-label>
+        </div>
+      </div>
+    </div>
+
+    <div class="lower_div" *ngIf="seg_id == 2">
+      <div class="time_segment">
+        <ion-button (click)="timeChange(1)" [class.active]="time_id == 1" fill="clear" color="medium">
+          <ion-label>Year</ion-label>
+        </ion-button>
+        <ion-button (click)="timeChange(2)" [class.active]="time_id == 2" fill="clear" color="medium">
+          <ion-label>Month</ion-label>
+        </ion-button>
+        <ion-button (click)="timeChange(3)" [class.active]="time_id == 3" fill="clear" color="medium">
+          <ion-label>Week</ion-label>
+        </ion-button>
+        <ion-button (click)="timeChange(4)" [class.active]="time_id == 4" fill="clear" color="medium">
+          <ion-label>Day</ion-label>
+        </ion-button>
+      </div>
+
+      <canvas id="incomeChart" #incomeChart></canvas>
+
+
+    <ion-label class="card_title">Category</ion-label>
+
+    <div class="category_div">
+      <div class="card" *ngFor="let item of [1,2]">
+        <div class="item">
+          <circle-progress [percent]="85" [showImage]="true" imageSrc="assets/img/card.png"
+          [imageHeight]="40" [imageWidth]=40 [outerStrokeColor]="'#68ab9f'" [backgroundColor]="'#68ab9f'">
+          </circle-progress>
+          <ion-icon name="wallet-outline" color="light"></ion-icon>
+        </div>
+        <ion-label class="name">Shopping</ion-label>
+        <ion-label class="text">Spent last month</ion-label>
+        <ion-label class="dolar">$205.00</ion-label>
+      </div>
+    </div>
+    <div class="category_div">
+      <div class="card" *ngFor="let item of [1,2]">
+        <div class="item">
+          <circle-progress [percent]="85" [showImage]="true" imageSrc="assets/img/card.png"
+          [imageHeight]="40" [imageWidth]=40 [outerStrokeColor]="'#68ab9f'" [backgroundColor]="'#68ab9f'">
+          </circle-progress>
+          <ion-icon name="wallet-outline" color="light"></ion-icon>
+        </div>
+        <ion-label class="name">Shopping</ion-label>
+        <ion-label class="text">Spent last month</ion-label>
+        <ion-label class="dolar">$205.00</ion-label>
+      </div>
+    </div>
+  </div>
+  </div>
+</ion-content>

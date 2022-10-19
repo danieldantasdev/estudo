@@ -1,0 +1,50 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToBack()">
+        <ion-icon slot="start" name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-label>Step 1/3</ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="head_div">
+      <img src="assets/img/slide1.png" class="img">
+      <ion-label class="head_lbl">Registration</ion-label>
+      <ion-label class="small_lbl">Enter your e-mail and create password. We will send you a verification code to your phone</ion-label>
+    </div>
+
+
+    <ion-item class="input ion-no-padding">
+      <ion-label position="stacked" color="primary">Phone</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+
+    <ion-item class="input ion-no-padding">
+      <ion-label position="stacked" color="primary">Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+
+    <ion-button class="large_btn" color="primary" expand="block" (click)="goToVerify()">
+      Register
+    </ion-button>
+    <ion-button class="small_btn" color="dark" expand="block" fill="clear" (click)="goToLogin()">
+      Login
+    </ion-button>
+  </div>
+
+</ion-content>

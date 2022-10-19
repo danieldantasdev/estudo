@@ -1,0 +1,55 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Assets</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <ion-toolbar class="filter">
+      <ion-buttons slot="start" class="star">
+        <ion-button>
+          <ion-icon name="star-outline" color="light"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+      <ion-buttons slot="start">
+        <ion-button expand="block" color="medium" size="small">
+          All
+        </ion-button>
+      </ion-buttons>
+
+      <ion-select placeholder="Hot" interface="popover" class="ion-no-padding" slot="end">
+        <ion-select-option value="nes">Hot</ion-select-option>
+        <ion-select-option value="n64">Cold</ion-select-option>
+      </ion-select>
+    </ion-toolbar>
+
+    <div class="currency_accet" (click)="goToCurrency()" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12]">
+      <img class="img" src="assets/icon/bitcoin.png" alt="">
+      <div class="detail">
+        <div class="up_div">
+          <ion-label class="title">Bitcoin</ion-label>
+          <ion-label class="price">$54 254,320</ion-label>
+        </div>
+        <div class="down_div">
+          <ion-label class="type">BTC/USD</ion-label>
+          <ion-label class="status" color="danger">+2.33%</ion-label>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,95 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToBack()">
+        <ion-icon slot="start" name="chevron-back" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="notifications-outline" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="top_div">
+    <div class="profile_detail">
+      <ion-avatar class="ion-margin">
+        <img src="assets/img/man.png" />
+      </ion-avatar>
+      <div class="text_area">
+        <ion-label class="id">Welcome back</ion-label>
+        <ion-label class="name">Johnsiea Snowborn</ion-label>
+      </div>
+    </div>
+
+    <div class="lower_div">
+      <div class="balance">
+        <ion-label class="title">My Balance:</ion-label>
+        <ion-label class="dollar">$5,434.27</ion-label>
+      </div>
+      <div class="spent">
+        <div>
+          <ion-label class="title">Today Spent:</ion-label>
+          <ion-label class="dollar">&nbsp; $34.27</ion-label>
+        </div>
+        <div>
+          <ion-label class="title">Daily Limit:</ion-label>
+          <ion-label class="dollar">&nbsp; $350</ion-label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="middle_div"></div>
+  <div class="bottom_div">
+    <div class="list_item">
+      <div class="detail">
+        <ion-label class="title">Name</ion-label>
+        <ion-label class="text">John Snow</ion-label>
+      </div>
+    </div>
+    <div class="list_item">
+      <div class="detail">
+        <ion-label class="title">Phone</ion-label>
+        <ion-label class="text">22334455344334</ion-label>
+      </div>
+    </div>
+    <div class="list_item">
+      <div class="detail">
+        <ion-label class="title">E-mail</ion-label>
+        <ion-label class="text">admin@admin.com</ion-label>
+      </div>
+    </div>
+    <div class="list_item">
+      <div class="detail">
+        <ion-label class="title">Language</ion-label>
+        <ion-label class="text">Taglog</ion-label>
+      </div>
+    </div>
+    <div class="list_item">
+      <ion-icon name="notifications-outline" color="primary"></ion-icon>
+      <div class="detail">
+        <ion-label class="text">&nbsp; Notifications</ion-label>
+      </div>
+    </div>
+    <div class="list_item">
+      <ion-icon name="chatbox-outline" color="primary"></ion-icon>
+      <div class="detail">
+        <ion-label class="text">&nbsp; Support</ion-label>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

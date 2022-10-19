@@ -1,0 +1,83 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToBack()">
+        <ion-icon slot="start" name="chevron-back" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Services</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <div class="lower_div">
+
+      <div class="category_title">
+        <ion-label>Choose category</ion-label>
+        <ion-button expand="block" class="ion-no-padding">
+          <ion-icon name="search-outline"></ion-icon>
+        </ion-button>
+      </div>
+
+      <div class="card_div">
+        <div class="card" *ngFor="let item of [1,2]">
+          <div class="item">
+            <circle-progress [percent]="85" [showImage]="true" imageSrc="assets/img/card.png"
+            [imageHeight]="40" [imageWidth]=40 [outerStrokeColor]="'#68ab9f'" [backgroundColor]="'#68ab9f'">
+            </circle-progress>
+            <ion-icon name="wallet-outline" color="light"></ion-icon>
+          </div>
+          <ion-label class="name">Shopping</ion-label>
+          <ion-label class="text">Spent last month</ion-label>
+          <ion-label class="dolar">$205.00</ion-label>
+        </div>
+      </div>
+
+      <div class="card_div">
+        <div class="card center" *ngFor="let item of [1,2,3]">
+          <div class="item">
+            <circle-progress
+            [percent]="58"
+            [outerStrokeColor]="'#d99e96'"
+            [backgroundColor]="'#d99e96'"
+            [showImage]="true" imageSrc="assets/img/card.png"
+            [imageHeight]="40" [imageWidth]=40>
+          </circle-progress>
+          </div>
+          <ion-label class="name">Cash</ion-label>
+        </div>
+      </div>
+      <div class="card_div">
+        <div class="card center" *ngFor="let item of [1,2,3]">
+          <div class="item">
+            <circle-progress
+            [percent]="74"
+            [outerStrokeColor]="'#d28e5c'"
+            [backgroundColor]="'#d28e5c'"
+            [showImage]="true" imageSrc="assets/img/card.png"
+            [imageHeight]="40" [imageWidth]=40>
+          </circle-progress>
+          </div>
+          <ion-label class="name">Cash</ion-label>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,99 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="goToBack()">
+                <ion-icon name="chevron-back" color="dark"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title> Cards</ion-title>
+        <ion-buttons slot="end">
+            <ion-button>
+                <ion-icon name="notifications-outline" color="dark"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <ion-slides [options]="slideOpts">
+            <ion-slide>
+                <img src="assets/img/credit-card.png">
+            </ion-slide>
+            <ion-slide>
+                <img src="assets/img/credit-card.png">
+            </ion-slide>
+            <ion-slide>
+                <img src="assets/img/credit-card.png">
+            </ion-slide>
+        </ion-slides>
+
+        <div class="service">
+            <div class="item" (click)="goToTransfer()">
+                <div class="icon secondary">
+                    <ion-icon name="wallet-outline" color="light"></ion-icon>
+                </div>
+                <ion-label>Transfer</ion-label>
+            </div>
+            <div class="item" (click)="goToHistory()">
+                <div class="icon tertiary">
+                    <ion-icon name="albums-outline" color="light"></ion-icon>
+                </div>
+                <ion-label>Replenish</ion-label>
+            </div>
+            <div class="item" (click)="goToService()">
+                <div class="icon black">
+                    <ion-icon name="phone-portrait-outline" color="light"></ion-icon>
+                </div>
+                <ion-label>Other</ion-label>
+            </div>
+            <div class="item" (click)="goToAddCard()">
+                <div class="icon add">
+                    <ion-icon name="add" color="primary"></ion-icon>
+                </div>
+                <ion-label>Add Card</ion-label>
+            </div>
+        </div>
+        <div class="lower_div">
+            <div class="list_item">
+                <div class="start">
+                    <ion-icon name="card-outline"></ion-icon>
+                    <ion-label>&nbsp;  Contactless payment</ion-label>
+                </div>
+                <ion-toggle color="primary"></ion-toggle>
+            </div>
+            <div class="list_item">
+                <div class="start">
+                    <ion-icon name="trash-bin-outline"></ion-icon>
+                    <ion-label>&nbsp;  Block card</ion-label>
+                </div>
+            </div>
+            <div class="list_item">
+                <div class="start">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <ion-label>&nbsp;  Edit Pin</ion-label>
+                </div>
+            </div>
+            <div class="list_item">
+                <div class="start">
+                    <ion-icon name="shield-checkmark-outline"></ion-icon>
+                    <ion-label>&nbsp;  Security settings</ion-label>
+                </div>
+            </div>
+            <div class="list_item">
+                <div class="start">
+                    <ion-icon name="card-outline"></ion-icon>
+                    <ion-label>&nbsp;  Contactless payment</ion-label>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>

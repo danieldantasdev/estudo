@@ -1,0 +1,145 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+@font-face {
+    font-family: "regular";
+    src: url(assets/fonts/Poppins-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: "medium";
+    src: url(assets/fonts/Poppins-Medium.ttf);
+  }
+
+  @font-face {
+    font-family: "semi-bold";
+    src: url(assets/fonts/Poppins-SemiBold.ttf);
+  }
+  @font-face {
+    font-family: "bold";
+    src: url(assets/fonts/Poppins-Bold.ttf);
+  }
+
+  * {
+    font-family: "regular";
+  }
+
+  .header-ios ion-toolbar:last-of-type {
+     --border-width: 0px;
+    --background: white;
+  }
+
+  .header-md:after {
+    background: none;
+  }
+
+  .main_content_div {
+    .textbox {
+      margin-bottom: 30px;
+      margin-top: 20px;
+      ion-input {
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        padding: 0px 7px !important;
+        font-family: "medium";
+        margin: 5px 0px;
+      }
+      ion-label {
+        font-family: "semi-bold";
+        font-size: 14px;
+      }
+    }
+
+    .heading{
+      font-size: 22px;
+      font-family: "semi-bold";
+      padding: 10px 14px;
+      display: block;
+    }
+
+    .btn {
+      display: flex;
+      padding: 14px;
+      margin: 20px 0px;
+      ion-button {
+        width: 100%;
+        border-radius: 10px !important;
+        margin: 7px;
+      }
+    }
+
+    .currency_accet {
+      display: flex;
+      flex-direction: row;
+      padding: 14px;
+      .img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+      .detail {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .up_div {
+          display: flex;
+          justify-content: space-between;
+          .title {
+            font-family: "semi-bold";
+            font-size: 16px;
+          }
+          .price {
+            font-family: "semi-bold";
+            font-size: 16px;
+          }
+        }
+        .down_div {
+          display: flex;
+          justify-content: space-between;
+          .type {
+            font-family: "medium";
+            font-size: 13px;
+            color: var(--ion-color-medium);
+          }
+          .status {
+            font-family: "semi-bold";
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+  }

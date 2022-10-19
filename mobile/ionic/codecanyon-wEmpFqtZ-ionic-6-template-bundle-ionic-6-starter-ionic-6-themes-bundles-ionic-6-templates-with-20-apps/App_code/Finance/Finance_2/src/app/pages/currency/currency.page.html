@@ -1,0 +1,69 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToBack()">
+        <ion-icon name="chevron-back-outline" color="medium"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Bitcoin</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="star-outline" color="medium"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <ion-label class="price_tag">$54 252,34</ion-label>
+    <ion-label color="danger" class="status">-0.33%</ion-label>
+    <canvas id="coinChart" #coinChart></canvas>
+
+    <div class="btn">
+      <ion-button (click)="goToBuy()" color="primary">
+        <ion-label>Buy</ion-label>
+      </ion-button>
+      <ion-button (click)="goToBuy()" fill="outline" color="primary">
+        <ion-label>Sell</ion-label>
+      </ion-button>
+    </div>
+
+
+      <div class="detail">
+        <ion-label class="title">Market cap</ion-label>
+        <ion-label class="price">923,234,333 USD</ion-label>
+      </div>
+      <div class="detail">
+        <ion-label class="title">Circulating Supply</ion-label>
+        <ion-label class="price">18,234,33 BTC</ion-label>
+      </div>
+      <div class="detail">
+        <ion-label class="title">Total Supply</ion-label>
+        <ion-label class="price">18,234,33 BTC</ion-label>
+      </div>
+      <div class="detail">
+        <ion-label class="title">Max Supply</ion-label>
+        <ion-label class="price">21,000,000 BTC</ion-label>
+      </div>
+      <div class="detail">
+        <ion-label class="title">Website</ion-label>
+        <a>https://bitcoin.org/</a>
+      </div>
+      <div class="detail">
+        <ion-label class="title">What is bitcoin?</ion-label>
+      </div>
+      <div class="detail">
+        <ion-label class="price">The software stores a continuously updated ledger that records all Bitcoin transactions. The code sets the scarcity of Bitcoin, and mining introduces new Bitcoins at regular intervals. This form of earning Bitcoins consists of solving the math problems necessary to confirm transactions. Successful solving of those problems using mathematical calculations triggers the creation of more currency.</ion-label>
+      </div>
+  </div>
+
+</ion-content>

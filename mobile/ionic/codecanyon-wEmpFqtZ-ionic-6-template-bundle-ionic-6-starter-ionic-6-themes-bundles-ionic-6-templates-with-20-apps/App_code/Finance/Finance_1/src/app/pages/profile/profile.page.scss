@@ -1,0 +1,121 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.header-ios ion-toolbar:last-of-type {
+  --background: var(--ion-color-primary);
+  color: white;
+}
+
+.header-md:after {
+  --background: var(--ion-color-primary);
+  color: white;
+}
+
+.top_div {
+  background-color: var(--ion-color-primary);
+  height: 20vh;
+  position: relative;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  .profile_detail {
+    color: white;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .text_area {
+      display: flex;
+      flex-direction: column;
+    }
+    .name {
+      font-family: "medium";
+      font-size: 18px;
+    }
+    .id {
+      font-size: 13px;
+      color: var(--ion-color-light);
+      padding-bottom: 5px;
+      display: block;
+    }
+  }
+  .lower_div {
+    padding: 20px;
+    margin: 15px;
+    width: 93%;
+    border-radius: 15px;
+    background-color: white;
+    position: absolute;
+    bottom: -90px;
+    box-shadow: 0px 5px 15px var(--box-shadow-color);
+    --box-shadow-color: #d7d8da;
+    .balance {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      .title {
+        font-size: 14px;
+        color: var(--ion-color-medium);
+        padding-bottom: 5px;
+      }
+      .dollar {
+        font-size: 22px;
+        font-family: "medium";
+        color: var(--ion-color-black);
+      }
+    }
+
+    .spent {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 15px;
+      .title {
+        font-size: 14px;
+        color: var(--ion-color-medium);
+      }
+      .dollar {
+        font-size: 14px;
+        font-family: "medium";
+        color: var(--ion-color-black);
+      }
+    }
+  }
+}
+.middle_div {
+  background-color: white;
+  height: 7rem;
+}
+.bottom_div {
+  background-color: var(--ion-color-light);
+  height: 60vh;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  .list_item {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    border-bottom: 1px solid lightgray;
+    .detail {
+        display: flex;
+        flex-direction: column;
+
+      .title{
+          font-family: "medium";
+          color: var(--ion-color-medium);
+          padding-bottom: 5px;
+      }
+      .text{
+        font-family: "medium";
+        font-size: 16px;
+      }
+    }
+    ion-icon{
+      font-size: 22px;
+    }
+  }
+}

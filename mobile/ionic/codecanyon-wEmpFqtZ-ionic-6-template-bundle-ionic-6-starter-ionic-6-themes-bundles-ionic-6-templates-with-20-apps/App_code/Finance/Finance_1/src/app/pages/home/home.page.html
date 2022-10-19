@@ -1,0 +1,137 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" class="ion-padding">
+      <ion-avatar>
+        <img src="assets/img/man.png" />
+      </ion-avatar>
+    </ion-buttons>
+    <ion-label class="name">John Snow</ion-label><br>
+    <ion-label class="id">@john2012</ion-label>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <div class="balance">
+      <div class="left_div">
+        <ion-label class="title">My Balance:</ion-label>
+        <ion-label class="dollar">$5,434.27</ion-label>
+      </div>
+      <div class="right_div">
+        <div class="top_div">
+          <ion-label class="title">Today Spent:</ion-label>
+          <ion-label class="dollar">&nbsp; $34.27</ion-label>
+        </div>
+        <div class="bottom_div">
+          <ion-label class="title">Daily Limit:</ion-label>
+          <ion-label class="dollar">&nbsp; $350</ion-label>
+        </div>
+      </div>
+    </div>
+    <div class="service">
+      <div class="item" (click)="goToTransfer()">
+        <div class="icon secondary">
+          <ion-icon name="wallet-outline" color="light"></ion-icon>
+        </div>
+        <ion-label>Payments</ion-label>
+      </div>
+      <div class="item ">
+        <div class="icon tertiary" (click)="goToTransfer()">
+          <ion-icon name="albums-outline" color="light"></ion-icon>
+        </div>
+        <ion-label>Transfer</ion-label>
+      </div>
+      <div class="item">
+        <div class="icon primary" (click)="goToService()">
+          <ion-icon name="phone-portrait-outline" color="light"></ion-icon>
+        </div>
+        <ion-label>Replenish</ion-label>
+      </div>
+      <div class="item">
+        <div class="icon black" (click)="goToAddCard()">
+          <ion-icon name="card-outline" color="light"></ion-icon>
+        </div>
+        <ion-label>Cards</ion-label>
+      </div>
+    </div>
+    <div class="lower-div">
+      <ion-toolbar class="limit_card">
+        <div class="progress" slot="start">
+
+          <circle-progress
+          [percent]="85"
+          [outerStrokeColor]="'#fff'"
+          [backgroundColor]="'#68ab9f'"
+          [titleColor]="'#fff'"
+          [unitsColor]="'#fff'"
+          [showUnits]="true">
+        </circle-progress>
+        </div>
+
+        <div class="title">
+          <ion-label class="name">Daily limit</ion-label>
+          <ion-label class="dollar">$140.20 of $350.00</ion-label>
+        </div>
+
+        <ion-buttons slot="end">
+          <ion-button>
+            <ion-icon name="chevron-forward-outline" color="light"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-label class="head-title">Exchange Rates</ion-label>
+
+       <ion-row class="list-title">
+        <ion-col size="4">
+          <ion-label>Currency</ion-label>
+        </ion-col>
+        <ion-col size="4">
+          <ion-label>Buy</ion-label>
+        </ion-col>
+        <ion-col size="4">
+          <ion-label>Sell</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row class="currency_row" *ngFor="let item of [1,2,3,4,5,6,7]">
+        <ion-col size="4">
+          <div class="currency">
+            <div class="sign">$</div>
+            <ion-label>&nbsp;EUR</ion-label>
+          </div>
+        </ion-col>
+        <ion-col size="4">
+          <div class="rate">
+            <ion-icon name="caret-down" color="danger"></ion-icon>
+            <div class="price">
+              <ion-label class="live">&nbsp;0.90</ion-label>
+              <ion-label class="increase">+0.10</ion-label>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col size="4">
+          <div class="rate">
+            <ion-icon name="caret-up" color="primary"></ion-icon>
+            <div class="price">
+              <ion-label class="live">&nbsp;0.90</ion-label>
+              <ion-label class="increase">+0.10</ion-label>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+
+</ion-content>

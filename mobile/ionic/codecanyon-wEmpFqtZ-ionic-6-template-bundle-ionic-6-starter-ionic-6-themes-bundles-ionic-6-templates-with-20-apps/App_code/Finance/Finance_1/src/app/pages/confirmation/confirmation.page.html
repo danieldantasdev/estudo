@@ -1,0 +1,64 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToBack()">
+        <ion-icon slot="start" name="chevron-back" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Confirmation</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <div class="lower_div">
+      <ion-label class="card_title">From</ion-label>
+      <div class="limit_card">
+        <ion-radio value="1" mode="md"></ion-radio>
+        <img class="img" src="assets/img/credit-card.png" alt="">
+        <div class="title">
+          <ion-label class="name">9999 **** **** 9999</ion-label>
+          <ion-label class="dollar">$3,450.00</ion-label>
+        </div>
+      </div>
+
+      <ion-label class="card_title" style="padding-top: 40px;">To</ion-label>
+      <div class="limit_card">
+        <ion-radio value="1" mode="md"></ion-radio>
+        <img class="img" src="assets/img/credit-card.png" alt="">
+        <div class="title">
+          <ion-label class="name">9999 **** **** 9999</ion-label>
+          <ion-label class="dollar">John Snow</ion-label>
+        </div>
+      </div>
+
+      <div class="payment_detail">
+        <div class="line"></div>
+
+          <ion-label>Commission for payer: 0.00$</ion-label>
+          <ion-label>Commission for reciver: 0.00$</ion-label>
+          <ion-label>Amount to be credited: 0.00$</ion-label>
+
+        <ion-label style="padding-top: 40px;">Payment amount:</ion-label>
+        <ion-label class="price">$1,623.64</ion-label>
+      </div>
+
+      <ion-button class="large_btn" color="primary" expand="block" (click)="goToCards()">
+        Send
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

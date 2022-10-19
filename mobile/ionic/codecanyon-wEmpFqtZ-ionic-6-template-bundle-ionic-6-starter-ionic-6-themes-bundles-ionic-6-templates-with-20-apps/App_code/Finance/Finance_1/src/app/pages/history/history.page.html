@@ -1,0 +1,65 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToBack()">
+        <ion-icon slot="start" name="chevron-back" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>History</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="notifications-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <div class="lower_div">
+      <ion-label class="category_title">Choose category</ion-label>
+
+      <div class="category_name">
+        <div class="item">
+          <div class="icon white">
+            <ion-label>All</ion-label>
+          </div>
+        </div>
+        <div class="item" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+          <div class="icon secondary">
+            <ion-icon name="wallet-outline" color="light"></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="date_div">
+        <ion-label>Friday, 31 January, 2022</ion-label>
+        <ion-buttons slot="start">
+          <ion-button>
+            <ion-icon name="calendar-outline" color="medium"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+
+      <div class="card" *ngFor="let item of [1,2,3,4,5,6,7]">
+        <img class="img"  src="assets/img/credit-card.png" alt="">
+        <div class="title">
+          <ion-label class="dollar">+&nbsp;$380.00</ion-label>
+          <ion-label class="name">Levi's T-shirt</ion-label>
+        </div>
+        <div class="time">
+          <ion-label>04.00pm</ion-label>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</ion-content>
