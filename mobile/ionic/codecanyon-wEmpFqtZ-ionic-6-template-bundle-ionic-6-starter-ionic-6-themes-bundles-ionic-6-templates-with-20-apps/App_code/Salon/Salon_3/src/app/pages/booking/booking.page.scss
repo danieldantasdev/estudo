@@ -1,0 +1,122 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-header {
+  ion-toolbar {
+    --border-width: 0px;
+    --background: #ffff;
+  }
+}
+
+ion-row {
+  padding: 0px;
+  border-radius: 0px;
+  border: 1px solid lightgray;
+  height: 42px;
+  ion-col {
+    padding: 0px;
+    .cancle_button {
+      height: 40px;
+      --background: #ffff;
+      --border-radius: 0px;
+      font-family: "Roboto", sans-serif;
+      letter-spacing: 1px;
+      margin: 0px;
+      color: black;
+    }
+    .save_button {
+      height: 40px;
+      --background: linear-gradient(to right, #fe4a7a, #fd6a58);
+      --border-radius: 0px;
+      font-family: "Roboto", sans-serif;
+      letter-spacing: 1px;
+      margin: 0px;
+    }
+  }
+}
+
+.main_div {
+  padding: 10px;
+  margin: 20px;
+  box-shadow: 0px 0px 20px var(--box-color);
+  --box-color: #e7e7e7;
+  border-radius: 10px;
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .sub_heading {
+      margin: 5px 0px;
+      color: black;
+    }
+    .small_heading {
+      margin: 5px 0px;
+      color: #fd6a58;
+      border-bottom: 1px solid#fd6a58;
+    }
+    ion-buttons {
+      ion-button {
+        width: max-content;
+        height: 25px;
+        --background: #03b875;
+        color: #ffff;
+        font-size: 13px;
+      }
+    }
+  }
+  ion-label {
+    display: flex;
+    align-items: center;
+    color: gray;
+    margin: 5px 0px;
+    ion-icon {
+      margin-right: 10px;
+    }
+  }
+  .line {
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    margin: 10px 0px;
+  }
+  .details {
+    margin: 20px 0px;
+    .payments {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      color: gray;
+      margin: 5px 0px;
+    }
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    .call_button {
+      --border-radius: 30px;
+      font-size: 15px;
+      font-family: "Outfit", sans-serif;
+      width: 30%;
+      ion-icon {
+        margin-right: 5px;
+      }
+    }
+    .chat_button {
+      --border-radius: 30px;
+      font-size: 15px;
+      font-family: "Outfit", sans-serif;
+      --background: #03b875;
+      width: 30%;
+      ion-icon {
+        margin-right: 5px;
+      }
+    }
+  }
+}

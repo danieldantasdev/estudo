@@ -1,0 +1,51 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()" color="dark">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Select Date</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="content">
+    <div class="calender">
+      <ion-slides #slideDate>
+        <ion-slide>
+          <ion-row class="row_cal">
+            <ion-col size="0.75" (click)="previousWeek()">
+              <ion-icon name="arrow-back-outline" mode="md" class="icon_change center_item" *ngIf="currentWeek != 0">
+              </ion-icon>
+            </ion-col>
+            <ion-col *ngFor="let day of days" [class.disabled]="initDate.split('T')[0] > day.val.split('T')" size="1.5"
+              (click)="selectDate(day)">
+              <ion-label class="lbl_day" [class.selectedDay]="day.val.split('T')[0] == selectedDate">{{ day.day }}
+              </ion-label>
+              <ion-label class="lbl_date" [class.selectedDate]="day.val.split('T')[0] == selectedDate">{{ day.date }}
+              </ion-label>
+            </ion-col>
+            <ion-col size="0.75" (click)="nextWeek()">
+              <ion-icon name="arrow-forward-outline" mode="md" class="icon_change center_item"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+
+  <ion-button class="content_button" (click)="onSave()" expand="block">
+    Apply
+  </ion-button>
+
+</ion-content>

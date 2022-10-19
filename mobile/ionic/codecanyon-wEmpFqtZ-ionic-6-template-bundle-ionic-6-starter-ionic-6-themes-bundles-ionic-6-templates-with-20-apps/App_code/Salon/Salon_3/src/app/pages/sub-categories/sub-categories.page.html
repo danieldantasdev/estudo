@@ -1,0 +1,78 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()" color="dark">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> <ion-icon name="location"></ion-icon> Abu Dhabi City</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-searchbar placeholder="Search here.." mode="ios"></ion-searchbar>
+
+  <ion-item lines="none">
+    <ion-label>Select Categories</ion-label>
+      <ion-select>
+        <ion-select-option value="peperoni">Salon</ion-select-option>
+        <ion-select-option value="hawaii">Hair</ion-select-option>
+      </ion-select>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-label>Select Sub Categories</ion-label>
+      <ion-select>
+        <ion-select-option value="peperoni">Hair Cutting</ion-select-option>
+        <ion-select-option value="hawaii">Facial</ion-select-option>
+      </ion-select>
+  </ion-item>
+
+  <ion-item lines="none" class="date" (click)="onDate()">
+    <ion-buttons>
+      <ion-button color="dark">
+        <ion-icon name="calendar-number"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-label>Web, Aug 14</ion-label>
+  </ion-item>
+
+  <ion-button class="content_button" (click)="onSearch()" expand="block">
+    Search
+  </ion-button>
+
+  <div class="main_content" *ngFor="let item of [1,2,3,4]">
+    <div class="image" [style.backgroundImage]="'url(assets/images/1.jpg)'">
+      <ion-label class="time"> <ion-icon name="time"></ion-icon> 12:25PM </ion-label>
+      <div class="profile">
+        <ion-thumbnail>
+          <img src="assets/images/3.jpg" />
+        </ion-thumbnail>
+        <div class="text">
+          <ion-label class="sub_heading">Shayra Alam</ion-label>
+          <div class="rate">
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-label>4.5 (445 review)</ion-label>
+          </div>
+          <ion-label class="location"><ion-icon name="location"></ion-icon> 4.8 KM </ion-label>
+        </div>
+      </div>
+    </div>
+    <div class="all">
+      <ion-label>See All</ion-label>
+    </div>
+  </div>
+
+</ion-content>

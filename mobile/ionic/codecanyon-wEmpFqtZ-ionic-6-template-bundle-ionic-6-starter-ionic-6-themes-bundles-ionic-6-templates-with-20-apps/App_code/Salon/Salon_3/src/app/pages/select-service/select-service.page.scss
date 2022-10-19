@@ -1,0 +1,77 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-header {
+  ion-toolbar {
+    --border-width: 0px;
+    --background: #ffff;
+  }
+}
+
+ion-item {
+  padding: 5px;
+  border: 1px solid lightgray;
+  margin: 20px 10px;
+  border-radius: 10px;
+  .ttl {
+    .sub_heading {
+      margin: 5px 0px;
+      color: black;
+    }
+    ion-label {
+      font-size: 10px;
+      color: gray;
+    }
+  }
+  .content_icn_button {
+    height: 30px;
+    width: 80px;
+    margin: 0px;
+    --border-radius: 30px;
+    color: #ffff;
+    font-size: 10px;
+    ion-icon {
+      font-size: 20px;
+    }
+  }
+  .content_button {
+    height: 30px;
+    width: 80px;
+    margin: 0px;
+    --border-radius: 30px;
+    color: #ffff;
+    font-size: 10px;
+  }
+}
+
+ion-row {
+  padding: 0px;
+  border-radius: 20px;
+  border: 1px solid lightgray;
+  height: 42px;
+  ion-col {
+    padding: 0px;
+    .cancle_button {
+      height: 40px;
+      --background: #ffff;
+      --border-radius: 30px 0px 0px 30px;
+      font-family: "Roboto", sans-serif;
+      letter-spacing: 1px;
+      margin: 0px;
+      color: black;
+    }
+    .save_button {
+      height: 40px;
+      --background: linear-gradient(to right, #fe4a7a, #fd6a58);
+      --border-radius: 0px 30px 30px 0px;
+      font-family: "Roboto", sans-serif;
+      letter-spacing: 1px;
+      margin: 0px;
+    }
+  }
+}

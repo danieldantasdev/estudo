@@ -1,0 +1,46 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+  <div class="main_image" [style.backgroundImage]="'url(assets/images/2.png)'">
+
+    <ion-buttons slot="end">
+      <ion-button (click)="onBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <div class="main_content ion-padding">
+      <div class="img" [style.backgroundImage]="'url(assets/images/l2.png)'"></div>
+      <ion-label class="sub_heading">Beauty Begins The Moment You <br> Decide To Be Yourself.</ion-label>
+    </div>
+
+    <div class="main_div">
+      <ion-item lines="none">
+        <ion-input type="text" placeholder="Full Name"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-input type="text" placeholder="Email ID"></ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-input type="text" placeholder="Password"></ion-input>
+      </ion-item>
+
+      <ion-button class="content_button" (click)="onLogin()" expand="block">
+        Sign Up
+      </ion-button>
+
+    </div>
+
+    <div class="second_div">
+      <h6>Already have account? <span (click)="onLogin()">LOG IN</span></h6>
+    </div>
+
+  </div>
+
+  </ion-content>

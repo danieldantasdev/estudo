@@ -1,0 +1,193 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-slides {
+  ion-slide {
+    .image {
+      height: 170px;
+      width: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.btn {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  .text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+}
+
+.profile_div {
+  position: absolute;
+  top: 16.5vh;
+  width: 100%;
+  z-index: 1;
+  .profile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    ion-buttons {
+      position: absolute;
+      right: 20px;
+      top: 40px;
+    }
+    ion-thumbnail {
+      height: 70px;
+      width: 70px;
+      --border-radius: 50%;
+      padding: 2px;
+      border: 1px solid #fd6a58;
+    }
+    .sub_heading {
+      margin: 2px 0px;
+      color: #fd6a58;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    ion-label {
+      font-size: 12px;
+      color: gray;
+      margin: 5px 0px;
+    }
+    .rate {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-align: center;
+      ion-icon {
+        color: #fdb558;
+        margin-left: 5px;
+      }
+      ion-label {
+        margin-left: 10px;
+      }
+    }
+    .content_button {
+      height: 30px;
+      width: max-content;
+    }
+  }
+}
+
+ion-row {
+  margin-top: 11rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  ion-col {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .line {
+      height: 80%;
+      border-right: 2px solid lightgray;
+    }
+    .sub_heading {
+      margin: 5px 0px;
+      color: #fd6a58;
+      font-size: 20px;
+    }
+    ion-label {
+      color: gray;
+      font-size: 13px;
+    }
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  .heading {
+    margin: 0px;
+  }
+}
+
+.sliders2 {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  padding: 10px 0px;
+
+  .categoryIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 0px 5px;
+    border-radius: 5px;
+    .imgs {
+      height: 55px;
+      width: 71px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      .back_image {
+        height: 70px;
+        width: 70px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 5px;
+      }
+    }
+    .icon {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+    }
+    .kind {
+      margin-top: 2px;
+      color: black;
+      font-size: 12px;
+    }
+  }
+}
+
+ion-item {
+  padding: 5px;
+  border: 1px solid lightgray;
+  margin: 20px;
+  border-radius: 10px;
+  .ttl {
+    .sub_heading {
+      margin: 5px 0px;
+      color: black;
+      font-size: 15px;
+    }
+    ion-label {
+      font-size: 10px;
+      color: gray;
+    }
+  }
+  .content_button {
+    height: 30px;
+    width: 80px;
+    margin: 0px;
+    --border-radius: 30px;
+    color: #ffff;
+    font-size: 10px;
+  }
+}

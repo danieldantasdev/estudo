@@ -1,0 +1,121 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-header {
+  ion-toolbar {
+    --border-width: 0px;
+    --background: #ffff;
+    ion-title {
+      ion-icon {
+        color: #fd6a58;
+        padding-top: 5px;
+      }
+    }
+  }
+}
+
+ion-item {
+  --background: #f5f6f9;
+  --padding-start: 10px;
+  border-radius: 30px;
+  margin: 20px 0px;
+  ion-label {
+    font-family: "Outfit", sans-serif;
+    margin: 15px 0px;
+    padding-left: 20px;
+  }
+  ion-select {
+    font-family: "Outfit", sans-serif;
+  }
+}
+
+.content_button {
+  margin: 10px 0px;
+}
+
+.main_content {
+  border: 1px solid #fd6a58;
+  border-radius: 10px;
+  height: 200px;
+  margin: 15px 0px;
+  .image {
+    height: 150px;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    .time {
+      color: #ffff;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: flex-end;
+      padding: 10px;
+      font-size: 13px;
+    }
+    .profile {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 10px;
+      margin-top: 10px;
+      ion-thumbnail {
+        --border-radius: 50%;
+        padding: 5px;
+        border: 1px solid #fd6a58;
+        height: 70px;
+        width: 70px;
+      }
+      .text {
+        color: #ffff;
+        padding: 10px;
+        .sub_heading {
+          margin: 0px;
+        }
+        .rate {
+          margin: 5px 0px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          text-align: center;
+          ion-icon {
+            color: #fda858;
+            margin-left: 5px;
+          }
+          ion-label {
+            font-size: 10px;
+            margin-left: 10px;
+          }
+        }
+        .location {
+          color: #ffff;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          font-size: 10px;
+          margin-top: 5px;
+          ion-icon {
+            margin-right: 5px;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+  .all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    ion-label {
+      font-size: 20px;
+      margin-top: 15px;
+    }
+  }
+}

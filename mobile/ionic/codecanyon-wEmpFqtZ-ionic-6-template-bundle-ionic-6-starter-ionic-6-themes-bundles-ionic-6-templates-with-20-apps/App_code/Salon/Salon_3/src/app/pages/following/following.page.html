@@ -1,0 +1,41 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="onBack()" color="dark">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Following</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item lines="none" *ngFor="let item of [1,2,3,4,5]">
+    <ion-thumbnail>
+      <img src="assets/images/1.jpg" />
+    </ion-thumbnail>
+    <ion-label>Shayra Alam</ion-label>
+    <ion-button slot="end" class="content_button" (click)="onFollow()" expand="block">
+      Follow
+    </ion-button>
+  </ion-item>
+  <ion-item lines="none">
+    <ion-thumbnail>
+      <img src="assets/images/1.jpg" />
+    </ion-thumbnail>
+    <ion-label>Shayra Alam</ion-label>
+    <ion-button slot="end" class="content_follow_button" (click)="onUnFollow()" expand="block">
+      Unfollow
+    </ion-button>
+  </ion-item>
+
+</ion-content>

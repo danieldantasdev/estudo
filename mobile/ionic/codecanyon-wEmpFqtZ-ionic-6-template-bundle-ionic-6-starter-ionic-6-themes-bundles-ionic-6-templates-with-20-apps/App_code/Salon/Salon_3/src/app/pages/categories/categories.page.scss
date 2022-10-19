@@ -1,0 +1,78 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.sub_heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //color: #fd6a58;
+  background: -webkit-linear-gradient(30deg, #fe4a7a, #fd6a58);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading {
+  margin: 20px 0px;
+}
+
+ion-item {
+  --background: #f5f6f9;
+  --padding-start: 10px;
+  border-radius: 30px;
+  ion-buttons {
+    margin-right: 10px;
+  }
+  ion-label {
+    font-family: "Outfit", sans-serif;
+    margin: 15px 0px;
+  }
+  ion-select {
+    font-family: "Outfit", sans-serif;
+  }
+}
+
+.content_button {
+  margin: 30px 0px;
+}
+
+ion-row {
+  border: 1px solid #fd6a58;
+  border-radius: 10px;
+  margin: 20px 0px;
+  ion-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    .sub_div {
+      height: 80px;
+      width: 95%;
+      background: linear-gradient(to right, #fe4a7a, #fd6a58);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      border-radius: 10px;
+      margin-right: 7px;
+      .imgs {
+        margin-top: 15px;
+        height: 50px;
+        width: 50px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+      }
+      ion-label {
+        margin: 10px 0px;
+        font-size: 12px;
+        color: #ffff;
+      }
+    }
+  }
+}
