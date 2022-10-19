@@ -1,0 +1,49 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    <ion-button (click)="goBack()" fill="clear" *ngIf="tabID == 1">
+      <ion-icon name="arrow-back" color="dark"></ion-icon>
+    </ion-button>
+    <ion-button (click)="changeTab()" fill="clear" *ngIf="tabID == 2">
+      <ion-icon name="arrow-back" color="dark"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <div *ngIf="tabID == 1">
+      <ion-label class="bold_lbl">Complaint</ion-label>
+
+      <ion-radio-group value="1" mode="md">
+        <ion-item *ngFor="let item of options" lines="none" detail="true" (click)="tabID = 2">
+          <ion-label>{{item.value}}</ion-label>
+        </ion-item>
+      </ion-radio-group>
+    </div>
+
+
+
+    <div *ngIf="tabID == 2">
+      <ion-label class="bold_lbl">Enter a description</ion-label>
+
+      <ion-textarea rows="3" [(ngModel)]="complaint"></ion-textarea>
+
+      <div class="btn_div">
+        <ion-fab-button [disabled]="complaint == ''">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </ion-fab-button>
+      </div>
+    </div>
+
+
+  </div>
+</ion-content>

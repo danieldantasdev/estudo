@@ -1,0 +1,114 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.main_content_div {
+  width: 100%;
+  height: 100vh;
+  // position: relative;
+  // padding: 16px;
+}
+.content_div {
+  width: 100%;
+  height: 100vh;
+  padding: 16px;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.upper_div {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+
+  .menu_btn {
+    display: flex;
+    justify-content: flex-end;
+    ion-button {
+      color: black;
+    }
+  }
+
+  ion-input {
+    background: white;
+    border-radius: 8px;
+    border-radius: 8px;
+    --padding-start: 10px;
+    font-family: "regular";
+    padding: 16px;
+    position: relative;
+
+    ion-icon {
+      font-size: 12px;
+      margin-left: 10px;
+    }
+
+    .heart_icn {
+      font-size: 18px;
+      color: grey;
+      position: absolute;
+      right: 10px;
+    }
+  }
+}
+
+.car_type_div {
+  background: white;
+  padding: 16px 0px;
+  padding-bottom: 0px;
+  width: 90px;
+  min-width: 90px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+
+  .single_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+
+    ion-label {
+      text-align: center;
+      font-size: 14px;
+      color: #ccc;
+      font-family: "medium";
+    }
+    .active {
+      color: #5e5f66;
+    }
+    div {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 50px;
+      }
+    }
+  }
+}
+
+.btn_div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 16px;
+
+  ion-button {
+    width: 200px;
+  }
+}

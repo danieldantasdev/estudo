@@ -1,0 +1,42 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar></ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <ion-label class="bold_lbl">Cancel Request</ion-label>
+
+    <ion-radio-group value="1" mode="md">
+      <ion-item *ngFor="let item of options" lines="none">
+        <ion-label>{{item.value}}</ion-label>
+        <ion-radio [value]="item.id"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+
+  </div>
+</ion-content>
+<ion-footer>
+  <div class="footer_div">
+    <ion-row>
+      <ion-col size="6" style="padding-right: 8px;">
+        <ion-button expand="block" shape="round" fill="outline" class="block_btn">
+          Submit
+        </ion-button>
+      </ion-col>
+      <ion-col size="6" style="padding-left: 8px;">
+        <ion-button expand="block" shape="round" fill="outline" class="block_btn">
+          Cancel
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-footer>

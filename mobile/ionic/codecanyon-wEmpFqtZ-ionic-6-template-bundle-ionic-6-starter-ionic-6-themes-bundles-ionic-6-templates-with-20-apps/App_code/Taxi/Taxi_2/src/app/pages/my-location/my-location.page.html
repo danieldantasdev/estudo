@@ -1,0 +1,41 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+  <div class="main_content_div" #map id="map"></div>
+  <!-- <div class="content_div"> -->
+  <div class="upper_div">
+    <div class="menu_btn">
+      <ion-button (click)="openMenu()" fill="clear">
+        <ion-icon slot="icon-only" name="menu-sharp"></ion-icon>
+      </ion-button>
+    </div>
+
+    <div style="padding: 20px;">
+      <ion-input type="text" value="R.A De Mel Mawatha">
+        <ion-icon name="ellipse" color="success"></ion-icon>
+        <ion-icon name="heart-outline" class="heart_icn"></ion-icon>
+      </ion-input>
+    </div>
+  </div>
+  <div class="car_type_div">
+    <div class="single_div" (click)="type = i+1" *ngFor="let item of carType; let i = index">
+      <ion-label [class.active]="type == i+1">{{item.name}}</ion-label>
+      <div>
+        <img [src]="'assets/imgs/'+item.img1" *ngIf="type == i+1">
+        <img [src]="'assets/imgs/'+item.img2" *ngIf="type !== i+1">
+      </div>
+    </div>
+  </div>
+  <div class="btn_div">
+    <ion-button mode="ios" class="block_btn" shape="round" (click)="goToSerchLocation()">
+      I'm Here
+    </ion-button>
+  </div>
+  <!-- </div> -->
+</ion-content>
