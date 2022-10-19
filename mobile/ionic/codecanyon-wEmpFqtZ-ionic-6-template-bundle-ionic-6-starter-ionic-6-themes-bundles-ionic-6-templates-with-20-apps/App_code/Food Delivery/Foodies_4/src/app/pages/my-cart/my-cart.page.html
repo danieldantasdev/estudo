@@ -1,0 +1,84 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+    <ion-toolbar>
+        <ion-button slot="start" fill="clear" mode="ios" (click)="onBackAdditem()">
+            <ion-icon name="chevron-back-outline" color="dark"></ion-icon>
+        </ion-button>
+        <ion-title>My Cart</ion-title>
+        <ion-button slot="end" fill="clear" mode="ios">
+            <ion-icon name="notifications-outline" color="dark"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+    <div class="brand" *ngFor="let item of [1,2]">
+        <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/burger.jpg)'"></div>
+        <div class="food_detail">
+            <div class="name">
+                <ion-label>Burger king</ion-label>
+            </div>
+            <div class="cart_price">
+                <ion-label>$ 15.00</ion-label>
+                <div class="qty_box">
+                    <ion-icon name="remove-outline" color="medium"></ion-icon>
+                    <ion-label >1</ion-label>
+                    <ion-icon name="add" color="warning" (click)="onAdditem()"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ion-item lines="none">
+        <img src="assets/images/promo.png" alt="">
+        <ion-label>Add promo coden</ion-label>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+
+    <div class="item_total">
+        <ion-label>Item total <span>$50.00</span></ion-label>
+        <ion-label>Discount <span>$10.00</span></ion-label>
+        <ion-label class="color_lbl">Delivery Free <span>Free</span></ion-label>
+    </div>
+
+
+    <div class="fare">
+        <ion-label>Total</ion-label>
+        <ion-label>$70.00</ion-label>
+    </div>
+
+
+    <div class="delivery">
+        <div class="image_div">
+            <img src="assets/images/map.png" alt="">
+        </div>
+        <div class="detail_div">
+            <div class="title_div">
+                <ion-label>Deliver to : Home</ion-label>
+                <ion-label style="color: var(--ion-app-yellow-color);">Change</ion-label>
+            </div>
+            <div class="address">
+              <ion-icon name="location-outline"></ion-icon> 13A Havinr street, New York
+            </div>
+        </div>
+    </div>
+
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-item lines="none" (click)="onCheckout()">
+            <ion-icon slot="start" name="cart-outline" color="light"></ion-icon>
+            <ion-label>Checkout</ion-label>
+            <ion-label slot="end">$ 70.00</ion-label>
+        </ion-item>
+    </ion-toolbar>
+</ion-footer>

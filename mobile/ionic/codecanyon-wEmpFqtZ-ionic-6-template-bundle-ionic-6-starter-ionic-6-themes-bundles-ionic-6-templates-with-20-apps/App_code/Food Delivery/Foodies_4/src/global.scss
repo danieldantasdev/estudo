@@ -1,0 +1,242 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+// font-family: 'Poppins', sans-serif;
+
+@font-face {
+    font-family: 'regular';
+    src: url(assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'medium';
+    src: url(assets/fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'semi-bold';
+    src: url(assets/fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'bold';
+    src: url(assets/fonts/Poppins-Bold.ttf);
+}
+
+* {
+    font-family: 'regular';
+}
+
+ion-label {
+    display: block;
+}
+
+ion-modal.custom_modal {
+    .modal-wrapper {
+        width: 100% !important;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+    }
+    &.bottom {
+        align-items: flex-end !important;
+    }
+    --height: 400px;
+    align-items: flex-end;
+}
+
+ion-modal.item_modal {
+    --height:80%;
+    align-items: flex-end;
+}
+
+
+ion-footer {
+    ion-toolbar {
+        ion-title {
+          font-family: "Poppins", sans-serif;
+        }
+    }
+}
+
+
+.bg_image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+ion-title {
+    font-weight: normal;
+    font-family: 'medium';
+    font-size: 18px;
+}
+
+ion-button {
+    margin: 0px;
+}
+
+.block_btn {
+    font-family: 'medium';
+    letter-spacing: 0.5px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.otp-input {
+    width: 50px !important;
+    height: 50px !important;
+    border: 1px solid var(--ion-color-primary) !important;
+    background: #f7f7f7 !important;
+    font-size: 24px !important;
+    font-family: 'medium';
+}
+
+.otp-input:not(:last-child) {
+    margin-right: 12px !important;
+}
+
+.otp-input:focus-visible {
+    outline: none !important;
+}
+
+.brand{
+    margin-bottom: 16px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: flex;
+
+    .back_image {
+        width: 95px;
+        min-width: 95px;
+        height: 90px;
+        border-radius: 10px;
+    }
+
+    .food_detail {
+        padding-left: 12px;
+        width: 100%;
+
+        .name{
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            ion-label{
+                font-family: 'medium';
+            }
+        }
+        .distance{
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            ion-label{
+                margin-left: 5px;
+                color: #c2c2cb;
+                font-size: 14px;
+                margin-right: 10px;
+            }
+        }
+        .about{
+            display: flex;
+            align-items: center;
+            ion-label{
+                margin-left: 3px;
+                font-size: 14px;
+                margin-right: 10px;
+            }
+            ion-icon {
+                margin-right: 2px;
+            }
+        }
+        .grey_lbl {
+            font-size: 13px;
+            color: #C2C3CB;
+        }
+        .price{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            ion-label{
+                color: var(--ion-app-yellow-color);
+                font-family: 'medium';
+            }
+
+            .qty_box {
+                display: flex;
+                width: 90px;
+                align-items: center;
+                justify-content: space-between;
+
+                ion-icon {
+                    font-size: 30px;
+                }
+                ion-label{
+                    font-family: 'semi-bold';
+                }
+            }
+        }
+        .cart_price{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            ion-label{
+                color: var(--ion-app-yellow-color);
+                font-family: 'medium';
+            }
+
+            .qty_box {
+                display: flex;
+                width: 90px;
+                align-items: center;
+                justify-content: space-between;
+                background: #F4F5F8;
+                padding: 4px 10px;
+                border-radius: 5px;
+
+                ion-icon {
+                    font-size: 24px;
+                }
+                ion-label{
+                    font-family: 'semi-bold';
+                    margin-left: 15px;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}

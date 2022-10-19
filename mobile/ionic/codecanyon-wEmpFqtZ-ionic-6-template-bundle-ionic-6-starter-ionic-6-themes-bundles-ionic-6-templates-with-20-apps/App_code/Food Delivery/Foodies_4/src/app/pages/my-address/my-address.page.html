@@ -1,0 +1,37 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+    <ion-toolbar>
+        <ion-button (click)="onBackProfile()" mode="ios" fill="clear" slot="start">
+            <ion-icon name="chevron-back-outline" color="dark"></ion-icon>
+        </ion-button>
+        <ion-title>My Address</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="search_box">
+        <ion-input type="text" placeholder="Search Address">
+            <ion-icon slot="start" name="search"></ion-icon>
+        </ion-input>
+        <div class="loc_div">
+            <ion-icon name="location-outline"></ion-icon>
+            <ion-label>9st, New york City</ion-label>
+        </div>
+    </div>
+    <div class="bg_image map" [style.backgroundImage]="'url(assets/images/map.jpg)'"></div>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-button (click)="onNavigation()" expand="block" mode="ios" class="block_btn" shape="round">
+            Save
+        </ion-button>
+    </ion-toolbar>
+</ion-footer>

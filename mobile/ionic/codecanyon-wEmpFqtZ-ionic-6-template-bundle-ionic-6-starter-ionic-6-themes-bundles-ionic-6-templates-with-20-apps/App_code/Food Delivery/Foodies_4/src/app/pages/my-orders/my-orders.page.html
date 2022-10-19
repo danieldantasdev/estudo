@@ -1,0 +1,79 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+    <ion-toolbar>
+        <ion-title>My Orders</ion-title>
+        <ion-button slot="end" fill="clear" mode="ios">
+            <ion-icon name="notifications-outline" color="dark"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <ion-segment value="1" mode="md" [(ngModel)]="current">
+        <ion-segment-button value="1">
+            <ion-label>Pr-Order</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="2">
+            <ion-label>Oncoming</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="3">
+            <ion-label>History</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+    <div *ngIf="current ==='1'">
+        <div class="day">
+            <ion-label class="date_lbl">25 May 2021</ion-label>
+
+            <div class="food_container" *ngFor="let item of [1,2]">
+                  <div class="food_flex">
+                      <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/burger.jpg)'"></div>
+                      <div class="food_detail">
+                          <div class="destination">
+                              <ion-label class="name_lbl">Cheese burger</ion-label>
+                              <ion-label class="price_lbl" style="color: #fba83c;">$15.00</ion-label>
+                          </div>
+                          <ion-label class="timing">25 May 2021 . 11:30</ion-label>
+                      </div>
+                  </div>
+                  <ion-row>
+                      <ion-col size="6" style="padding-right: 8px;">
+                          <ion-button (click)="onBackNavigation()" mode="ios" expand="block" class="block_btn">
+                              <ion-icon slot="start" name="refresh-outline"></ion-icon>
+                              <ion-label>Reorder</ion-label>
+                          </ion-button>
+                      </ion-col>
+                      <ion-col size="6" style="padding-left: 8px;">
+                          <ion-button (click)="onClick()" mode="ios" expand="block" class="block_btn grey_btn">
+                              <ion-label>Get Help</ion-label>
+                          </ion-button>
+                      </ion-col>
+                  </ion-row>
+            </div>
+
+        </div>
+    </div>
+
+    <div *ngIf="current ==='2'">
+        <div class="cart">
+            <img src="assets/images/cart.png" alt="">
+            <ion-label class="emply_lbl">Cart Empty</ion-label>
+            <ion-label class="grey_lbl">Go a head, order some items from the menue</ion-label>
+            <ion-button class="block_btn" mode="ios" (click)="onClick()">
+                <ion-icon slot="start" name="add"></ion-icon> Add items
+            </ion-button>
+        </div>
+    </div>
+
+    <div *ngIf="current ==='3'">
+
+    </div>
+
+</ion-content>

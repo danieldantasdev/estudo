@@ -1,0 +1,184 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+    <div class="bg_image head" [style.backgroundImage]="'url(assets/images/burger.jpg)'">
+        <div class="icons">
+            <ion-button (click)="onBackFavourite()" mode="ios" fill="clear">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </ion-button>
+            <div class="btn">
+                <ion-button (click)="onClick()" mode="ios" fill="clear">
+                    <ion-icon name="search-outline" ></ion-icon>
+                </ion-button>
+                <ion-button (click)="onClick()" mode="ios" fill="clear">
+                    <ion-icon name="open-outline" ></ion-icon>
+                </ion-button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content_div">
+
+        <div class="flex_div">
+            <ion-label>Chicken Burger</ion-label>
+            <ion-label style="color: var(--ion-app-yellow-color);">$ 15.00</ion-label>
+        </div>
+
+        <div class="info ">
+            <div class="inner_flex">
+                <ion-icon name="star" style="color: var(--ion-app-yellow-color);"></ion-icon>
+                <ion-label><span>4.9</span>(150)</ion-label>
+            </div>
+            <div class="inner_flex">
+                <ion-icon name="time-outline" style="color: #3880ff;"></ion-icon>
+                <ion-label>30 min</ion-label>
+            </div>
+            <div class="inner_flex">
+                <ion-icon name="logo-usd" style="color: green;"></ion-icon>
+                <ion-label >Free Delivery</ion-label>
+            </div>
+        </div>
+
+        <div class="segment">
+            <ion-segment  [(ngModel)]="current">
+                <ion-segment-button value="1">
+                  <ion-label>Details</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="2">
+                  <ion-label>Ingradiants</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="3">
+                  <ion-label >Review</ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </div>
+
+        <div *ngIf="current ==='1'">
+            <div class="food">
+                <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/burger.jpg)'"></div>
+                <div class="food_detail">
+                    <ion-label class="name_lbl">Crispy Burger</ion-label>
+                    <ion-label class="color_lbl">Mcdonald's</ion-label>
+                    <ion-label class="price_lbl">$30.00</ion-label>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="quantity">
+                <ion-label>Quantity</ion-label>
+                <div class="qty_box">
+                    <ion-icon name="remove-circle-outline" color="medium"></ion-icon>
+                    <ion-label >1</ion-label>
+                    <ion-icon name="add-circle" color="medium" class="plus"></ion-icon>
+                </div>
+            </div>
+
+            <div class="quantity">
+                <ion-label>Size</ion-label>
+                <ion-range
+                    min="0" max="100"
+                    value = 30
+                    pin="true" mode="md"
+                    color="primary"
+                >
+                </ion-range>
+            </div>
+
+            <div class="flex_div">
+                <ion-label>Sides</ion-label>
+            </div>
+
+            <ion-slides mode="ios" pager="ios" scrollbar="ios" [options]="slideOpts">
+                <ion-slide *ngFor="let item of [1,2,3,4,5,6,7,8]">
+                    <ion-thumbnail>
+                        <img src="assets/images/burger.jpg" />
+                    </ion-thumbnail>
+                </ion-slide>
+            </ion-slides>
+
+            <div class="flex_div">
+                <ion-label>Beverages</ion-label>
+            </div>
+
+            <ion-slides mode="ios" pager="ios" scrollbar="ios" [options]="slideOpts">
+                <ion-slide *ngFor="let item of [1,2,3,4,5,6,7,8]">
+                    <ion-thumbnail>
+                        <img src="assets/images/drink.png" />
+                    </ion-thumbnail>
+                </ion-slide>
+            </ion-slides>
+
+            <ion-button expand="block" (click)="onMyCart()" mode="ios" class="block_btn">
+                <ion-label class="add">Add to cart</ion-label>
+                <ion-label class="price">$ 15.00</ion-label>
+            </ion-button>
+
+        </div>
+
+        <div *ngIf="current ==='2'">
+
+            <div class="flex_div">
+                <ion-label>Auto Manufacturers</ion-label>
+                <ion-chip color="warning" mode="md">
+                    <ion-label>Required</ion-label>
+                </ion-chip>
+            </div>
+
+            <ion-radio-group name="auto" mode="md" value="2">
+                <ion-item lines="none">
+                    <ion-label>Extra savoury sauce</ion-label>
+                    <ion-radio value="1" slot="start"></ion-radio>
+                </ion-item>
+                <ion-item lines="none">
+                    <ion-label>Extra cheess</ion-label>
+                    <ion-radio value="2" slot="start"></ion-radio>
+                </ion-item>
+                <ion-item lines="none">
+                    <ion-label>Extra tomatos</ion-label>
+                    <ion-radio value="3" slot="start"></ion-radio>
+                </ion-item>
+            </ion-radio-group>
+
+            <div class="instruct" (click)="current = '4'">
+                <ion-icon name="add" color="warning"></ion-icon>
+                <ion-label>Add special instruction</ion-label>
+            </div>
+
+        </div>
+
+        <div class="ion-padding" *ngIf="current === '3'">
+            <ion-label (click)="onReview()">Review</ion-label>
+        </div>
+
+        <div *ngIf="current === '4'" class="special ion-padding">
+            <ion-textarea placeholder="Add special instruction"  rows="6" cols="20"></ion-textarea>
+        </div>
+
+    </div>
+
+</ion-content>
+
+<ion-footer *ngIf="current ==='2'">
+      <ion-toolbar>
+
+          <div class="flex_div">
+              <div class="qty_box">
+                  <ion-icon name="remove-outline" color="warning"></ion-icon>
+                  <ion-label>1</ion-label>
+                  <ion-icon name="add-outline" color="warning"></ion-icon>
+              </div>
+              <ion-button expand="block" (click)="onMyCart()" mode="ios" class="block_btn">
+                  <ion-label class="add">Add to cart</ion-label>
+                  <ion-label class="price">$ 15.00</ion-label>
+              </ion-button>
+          </div>
+
+    </ion-toolbar>
+</ion-footer>

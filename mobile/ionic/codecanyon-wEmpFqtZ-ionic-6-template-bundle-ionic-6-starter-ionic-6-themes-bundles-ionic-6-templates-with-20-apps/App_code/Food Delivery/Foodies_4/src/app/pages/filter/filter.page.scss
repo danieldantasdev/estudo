@@ -1,0 +1,116 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-header {
+  ion-toolbar {
+    --background: white;
+
+    .reset_btn {
+      font-size: 16px;
+      font-family: "medium";
+      --color: var(--ion-app-yellow-color);
+    }
+  }
+}
+
+ion-content {
+  .title_lbl {
+    font-family: "medium";
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  .category {
+    margin-bottom: 30px;
+    ion-col {
+      padding: 0px;
+      div {
+        width: 100%;
+        padding: 10px 10px;
+        background: #f4f5f8;
+        color: black;
+        font-family: "medium";
+        border-radius: 8px;
+
+        ion-label {
+          text-align: center;
+        }
+      }
+
+      .active {
+        background: var(--ion-color-primary);
+
+        ion-label {
+          color: white;
+        }
+      }
+    }
+  }
+  .group {
+    margin-bottom: 30px;
+    .flex_div {
+      display: flex;
+      flex-wrap: wrap;
+
+      div {
+        border: 1px solid var(--ion-color-primary);
+        border-radius: 8px;
+        margin-right: 12px;
+        margin-bottom: 16px;
+        padding: 6px 20px;
+      }
+      .active {
+        background: var(--ion-color-primary);
+
+        ion-label {
+          color: white;
+        }
+      }
+    }
+  }
+  .ratting {
+    margin-bottom: 30px;
+    .flex_div {
+      display: flex;
+      flex-wrap: wrap;
+
+      div {
+        background: #f4f5f8;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        margin-right: 12px;
+        padding: 8px 12px;
+
+        ion-label {
+          font-family: "semi-bold";
+        }
+
+        ion-icon {
+          color: var(--ion-app-yellow-color);
+          margin-left: 5px;
+        }
+      }
+      .active {
+        background: var(--ion-color-primary);
+        ion-icon {
+          color: white;
+        }
+        ion-label {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+ion-footer {
+  ion-toolbar {
+    --border-width: 0px;
+    padding: 10px 16px;
+  }
+}

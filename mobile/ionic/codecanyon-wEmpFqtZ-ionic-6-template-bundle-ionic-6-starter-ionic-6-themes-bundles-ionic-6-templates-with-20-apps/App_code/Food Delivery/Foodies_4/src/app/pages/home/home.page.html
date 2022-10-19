@@ -1,0 +1,126 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <div class="location">
+      <ion-icon name="location-outline"></ion-icon>
+      <ion-label>Delivered to</ion-label>
+      <ion-select value="home">
+        <ion-select-option value="home">Home</ion-select-option>
+        <ion-select-option value="office">Office/Shop</ion-select-option>
+      </ion-select>
+      <ion-icon name="notifications-outline" class="icn"></ion-icon>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="main_div">
+
+    <div class="searchBar">
+      <ion-item lines="none">
+        <ion-input type="text" placeholder="Search for meals..."></ion-input>
+        <ion-icon slot="start" name="search-outline"></ion-icon>
+        <div class="icon" (click)="onFilter()">
+          <ion-icon slot="end" name="options-outline" class="icn"></ion-icon>
+        </div>
+      </ion-item>
+    </div>
+
+    <div class="menu">
+      <div class="cat" *ngFor="let item of [1,2,3,4,5]" (click)="onFavourite()">
+        <img src="assets/images/breakfast.png" />
+        <ion-label>Breakfast</ion-label>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="shape"></div>
+
+  <div class="second_div">
+    <div class="favourite">
+      <ion-label class="bold_lbl">Favourite</ion-label>
+      <ion-label class="see_lbl">See all</ion-label>
+    </div>
+
+    <ion-slides mode="ios" pager="ios" scrollbar="ios" [options]="slideOpts">
+      <ion-slide *ngFor="let item of [1,2,3]">
+        <div class="fav_food" (click)="onFavourite()">
+          <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/burger.jpg)'"></div>
+          <div class="food">
+            <ion-label class="name">Burger king</ion-label>
+            <ion-label class="grey_lbl">Burger American-Food Deshi-food</ion-label>
+            <div class="info">
+              <div>
+                <ion-icon name="star" style="font-size: 16px; color: var(--ion-app-yellow-color);"></ion-icon>
+                <ion-label><span>4.9</span>(149)</ion-label>
+              </div>
+              <div>
+                <ion-chip color="warning" style="margin-right: 8px;">
+                  <ion-icon name="location-outline"></ion-icon>
+                  <ion-label>150 m</ion-label>
+                </ion-chip>
+                <ion-chip color="warning">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <ion-label>30</ion-label>
+                </ion-chip>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div class="content_div">
+    <ion-segment value="recent" (ionChange)="segmentChanged($event)" mode="md" scrollable="boolean" color="warning">
+      <ion-segment-button value="recent">
+        <ion-label>Recent</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="favourite">
+        <ion-label>Favourite</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="rating">
+        <ion-label>Rating</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="popular">
+        <ion-label>Popular</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="trending">
+        <ion-label>Trending</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <div class="brand" *ngFor="let item of [1,2,3]" (click)="onFavourite()">
+      <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/burger.jpg)'"></div>
+      <div class="food_detail">
+        <div class="name">
+          <ion-label>Burger king</ion-label>
+          <ion-icon name="bookmark-outline" style="font-size: 20px;"></ion-icon>
+        </div>
+        <div class="distance">
+          <ion-icon name="fast-food" color="warning"></ion-icon>
+          <ion-label>Burger</ion-label>
+          <ion-icon name="location" color="medium"></ion-icon>
+          <ion-label>2.1 Km</ion-label>
+        </div>
+        <div class="about">
+          <ion-icon name="star" color="warning"></ion-icon>
+          <ion-label>5.0</ion-label>
+          <ion-icon name="stopwatch-outline"></ion-icon>
+          <ion-label>10 min</ion-label>
+          <ion-icon name="call-outline" color="primary"></ion-icon>
+          <ion-label>Contact</ion-label>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</ion-content>

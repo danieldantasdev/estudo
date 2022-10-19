@@ -1,0 +1,91 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content mode="ios" class="ion-no-border">
+    <div class="bg_image head" [style.backgroundImage]="'url(assets/images/hamburger.jpg)'">
+        <div class="icons">
+            <ion-button (click)="onBackHome()" fill="clear" mode="ios">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </ion-button>
+            <div class="btn">
+                <ion-button (click)="onClick()" fill="clear" mode="ios">
+                    <ion-icon name="search-outline" ></ion-icon>
+                </ion-button>
+                <ion-button (click)="onClick()" fill="clear" mode="ios">
+                    <ion-icon name="open-outline" ></ion-icon>
+                </ion-button>
+            </div>
+        </div>
+    </div>
+
+    <div class="favourite">
+        <div class="name_flex">
+            <ion-label>Mcdonald's</ion-label>
+            <ion-icon name="bookmark"></ion-icon>
+        </div>
+        <ion-label class="about">$$ - Burger - American food - Deshi food</ion-label>
+
+        <div class="rating">
+            <ion-icon name="star" color="warning"></ion-icon>
+            <ion-label><span>4.9</span>200 + ratings</ion-label>
+        </div>
+
+        <div class="info">
+              <div class="inner_flex">
+                  <ion-icon name="logo-usd" style="color: green;"></ion-icon>
+                  <ion-label >Free Delivery</ion-label>
+              </div>
+              <div class="inner_flex">
+                  <ion-icon name="time-outline" style="color: #3880ff;"></ion-icon>
+                  <ion-label>30 min</ion-label>
+              </div>
+              <ion-chip color="warning" >
+                  <ion-label>Tack Away</ion-label>
+              </ion-chip>
+        </div>
+
+      <div class="select">
+          <ion-segment value="recent" (ionChange)="segmentChanged($event)" mode="md" scrollable="boolean">
+              <ion-segment-button value="recent">
+                  <ion-label>For you</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="favourite">
+                  <ion-label>burgers</ion-label>
+              </ion-segment-button><ion-segment-button value="rating">
+                  <ion-label>Meals</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="popular">
+                  <ion-label>Chicken</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="trending">
+                  <ion-label>Trending</ion-label>
+              </ion-segment-button>
+          </ion-segment>
+      </div>
+
+      <div class="brand" *ngFor="let item of [1,2,3,4]">
+          <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/burger.jpg)'"></div>
+          <div class="food_detail">
+              <div class="name">
+                  <ion-label>Burger king</ion-label>
+              </div>
+              <ion-label class="grey_lbl">sandwitch features two savory flame-grilled beef patties</ion-label>
+              <div class="price">
+                  <ion-label>$ 15.00</ion-label>
+                  <div class="qty_box">
+                      <ion-icon name="remove-circle-outline" color="medium" class="minus"></ion-icon>
+                      <ion-label >1</ion-label>
+                      <ion-icon name="add-circle" color="warning" (click)="onAdditem()" class="plus"></ion-icon>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+    </div>
+</ion-content>
+

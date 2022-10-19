@@ -1,0 +1,158 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+    <ion-toolbar>
+        <ion-button slot="start" fill="clear" mode="ios" (click)="onBackNavigation()">
+            <ion-icon name="chevron-back-outline" color="dark"></ion-icon>
+        </ion-button>
+        <ion-title>Order Tracking</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <ion-label class="id_lbl">Order ID: <span>154200352</span></ion-label>
+
+    <div class="track">
+        <ion-row>
+            <ion-col size="4">
+                <div class="left">
+                    <ion-label>10 May 2021</ion-label>
+                    <ion-label>10:30 AM</ion-label>
+                </div>
+            </ion-col>
+            <ion-col size="1">
+                <div class="timeliner"></div>
+            </ion-col>
+            <ion-col size="7">
+                <div class="right">
+                    <img src="assets/images/delivered.png" alt="" style="background: #fba83c;">
+                    <ion-label>Status : <span style="color: #fba83c;">Delivered</span></ion-label>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col size="4">
+                <div class="left">
+                    <ion-label>10 May 2021</ion-label>
+                    <ion-label>10:30 AM</ion-label>
+                </div>
+            </ion-col>
+            <ion-col size="1">
+                <div class="timeliner"></div>
+            </ion-col>
+            <ion-col size="7">
+                <div class="right">
+                    <img src="assets/images/order.png" alt="" style="background: #6370ff;">
+                    <ion-label>Status : <span style="color: #6370ff;" (click)="ontrackDetail()">On the way</span></ion-label>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col size="4">
+                <div class="left">
+                    <ion-label>10 May 2021</ion-label>
+                    <ion-label>10:30 AM</ion-label>
+                </div>
+            </ion-col>
+            <ion-col size="1">
+                <div class="timeliner"></div>
+            </ion-col>
+            <ion-col size="7">
+                <div class="right">
+                    <img src="assets/images/processing.png" alt="" style="background: #ed576b;">
+                    <ion-label>Status : <span style="color: #ed576b;">Order processing</span></ion-label>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col size="4">
+                <div class="left">
+                    <ion-label>10 May 2021</ion-label>
+                    <ion-label>10:30 AM</ion-label>
+                </div>
+            </ion-col>
+            <ion-col size="1">
+                <div class="timeliner"></div>
+            </ion-col>
+            <ion-col size="7">
+                <div class="right">
+                    <img src="assets/images/confirm.png" alt="" style="background: #42d77d;">
+                    <ion-label>Status : <span style="color: #42d77d;">Confirmed</span></ion-label>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col size="4">
+                <div class="left">
+                    <ion-label>10 May 2021</ion-label>
+                    <ion-label>10:30 AM</ion-label>
+                </div>
+            </ion-col>
+            <ion-col size="1">
+                <div class="timeliner"></div>
+            </ion-col>
+            <ion-col size="7">
+                <div class="right">
+                    <img src="assets/images/orderc.png" alt="" style="background: #fba83c;">
+                    <ion-label>Status : <span style="color: #fba83c;">Order Placed</span></ion-label>
+                </div>
+            </ion-col>
+        </ion-row>
+    </div>
+
+
+    <div class="details">
+        <div class="order_from">
+            <ion-label>Order from :</ion-label>
+            <ion-label class="color_lbl">Mcdonald's</ion-label>
+        </div>
+
+        <div class="food">
+            <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/burger.jpg)'"></div>
+            <div class="food_detail">
+                <ion-label class="name_lbl">Crispy Burger</ion-label>
+                <ion-label class="price_lbl">$30.00</ion-label>
+            </div>
+            <ion-badge color="primary" mode="ios">2</ion-badge>
+        </div>
+
+        <div class="order_from">
+            <ion-label>Item Total</ion-label>
+            <ion-label style="font-family: 'medium';">$50.00</ion-label>
+        </div>
+
+        <div class="order_from">
+            <ion-label>Discount</ion-label>
+            <ion-label>$10.00</ion-label>
+        </div>
+
+        <div class="order_from">
+            <ion-label>Delivery Fee</ion-label>
+            <ion-label>Free</ion-label>
+        </div>
+        <hr>
+        <div class="order_from">
+            <ion-label>Total</ion-label>
+            <ion-label>$70.00</ion-label>
+        </div>
+
+        <div class="order_from">
+            <ion-label>Payment Method</ion-label>
+            <ion-label>Visa card</ion-label>
+        </div>
+
+    </div>
+
+</ion-content>
+
+

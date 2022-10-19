@@ -1,0 +1,63 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding" class="ion-no-border">
+  <ion-slides mode="ios" pager="ios" scrollbar="ios" #slides>
+
+    <ion-slide>
+      <div class="slide">
+        <img src="assets/images/p1.png" alt="">
+        <ion-label class="title_lbl">Discover places near you</ion-label>
+        <ion-label class="simp_lbl">We make it simple to find the food you crave. enter your address and let us do
+          reset.</ion-label>
+        <ion-fab horizontal="start" vertical="bottom" slot="fixed" (click)="skip()">
+          <ion-fab-button>
+            SKIP
+          </ion-fab-button>
+        </ion-fab>
+        <ion-fab horizontal="end" vertical="bottom" slot="fixed" (click)="next()">
+          <ion-fab-button color="medium">
+            NEXT
+          </ion-fab-button>
+        </ion-fab>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+        <img src="assets/images/p2.png" alt="">
+        <ion-label class="title_lbl">Order your favourite</ion-label>
+        <ion-label class="simp_lbl">When you order eat street, we will hook you up with exclusive coupens, special sand
+          rewards.</ion-label>
+        <ion-fab horizontal="start" vertical="bottom" slot="fixed" (click)="skip()">
+          <ion-fab-button>
+            SKIP
+          </ion-fab-button>
+        </ion-fab>
+        <ion-fab horizontal="end" vertical="bottom" slot="fixed" (click)="next()">
+          <ion-fab-button color="medium">
+            NEXT
+          </ion-fab-button>
+        </ion-fab>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide">
+        <img src="assets/images/p3.png" alt="">
+        <ion-label class="title_lbl">Fastest delivery</ion-label>
+        <ion-label class="simp_lbl">We make food ordering fast, simple and free -no matter if you order online or cash.
+        </ion-label>
+        <ion-button (click)="onSignin()" expand="block" mode="ios" class="block_btn">
+          Get started
+        </ion-button>
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

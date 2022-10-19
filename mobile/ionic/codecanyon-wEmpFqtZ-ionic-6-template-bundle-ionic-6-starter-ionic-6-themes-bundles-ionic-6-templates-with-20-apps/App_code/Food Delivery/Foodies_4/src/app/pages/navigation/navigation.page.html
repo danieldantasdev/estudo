@@ -1,0 +1,71 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+    <ion-toolbar>
+        <ion-button slot="start" fill="clear" mode="ios">
+            <ion-icon name="chevron-back-outline" color="dark"></ion-icon>
+        </ion-button>
+        <ion-title>
+            <ion-item lines="none">
+                <ion-select placeholder="Delivery address">
+                    <ion-select-option value="1">Home</ion-select-option>
+                    <ion-select-option value="2">Office</ion-select-option>
+                </ion-select>
+            </ion-item>
+        </ion-title>
+        <ion-button slot="start" slot="end" fill="clear" mode="ios">
+            <ion-icon name="notifications-outline" color="dark"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <div class="searchBar">
+        <ion-item lines="none">
+            <ion-input type="text" placeholder="Search for meals..."></ion-input>
+            <ion-icon slot="start" name="search-outline" ></ion-icon>
+            <div class="icon">
+                <ion-icon slot="end" name="options-outline" class="icn" (click)="onFilter()"></ion-icon>
+            </div>
+        </ion-item>
+    </div>
+
+    <div class="near">
+        <ion-label class="bold_lbl">Near By Restaurants</ion-label>
+        <ion-label class="grey_lbl">200+ Restaurants found near you</ion-label>
+    </div>
+
+    <div class="filter">
+        <ion-label class="filter_lbl">Filter :</ion-label>
+        <ion-chip color="medium" mode="ios" *ngFor="let item of [1,2,3,4,5,6]">
+            <ion-label>Burger</ion-label>
+            <ion-icon name="close-circle"></ion-icon>
+        </ion-chip>
+    </div>
+
+    <div class="brand" *ngFor="let item of [1,2,3,4]">
+        <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/burger.jpg)'"></div>
+        <div class="food_detail">
+            <div class="name">
+                <ion-label>Burger king</ion-label>
+                <ion-icon name="bookmark-outline" style="font-size: 20px;" (click)="onFavourite()"></ion-icon>
+            </div>
+            <div class="distance">
+                <ion-icon name="fast-food" color="warning"></ion-icon><ion-label>Burger</ion-label>
+                <ion-icon name="location" color="medium"></ion-icon><ion-label>2.1 Km</ion-label>
+            </div>
+            <div class="about">
+                <ion-icon name="star" color="warning"></ion-icon><ion-label>5.0</ion-label>
+                <ion-icon name="stopwatch-outline" color="secondary"></ion-icon><ion-label>10 min</ion-label>
+                <ion-icon name="logo-usd" color="primary"></ion-icon><ion-label>Free</ion-label>
+            </div>
+        </div>
+    </div>
+
+</ion-content>

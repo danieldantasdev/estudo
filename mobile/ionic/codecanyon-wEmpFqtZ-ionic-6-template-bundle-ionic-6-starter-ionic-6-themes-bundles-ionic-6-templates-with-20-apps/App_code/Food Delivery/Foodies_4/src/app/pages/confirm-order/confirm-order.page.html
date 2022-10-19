@@ -1,0 +1,28 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md">
+    <ion-toolbar>
+        <ion-title>Confirm Order</ion-title>
+        <ion-button size="small" fill="clear" slot="end" mode="ios">
+            Done
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <div class="success">
+        <ion-label class="bold_lbl">You Place The Order Successfully</ion-label>
+        <ion-label class="simp_lbl">You placed the order successfully. You will get your order with in 25 minutes.
+          thanks for using our services, Enjoy your order.
+        </ion-label>
+        <ion-button (click)="onHome()" expand="block" mode="ios" fill="clear">
+            Keep Browsing Food
+        </ion-button>
+    </div>
+</ion-content>
