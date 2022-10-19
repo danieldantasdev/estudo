@@ -1,0 +1,62 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+    <div class="img" [style.backgroundImage]="'url(assets/profile3.jpg)'">
+      <div class="icon">
+        <ion-icon class="back" name="chevron-back-outline" (click)="goToBack()"></ion-icon>
+      </div>
+      <div>
+        <ion-icon class="setting" color="primary" name="settings-outline" (click)="goToSetting()"></ion-icon>
+      </div>
+      <div>
+          <ion-label class="edit" (click)="goToEdit()">Edit info</ion-label>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="uper_div">
+        <div class="item">
+          <ion-label class="name">John Doe</ion-label>
+          <ion-badge class="badge">24 year</ion-badge>
+        </div>
+        <div class="item">
+          <ion-label class="text">Florida, Usa</ion-label>
+        </div>
+        <div class="line"></div>
+        <div>
+          <ion-icon class="icon" name="school-outline"></ion-icon>
+          <ion-label class="text">Flutter Devlopment at Google</ion-label>
+        </div>
+
+        <div>
+          <ion-icon class="icon" name="file-tray-outline"></ion-icon>
+          <ion-label class="text">Music, Traveling, Netflix</ion-label>
+        </div>
+        <div class="about">
+          <div class="title">
+            <ion-label>About</ion-label>
+          </div>
+          <div class="text">
+            <ion-label>hello everyone, this is john and this is details for testing. this is about text
+            </ion-label>
+          </div>
+        </div>
+
+        <ion-item class="ion-no-padding" lines="none">
+          <ion-label class="text">Gender</ion-label>
+          <ion-label color="primary" slot="end">Female</ion-label>
+        </ion-item>
+
+        <ion-item class="ion-no-padding" lines="none">
+          <ion-label class="text">Show my age</ion-label>
+          <ion-toggle></ion-toggle>
+        </ion-item>
+      </div>
+    </div>
+  </ion-content>

@@ -1,0 +1,71 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-button (click)="goToSuggest()">
+          <ion-icon slot="icon-only" name="tablet-portrait-outline"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+    <ion-title>Logo</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goToBell()">
+        <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+      </ion-button>
+     <ion-button (click)="goToFilter()">
+       <ion-icon slot="icon-only" name="options-outline"></ion-icon>
+     </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="stories">
+    <div class="heading">
+      <ion-label class="title">Stories</ion-label>
+      <ion-label class="view">View All</ion-label>
+    </div>
+    <div class="story-item">
+      <div class="menu">
+        <div class="item" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+          <ion-thumbnail>
+            <img src="assets/profile.jpg" />
+          </ion-thumbnail>
+          <ion-label>Jon.24</ion-label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <ion-row>
+      <ion-col size="6" *ngFor="let item of [1,2,3,]" (click)="goToFriend()">
+        <ion-card class="ion-no-margin">
+          <img src="assets/profile.jpg">
+          <ion-label class="name">John doe</ion-label>
+          <ion-label class="km">44 KM</ion-label>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6" *ngFor="let item of [1,]">
+        <ion-card class="ion-no-margin">
+          <img src="assets/mobile.jpg">
+          <ion-label class="name">John doe</ion-label>
+          <ion-label class="km">44 KM</ion-label>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </div>
+
+  <div class="banner">
+    <div class="banner-slide" [style.backgroundImage]="'url(assets/datting.jpg)'">
+      <div class="title">
+        <ion-label>post your profile and meet your crush</ion-label>
+      </div>
+    </div>
+  </div>
+</ion-content>

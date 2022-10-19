@@ -1,0 +1,112 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.img {
+  height: 50vh;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  .icon {
+    color: white;
+    .back {
+      color: white;
+      background-color: black;
+      border-radius: 100%;
+      opacity: 0.6;
+      z-index: 9999;
+      left: 14px;
+      top: 20px;
+      position: absolute;
+      font-size: 22px;
+      padding: 3px;
+    }
+  }
+  .setting {
+    position: absolute;
+    bottom: -15px;
+    background-color: white;
+    border-radius: 30px;
+    left: 24px;
+    position: absolute;
+    font-size: 22px;
+    padding: 5px 20px;
+    box-shadow: 0px 0px 10px var(--box-shadow-color);
+    --box-shadow-color: var(--ion-color-medium);
+  }
+  .edit {
+    position: absolute;
+    bottom: -15px;
+    background-color: white;
+    font-family: "medium";
+    border-radius: 30px;
+    right: 24px;
+    position: absolute;
+    font-size: 14px;
+    padding: 7px 20px;
+    color: var(--ion-color-primary);
+    box-shadow: 0px 0px 10px var(--box-shadow-color);
+    --box-shadow-color: var(--ion-color-medium);
+  }
+}
+.main-content {
+  padding: 24px;
+  margin-top: 10px;
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+  }
+  .name {
+    font-size: 18px;
+    font-family: "bold";
+    color: var(--ion-color-dark);
+  }
+  .badge {
+    font-size: 13px;
+    font-family: "bold";
+  }
+  .text {
+    font-size: 14px;
+    font-family: "medium";
+    color: var(--ion-color-medium);
+  }
+  .icon {
+    font-size: 20px;
+    color: var(--ion-color-medium);
+    padding-right: 10px;
+  }
+  .about {
+    padding-bottom: 10px;
+    .title {
+      font-size: 16px;
+      color: var(--ion-color-dark);
+      padding: 10px 0px 5px 0px;
+      ion-label {
+        font-family: "bold";
+      }
+    }
+  }
+
+  .line {
+    width: 100px;
+    margin: 10px 0px;
+    border-bottom: 3px solid var(--ion-color-primary);
+  }
+
+  ion-item {
+    border-top: 2px solid var(--ion-color-light);
+    font-size: 14px;
+    font-family: "medium";
+    ion-toggle {
+      height: 20px;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-button (click)="goToBack()">
+              <ion-icon slot="start" name="chevron-back-outline"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+      <ion-title>Filter</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="main-content">
+
+    <div class="items">
+      <ion-item lines="none" class="ion-no-padding">
+        <ion-label>Location</ion-label>
+        <ion-select placeholder="Select City">
+          <ion-select-option value="0" class="text">Gujarat</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>
+
+    <div class="items">
+      <div>
+        <ion-item lines="none" class="ion-no-padding">
+          <ion-label>Distance</ion-label>
+          <ion-label slot="end" class="text">30mi</ion-label>
+        </ion-item>
+      </div>
+      <ion-item lines="none" class="ion-no-padding">
+        <ion-range min="0" max="160" step="1" pin>
+        </ion-range>
+      </ion-item>
+    </div>
+
+    <div class="items">
+      <ion-label>Intrested In</ion-label>
+      <ion-item lines="none" class="ion-no-padding">
+        <ion-checkbox></ion-checkbox>
+        <ion-label class="text">Dating</ion-label>
+        <ion-checkbox></ion-checkbox>
+        <ion-label class="text">Friendship</ion-label>
+        <ion-checkbox></ion-checkbox>
+        <ion-label class="text">Business</ion-label>
+      </ion-item>
+    </div>
+
+    <div class="items">
+      <div>
+        <ion-item lines="none" class="ion-no-padding">
+          <ion-label>Age</ion-label>
+          <ion-label slot="end" class="text">18 - 26</ion-label>
+        </ion-item>
+      </div>
+      <ion-item lines="none" class="ion-no-padding">
+        <ion-range dualKnobs="true" min="18" max="80" step="1" pin>
+        </ion-range>
+      </ion-item>
+    </div>
+
+    <div class="items">
+      <ion-label>Height</ion-label>
+      <ion-item lines="none" class="ion-no-padding">
+        <ion-range dualKnobs="true" min="140" max="200" step="1" pin>
+        </ion-range>
+      </ion-item>
+    </div>
+    <div>
+      <ion-item lines="none" class="ion-no-padding">
+        <ion-label>Match Sound</ion-label>
+        <ion-toggle slot="end"></ion-toggle>
+      </ion-item>
+    </div>
+    <ion-button (click)="goToBack()" expand="block" shape="round">
+      Done
+    </ion-button>
+  </div>
+
+</ion-content>

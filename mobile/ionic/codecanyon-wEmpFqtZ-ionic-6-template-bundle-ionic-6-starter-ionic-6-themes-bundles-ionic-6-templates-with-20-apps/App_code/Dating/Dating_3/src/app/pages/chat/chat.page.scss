@@ -1,0 +1,101 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-header {
+    ion-toolbar {
+        --border-width: 0;
+    }
+}
+
+ion-content{
+    ion-searchbar{
+        --background: #fff;
+        --padding-start:30px;
+        border: 1px solid #c2c2cb;
+        border-radius: 20px;
+        padding: 0;
+        height: 40px;
+    }
+    .head_lbl{
+        margin-top: 2rem;
+    }
+    .match{
+        overflow: scroll;
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0px 10px 0px;
+        .menu {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          .item {
+            border-radius: 50%;
+            background: transparent !important;
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: #F4F5F8;
+            ion-label {
+              font-size: 10px;
+            }
+            ion-thumbnail {
+              border-radius: 50%;
+              padding: 2px;
+              margin: 2px;
+              height: 60px;
+              width: 60px;
+              --background: transparent;
+              img {
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+    }
+    .message{
+        margin-top: 2rem;
+        display: flex;
+        .circle {
+            background: var(--ion-color-primary);;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            color: #fff;
+            display: inline-block;
+            font-weight: bold;
+            line-height: 25px;
+            margin-left: 10px;
+            text-align: center;
+            width: 25px;
+            font-size: 14px;
+          }
+    }
+    .list{
+        ion-item{
+            margin-top: 18px;
+            ion-thumbnail{
+                width: 50px;
+                height: 50px;
+                img{
+                    border-radius: 50%;
+                }
+            }
+            .msg{
+                margin-left: 14px;
+                .name {
+                    font-size: 16px;
+                }
+                .msg_lbl {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

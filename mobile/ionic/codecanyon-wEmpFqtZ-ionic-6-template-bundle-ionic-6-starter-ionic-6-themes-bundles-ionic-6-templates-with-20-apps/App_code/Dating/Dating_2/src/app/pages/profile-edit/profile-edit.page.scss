@@ -1,0 +1,95 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-header {
+    box-shadow: 0px 0px 10px var(--box-shadow-color);
+    --box-shadow-color: #d7d8da;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px;
+      .left {
+        ion-icon {
+          font-size: 20px;
+          font-family: "semi-bold";
+        }
+      }
+      .title {
+        font-size: 18px;
+        font-family: "semi-bold";
+      }
+      .right {
+        font-size: 0px;
+        color: white;
+      }
+    }
+  }
+
+  ion-content{
+    .profile {
+        padding-top: 20px;
+
+        .profile-item {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .profile-picture {
+          border-radius: 100%;
+          -webkit-box-sizing: content-box;
+          -moz-box-sizing: content-box;
+          box-sizing: content-box;
+          margin: 0 auto;
+          width: 110px;
+          height: 110px;
+          overflow: hidden;
+          box-shadow: 0px 0px 10px var(--box-shadow-color);
+          --box-shadow-color: #d7d8da;
+        }
+
+        .profile-name {
+          font-family: "medium";
+          font-size: 20px;
+          color: var(--ion-color-black);
+          text-transform: capitalize;
+        }
+        .id {
+          font-size: 14px;
+          color: var(--ion-color-medium);
+        }
+      }
+
+      .form{
+          .input{
+            padding: 0px 15px;
+            margin: 10px 10px;
+            border: 1px solid rgb(192, 190, 190);
+            border-radius: 15px;
+            font-size: 18px;
+            font-family: "medium";
+          }
+          ion-label{
+            font-size: 16px;
+            font-family: "medium";
+        }
+        .text{
+            font-size: 14px;
+            font-family: "medium";
+            color: var(--ion-color-medium);
+        }
+        ion-button{
+            margin: 10px 0px;
+        }
+        .date{
+          display: flex;
+          justify-content: center;
+        }
+      }
+  }

@@ -1,0 +1,75 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="seg_id" mode="md">
+      <ion-segment-button [value]="1">
+        <ion-label>Like</ion-label>
+      </ion-segment-button>
+      <ion-segment-button [value]="2">
+        <ion-label>Visitors</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  <!-- <ion-grid fixed class="ion-no-padding">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="4" (click)="segmentChange(1)" class="ion-text-center" [class.active]="seg_id == 1">Like</ion-col>
+      <ion-col size="4" (click)="segmentChange(2)" class="ion-text-center" [class.active]="seg_id == 2">Visitors
+      </ion-col>
+    </ion-row>
+  </ion-grid> -->
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="main-content">
+    <div *ngIf="seg_id == 1">
+      <div *ngFor="let iten of [1,2,3,4,5,6,7,8,11,12,12,32]">
+        <ion-row>
+          <ion-col size="2">
+            <div>
+              <img src="assets/profile.jpg">
+            </div>
+          </ion-col>
+          <ion-col size="7">
+            <ion-label class="name">John Doe</ion-label><br>
+            <ion-label class="time">10 h</ion-label>
+          </ion-col>
+          <ion-col size="3">
+            <div class="btn">
+              <ion-icon name="add"></ion-icon>
+              <ion-label>Add</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+
+    <div *ngIf="seg_id == 2">
+      <div *ngFor="let iten of [1,2,3,4,5,6,7,8,11,12,12,32]">
+        <ion-row>
+          <ion-col size="2">
+            <div>
+              <img src="assets/profile.jpg">
+            </div>
+          </ion-col>
+          <ion-col size="7">
+            <ion-label class="name">John Doe</ion-label><br>
+            <ion-label class="time">10 h</ion-label>
+          </ion-col>
+          <ion-col size="3">
+            <div class="btn">
+              <ion-icon name="add"></ion-icon>
+              <ion-label>Add</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </div>
+</ion-content>

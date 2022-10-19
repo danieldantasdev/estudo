@@ -1,0 +1,73 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-content {
+  --background: #f6515f;
+  height: 100%;
+  .text {
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .cong_lbl {
+      color: #fff;
+      font-size: 32px;
+      font-family: "semi-bold";
+    }
+    .match_lbl {
+      color: #fff;
+      margin-top: 10px;
+      font-size: 22px;
+    }
+  }
+  .like {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20rem;
+    .lbl {
+      color: #fff;
+    }
+  }
+  .img {
+    position: relative;
+    margin: 10rem 0px 5rem 0px;
+    .center-item {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .wrapper {
+        position: relative;
+        display: block;
+        margin-right: 50px;
+        .big-img {
+          width: 150px;
+          max-width: 150px;
+          height: 150px;
+          border: 2px solid white;
+          border-radius: 50%;
+        }
+        .small-img {
+          border: 2px solid white;
+          position: absolute;
+          right: -50%;
+          top: 0%;
+          height: 150px;
+          width: 150px;
+          max-width: 150px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

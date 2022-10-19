@@ -1,0 +1,81 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+  <div class="bgimage" [style.backgroundImage]="'url(assets/images/women.jpg)'">
+    <ion-button (click)="onBackHome()" fill="clear">
+      <ion-icon slot="start" name="chevron-back-outline" color="dark" ></ion-icon>
+    </ion-button>
+  </div>
+
+  <div class="content ion-padding">
+      <ion-item lines="none" (click)="onFriendsProfile()">
+        <div class="text">
+          <ion-label style="font-size: 18px; font-weight: 600;">Elenor Pena</ion-label>
+          <ion-label style="font-size: 14px; margin-top: 5px;">
+            <ion-icon name="location-outline" color="primary"></ion-icon>
+            5.2 km away
+          </ion-label>
+        </div>
+        <ion-chip slot="end">
+          <ion-label>3.4k</ion-label>
+          <ion-icon name="heart-outline" color="primary"></ion-icon>
+        </ion-chip>
+      </ion-item>
+      <div class="about ion-padding">
+        <ion-label class="about_lbl">About</ion-label>
+        <ion-label class="sub_lbl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit... <span>See More</span>
+        </ion-label>
+      </div>
+
+      <div class="interest ion-padding">
+        <ion-label class="head_lbl">Interest</ion-label>
+        <div class="select">
+          <ion-chip>
+            <ion-icon name="checkmark"></ion-icon>
+            <ion-label>Travelling</ion-label>
+          </ion-chip>
+          <ion-chip>
+            <ion-label>Books</ion-label>
+          </ion-chip>
+          <ion-chip>
+            <ion-label>Music</ion-label>
+          </ion-chip>
+          <ion-chip>
+            <ion-label>Dancing</ion-label>
+          </ion-chip>
+          <ion-chip>
+            <ion-label>Modeling</ion-label>
+          </ion-chip>
+        </div>
+      </div>
+
+      <div class="btn">
+        <ion-buttons slot="start">
+          <ion-button (click)="onClick()">
+            <ion-icon name="close" color="dark" ></ion-icon>
+          </ion-button>
+        </ion-buttons>
+
+        <ion-buttons slot="start" class="heart">
+          <ion-button (click)="onClick()" class="button">
+            <ion-icon name="heart"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+
+        <ion-buttons slot="start">
+          <ion-button (click)="onClick()">
+            <ion-icon name="star" color="secondary" ></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+
+  </div>
+</ion-content>

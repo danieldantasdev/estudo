@@ -1,0 +1,42 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-button (click)="goToBack()">
+              <ion-icon slot="start" name="chevron-back-outline" color="dark"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="main_content_div">
+
+    <div class="title">
+      <ion-label>Verification Code </ion-label>
+    </div>
+    <div class="text">
+      <ion-label>Please enter 4-digit code sent to <span class="spc">+91-6352635787</span></ion-label>
+    </div>
+    <div class="verify">
+      <ion-input type="text" maxLength="1" size="1" min="0" max="9"></ion-input>
+      <ion-input type="text" maxLength="1" size="1" min="0" max="9"></ion-input>
+      <ion-input type="text" maxLength="1" size="1" min="0" max="9"></ion-input>
+      <ion-input type="text" maxLength="1" size="1" min="0" max="9"></ion-input>
+    </div>
+
+    <ion-button class="btn" (click)="goToHome()" expand="block" shape="round">
+      Send Code
+    </ion-button>
+    <ion-button class="btn2" fill="clear" expand="block">
+      Resend Code
+    </ion-button>
+  </div>
+</ion-content>

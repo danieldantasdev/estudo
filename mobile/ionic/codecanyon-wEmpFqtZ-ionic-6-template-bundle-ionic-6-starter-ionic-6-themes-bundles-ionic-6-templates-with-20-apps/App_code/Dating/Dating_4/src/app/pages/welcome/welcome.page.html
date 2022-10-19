@@ -1,0 +1,29 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+  <div class="main_content_div">
+    <div class="img" [style.backgroundImage]="'url(assets/welcome.png)'">
+    </div>
+    <div class="heading">
+      <ion-label>Welcome to</ion-label>
+    </div>
+    <div class="logo">
+      <ion-label>logo</ion-label>
+    </div>
+
+    <ion-button class="btn" (click)="goToLogin()" color="tertiary" expand="block" shape="round">
+      <ion-icon slot="start" name="logo-facebook"></ion-icon>
+      Continue with Facebook
+    </ion-button>
+    <ion-button class="btn" (click)="goToLogin()" fill="outline" expand="block" shape="round">
+      <ion-icon slot="start" name="phone-portrait-outline"></ion-icon>
+      Continue with phone
+    </ion-button>
+  </div>
+</ion-content>

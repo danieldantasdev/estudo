@@ -1,0 +1,59 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Filters</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClick()">
+        Clear
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-label class="head_lbl">Intrested in</ion-label>
+  <ion-segment value="1">
+    <ion-segment-button value="1">
+      <ion-label >Girls</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="2">
+      <ion-label>Boys</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="3">
+      <ion-label>Both</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-item lines="none">
+    <ion-icon slot="start" name="location" color="primary"></ion-icon>
+    <ion-label>Bali, Indonesia</ion-label>
+  </ion-item>
+
+  <div class="select">
+    <div class="range">
+      <ion-label class="head_lbl">Distance</ion-label>
+      <ion-label class="head_lbl">45km</ion-label>
+    </div>
+    <ion-range color="danger" [pin]="true"></ion-range>
+  </div>
+
+  <div class="select">
+    <div class="range">
+      <ion-label class="head_lbl">Ages</ion-label>
+      <ion-label class="head_lbl">20-30</ion-label>
+    </div>
+    <ion-range color="danger" [pin]="true" dual-knobs></ion-range>
+  </div>
+
+  <ion-button (click)="onHome()" expand="block" shape="round">
+    Continue <ion-icon name="arrow-forward-outline" style="margin-left: 10px;"></ion-icon>
+  </ion-button>
+
+</ion-content>

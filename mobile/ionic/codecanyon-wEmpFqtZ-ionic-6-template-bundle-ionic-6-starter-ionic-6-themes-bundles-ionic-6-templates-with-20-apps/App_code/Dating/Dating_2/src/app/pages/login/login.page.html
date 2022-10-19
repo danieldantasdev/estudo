@@ -1,0 +1,42 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+
+  <div class="img" [style.backgroundImage]="'url(assets/mobile.jpg)'">
+    <div class="main-content">
+      <div class="logo">
+        Logo
+      </div>
+
+      <div>
+        <div class="btn facebook" (click)="goToHome()">
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-label class="name">Continue with Facebook </ion-label>
+        </div>
+        <div class="btn google" (click)="goToHome()">
+          <ion-icon name="logo-google"></ion-icon>
+          <ion-label class="name">Continue with Google </ion-label>
+        </div>
+        <div class="btn instagram">
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-label class="name">Continue with Apple </ion-label>
+        </div>
+        <div class="btn phone">
+          <ion-icon name="mail"></ion-icon>
+          <ion-label class="name">Continue with Phone </ion-label>
+        </div>
+      </div>
+
+      <div class="footer">
+        By continueing. agree to our <span> <u>Terms And Conditions and Privacy Policy</u></span>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

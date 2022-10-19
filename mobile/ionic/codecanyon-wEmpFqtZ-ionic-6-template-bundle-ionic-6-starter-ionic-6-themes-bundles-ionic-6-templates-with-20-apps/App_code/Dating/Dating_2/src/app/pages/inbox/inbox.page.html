@@ -1,0 +1,44 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inbox</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="start" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <!-- <div class="header">
+    <ion-label class="title">Inbox</ion-label>
+    <div class="right">
+      <ion-icon name="search"></ion-icon>
+    </div>
+  </div> -->
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let item of [1,2,3,4,5,6,7,8,9]">
+    <div class="title" (click)="goToChat()">
+      <ion-thumbnail>
+        <img src="assets/profile.jpg" />
+      </ion-thumbnail>
+      <div class="details">
+        <ion-label class="name">Peter Englend</ion-label>
+        <ion-label class="msg">My name is Englend</ion-label>
+      </div>
+    </div>
+    <div class="badge">
+      <ion-badge color="success"> +9</ion-badge><br>
+      <ion-label>15m ago</ion-label>
+    </div>
+
+  </ion-card>
+
+</ion-content>

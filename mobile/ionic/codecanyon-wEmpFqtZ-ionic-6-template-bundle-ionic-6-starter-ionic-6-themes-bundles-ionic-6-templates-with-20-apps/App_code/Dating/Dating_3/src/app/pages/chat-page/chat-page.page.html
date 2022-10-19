@@ -1,0 +1,53 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md">
+  <ion-toolbar>
+    <ion-item lines="none">
+      <ion-icon name="chevron-back-outline" (click)="onBackChat()" style="margin-right: 10px;"></ion-icon>
+      <ion-avatar>
+        <img src="assets/images/girl.jpg" style="margin-left: 5px;" />
+      </ion-avatar>
+      <div class="div_lbl">
+        <ion-label class="name_lbl">Brooklyn Simmons</ion-label>
+        <ion-label class="status">Online</ion-label>
+      </div>
+      <ion-icon slot="end" name="ellipsis-vertical-outline"></ion-icon>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="messageList">
+    <div class="left" *ngFor="let item of [1,2,3]">
+      <div class="text">
+        <ion-avatar>
+          <img src="assets/images/girl.jpg" />
+        </ion-avatar>
+        <ion-label style="margin-left: 10px;" class="msg_lbl">Hey there ! What's up ?</ion-label>
+        <!-- <p style="margin-left: 10px;" >Hey there ! What's up ?</p> -->
+        <ion-label class="time_lbl">1:30 PM</ion-label>
+      </div>
+    </div>
+
+    <div class="right" *ngFor="let item of [1,2,3]">
+      <ion-label class="right_lbl">Nothing just chilling</ion-label>
+      <ion-label class="sent_blb">1:30 PM</ion-label>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-item lines="none">
+      <ion-icon name="happy-outline" style="margin-right: 12px;"></ion-icon>
+      <ion-input type="text" placeholder="Write a message..."></ion-input>
+      <ion-icon name="paper-plane" style="margin-right: 10px;" class="send" color="light"></ion-icon>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>

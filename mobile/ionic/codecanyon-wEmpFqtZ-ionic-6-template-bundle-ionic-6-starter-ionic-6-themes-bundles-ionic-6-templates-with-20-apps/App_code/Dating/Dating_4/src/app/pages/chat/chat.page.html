@@ -1,0 +1,64 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToBack()">
+        <ion-icon slot="start" name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-avatar>
+      <img src="assets/profile.jpg" />
+    </ion-avatar>
+    <ion-title>John Snow</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="main-content">
+
+    <div class="lower_div">
+      <span *ngFor="let msg of messages">
+        <div class="left" *ngIf="msg.side == 'left'">
+          <div class="content">
+            <div>
+              <img class="imgl" src="assets/profile.jpg" />
+            </div>
+            <div class="msg">
+              {{msg.msg}}
+            </div>
+          </div>
+        </div>
+
+        <div class="right" *ngIf="msg.side == 'right'">
+          <div class="content">
+            <div class="msg">
+              {{msg.msg}}
+            </div>
+            <ion-thumbnail>
+              <img class="imgr" src="assets/profile.jpg" />
+            </ion-thumbnail>
+          </div>
+        </div>
+      </span>
+    </div>
+  </div>
+
+</ion-content>
+<ion-footer>
+  <div class="footer">
+    <div class="sendbox">
+      <ion-input type="text" placeholder="Say something..." class="ion-no-padding"></ion-input>
+      <div class="icon">
+        <ion-icon class="attach" name="attach-outline"></ion-icon>
+        <ion-icon class="send" name="send-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+</ion-footer>

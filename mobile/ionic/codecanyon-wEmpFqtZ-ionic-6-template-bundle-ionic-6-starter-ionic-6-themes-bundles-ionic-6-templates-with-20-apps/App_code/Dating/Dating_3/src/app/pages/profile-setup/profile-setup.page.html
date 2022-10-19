@@ -1,0 +1,61 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    <ion-button (click)="onBackRegister()" fill="clear">
+      <ion-icon slot="start" name="chevron-back-outline" color="dark"></ion-icon>
+    </ion-button>
+    <ion-title>Profile Setup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="profile" (click)="openPicker()">
+    <img src="assets/images/profile.png" alt="">
+    <ion-icon name="add-outline"></ion-icon>
+  </div>
+
+  <div class="input ion-padding">
+    <ion-item lines="none">
+      <ion-icon name="person" color="primary"></ion-icon>
+      <ion-input placeholder="First Name" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-icon name="person" color="primary"></ion-icon>
+      <ion-input placeholder="Last Name" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-icon name="calendar-number" color="primary"></ion-icon>
+      <ion-input placeholder="Choose Birthday Date" type="date"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="gender">
+    <div class="male">
+      <ion-checkbox checked></ion-checkbox>
+    <ion-label>Male</ion-label>
+    </div>
+    <div class="male">
+      <ion-checkbox ></ion-checkbox>
+    <ion-label>Female</ion-label>
+    </div>
+
+  </div>
+</ion-content>
+
+<ion-footer class="ion-padding">
+  <ion-toolbar>
+    <ion-button (click)="onTermsandCondition()" expand="block"  shape="round">
+      Continue  <ion-icon name="arrow-forward-outline" style="margin-left: 10px;"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

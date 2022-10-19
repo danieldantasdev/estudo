@@ -1,0 +1,56 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Notification</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="time">
+    <ion-label class="main_lbl">Today</ion-label>
+    <ion-label class="sub_lbl">Clear All</ion-label>
+  </div>
+
+  <div *ngFor="let item of [1,2]">
+    <ion-item lines="none">
+      <ion-thumbnail>
+        <img src="assets/images/woman2.jpg" />
+      </ion-thumbnail>
+      <div class="content">
+        <ion-label class="name">Easter Howerds</ion-label>
+        <ion-label class="req">likes your profile</ion-label>
+        <ion-label color="secondary" class="req">3 hours</ion-label>
+      </div>
+      <ion-label slot="end">New</ion-label>
+    </ion-item>
+    <hr>
+  </div>
+
+  <div class="time">
+    <ion-label class="main_lbl">Yesterday</ion-label>
+    <ion-label class="sub_lbl">Clear</ion-label>
+  </div>
+
+  <div *ngFor="let item of [1,2]">
+    <ion-item lines="none">
+      <ion-thumbnail>
+        <img src="assets/images/woman2.jpg" />
+      </ion-thumbnail>
+      <div class="content">
+        <ion-label class="name">Easter Howerds</ion-label>
+        <ion-label class="req">likes your profile</ion-label>
+        <ion-label color="secondary" class="req">Yesterday</ion-label>
+      </div>
+      <ion-label slot="end">24 hours ago</ion-label>
+    </ion-item>
+    <hr>
+  </div>
+
+</ion-content>

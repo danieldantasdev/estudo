@@ -1,0 +1,160 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.center_div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.no-data {
+  position: absolute;
+  top: 70%;
+  text-align: center;
+  width: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  p {
+    font-size: 12px;
+  }
+}
+.ripple-container {
+  position: relative;
+  width: 96px;
+  height: 96px;
+}
+.rounded_img {
+  background: white !important;
+  border: 0px !important;
+  border-radius: 50%;
+}
+.ripple-trigger {
+  position: absolute;
+  z-index: 9;
+  transition: transform 250ms ease-out;
+  animation: beating 2s infinite ease-out;
+  &:active {
+    transform: scale3d(1.2, 1.2, 1);
+  }
+}
+.ripple-1,
+.ripple-2 {
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  left: 2px;
+  width: 92px;
+  height: 92px;
+  border-radius: 999em;
+  background-color: var(--ion-color-primary);
+  border: solid 1px var(--ion-color-primary);
+  animation: rippling 2s infinite ease-out;
+}
+
+.ripple-2 {
+  animation-delay: 350ms;
+}
+
+@keyframes beating {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  10% {
+    transform: scale3d(1.2, 1.2, 1);
+  }
+  20% {
+    transform: scale3d(0.95, 0.95, 1);
+  }
+  30% {
+    transform: scale3d(1.05, 1.05, 1);
+  }
+  40% {
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes rippling {
+  0% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(5, 5, 1);
+  }
+}
+
+// ion-content {
+//   .profile {
+//     padding: 24px 32px;
+//     position: relative;
+//     .bgimage {
+//       height: 500px;
+//       width: 100%;
+//       background-position: center center;
+//       background-repeat: no-repeat;
+//       background-size: cover;
+//       border-radius: 10px;
+//       position: relative;
+//       .about {
+//         position: absolute;
+//         bottom: 20px;
+//         width: 100%;
+//         ion-item {
+//           padding: 16px;
+//           --background: rgba(255, 255, 255, 0.774);
+//           --border-radius: 10px;
+//           .text {
+//             margin: 10px 0px;
+//           }
+//           ion-buttons {
+//             ion-icon {
+//               background: #ffff;
+//               border-radius: 50%;
+//               font-size: 18px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+//   .btn {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin-top: 2rem;
+//     ion-buttons {
+//       --border-radius: 50%;
+//       margin: 5px;
+//       ion-button {
+//         height: 45px;
+//         width: 45px;
+//         border-radius: 50%;
+//         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+//         background: white;
+//       }
+//     }
+//     .heart {
+//       --border-radius: 50%;
+//       margin: 5px;
+//       .button {
+//         height: 65px;
+//         width: 65px;
+//         border-radius: 50%;
+//         box-shadow: none;
+//         background: rgba(255, 0, 0, 0.171);
+//         ion-icon {
+//           font-size: 36px;
+//         }
+//       }
+//     }
+//   }
+// }

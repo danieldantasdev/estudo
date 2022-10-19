@@ -1,0 +1,150 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.main-content {
+  padding: 25px;
+  position: relative;
+  height: 100vh !important;
+  width: 100%;
+  .logo {
+    font-size: 28px;
+
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    color: var(--ion-color-primary);
+    padding-bottom: 10px;
+    ion-label {
+      font-family: "bold";
+    }
+  }
+  .text {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--ion-color-medium);
+    margin-bottom: 3rem;
+  }
+
+  .footer {
+    font-size: 16px;
+    font-family: "bold";
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 20px 0px;
+    color: black;
+  }
+
+  .match {
+    .main {
+      width: 250px;
+      height: 250px;
+      border: 1px solid #f62354;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-radius: 50%;
+    }
+
+    .main2 {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #fa7b98;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-radius: 50%;
+    }
+
+    .main3 {
+      width: 150px;
+      height: 150px;
+      border: 1px solid #fba7bb;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-radius: 50%;
+    }
+
+    .main4 {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #fee9ee;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-radius: 50%;
+    }
+
+    .circle {
+      width: 80px;
+      height: 80px;
+      background: cyan;
+      border-radius: 50%;
+      border: 2px solid var(--ion-color-primary);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+      margin: auto;
+      animation: circle 6s linear infinite;
+      z-index: 9999;
+    }
+
+    .circle2 {
+      width: 80px;
+      height: 80px;
+      background: cyan;
+      border-radius: 50%;
+      border: 2px solid var(--ion-color-primary);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+      margin: auto;
+      animation: circle2 6s linear infinite;
+      z-index: 9999;
+    }
+
+    @keyframes circle {
+      0% {
+        transform: rotate(0deg) translate(-100px) rotate(360deg);
+      }
+      100% {
+        transform: rotate(360deg) translate(-100px) rotate(-360deg);
+      }
+    }
+
+    @keyframes circle2 {
+      0% {
+        transform: rotate(360deg) translate(-100px) rotate(0deg);
+      }
+      100% {
+        transform: rotate(0deg) translate(-100px) rotate(-360deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToBack()">
+        <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Edit Profile</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="start" name="create-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="profile">
+    <div class="profile-item">
+      <div class="profile-picture">
+        <img src="assets/profile.jpg">
+      </div>
+      <ion-label class="profile-name">John doe</ion-label>
+      <ion-label class="id">john20</ion-label>
+    </div>
+  </div>
+
+  <div class="form">
+
+    <div class="input">
+      <ion-input type="text" placeholder="Your name"></ion-input>
+    </div>
+
+
+    <ion-radio-group value="biff">
+      <ion-item lines="none" class="ion-no-padding" style="padding-left: 20px;">
+        <ion-label> Gender</ion-label>
+        <ion-radio mode="md" value="0"></ion-radio>
+        <ion-label class="text" style="padding-left: 10px;">Male</ion-label>
+        <ion-radio mode="md" value="1"></ion-radio>
+        <ion-label class="text" style="padding-left: 10px;">Female</ion-label>
+      </ion-item>
+    </ion-radio-group>
+
+    <div class="date">
+      <div class="input">
+        <ion-input type="text" placeholder="dd"></ion-input>
+      </div>
+      <div class="input">
+        <ion-input type="text" placeholder="mm"></ion-input>
+      </div>
+      <div class="input">
+        <ion-input type="text" placeholder="yyyy"></ion-input>
+      </div>
+    </div>
+
+    <ion-item lines="none" class="ion-no-padding" style="padding-left: 20px;">
+      <ion-label slot="start">Height</ion-label>
+      <div class="input">
+        <ion-input slot="end" type="text" placeholder="height"></ion-input>
+      </div>
+    </ion-item>
+
+
+
+
+    <ion-button (click)="goToBack()" expand="block" shape="round">
+      Done
+    </ion-button>
+  </div>
+
+</ion-content>

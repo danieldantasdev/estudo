@@ -1,0 +1,45 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-button (click)="goToBack()">
+              <ion-icon slot="start" name="chevron-back-outline"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+      <ion-title>Messages</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="main-content">
+
+    <div class="header">
+      <ion-icon class="icon" name="chevron-back-outline" (click)="goToBack()"></ion-icon>
+      <ion-label class="heading">Messages</ion-label>
+    </div>
+
+    <ion-item class="ion-no-padding" (click)="goToChat()" *ngFor="let item of [1,2,3,4,5,6,7]">
+      <ion-thumbnail>
+        <img src="assets/profile.jpg" />
+      </ion-thumbnail>
+      <div>
+        <h6>Jon Snow</h6>
+        <p>hello tygarian</p>
+      </div>
+      <div slot="end" class="time">
+        <p>2 min</p>
+        <div>
+          <p class="badge">4</p>
+        </div>
+      </div>
+    </ion-item>
+
+  </div>
+</ion-content>

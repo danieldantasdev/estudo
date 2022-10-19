@@ -1,0 +1,37 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="onFilter()">
+        <ion-icon name="options-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-searchbar placeholder="Search people" mode="ios"></ion-searchbar>
+</ion-header>
+<ion-content>
+
+
+
+  <div class="center_div" *ngIf="loaded == false">
+    <div class="ripple-container">
+      <div class="thumb-lg ripple-trigger">
+        <img src="assets/images/man.jpg" onError="this.src='assets/images/man.jpg'" style="height:100px;width: 100px"
+          class="rounded_img b b-2x box-shadow">
+      </div>
+      <div class="ripple-1"></div>
+      <div class="ripple-2"></div>
+    </div>
+  </div>
+
+  <div *ngIf="loaded == true">
+    <app-tinder-card [cards]="cards"></app-tinder-card>
+  </div>
+</ion-content>
