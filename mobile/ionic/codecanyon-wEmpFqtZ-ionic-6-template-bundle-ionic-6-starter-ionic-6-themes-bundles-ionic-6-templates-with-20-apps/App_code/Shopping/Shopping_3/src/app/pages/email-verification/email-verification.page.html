@@ -1,0 +1,27 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header class="ion-no-border" mode="ios">
+  <ion-toolbar>
+    <ion-button (click)="goBack()" fill="clear">
+      <ion-icon name="arrow-back" color="dark"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+    <ion-label class="title_lbl">Email <br>Verification</ion-label>
+    <ion-label class="sub_title_lbl">Please type OTP code that we given you</ion-label>
+    <ion-input type="text" placeholder="Type your Email"></ion-input>
+    <ion-label class="forgot_lbl">Resend on <span>00:30</span></ion-label>
+    <ion-button expand="block" (click)="goToSetPassword()">
+      Submit
+    </ion-button>
+  </div>
+</ion-content>

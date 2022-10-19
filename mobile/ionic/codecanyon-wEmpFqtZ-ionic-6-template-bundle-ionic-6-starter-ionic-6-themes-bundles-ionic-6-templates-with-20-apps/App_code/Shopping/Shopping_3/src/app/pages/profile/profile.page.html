@@ -1,0 +1,117 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+  <div class="main_content_div">
+
+    <ion-icon class="logout_icn" name="exit-outline" (click)="logout()"></ion-icon>
+
+    <div class="back_div">
+      <div class="user_info">
+        <div class="back_image user_image" [style.backgroundImage]="'url(assets/imgs/user1.jpg)'"></div>
+        <ion-label class="name">Jonh Doe</ion-label>
+        <ion-label class="username">@jonh_doe</ion-label>
+      </div>
+    </div>
+
+    <div class="content_div">
+      <div class="count_div">
+        <ion-row>
+          <ion-col size="3">
+            <div>
+              <ion-label class="bold_lbl">5</ion-label>
+              <ion-label class="small_lbl">Posts</ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="3">
+            <div>
+              <ion-label class="bold_lbl">7</ion-label>
+              <ion-label class="small_lbl">Orders</ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="3">
+            <div>
+              <ion-label class="bold_lbl">3</ion-label>
+              <ion-label class="small_lbl">Wishlist</ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="3">
+            <div style="border: 0px;">
+              <ion-label class="bold_lbl">300</ion-label>
+              <ion-label class="small_lbl">Likes</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="menu_div">
+        <div class="menu_box" (click)="goToAccInfo()">
+          <div class="color_box" style="background: var(--ion-color-primary);">
+            <ion-icon name="person"></ion-icon>
+          </div>
+          <ion-label>Account Information</ion-label>
+          <ion-icon name="chevron-forward" class="arrow_icn"></ion-icon>
+        </div>
+        <div class="menu_box" (click)="goToMyPosts()">
+          <div class="color_box" style="background: black;">
+            <ion-icon name="document-text"></ion-icon>
+          </div>
+          <ion-label>My Posts</ion-label>
+          <ion-icon name="chevron-forward" class="arrow_icn"></ion-icon>
+        </div>
+        <div class="menu_box" (click)="goToMyOrders()">
+          <div class="color_box" style="background: #03b989;">
+            <ion-icon name="cart"></ion-icon>
+          </div>
+          <ion-label>My Order</ion-label>
+          <ion-icon name="chevron-forward" class="arrow_icn"></ion-icon>
+        </div>
+        <div class="menu_box" (click)="goToPaymentMethod()">
+          <div class="color_box" style="background: #f9b600;">
+            <ion-icon name="wallet"></ion-icon>
+          </div>
+          <ion-label>Payment Method</ion-label>
+          <ion-icon name="chevron-forward" class="arrow_icn"></ion-icon>
+        </div>
+        <div class="menu_box" style="border: 0px;" (click)="goToAddresses()">
+          <div class="color_box" style="background: #874cfc;">
+            <ion-icon name="location"></ion-icon>
+          </div>
+          <ion-label>Delivery Address</ion-label>
+          <ion-icon name="chevron-forward" class="arrow_icn"></ion-icon>
+        </div>
+      </div>
+
+      <div class="menu_div">
+        <div class="menu_box" (click)="goToSettings()">
+          <div class="color_box" style="background: black;">
+            <ion-icon name="settings"></ion-icon>
+          </div>
+          <ion-label>Settings</ion-label>
+          <ion-icon name="chevron-forward" class="arrow_icn"></ion-icon>
+        </div>
+        <div class="menu_box">
+          <div class="color_box" style="background: #0097fc;">
+            <ion-icon name="chatbubble-ellipses"></ion-icon>
+          </div>
+          <ion-label>Contact with Us</ion-label>
+          <ion-icon name="chevron-forward" class="arrow_icn"></ion-icon>
+        </div>
+        <div class="menu_box" style="border: 0px;">
+          <div class="color_box" style="background: #874cfc;">
+            <ion-icon name="information-circle"></ion-icon>
+          </div>
+          <ion-label>About Us</ion-label>
+          <ion-icon name="chevron-forward" class="arrow_icn"></ion-icon>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,27 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear">
+            <ion-icon name="arrow-back" color="dark"></ion-icon>
+        </ion-button>
+        <ion-title>Language</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <ion-radio-group mode="md">
+            <ion-item *ngFor="let item of languages">
+                <ion-label>{{item}}</ion-label>
+                <ion-radio value="{{item}}"></ion-radio>
+            </ion-item>
+        </ion-radio-group>
+    </div>
+</ion-content>

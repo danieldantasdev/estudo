@@ -1,0 +1,57 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear">
+            <ion-icon name="arrow-back" color="dark"></ion-icon>
+        </ion-button>
+        <ion-title>Payment Methods</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+          <ion-label class="heading_lbl">My Payment Method</ion-label>
+
+          <ion-radio-group value="1" mode="md">
+              <div class="border_div">
+                  <ion-label>•••• •••• •••• 4242</ion-label>
+                  <ion-radio value="1"></ion-radio>
+              </div>
+              <div class="border_div">
+                  <ion-label>•••• •••• •••• 4242</ion-label>
+                  <ion-radio value="2"></ion-radio>
+              </div>
+          </ion-radio-group>
+    </div>
+</ion-content>
+
+<ion-footer>
+    <div class="footer_content">
+        <ion-label class="heading_lbl">Add New Payment Method</ion-label>
+
+        <ion-select placeholder="Select Method">
+            <ion-select-option value="master">Master Card</ion-select-option>
+            <ion-select-option value="visa">Visa</ion-select-option>
+        </ion-select>
+
+        <ion-input type="text" placeholder="Card Number"></ion-input>
+        <ion-row>
+            <ion-col size="6" style="padding-right: 8px;">
+                <ion-datetime display-format="DD.MM.YYYY HH:mm" placeholder="Valid Thru"></ion-datetime>
+            </ion-col>
+            <ion-col size="6" style="padding-left: 8px;">
+                <ion-input type="text" placeholder="CVV"></ion-input>
+            </ion-col>
+        </ion-row>
+        <ion-button expand="block">
+          Add New Payment
+        </ion-button>
+    </div>
+</ion-footer>

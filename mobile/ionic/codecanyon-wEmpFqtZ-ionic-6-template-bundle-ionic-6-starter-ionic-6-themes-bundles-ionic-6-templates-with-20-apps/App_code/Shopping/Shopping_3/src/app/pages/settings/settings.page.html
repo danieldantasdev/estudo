@@ -1,0 +1,56 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear">
+            <ion-icon name="arrow-back" color="dark"></ion-icon>
+        </ion-button>
+        <ion-title>Settings</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="menu_box" (click)="goToCountry()">
+            <ion-label class="simp_lbl">Shop In</ion-label>
+            <ion-label class="grey_lbl">Bhavnagar</ion-label>
+            <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+        <div class="menu_box" (click)="goToCurrency()">
+            <ion-label class="simp_lbl">Currency</ion-label>
+            <ion-label class="grey_lbl">$ Dollor</ion-label>
+            <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+        <div class="menu_box" (click)="goToLanguage()">
+            <ion-label class="simp_lbl">Language</ion-label>
+            <ion-label class="grey_lbl">English</ion-label>
+            <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+        <div class="menu_box">
+            <ion-label class="simp_lbl">Notifications</ion-label>
+            <ion-label class="grey_lbl">On</ion-label>
+            <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+        <div class="menu_box">
+            <ion-label class="simp_lbl">Shop</ion-label>
+            <ion-label class="grey_lbl">Women</ion-label>
+            <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+        <div class="menu_box">
+            <ion-label class="simp_lbl">Screenshots</ion-label>
+            <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+        <div class="menu_box" style="border: 0px;">
+            <ion-label class="simp_lbl">Tearms & Conditions - Privacy Policy</ion-label>
+            <ion-icon name="chevron-forward"></ion-icon>
+        </div>
+
+    </div>
+</ion-content>

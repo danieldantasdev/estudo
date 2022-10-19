@@ -1,0 +1,56 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+    <ion-toolbar>
+        <ion-button (click)="goBack()" fill="clear">
+            <ion-icon name="arrow-back" color="dark"></ion-icon>
+        </ion-button>
+        <ion-title>My Post</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="single_post" *ngFor="let item of (products | slice : 0: 3)">
+
+            <div class="user_div">
+                <div class="back_image user_image" [style.backgroundImage]="'url('+ item.user +')'"></div>
+                <div class="user_detail">
+                    <ion-label class="name_lbl">Jonh Doe</ion-label>
+                    <ion-label class="grey_lbl">12 mins ago</ion-label>
+                </div>
+                <ion-icon class="more_icn" name="ellipsis-horizontal"></ion-icon>
+            </div>
+
+            <ion-label class="about_lbl">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</ion-label>
+
+            <div class="image_box back_image" [style.backgroundImage]="'url('+ item.img +')'"></div>
+
+            <div class="action_div">
+                <div class="like_div">
+                    <div>
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <ion-label>30</ion-label>
+                    </div>
+                    <div>
+                        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                        <ion-label>7</ion-label>
+                    </div>
+                </div>
+                <div class="bookmark_flex">
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                    <ion-icon name="arrow-redo-outline"></ion-icon>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</ion-content>

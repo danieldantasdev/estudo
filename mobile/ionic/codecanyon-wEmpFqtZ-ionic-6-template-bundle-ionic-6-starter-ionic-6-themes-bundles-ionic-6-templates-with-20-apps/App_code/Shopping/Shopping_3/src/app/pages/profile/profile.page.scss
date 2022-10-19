@@ -1,0 +1,133 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+ion-content {
+  --background: #f3f3f3;
+}
+.main_content_div {
+  .logout_icn {
+    color: white;
+    position: absolute;
+    top: 40px;
+    right: 16px;
+    z-index: 999;
+    font-size: 26px;
+  }
+  .back_div {
+    background: var(--ion-color-primary);
+    width: 130%;
+    height: 265px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+    .user_info {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+
+      .user_image {
+        height: 70px;
+        width: 70px;
+        border-radius: 100%;
+        border: 2px solid white;
+        background: lightgrey;
+        margin-bottom: 10px;
+      }
+
+      .name {
+        color: white;
+        font-size: 18px;
+      }
+
+      .username {
+        font-size: 13px;
+        color: white;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .content_div {
+    padding: 16px;
+    width: 100%;
+    padding-top: 190px;
+    position: absolute;
+
+    .count_div {
+      background: white;
+      border-radius: 16px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+
+      ion-col {
+        div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-right: 1px solid lightgrey;
+        }
+      }
+
+      .bold_lbl {
+        font-family: "medium";
+        margin-bottom: 5px;
+      }
+      .small_lbl {
+        color: grey;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .menu_div {
+    background: white;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    padding: 0px 16px;
+
+    .menu_box {
+      border-bottom: 1px solid lightgrey;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 16px 0px;
+
+      .color_box {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        ion-icon {
+          color: white;
+          font-size: 18px;
+        }
+      }
+
+      ion-label {
+        margin-left: 16px;
+        font-family: "medium";
+      }
+
+      .arrow_icn {
+        position: absolute;
+        right: 0px;
+      }
+    }
+  }
+}

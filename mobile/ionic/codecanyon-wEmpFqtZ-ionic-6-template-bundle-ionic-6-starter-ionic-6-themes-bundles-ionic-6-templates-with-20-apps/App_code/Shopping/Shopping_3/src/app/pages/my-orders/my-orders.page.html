@@ -1,0 +1,110 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-button (click)="goBack()" fill="clear">
+      <ion-icon name="arrow-back" color="dark"></ion-icon>
+    </ion-button>
+    <ion-title>My Order</ion-title>
+  </ion-toolbar>
+  <ion-segment value="unpaid" (ionChange)="segmentChanged($event)" mode="md">
+    <ion-segment-button value="unpaid">
+      <ion-label>Unpaid</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="processing">
+      <ion-label>Processing</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="shipped">
+      <ion-label>Shipped</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <div *ngIf="tabID == 'unpaid'">
+      <div class="main_pro_div" *ngFor="let item of (products | slice: 0: 2)">
+        <div class="product_div">
+          <div class="back_image image_box" [style.backgroundImage]="'url('+ item.img +')'"></div>
+          <div class="pro_info">
+            <ion-label class="pro_name">Hair Volumizer</ion-label>
+            <div class="price_flex">
+              <ion-label class="price_lbl">$24.00</ion-label>
+              <div class="qty_div">
+                <div class="action_div">
+                  <ion-icon name="remove-outline"></ion-icon>
+                </div>
+                <ion-label>1</ion-label>
+                <div class="action_div">
+                  <ion-icon name="add-outline"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="tabID == 'processing'">
+      <div class="main_pro_div" *ngFor="let item of (products | slice: 3: 5)">
+        <div class="product_div">
+          <div class="back_image image_box" [style.backgroundImage]="'url('+ item.img +')'"></div>
+          <div class="pro_info">
+            <ion-label class="pro_name">Hair Volumizer</ion-label>
+            <ion-label class="item_lbl">3 Items</ion-label>
+          </div>
+        </div>
+        <div class="detail_flex">
+          <ion-label class="grey_lbl">ID Order</ion-label>
+          <ion-label>#ODR4689</ion-label>
+        </div>
+        <div class="detail_flex">
+          <ion-label class="grey_lbl">Total</ion-label>
+          <ion-label>$270.00</ion-label>
+        </div>
+        <div class="detail_flex">
+          <ion-label class="grey_lbl">Status</ion-label>
+          <ion-label class="orange_lbl">Waiting</ion-label>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="tabID == 'shipped'">
+      <div class="main_pro_div" *ngFor="let item of (products | slice: 7: 9)">
+        <div class="product_div">
+          <div class="back_image image_box" [style.backgroundImage]="'url('+ item.img +')'"></div>
+          <div class="pro_info">
+            <ion-label class="pro_name">Hair Volumizer</ion-label>
+            <ion-label class="item_lbl">3 Items</ion-label>
+          </div>
+        </div>
+        <div class="detail_flex">
+          <ion-label class="grey_lbl">ID Order</ion-label>
+          <ion-label>#ODR4689</ion-label>
+        </div>
+        <div class="detail_flex">
+          <ion-label class="grey_lbl">Total</ion-label>
+          <ion-label>$270.00</ion-label>
+        </div>
+        <div class="detail_flex">
+          <ion-label class="grey_lbl">Status</ion-label>
+          <ion-label class="green_lbl">Finished</ion-label>
+        </div>
+        <div class="detail_flex">
+          <ion-label class="orange_lbl">Rate for products</ion-label>
+          <ion-button size="small">
+            Re-Order
+          </ion-button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

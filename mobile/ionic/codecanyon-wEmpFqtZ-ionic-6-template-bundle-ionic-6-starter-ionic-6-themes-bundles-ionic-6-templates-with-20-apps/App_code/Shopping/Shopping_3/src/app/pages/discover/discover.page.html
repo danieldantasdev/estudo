@@ -1,0 +1,91 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Discover</ion-title>
+        <ion-button (click)="openCheckout()" slot="end" fill="clear">
+            <ion-icon name="cart-outline" color="dark"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="main_content_div">
+        <div class="flex_div">
+            <ion-label class="bold_lbl">Categories</ion-label>
+            <ion-label class="view_lbl">View All</ion-label>
+        </div>
+
+        <div class="cat_slider">
+            <div class="cat_div" *ngFor="let item of categories">
+                <div class="back_image image_box" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                <ion-label>{{item.name}}</ion-label>
+            </div>
+        </div>
+
+        <div class="flex_div">
+            <ion-label class="bold_lbl">Recommended for You</ion-label>
+            <ion-label class="view_lbl">View All</ion-label>
+        </div>
+        <div class="product_slider">
+            <div class="product_div" *ngFor="let item of (products | slice : 0 :10)">
+                <div class="back_image image_box" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                <ion-label class="grey_lbl">Haircare</ion-label>
+                <ion-label class="name_lbl">Andora Skincare</ion-label>
+                <ion-label class="price_lbl">$ 24.00</ion-label>
+            </div>
+        </div>
+
+        <div class="flex_div">
+            <ion-label class="bold_lbl">Valentine's for You</ion-label>
+            <ion-label class="view_lbl">View All</ion-label>
+        </div>
+        <div class="product_slider">
+            <div class="product_div" *ngFor="let item of (products | slice : 10: 19)">
+                <div class="back_image image_box" [style.backgroundImage]="'url('+ item.img +')'"></div>
+                <ion-label class="grey_lbl">Haircare</ion-label>
+                <ion-label class="name_lbl">Andora Skincare</ion-label>
+                <ion-label class="price_lbl">$ 24.00</ion-label>
+            </div>
+        </div>
+
+        <div class="flex_div">
+            <ion-label class="bold_lbl">Popular Products</ion-label>
+            <ion-label class="view_lbl">View All</ion-label>
+        </div>
+
+        <ion-row>
+            <ion-col size="6" [class.left]="i%2 == 1" [class.right]="i%2 == 0" *ngFor="let item of (products | slice : 0: 8); let i = index">
+                <div class="grid_product_div" (click)="goToProductDetail()">
+                  <div class="back_image image_box" [style.backgroundImage]="'url('+ item.img +')'">
+                      <div class="like_div">
+                          <ion-icon name="heart-outline" style="color: white;"></ion-icon>
+                      </div>
+                  </div>
+                  <div class="pro_info">
+                      <ion-label class="grey_lbl">Ladies</ion-label>
+                      <ion-label class="pro_name">Conditioner Bestie</ion-label>
+                      <ion-label class="pro_price">$20.00</ion-label>
+                      <div class="pro_flex">
+                          <div>
+                              <ion-icon name="cart"></ion-icon>
+                              <ion-label>7.6k</ion-label>
+                          </div>
+                          <div>
+                              <ion-icon name="eye"></ion-icon>
+                              <ion-label>10.2k</ion-label>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </ion-col>
+        </ion-row>
+
+    </div>
+</ion-content>
