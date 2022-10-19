@@ -1,0 +1,69 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios">
+  <ion-toolbar>
+    <ion-buttons slot="end" *ngIf="isLastSlide == false">
+      <ion-button (click)="onSkip()">
+        Skip
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-slides mode="ios" pager="ios" scrollbar="ios" #slides (ionSlideDidChange)="slideChanged($event)">
+    <ion-slide>
+      <div class="image" [style.backgroundImage]="'url(assets/images/4.jpg)'"></div>
+      <ion-label class="heading">Your True Financial Manager</ion-label>
+      <ion-label class="sub_heading">Manage your personal finance, set goal to achive, and plans to get control of all
+        your expenses.
+      </ion-label>
+    </ion-slide>
+    <ion-slide>
+      <div class="image" [style.backgroundImage]="'url(assets/images/2.jpg)'"></div>
+      <ion-label class="heading">Your True Financial Manager</ion-label>
+      <ion-label class="sub_heading">Manage your personal finance, set goal to achive, and plans to get control of all
+        your expenses.
+      </ion-label>
+    </ion-slide>
+    <ion-slide>
+      <div class="image" [style.backgroundImage]="'url(assets/images/1.jpg)'"></div>
+      <ion-label class="heading">Your True Financial Manager</ion-label>
+      <ion-label class="sub_heading">Manage your personal finance, set goal to achive, and plans to get control of all
+        your expenses.
+      </ion-label>
+    </ion-slide>
+    <ion-slide>
+      <div class="image" [style.backgroundImage]="'url(assets/images/3.jpg)'"></div>
+      <ion-label class="heading">Your True Financial Manager</ion-label>
+      <ion-label class="sub_heading">Manage your personal finance, set goal to achive, and plans to get control of all
+        your expenses.
+      </ion-label>
+    </ion-slide>
+  </ion-slides>
+
+  <div class="btns">
+    <div class="first_btn">
+      <ion-button class="content_button" fill="clear" (click)="onBack()" *ngIf="index > 0">
+        Back
+      </ion-button>
+    </div>
+
+    <div class="second_btn">
+      <ion-button class="content_next_button" fill="clear" (click)="onNext()" *ngIf="isLastSlide == false">
+        Next
+      </ion-button>
+      <ion-button class="content_next_button" fill="clear" (click)="onSkip()" *ngIf="isLastSlide == true">
+        Finish
+      </ion-button>
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,6 @@
+{
+	"appId": "io.initappz.fitness1",
+	"appName": "Fitness1",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
