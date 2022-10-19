@@ -1,0 +1,85 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar></ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="location_modal" *ngIf="tabID == 1">
+      <div class="flex_title">
+        <ion-label color="success">Pickup Location</ion-label>
+        <ion-icon name="close" (click)="close()"></ion-icon>
+      </div>
+
+      <ion-input type="text" placeholder="Enter Code">
+        <ion-icon name="ellipse" color="success"></ion-icon>
+      </ion-input>
+
+      <div class="flex_div">
+        <div class="inner_flex">
+          <ion-icon name="location" color="success"></ion-icon>
+          <ion-label>Tap to select from the map</ion-label>
+        </div>
+        <ion-fab-button (click)="tabID = 2">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </ion-fab-button>
+      </div>
+    </div>
+
+    <div class="location_modal" *ngIf="tabID == 2">
+      <div class="flex_title">
+        <ion-label color="danger">Drop off Location</ion-label>
+        <ion-label (click)="openLocations()">Skip</ion-label>
+      </div>
+
+      <ion-input type="text" placeholder="Enter Code">
+        <ion-icon name="ellipse" color="danger"></ion-icon>
+      </ion-input>
+
+      <div class="flex_div">
+        <div class="inner_flex">
+          <ion-icon name="location" color="danger"></ion-icon>
+          <ion-label>Tap to select from the map</ion-label>
+        </div>
+        <ion-fab-button (click)="goToBookDetail()">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </ion-fab-button>
+      </div>
+    </div>
+
+    <div class="content_div">
+      <ion-label class="title_lbl">Favourite Places</ion-label>
+
+      <div class="fav_flex" *ngFor="let item of [1,2,3]">
+        <div class="inner_flex">
+          <ion-icon name="heart" color="success" style="padding-top: 4px;"></ion-icon>
+          <div>
+            <ion-label class="bold_lbl">Creative Software - Office </ion-label>
+            <ion-label class="small_lbl">No. 29 Deal PI, Colombo</ion-label>
+          </div>
+        </div>
+        <div>
+          <ion-icon name="remove-circle-outline" style="font-size: 24px;" color="danger" (click)="openDeleteModal()">
+          </ion-icon>
+        </div>
+      </div>
+
+      <ion-label class="title_lbl">Recently visited places</ion-label>
+
+      <div class="visited_flex" *ngFor="let item of [1,2,3]">
+        <ion-icon name="time"></ion-icon>
+        <ion-label>katunayake Airport - Sri Lanka</ion-label>
+      </div>
+
+    </div>
+
+  </div>
+</ion-content>

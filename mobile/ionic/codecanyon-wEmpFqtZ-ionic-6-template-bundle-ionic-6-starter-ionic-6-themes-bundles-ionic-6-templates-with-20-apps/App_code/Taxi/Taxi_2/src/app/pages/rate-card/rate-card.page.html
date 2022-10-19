@@ -1,0 +1,50 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-button (click)="goBack()" fill="clear" mode="md">
+      <ion-icon name="arrow-back" color="dark"></ion-icon>
+    </ion-button>
+    <ion-title color="dark">Rate Card</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main_content_div">
+
+    <div class="slider_container">
+      <div class="single_div" (click)="type = i+1" *ngFor="let item of carType; let i = index">
+        <ion-label [class.active]="type == i+1">{{item.name}}</ion-label>
+        <div>
+          <img [src]="'assets/imgs/'+item.img1" *ngIf="type == i+1">
+          <img [src]="'assets/imgs/'+item.img2" *ngIf="type !== i+1">
+        </div>
+      </div>
+    </div>
+
+    <div class="container_div">
+      <div class="card_box" *ngFor="let item of [1,2]">
+        <ion-label class="name_lbl">Car</ion-label>
+        <ion-label class="grey_lbl">Toyota Paris / Axio (Hybrid)</ion-label>
+
+        <ion-label class="lbl_flex">
+          Min Fare(First 5 km) <span>LKR 380.00</span>
+        </ion-label>
+        <ion-label class="lbl_flex">
+          After 5 km(Per km) <span>LKR 72.00</span>
+        </ion-label>
+        <ion-label class="lbl_flex">
+          Waiting Time(Per 1 Hour) <span>LKR 420.00</span>
+        </ion-label>
+
+      </div>
+    </div>
+
+  </div>
+</ion-content>
