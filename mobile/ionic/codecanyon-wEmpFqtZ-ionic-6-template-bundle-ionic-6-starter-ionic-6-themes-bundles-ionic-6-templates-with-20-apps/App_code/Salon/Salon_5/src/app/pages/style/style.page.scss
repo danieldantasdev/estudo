@@ -1,0 +1,141 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.header {
+  height: 20vh;
+  width: 100%;
+  position: relative;
+  background-color: var(--ion-color-secondary);
+  padding: 40px;
+
+  .icon {
+    font-size: 35px;
+    color: var(--ion-color-dark);
+    position: absolute;
+    left: 14px;
+  }
+  .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--ion-color-dark);
+  }
+}
+
+.main-content {
+  .card {
+    background-color: white;
+    z-index: 9999;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    height: 100vh;
+    border-radius: 30px;
+
+    .style {
+      overflow: scroll;
+      padding: 20px 0px 10px 14px;
+      .menu {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        .item {
+          padding: 8px;
+          .img {
+            height: 20vh;
+            width: 150px;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            padding: 20px;
+            .style-name {
+              color: white;
+              .name {
+                font-size: 20px;
+                font-weight: bold;
+              }
+              .price {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .price-btn {
+      color: var(--ion-color-gray);
+      display: flex;
+      align-items: center;
+      padding: 5px 20px 10px 20px;
+    }
+    .title {
+      font-size: 24px;
+      padding: 10px 20px;
+      font-weight: bold;
+    }
+    .profile {
+      display: flex;
+      flex-direction: column;
+      margin: 10px 20px;
+      padding: 20px;
+      border-radius: 20px;
+      background-color: white;
+      box-shadow: 0px 0px 10px var(--box-shadow-color);
+  --box-shadow-color: var(--ion-color-light);
+
+      .img {
+        height: 20vh;
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+      }
+      .rating {
+        padding: 5px 0px ;
+        display: flex;
+        justify-content: space-between;
+        .star {
+          color: var(--ion-color-primary);
+          .rate {
+            padding-left: 10px;
+          }
+        }
+        .view {
+          color: var(--ion-color-gray);
+          padding-left: 20px;
+        }
+      }
+      .name {
+        color: var(--ion-color-dark);
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        ion-icon {
+          padding-top: 5px;
+        }
+      }
+      ion-button{
+        margin: 10px 0px;
+        color: white;
+        font-weight: bold;
+        font-size: 22px;
+      }
+    }
+  }
+
+}

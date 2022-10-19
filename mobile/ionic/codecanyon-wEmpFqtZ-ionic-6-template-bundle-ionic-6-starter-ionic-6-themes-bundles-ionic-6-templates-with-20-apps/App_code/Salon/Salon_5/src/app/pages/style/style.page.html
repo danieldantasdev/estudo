@@ -1,0 +1,64 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+
+  <div class="header">
+
+    <ion-icon class="icon" name="chevron-back-outline" (click)="Back()"></ion-icon>
+    <div class="heading"> Haircut </div>
+
+  </div>
+  <div class="main-content">
+    <div class="card">
+
+
+      <div class="style">
+        <div class="menu">
+          <div class="item" *ngFor="let item of [1,2,3,4]">
+            <div class="img" [style.backgroundImage]="'url(assets/salon-banner.jpg)'">
+              <div class="style-name">
+                <ion-label class="name">Haircut</ion-label>
+                <ion-label class="price">$35</ion-label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="price-btn">
+        <ion-label>See a full price list</ion-label>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </div>
+
+      <div class="title">
+        <ion-label>Sophia's Hair Spacialists</ion-label>
+      </div>
+
+      <div class="profile" *ngFor="let item of [1,2]">
+        <div class="img" [style.backgroundImage]="'url(assets/salon-banner.jpg)'">
+        </div>
+        <div class="rating">
+          <div class="star">
+            <ion-icon name="star" *ngFor="let item of [1,2,3,4,5]"></ion-icon>
+            <ion-label class="rate">4.5</ion-label>
+          </div>
+          <ion-label class="view">View Profile</ion-label>
+        </div>
+        <div class="name">
+          <ion-label>Jenny Wilson</ion-label>
+          <ion-icon name="chatbox-outline"></ion-icon>
+
+        </div>
+        <ion-button (click)="goToVisit()" expand="block">
+          Book a Visit
+        </ion-button>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

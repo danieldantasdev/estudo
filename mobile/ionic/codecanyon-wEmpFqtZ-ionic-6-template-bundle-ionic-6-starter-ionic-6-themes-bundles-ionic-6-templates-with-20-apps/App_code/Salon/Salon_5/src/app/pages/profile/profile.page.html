@@ -1,0 +1,154 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+
+  <div class="header">
+
+    <div class="heading"> Profile Details</div>
+
+  </div>
+  <div class="main-content">
+    <div class="card">
+
+      <div class="profile">
+        <div class="profile-item">
+          <div class="profile-picture">
+            <img src="assets/profile.jpg">
+          </div>
+          <ion-label class="profile-name">John doe</ion-label>
+          <ion-label class="id">+1 (201) 555-3245</ion-label>
+        </div>
+      </div>
+
+      <div class="title">
+        Bonus Card
+      </div>
+
+      <div class="bonus-card">
+        <div class="img" [style.backgroundImage]="'url(assets/back.jpg)'">
+
+          <div class="logo">
+            Logo
+          </div>
+          <div class="upper">
+            <ion-icon name="barcode-outline"></ion-icon>
+          <ion-label class="id">4281 2255 8877 9090</ion-label>
+          <ion-label class="name">Martina Wolna</ion-label>
+          </div>
+
+          <div class="lower">
+            <div class="time">
+              <div class="date">
+                <ion-label>Expiry date</ion-label>
+                <ion-label>12/2025</ion-label>
+              </div>
+              <div class="discount">
+                -15% Discount
+              </div>
+            </div>
+
+          </div>
+
+
+
+        </div>
+      </div>
+
+      <div class="title">
+        <ion-label>Saved Tips & Tricks</ion-label>
+        <ion-label class="more">See more</ion-label>
+      </div>
+
+      <div class="photo">
+        <ion-row class="main-row">
+          <ion-col size="6">
+            <div class="img" [style.backgroundImage]="'url(assets/salon-banner.jpg)'">
+              <ion-label class="text">How to apply foundation</ion-label>
+            </div>
+          </ion-col>
+
+          <ion-col size="6">
+            <div class="img2" [style.backgroundImage]="'url(assets/salon-banner.jpg)'">
+              <ion-label class="text">How to</ion-label>
+            </div>
+            <ion-row>
+              <ion-col size="6">
+                <div class="img2" [style.backgroundImage]="'url(assets/salon-banner.jpg)'">
+                  <ion-label class="text">How </ion-label>
+                </div>
+              </ion-col>
+              <ion-col size="6">
+                <div class="img2" [style.backgroundImage]="'url(assets/salon-banner.jpg)'">
+                  <ion-label class="text">How </ion-label>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="title">
+        <ion-label>Rating & Reviews</ion-label>
+        <ion-label class="more">See more</ion-label>
+      </div>
+
+      <div class="rating">
+        <ion-row>
+          <ion-col size="4">
+            <div class="img" [style.backgroundImage]="'url(assets/salon-banner.jpg)'">
+
+            </div>
+          </ion-col>
+          <ion-col size="8">
+            <div class="details">
+              <ion-label class="name">Jenny Wilson</ion-label>
+              <div class="rating">
+                <ion-icon name="star" *ngFor="let item of [1,2,3,4,5]"></ion-icon>
+                <ion-label class="rate">4.5</ion-label>
+              </div>
+              <div class="info">
+                <ion-label>"Jenny really saved the bad hair dye in other salon. My hair is again glossy and silky. Thank you!"</ion-label>
+              </div>
+              <div class="date">
+                <ion-label>July 21, 2021</ion-label>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="title">
+        Clients' Support
+      </div>
+
+      <div  class="add">
+        <ion-icon  name="time-outline"></ion-icon>
+        <ion-label>You can contact us on any questions from 08 am to 12 pm</ion-label>
+      </div>
+
+      <div class="btn">
+        <ion-row>
+          <ion-col size="6">
+            <ion-button expand="block">
+              Request a Call
+            </ion-button>
+          </ion-col>
+          <ion-col size="6">
+            <ion-button expand="block">
+              Go to chat
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </div>
+
+
+    </div>
+
+  </div>
+</ion-content>

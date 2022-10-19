@@ -1,0 +1,38 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+
+  <div class="img" [style.backgroundImage]="'url(assets/salon-banner.jpg)'">
+    <div class="content">
+      <div class="logo"> Sophia </div>
+      <div class="name"> Beauty Salon </div>
+    </div>
+  </div>
+  <div class="main-content">
+    <div class="card">
+      <div class="title">
+        Choose Location
+      </div>
+      <div class="location" (click)="goToHome()">
+        <div class="img" [style.backgroundImage]="'url(assets/salon-banner.jpg)'">
+        </div>
+        <div class="rating">
+          <ion-icon name="star" *ngFor="let item of [1,2,3,4,5]"></ion-icon>
+          <ion-label class="rate">4.5</ion-label>
+          <ion-label class="review">(320 reviews)</ion-label>
+        </div>
+        <div class="address">
+          <ion-icon  name="location"></ion-icon>
+          <ion-label class="name">232 Santa Paola Road, Washington DC, 20245</ion-label>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</ion-content>

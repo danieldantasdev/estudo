@@ -1,0 +1,99 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+
+  <div class="header">
+    <ion-icon class="icon" name="chevron-back-outline" (click)="Back()"></ion-icon>
+    <div class="heading"> Confirmation </div>
+  </div>
+  <div class="main-content">
+    <div class="card">
+
+      <ion-item class="ion-no-padding"  lines="none">
+        <div class="icon">
+          <ion-icon name="home"></ion-icon>
+        </div>
+        <div>
+          <p>salon address</p>
+          <h6>Sophia Beauty Salon</h6>
+          <p class="address">2972 westheimer Rd. Tokyo</p>
+        </div>
+        <div slot="end" class="edit">
+          <ion-icon slot="end" name="pencil"></ion-icon>
+        </div>
+      </ion-item>
+
+      <ion-item class="ion-no-padding"  lines="none">
+        <div class="icon">
+          <ion-icon name="cut"></ion-icon>
+        </div>
+        <div>
+          <p>Service</p>
+          <h6>Haircut</h6>
+          <p class="address">Non-specified Typ</p>
+        </div>
+        <div slot="end" class="edit">
+          <ion-icon slot="end" name="pencil"></ion-icon>
+        </div>
+      </ion-item>
+
+      <ion-item class="ion-no-padding"  lines="none">
+        <div class="icon">
+          <ion-icon name="person"></ion-icon>
+        </div>
+        <div>
+          <p>Specialist</p>
+          <h6>Jenny Wilson</h6>
+          <p class="address">Hair Stylist</p>
+        </div>
+        <div slot="end" class="edit">
+          <ion-icon slot="end" name="pencil"></ion-icon>
+        </div>
+      </ion-item>
+
+      <ion-item class="ion-no-padding"  lines="none">
+        <div class="icon">
+          <ion-icon name="time-outline"></ion-icon>
+        </div>
+        <div>
+          <p>Date & Time</p>
+          <h6>July,21/5:00 pm</h6>
+          <p class="address"></p>
+        </div>
+        <div slot="end" class="edit">
+          <ion-icon slot="end" name="pencil"></ion-icon>
+        </div>
+      </ion-item>
+
+
+      <div  class="add">
+        <ion-icon  name="add"></ion-icon>
+        <ion-label>Add onother Service</ion-label>
+      </div>
+
+
+      <div mode="md" class="check">
+        <ion-checkbox></ion-checkbox>
+        <ion-label>Notify me if master has any cancellations on this date</ion-label>
+      </div>
+
+
+        <ion-button (click)="goToSuccess()" expand="block">
+          Confirm
+        </ion-button>
+        <ion-button (click)="goToSuccess()" color="dark" expand="block" fill="outline">
+          Cancel
+        </ion-button>
+
+
+
+    </div>
+
+  </div>
+</ion-content>

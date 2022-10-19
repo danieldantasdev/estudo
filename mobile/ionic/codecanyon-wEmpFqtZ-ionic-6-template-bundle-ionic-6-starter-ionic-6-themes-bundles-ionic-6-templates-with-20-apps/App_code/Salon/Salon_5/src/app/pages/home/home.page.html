@@ -1,0 +1,114 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content>
+
+  <div class="header">
+    <div class="heading" (click)="location()"> Sophia Beauty Bar, Richardson </div>
+  </div>
+  <div class="main-content">
+    <div class="card">
+
+      <div class="search">
+        <ion-searchbar showCancelButton="never" placeholder="Search for Service" mode="ios"></ion-searchbar>
+      </div>
+
+
+      <div class="banner">
+        <div class="img" [style.backgroundImage]="'url(assets/salon-banner.jpg)'" (click)="openStyle()">
+          <div class="style-name">
+            <ion-label class="price">-50 %</ion-label>
+            <ion-label class="name">Permenent Mackup</ion-label>
+          </div>
+        </div>
+      </div>
+
+      <div class="title">
+        <ion-label>Services</ion-label>
+      </div>
+
+      <div class="service">
+        <div class="menu">
+          <div class="item" *ngFor="let item of [1,2,3,4,5]" (click)="openStyle()">
+            <div class="icon">
+              <ion-icon name="cut"></ion-icon>
+            </div>
+            <ion-label>Hair Cut</ion-label>
+          </div>
+        </div>
+      </div>
+
+      <div class="title">
+        <ion-label>Hair Spacialist</ion-label>
+        <ion-label class="view-btn">View All</ion-label>
+      </div>
+
+      <div class="spacialist">
+        <ion-row>
+          <ion-col size="6" *ngFor="let item of [1,2]" (click)="openStyle()">
+            <div class="profile">
+              <div class="img" [style.backgroundImage]="'url(assets/salon-banner.jpg)'">
+              </div>
+              <div class="name">
+                <ion-label class="view">Jenny Wilson</ion-label>
+                <div class="star">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-label class="rate">4.5</ion-label>
+                </div>
+              </div>
+              <div class="work">
+                <ion-label>Hair Stylist</ion-label>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="title">
+        <ion-label>Brow Spacialist</ion-label>
+        <ion-label class="view-btn">View All</ion-label>
+      </div>
+
+      <div class="spacialist">
+        <ion-row>
+          <ion-col size="6" *ngFor="let item of [1,2]" (click)="openStyle()">
+            <div class="profile">
+              <div class="img" [style.backgroundImage]="'url(assets/salon-banner.jpg)'">
+              </div>
+              <div class="name">
+                <ion-label class="view">Jenny Wilson</ion-label>
+                <div class="star">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-label class="rate">4.5</ion-label>
+                </div>
+              </div>
+              <div class="work">
+                <ion-label>Brow Stylist</ion-label>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="btn">
+        <div class="time">
+          <div class="icon">
+            <ion-icon name="time-outline"></ion-icon>
+          </div>
+          <div class="work">
+            <ion-label>Work Hour</ion-label><br>
+            <ion-label>08 am - 12 pm</ion-label>
+          </div>
+        </div>
+        <ion-button (click)="goTovisit()" expand="block">
+          Book a Visit
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
