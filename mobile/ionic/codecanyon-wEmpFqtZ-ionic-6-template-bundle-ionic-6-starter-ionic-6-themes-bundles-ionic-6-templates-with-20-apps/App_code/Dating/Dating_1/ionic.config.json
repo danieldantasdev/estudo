@@ -1,0 +1,7 @@
+{
+  "name": "dating_user_capacitor",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
