@@ -1,0 +1,47 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+
+  <ion-slides mode="ios" pager="ios" scrollbar="ios">
+    <ion-slide>
+      <div class="content">
+        <div class="back_img" [style.backgroundImage]="'url(assets/images/1.jpg)'"></div>
+        <ion-label class="h5">View Product 360 Degrees</ion-label> <br>
+        <ion-label class="h6">You can see the product all angles, true and conventient.</ion-label>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="content">
+        <div class="back_img" [style.backgroundImage]="'url(assets/images/2.jpg)'"></div>
+        <ion-label class="h5">Find Product Easily</ion-label> <br>
+        <ion-label class="h6">You just need to take a photo or upload and we will find similar product for you.
+        </ion-label>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="content">
+        <div class="back_img" [style.backgroundImage]="'url(assets/images/4.jpg)'"></div>
+        <ion-label class="h5">Payment Is Easy</ion-label> <br>
+        <ion-label class="h6">You just need to take a photo or upload and we will find similar product for you.
+        </ion-label>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button class="content_button" (click)="signIn()" expand="block">
+      Get Started !
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

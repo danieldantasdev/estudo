@@ -1,0 +1,454 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+@font-face {
+  font-family: 'regular';
+  src: url(assets/fonts/Jost-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'medium';
+  src: url(assets/fonts/Jost-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'bold';
+  src: url(assets/fonts/Jost-Bold.ttf);
+}
+
+*{
+  font-family: 'regular';
+}
+
+.header-ios ion-toolbar:last-of-type {
+  --border-width: 0px;
+}
+
+.header-md:after{
+  background: none;
+}
+
+
+ion-header {
+  ion-toolbar {
+    --border-style: 0px;
+    --background: white;
+    --ionicon-stroke-width: 15px;
+    // --background: transparent;
+    opacity: 0.9;
+    ion-icon {
+      font-size: 30px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-family: 'medium';
+      padding-left: 30px;
+      margin: 15px;
+    }
+  }
+}
+ion-content {
+  .main-content {
+    .heading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 10px;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      .title {
+        font-size: 18px;
+        text-transform: capitalize;
+        letter-spacing: none;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .line {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      bottom: 1px;
+      margin: 10px;
+      .border {
+        width: 150px;
+        border-bottom: 1px solid gray;
+      }
+      ion-icon {
+        position: absolute;
+        bottom: -5px;
+        transform: rotate(45deg);
+        background-color: white;
+        color: gray;
+        font-size: 11px;
+      }
+    }
+
+    .segment {
+      margin: 0px 5px;
+      font-size: 16px;
+      color: gray;
+      .active {
+        border-bottom: 1px solid var(--ion-color-primary);
+        color: black;
+      }
+    }
+
+    .items {
+      padding: 20px 10px;
+    }
+
+    .banner {
+      padding-top: 20px;
+      .img {
+        height: 30vh;
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        color: white;
+        padding: 30px;
+        .text {
+          font-size: 30px;
+          font-family: 'medium';
+          font-style: italic;
+          text-align: end;
+          .info {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-style: normal;
+            letter-spacing: 3px;
+          }
+        }
+      }
+    }
+
+    .products{
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      align-items: center;
+      .img {
+        height: 25vh;
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        .name {
+          font-size: 14px;
+          font-family: 'medium';
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          padding-top: 5px;
+        }
+        .detail {
+          font-size: 12px;
+        }
+        .price {
+          color: var(--ion-color-primary);
+          font-size: 14px;
+          padding-bottom: 10px;
+        }
+      }
+
+    }
+
+
+
+    .products-segment {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      align-items: center;
+      text-align: center;
+      .img {
+        height: 22vh;
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .name {
+        padding: 0px 10px;
+      }
+      .price {
+        padding: 0px 10px;
+        color: var(--ion-color-primary);
+      }
+    }
+
+
+
+    .footer {
+      .page-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ion-icon {
+          padding: 20px 20px;
+          font-size: 24px;
+        }
+        ion-label {
+          padding: 20px 25px;
+          font-size: 18px;
+        }
+      }
+      .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        padding: 20px 0px;
+      }
+      .copyright {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--ion-color-light);
+        text-align: center;
+        padding: 14px;
+      }
+    }
+  }
+}
+
+
+
+//item page
+
+
+.item-details {
+  padding: 14px;
+  .info {
+    display: flex;
+    flex-direction: column;
+    .name {
+      font-size: 20px;
+      font-family: 'medium';
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    .detail {
+      font-size: 17px;
+      padding: 5px 0px;
+    }
+    .price {
+      color: var(--ion-color-primary);
+      font-size: 20px;
+    }
+  }
+}
+
+.variation-selector {
+  margin: 10px 0px;
+  display: flex;
+  ion-label {
+    margin-right: 10px;
+  }
+  .colors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .active {
+      border: 2px solid white;
+      outline: 2px solid var(--ion-color-primary);
+      width: 27px;
+      height: 27px;
+    }
+  }
+  .sizes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f3f3f3;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+      transition: 0.5s ease-in-out;
+    }
+    .active {
+      color: #ffffff;
+      background-color: var(--ion-color-primary);
+    }
+  }
+}
+
+.btn {
+  ion-toolbar {
+    padding: 10px 0px;
+   ion-label{
+     text-transform: uppercase;
+   }
+  }
+}
+
+.description{
+  padding: 14px;
+  .title{
+    font-size: 18px;
+    font-family: 'medium';
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding: 20px 0px 10px 0px;
+  }
+  .text{
+    font-size: 16px;
+  }
+  .list{
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    ion-label{
+      padding-left: 15px;
+    }
+  }
+}
+.gallery{
+  padding: 0px 14px;
+  .title{
+    font-size: 18px;
+    font-family: 'medium';
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding: 20px 0px 10px 0px;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    margin: 7px 0px;
+  }
+
+}
+
+
+//cart
+
+.cart {
+  padding: 10px 10px;
+  .product-img {
+    width: 100%;
+    height: 150px;
+  }
+  .product-detail {
+    display: flex;
+    flex-direction: column;
+
+    .item-add {
+      font-size: 16px;
+      font-family: 'bold';
+      display: flex;
+      align-items: center;
+      margin: 15px 0px;
+      .remove {
+        background-color: var(--ion-color-light);
+        border-radius: 50%;
+        padding: 2px;
+        font-size: 22px;
+      }
+      ion-label {
+        padding: 0px 10px;
+      }
+      .add {
+        background-color: var(--ion-color-primary);
+        border-radius: 50%;
+        padding: 2px;
+        color: white;
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+
+
+.footer-btn {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  .total {
+    border-top: 2px solid var(--ion-color-light);
+    margin: 14px;
+    .total-price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .detail {
+      color: gray;
+      font-size: 15px;
+    }
+  }
+  .submit-btn {
+    margin-top: 30px;
+    text-transform: uppercase;
+    ion-icon {
+      padding-right: 15px;
+    }
+  }
+}
+
