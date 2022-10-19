@@ -1,0 +1,43 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToBack()">
+        <ion-icon slot="start" name="chevron-back-outline" color="dark"></ion-icon>
+
+      </ion-button>
+    </ion-buttons>
+    <ion-title>For Me</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-searchbar placeholder="Origin" showCancelButton="never"></ion-searchbar>
+  <ion-searchbar placeholder="Where to ?" showCancelButton="never"></ion-searchbar>
+
+  <ion-list>
+    <ion-item>
+      <li>Saved Places</li>
+    </ion-item>
+    <ion-item>
+      <li>Set location on map </li>
+    </ion-item>
+    <ion-item>
+      <li>Enter destination later</li>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="goToOngoing()">
+      <ion-icon name="checkmark-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

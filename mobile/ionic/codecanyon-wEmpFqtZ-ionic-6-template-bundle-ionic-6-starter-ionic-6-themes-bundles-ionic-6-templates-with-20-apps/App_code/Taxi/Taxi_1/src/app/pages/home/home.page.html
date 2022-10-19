@@ -1,0 +1,75 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="util.openMenu()">
+        <ion-icon slot="start" name="ellipsis-vertical" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main-content">
+    <div class="header">
+      <div class="title">
+        Welcome to vying
+      </div>
+      <div class="text">
+        Happy to have you. Access to trips is just a tap away.
+      </div>
+
+      <div class="ride-btn" (click)="openRide()">
+        <ion-label>Ride with Vying</ion-label>
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </div>
+    </div>
+
+    <div class="lower-div">
+      <div class="ride-btn-div">
+        <ion-button class="ride" fill="clear" (click)="RideModal()">
+          <img class="car-icon" src="assets/taxi.png" alt="">
+          <ion-label>Ride</ion-label>
+        </ion-button>
+
+        <ion-button class="ride" fill="clear" (click)="goToRequest()">
+          <img class="car-icon" src="assets/taxi.png" alt="">
+          <ion-label>Intercity</ion-label>
+        </ion-button>
+      </div>
+
+      <div class="select-time" (click)="goToSearch()">
+        <ion-label>Where to?</ion-label>
+        <div class="time">
+          <ion-icon name="time" color="primary"></ion-icon>
+
+          <!-- <ion-select placeholder="Now" interface="popover">
+            <ion-select-option value="1">Now</ion-select-option>
+            <ion-select-option value="2">Then</ion-select-option>
+          </ion-select> -->
+        </div>
+      </div>
+
+      <div class="save-place">
+        <div class="back-btn">
+          <ion-icon name="star" color="primary"></ion-icon>
+        </div>
+        <ion-label>Choose a saved Place</ion-label>
+        <ion-icon class="chevron" name="chevron-forward-outline"></ion-icon>
+      </div>
+      <ion-label class="around-label">Around you</ion-label>
+      <div class="map-div">
+        <div #map id="map" class="map">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

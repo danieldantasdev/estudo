@@ -1,0 +1,47 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-content class="ion-padding">
+  <div class="main-content">
+
+    <div class="img" [style.backgroundImage]="'url(assets/profile.jpg)'">
+    </div>
+    <div class="name">
+      <ion-label>John Doe</ion-label>
+      <div>
+        <ion-icon name="star" color="primary" *ngFor="let item of [1,2,3,4,5]"></ion-icon>
+      </div>
+    </div>
+
+    <ion-label class="title">ADD TIPS</ion-label>
+    <div class="tip-list">
+      <div class="tip" [class.active]="selectedSize == 1" (click)="changeSize(1)">
+        <ion-label class="price">No Tips</ion-label>
+      </div>
+      <div class="tip" [class.active]="selectedSize == 2" (click)="changeSize(2)">
+        <ion-label class="price">R15</ion-label>
+      </div>
+      <div class="tip" [class.active]="selectedSize == 3" (click)="changeSize(3)">
+        <ion-label class="price">R20</ion-label>
+      </div>
+      <div class="tip" [class.active]="selectedSize == 4" (click)="changeSize(4)">
+        <ion-label class="price">R25</ion-label>
+      </div>
+    </div>
+    <ion-label class="title">CUSTOM TIPS</ion-label>
+
+    <div class="tip-custom">
+      <ion-input class="ion-no-padding" type="text" placeholder="Enter Tips"></ion-input>
+    </div>
+
+    <ion-button expand="block" (click)="onPay()">
+      Pay R55
+    </ion-button>
+
+  </div>
+</ion-content>

@@ -1,0 +1,86 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToBack()">
+        <ion-icon slot="start" name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content fullscreen>
+  <div class="map-content">
+    <div class="lower_div">
+      <div #map id="map" class="map">
+      </div>
+      <div class="location">
+        <ion-label>Current location</ion-label>
+        <ion-icon name="arrow-forward-outline" color="primary"></ion-icon>
+        <ion-label>HariBapa Asharm</ion-label>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="footer">
+    <div class="title">
+      <div class="left-div">
+        <div class="img" [style.backgroundImage]="'url(assets/taxi.png)'"></div>
+        <ion-label class="name">Ride</ion-label>
+      </div>
+
+      <div class="right-div">
+        <ion-label>Get there by</ion-label>
+        <ion-label>6.35 PM</ion-label>
+      </div>
+    </div>
+
+    <div class="ride-list">
+      <div class="ride" [class.active]="selectedSize == 1" (click)="changeSize(1)">
+        <ion-icon name="radio-button-off"></ion-icon>
+        <div class="time">
+          <ion-label> Pickup in 4 min</ion-label>
+          <ion-label class="standard"> Standard</ion-label>
+        </div>
+        <ion-label class="price">R55.00</ion-label>
+      </div>
+      <div class="ride" [class.active]="selectedSize == 2" (click)="changeSize(2)">
+        <ion-icon name="radio-button-off"></ion-icon>
+        <div class="time">
+          <ion-label> Pickup in 4 min</ion-label>
+          <ion-label class="standard"> Standard</ion-label>
+        </div>
+        <ion-label class="price">R55.00</ion-label>
+      </div>
+      <div class="ride" [class.active]="selectedSize == 3" (click)="changeSize(3)">
+        <ion-icon name="radio-button-off"></ion-icon>
+        <div class="time">
+          <ion-label> Pickup in 4 min</ion-label>
+          <ion-label class="standard"> Standard</ion-label>
+        </div>
+        <ion-label class="price">R55.00</ion-label>
+      </div>
+    </div>
+
+
+
+    <ion-button (click)="goToOngoing()" expand="block">
+      Select Ride
+    </ion-button>
+  </div>
+</ion-footer>

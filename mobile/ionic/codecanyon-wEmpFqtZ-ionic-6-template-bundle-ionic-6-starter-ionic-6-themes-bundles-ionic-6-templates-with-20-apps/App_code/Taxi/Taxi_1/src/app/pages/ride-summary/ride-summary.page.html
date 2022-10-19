@@ -1,0 +1,107 @@
+<!--
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+ -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToBack()">
+        <ion-icon slot="start" name="chevron-back-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <div class="hehe">
+      <ion-label>Ride Summary</ion-label>
+      <ion-label color="primary">#223432</ion-label>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main-content">
+    <div class="bill">
+      <div class="detail">
+        <ion-label class="title">Fare</ion-label>
+        <ion-label class="price">R45.00</ion-label>
+      </div>
+      <div class="detail">
+        <ion-label class="title">Payable Total</ion-label>
+        <ion-label class="price2">R45.00</ion-label>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="locations_div">
+      <div class="left_div">
+        <span>
+          <div class="round_div"></div>
+          <div class="line_div"></div>
+          <div class="round_div"></div>
+        </span>
+      </div>
+
+      <div class="right_div">
+        <div class="title">
+          <ion-label class="origin"> Home</ion-label>
+          <ion-label class="time">09.00 AM</ion-label>
+        </div>
+        <div class="location">
+          <ion-label>White House, Pawder galli, UK</ion-label>
+        </div>
+        <div class="title">
+          <ion-label class="origin"> Work</ion-label>
+          <ion-label class="time">09.10 AM</ion-label>
+        </div>
+        <div class="location">
+          <ion-label>White House, Pawder galli, Texas</ion-label>
+        </div>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="ride-detail">
+      <div class="ride-content" fill="clear">
+        <ion-label class="title">Destination</ion-label>
+        <ion-label class="text">3 Km</ion-label>
+      </div>
+
+      <div class="line_div"></div>
+
+      <div class="ride-content" fill="clear">
+        <ion-label class="title">Wait Time</ion-label>
+        <ion-label class="text">3 min</ion-label>
+      </div>
+
+      <div class="line_div"></div>
+
+      <div class="ride-content" fill="clear">
+        <ion-label class="title">Total</ion-label>
+        <ion-label class="text">R45</ion-label>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="driver-div">
+      <div class="img" [style.backgroundImage]="'url(assets/profile.jpg)'"></div>
+      <div class="content_div" (click)="Driver()">
+        <ion-label class="msg">DRIVER</ion-label>
+        <ion-label class="driver">Jonh Doe</ion-label>
+        <div class="star">
+          <ion-icon name="star"></ion-icon>5
+        </div>
+      </div>
+    </div>
+
+    <div class="continue-btn">
+      <ion-button (click)="goToPay()" expand="block">
+        Continue to Pay
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

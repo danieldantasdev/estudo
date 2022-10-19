@@ -1,0 +1,93 @@
+/*
+  Authors : bunchdevelopers (Rahul Jograna)
+  Website : https://bunchdevelopers.com/
+  App Name : ionic6Template Pack
+  This App Template Source code is licensed as per the
+  terms found in the Website https://bunchdevelopers.com/license
+  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
+*/
+.main-content {
+  padding: 14px;
+  .heading {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    color: var(--ion-color-primary);
+    .title {
+      font-size: 26px;
+      font-family: "bold";
+    }
+    .text {
+      font-size: 18px;
+      font-family: "semi-bold";
+      padding-top: 15px;
+    }
+  }
+  .pay-list {
+    display: flex;
+    flex-direction: row;
+    margin: 30px 10px;
+    padding: 20px 20px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--box-shadow-color);
+    --box-shadow-color: #d7d8da;
+    .img {
+      height: 30px;
+      width: 30px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .content_div {
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      .title {
+        font-family: "semi-bold";
+        padding-top: 3px;
+      }
+      .id {
+        font-size: 11px;
+      }
+    }
+  }
+  .radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    padding: 5px;
+    position: absolute;
+    right: 30px;
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: lightgray;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-right: 10px;
+      transition: 0.5s ease-in-out;
+    }
+    .active {
+      color: #ffffff;
+      background-color: var(--ion-color-primary);
+    }
+  }
+
+  .continue-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    ion-button {
+      width: 80%;
+    }
+  }
+}
