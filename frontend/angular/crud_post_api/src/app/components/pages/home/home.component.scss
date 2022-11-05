@@ -1,0 +1,128 @@
+
+
+/*===== main ===== */
+
+.d-flex__row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.d-flex__column{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.d-flex__start__column{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.l-main {
+  @extend .d-flex__start__column
+}
+
+.l-section{
+  margin-top: 5rem;
+  @extend .d-flex__row
+}
+
+hr {
+  border: 2px black solid;
+  width: 100vw;
+}
+
+.l-section__title {
+  margin-bottom: 2rem;
+}
+
+/*===== table ===== */
+
+table {
+  margin-top:5rem;
+
+	text-align: center;
+	width: 100%;
+	border-collapse: collapse;
+	// margin: auto;
+	min-width: 500px;
+	// margin-top: 50px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+td{
+	padding: 5px;
+}
+
+.impar{
+	background-color: rgb(240,248,255);
+}
+
+.impar:hover {
+	background-color: rgb(73, 135, 189);
+  transition: 0.2s all linear;
+}
+
+.nome{
+	text-align: left;
+}
+
+/*===== form ===== */
+
+form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+form > input {
+
+  &#nome, &#idade {
+    border: 2px rgba(0, 0, 0, 0.514) solid;
+    border-radius: 10px;
+  }
+
+  &#nome, &#idade:not(#checkbox) {
+    width: 20rem;
+    height: 2rem;
+  }
+
+  &#checkbox {
+    margin: 1rem 0;
+  }
+
+  &#nome:invalid, &#idade:invalid {
+  outline:2px red solid;
+  }
+
+  &#nome:valid, &#idade:valid{
+  outline:2px green solid;
+  }
+
+  &:focus:not(#checkbox){
+    outline:2px rgba(0, 0, 0, 0.692) solid;
+  }
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.loading{
+  @extend .d-flex__row;
+  background-color: gray;
+}

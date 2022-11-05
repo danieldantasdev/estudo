@@ -1,7 +1,7 @@
 export interface Post {
   createdAt: Date;
-  title: String;
-  image: String;
-  body: String;
-  id: String;
+  title: string;
+  image: string;
+  body: string;
+  id: string;
 }

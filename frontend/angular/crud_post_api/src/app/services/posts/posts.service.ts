@@ -7,8 +7,8 @@ import { environment } from '../../../environments/environment';
 @Injectable({
   providedIn: 'root',
 })
-export class CursosService {
-  private readonly API = `${environment.BASE_URL}${environment.API}`;
+export class PostsService {
+  private readonly API = `${environment.API}${environment.BASE_URL}`;
 
   constructor(private http: HttpClient) {}
 

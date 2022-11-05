@@ -1,0 +1,101 @@
+<section class="l-section">
+  <mat-card class="example-card">
+    <mat-card-subtitle>Login</mat-card-subtitle>
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-content>
+      <form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Email</mat-label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            matInput
+            formControlName="email"
+            placeholder="Ex. pat@example.com"
+          />
+          <mat-hint>Errors appear instantly!</mat-hint>
+          <mat-error
+            *ngIf="
+              formControls['email'].hasError('email') &&
+              !formControls['email'].hasError('required')
+            "
+          >
+            Digite um e-mail válido
+          </mat-error>
+          <mat-error *ngIf="formControls['email'].hasError('required')">
+            Email é <strong>obrigatório!</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Nome</mat-label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            matInput
+            formControlName="name"
+            name
+            placeholder="Ex. daniel"
+          />
+          <mat-hint>Errors appear instantly!</mat-hint>
+          <mat-error *ngIf="formControls['name'].hasError('required')">
+            Nome é <strong>obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Senha</mat-label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            matInput
+            formControlName="password"
+            placeholder="Ex. hfdcyjfvusdgfv"
+          />
+          <mat-hint>Errors appear instantly!</mat-hint>
+          <mat-error *ngIf="formControls['password'].hasError('required')">
+            Senha é <strong>obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Perfil</mat-label>
+          <input
+            type="text"
+            id="perfil"
+            name="perfil"
+            matInput
+            formControlName="perfil"
+            placeholder="Ex. ADMINISTRADOR"
+          />
+          <mat-hint>Errors appear instantly!</mat-hint>
+          <mat-error *ngIf="formControls['perfil'].hasError('required')">
+            Perfil é <strong>obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-divider inset></mat-divider>
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="onSubmit()"
+        [disabled]="!form.valid"
+        type="submit"
+      >
+        Logar
+      </button>
+      <button mat-button [routerLink]="'/register'">Cadastro</button>
+    </mat-card-actions>
+    <mat-card-footer>
+      <mat-progress-bar
+        mode="indeterminate"
+        *ngIf="isLoading"
+      ></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+</section>
