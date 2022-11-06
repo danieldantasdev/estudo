@@ -1,4 +1,4 @@
-import { Course } from './../model/course';
+import { Course } from './../../model/course';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -7,7 +7,6 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./courses-list.component.scss'],
 })
 export class CoursesListComponent implements OnInit {
-
   @Input() courses: Course[] = [];
   @Output() addCourse = new EventEmitter(false);
   readonly displayedColumns: string[] = ['id', 'name', 'category', 'actions'];
