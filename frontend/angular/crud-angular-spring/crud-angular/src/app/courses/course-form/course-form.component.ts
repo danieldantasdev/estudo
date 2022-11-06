@@ -1,18 +1,19 @@
-import { Course } from './../model/course';
-import { CoursesService } from './../services/courses.service';
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import {
-  FormBuilder,
   FormControl,
   FormGroup,
   FormGroupDirective,
   NgForm,
+  NonNullableFormBuilder,
   Validators,
 } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { Location } from '@angular/common';
+
+import { Course } from './../model/course';
+import { CoursesService } from './../services/courses.service';
 
 @Component({
   selector: 'app-course-form',
@@ -20,21 +21,24 @@ import { Location } from '@angular/common';
   styleUrls: ['./course-form.component.scss'],
 })
 export class CourseFormComponent implements OnInit {
-  form: FormGroup;
+  form: FormGroup = this.formBuilder.group({
+    name: new FormControl<Course['name']>('', Validators.required),
+    category: new FormControl<Course['category']>('', Validators.required),
+  });
   matcher = new MyErrorStateMatcher();
   isLoading: boolean = false;
 
   constructor(
-    private formBuilder: FormBuilder,
+    private formBuilder: NonNullableFormBuilder,
     private coursesService: CoursesService,
     private _snackbar: MatSnackBar,
     private _router: Router,
     private _location: Location
   ) {
-    this.form = this.formBuilder.group({
-      name: ['', Validators.required],
-      category: ['', Validators.required],
-    });
+    // this.form = this.formBuilder.group({
+    //   name: new FormControl<Course['name']>('', Validators.required),
+    //   category: new FormControl<Course['category']>('', Validators.required),
+    // });
   }
 
   ngOnInit(): void {}

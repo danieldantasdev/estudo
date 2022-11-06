@@ -3,10 +3,10 @@ import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { ErrorDialogComponent } from '../../shared/components/error-dialog/error-dialog.component';
+import { ErrorDialogComponent } from '../../../shared/components/error-dialog/error-dialog.component';
 
-import { Course } from '../model/course';
-import { CoursesService } from '../services/courses.service';
+import { Course } from '../../model/course';
+import { CoursesService } from '../../services/courses.service';
 
 @Component({
   selector: 'app-courses',
@@ -17,7 +17,6 @@ export class CoursesComponent implements OnInit {
   // courses: Course[] = [{ _id: '1', name: 'Angular', category: 'Front-end' }];
   // courses: Course[] = [];
   courses$: Observable<Course[]>;
-  displayedColumns: string[] = ['id', 'name', 'category', 'actions'];
 
   constructor(
     private courseService: CoursesService,
