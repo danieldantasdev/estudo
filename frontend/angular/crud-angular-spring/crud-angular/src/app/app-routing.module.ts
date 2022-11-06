@@ -6,9 +6,7 @@ const routes: Routes = [
   {
     path: 'courses',
     loadChildren: () =>
-      import('./components/pages/courses/courses.module').then(
-        (m) => m.CoursesModule
-      ),
+      import('./courses/courses.module').then((m) => m.CoursesModule),
   },
 ];
 

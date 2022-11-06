@@ -1,0 +1,65 @@
+<section class="l-section">
+  <mat-card class="example-car d">
+    <mat-toolbar color="primary">
+      <!-- <mat-card-header> -->
+      <!-- <mat-card-subtitle>Cursos</mat-card-subtitle> -->
+      <mat-card-title>Cadastre um novo curso</mat-card-title>
+      <!-- </mat-card-header> -->
+    </mat-toolbar>
+    <mat-card-content>
+      <form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Nome</mat-label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            matInput
+            formControlName="name"
+            name
+            [errorStateMatcher]="matcher"
+            placeholder="Ex. daniel"
+          />
+          <mat-hint>Errors appear instantly!</mat-hint>
+          <mat-error *ngIf="formControls['name'].hasError('required')">
+            Nome é <strong>obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Categoria</mat-label>
+          <mat-select formControlName="category">
+            <mat-option value="Front-end">Front-end</mat-option>
+            <mat-option value="Back-end">Back-end</mat-option>
+          </mat-select>
+          <mat-hint>Errors appear instantly!</mat-hint>
+          <mat-error *ngIf="formControls['category'].hasError('required')">
+            Categoria é <strong>obrigatório</strong>
+          </mat-error>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+
+    <mat-divider inset></mat-divider>
+
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="onSubmit()"
+        [disabled]="!form.valid"
+        type="submit"
+      >
+        Salvar
+      </button>
+      <button mat-button (click)="onCancel()">Cancelar</button>
+    </mat-card-actions>
+
+    <mat-card-footer>
+      <mat-progress-bar
+        mode="indeterminate"
+        *ngIf="isLoading"
+      ></mat-progress-bar>
+    </mat-card-footer>
+  </mat-card>
+</section>

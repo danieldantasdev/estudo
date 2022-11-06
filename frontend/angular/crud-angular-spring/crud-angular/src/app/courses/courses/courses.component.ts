@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { ErrorDialogComponent } from '../../shared/components/error-dialog/error-dialog.component';
 
-import { Course } from './model/course';
-import { CoursesService } from './services/courses.service';
+import { Course } from '../model/course';
+import { CoursesService } from '../services/courses.service';
 
 @Component({
   selector: 'app-courses',
@@ -16,9 +17,14 @@ export class CoursesComponent implements OnInit {
   // courses: Course[] = [{ _id: '1', name: 'Angular', category: 'Front-end' }];
   // courses: Course[] = [];
   courses$: Observable<Course[]>;
-  displayedColumns: string[] = ['id', 'name', 'category'];
+  displayedColumns: string[] = ['id', 'name', 'category', 'actions'];
 
-  constructor(private courseService: CoursesService, public dialog: MatDialog) {
+  constructor(
+    private courseService: CoursesService,
+    public _dialog: MatDialog,
+    private _router: Router,
+    private _route: ActivatedRoute
+  ) {
     // this.courses = [];
     this.courses$ = this.courseService.readAll().pipe(
       catchError((error) => {
@@ -37,8 +43,12 @@ export class CoursesComponent implements OnInit {
   // };
 
   onError = (errorMessage: string) => {
-    this.dialog.open(ErrorDialogComponent, {
+    this._dialog.open(ErrorDialogComponent, {
       data: errorMessage,
     });
+  };
+
+  onAdd = () => {
+    this._router.navigate(['new'], { relativeTo: this._route });
   };
 }

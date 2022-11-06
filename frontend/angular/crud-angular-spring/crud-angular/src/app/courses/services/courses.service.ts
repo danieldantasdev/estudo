@@ -1,4 +1,4 @@
-import { Course } from './../model/course';
+import { Course } from '../model/course';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { delay, first, take, tap } from 'rxjs/operators';
@@ -14,7 +14,7 @@ export class CoursesService {
   constructor(private http: HttpClient) {}
 
   create = (course: Course): Observable<Course> => {
-    return this.http.post<Course>(this.API, course).pipe();
+    return this.http.post<Course>(this.API, course).pipe(take(1), first());
   };
 
   readAll = (): Observable<Course[]> => {
