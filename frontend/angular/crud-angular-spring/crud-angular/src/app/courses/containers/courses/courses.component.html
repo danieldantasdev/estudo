@@ -5,7 +5,9 @@
     <app-courses-list
       *ngIf="courses$ | async as courses; else isLoading"
       [courses]="courses"
-      (addCourse)="onAdd()"
+      (add)="onAdd()"
+      (edit)="onEdit($event)"
+      (delete)="onDelete($event)"
     ></app-courses-list>
   </section>
 

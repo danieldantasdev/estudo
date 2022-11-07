@@ -1,16 +1,9 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  FormGroupDirective,
-  NgForm,
-  NonNullableFormBuilder,
-  Validators,
-} from '@angular/forms';
+import { FormControl, FormGroup, FormGroupDirective, NgForm, NonNullableFormBuilder, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { Course } from '../../model/course';
 import { CoursesService } from '../../services/courses.service';
@@ -22,6 +15,7 @@ import { CoursesService } from '../../services/courses.service';
 })
 export class CourseFormComponent implements OnInit {
   form: FormGroup = this.formBuilder.group({
+    _id: new FormControl<Course['_id']>(''),
     name: new FormControl<Course['name']>('', Validators.required),
     category: new FormControl<Course['category']>('', Validators.required),
   });
@@ -33,6 +27,7 @@ export class CourseFormComponent implements OnInit {
     private coursesService: CoursesService,
     private _snackbar: MatSnackBar,
     private _router: Router,
+    private _route: ActivatedRoute,
     private _location: Location
   ) {
     // this.form = this.formBuilder.group({
@@ -41,7 +36,14 @@ export class CourseFormComponent implements OnInit {
     // });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const COURSE: Course = this._route.snapshot.data['course'];
+    this.form.setValue({
+      _id:COURSE._id,
+      name:COURSE.name,
+      category:COURSE.category,
+    })
+  }
 
   get formControls() {
     return this.form.controls;
@@ -51,7 +53,7 @@ export class CourseFormComponent implements OnInit {
     this.isLoading = true;
 
     if (this.form.valid) {
-      this.coursesService.create(this.form.value).subscribe(
+      this.coursesService.save(this.form.value).subscribe(
         (data) => {
           setTimeout(this.onSuccess, 2000);
           console.log(data);

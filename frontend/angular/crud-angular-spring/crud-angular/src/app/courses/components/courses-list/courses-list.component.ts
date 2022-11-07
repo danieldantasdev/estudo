@@ -8,7 +8,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class CoursesListComponent implements OnInit {
   @Input() courses: Course[] = [];
-  @Output() addCourse = new EventEmitter(false);
+  @Output() add = new EventEmitter(false);
+  @Output() edit = new EventEmitter(false);
+  @Output() delete = new EventEmitter(false);
   readonly displayedColumns: string[] = ['id', 'name', 'category', 'actions'];
 
   constructor() {}
@@ -16,6 +18,14 @@ export class CoursesListComponent implements OnInit {
   ngOnInit(): void {}
 
   onAdd = () => {
-    this.addCourse.emit(true);
+    this.add.emit(true);
+  };
+
+  onEdit = (course: Course) => {
+    this.edit.emit(course);
+  };
+
+  onDelete = (course: Course) => {
+    this.delete.emit(course);
   };
 }
