@@ -1,0 +1,27 @@
+GET - readAll
+http://localhost:8080/api/courses
+
+POST - create
+http://localhost:8080/api/courses
+
+{
+    "name": "js",
+    "category": "Front-end"
+}
+
+GET - readById
+http://localhost:8080/api/courses/2
+
+PUT - update
+http://localhost:8080/api/courses/2
+
+{
+    "name": "js",
+    "category": "Front-end"
+}
+
+DELETE - delete
+http://localhost:8080/api/courses/2
+
+COLLECTION POSTMAN
+https://www.postman.com/collections/9afb3373ad3ed84181e4
