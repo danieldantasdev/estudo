@@ -2,7 +2,7 @@ import { CourseFormComponent } from './containers/course-form/course-form.compon
 import { CoursesComponent } from './containers/courses/courses.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CourseResolver } from './guards/course.resolver';
+import { CourseResolver } from '../../core/guards/course.resolver';
 
 const routes: Routes = [
   { path: '', component: CoursesComponent },

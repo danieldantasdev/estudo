@@ -1,12 +1,12 @@
-[
-    {
-    "_id":"1",
-    "name":"Angular",
-    "category":"Front-end"
-  },
-  {
-    "_id":"2",
-    "name":"Java",
-    "category":"Back-end"
-  }
-]
+[{
+  "_id": 1,
+  "name": "Giralda",
+  "category": "Glass & Glazing"
+}, {
+  "_id": 2,
+  "name": "Lenee",
+  "category": "Fire Sprinkler System"
+}, {
+  "_id": 3,
+  "name": "Lyssa"
+}]

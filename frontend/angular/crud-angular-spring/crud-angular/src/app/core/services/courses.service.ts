@@ -16,7 +16,7 @@ export class CoursesService {
 
   save = (course: Partial<Course>): Observable<Course> => {
     if (course._id) {
-      this.update(course);
+      return this.update(course);
     }
     return this.create(course);
   };

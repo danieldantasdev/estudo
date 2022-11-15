@@ -5,8 +5,8 @@ import { ErrorStateMatcher } from '@angular/material/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Course } from '../../model/course';
-import { CoursesService } from '../../services/courses.service';
+import { Course } from '../../../../core/model/course';
+import { CoursesService } from '../../../../core/services/courses.service';
 
 @Component({
   selector: 'app-course-form',

@@ -1,4 +1,4 @@
-import { Course } from './../../model/course';
+import { Course } from '../../../../core/model/course';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
