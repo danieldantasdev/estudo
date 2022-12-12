@@ -17,6 +17,8 @@ import { RegisterComponent } from './components/pages/register/register.componen
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatInputModule } from '@angular/material/input';
+
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, RegisterComponent],
@@ -35,6 +37,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatFormFieldModule,
     MatProgressBarModule,
     MatDividerModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
