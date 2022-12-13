@@ -9,15 +9,15 @@ const obj = [
   },
   {
     id: 3,
-    nome: 'Renata',
+    nome: 'Renata Dantas',
   },
   {
     id: 4,
-    nome: 'Davi',
+    nome: 'Joel',
   },
   {
     id: 5,
-    nome: 'Joaquim',
+    nome: 'Davi',
   },
   {
     id: 6,
@@ -25,30 +25,34 @@ const obj = [
   },
   {
     id: 7,
-    nome: 'Renata figueiredo',
+    nome: 'Joaquim',
   },
   {
     id: 8,
-    nome: 'Ricardinho',
+    nome: 'Renata Figueiredo',
   },
   {
     id: 9,
-    nome: 'Renatinho',
+    nome: 'Ricardo',
   },
   {
     id: 10,
-    nome: 'Joel',
+    nome: 'Ricardinho',
+  },
+  {
+    id: 11,
+    nome: 'Renatinho',
   },
 ]
 
-const div = document.querySelector('.div')
+const nomeGerado = document.querySelector('.nomeGerado')
 
 const gerarNumeros = async () => {
-  const numberAleatory = Math.floor(Math.random() * 10)
+  const numberAleatory = Math.floor(Math.random() * obj.length)
 
   for (const iterator of obj) {
     if (iterator.id === numberAleatory) {
-      div.innerHTML = iterator.nome
+      nomeGerado.innerHTML = iterator.nome
       await this.setData('participantes', JSON.stringify(obj))
     } //else {
     //   div.innerHTML = 'Estamos tentando deixar aleatorio'
@@ -65,6 +69,6 @@ setData = (key, data) => {
 }
 
 clearData = () => {
-  div.innerHTML = ''
+  nomeGerado.innerHTML = ''
   localStorage.clear()
 }
