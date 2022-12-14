@@ -1,0 +1,104 @@
+<section class="l-section">
+  <form class="example-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Id</mat-label>
+      <input
+        type="number"
+        name="id"
+        matInput
+        formControlName="id"
+        placeholder="Ex: 1"
+        [ngClass]="{
+          'has-error': isSubmitted && formControls['name'].hasError
+        }"
+      />
+      <mat-error *ngIf="formControls['id'].hasError('required')">
+        O id é <strong>obrigatório</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Password</mat-label>
+      <input
+        [type]="hidePassword ? 'password' : 'text'"
+        matInput
+        formControlName="password"
+        placeholder="Password"
+        [ngClass]="{
+          'has-error': isSubmitted && formControls['password'].hasError
+        }"
+      />
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="hidePassword = !hidePassword"
+        [attr.aria-label]="'hidePassword password'"
+        [attr.aria-pressed]="hidePassword"
+      >
+        <mat-icon>{{
+          hidePassword ? "visibility_off" : "visibility"
+        }}</mat-icon>
+      </button>
+      <mat-error *ngIf="formControls['password'].hasError('required')">
+        A senha é <strong>obrigatória</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Name</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="name"
+        placeholder="Nome"
+        [ngClass]="{
+          'has-error': isSubmitted && formControls['name'].hasError
+        }"
+      />
+
+      <mat-error *ngIf="formControls['name'].hasError('required')">
+        A nome é <strong>obrigatório</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <div class="divFoto">
+      <img hidden id="foto" src="#" width="350" height="300" />
+    </div>
+
+    <div fxLayoutAlign="center end">
+      <input
+        [hidden]="true"
+        type="file"
+        #fileInput
+        name="photo"
+        formControlName="photo"
+        (change)="SelecionarFoto($event)"
+      />
+      <br /><br /><br /><br />
+      <button
+        type="button"
+        mat-stroked-button
+        color="primary"
+        (click)="fileInput.click()"
+      >
+        Escolha sua foto.
+      </button>
+
+      <!-- <div *ngIf="propriedade.foto.touched && propriedade.foto.invalid">
+          <sup>*</sup>Escolha sua foto.
+        </div> -->
+    </div>
+
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="!loginForm.valid"
+      type="submit"
+      name="action"
+      class="button"
+    >
+      Cadastrar
+    </button>
+  </form>
+</section>
