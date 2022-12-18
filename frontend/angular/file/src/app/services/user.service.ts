@@ -5,7 +5,7 @@ import { environment } from 'src/environments/environment';
 
 import { DadosLogin } from '../model/DadosLogin';
 import { DadosRegistro } from '../model/DadosRegistro';
-import { User } from './../model/User';
+import { User } from '../model/User';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -18,12 +18,12 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root',
 })
-export class UsuariosService {
+export class UserService {
   url = environment.apiServer + 'user';
 
   constructor(private http: HttpClient) {}
 
-  readById(idUsuario: User['id']): Observable<User> {
+  readById(idUsuario: any): Observable<User> {
     const apiUrl = `${this.url}/${idUsuario}`;
     return this.http.get<User>(apiUrl, httpOptions);
   }
@@ -33,12 +33,14 @@ export class UsuariosService {
     return this.http.get<User[]>(apiUrl, httpOptions);
   }
 
-  savePhoto(file: any): Observable<any> {
-    // const formData = new FormData();
-    // formData.append('file', file, file.name);
-
+  savePhoto(files: File): Observable<File> {
     const apiUrl = `${environment.apiServer}salvarFoto`;
-    return this.http.post<any>(apiUrl, file);
+
+    const formData = new FormData();
+    formData.append('file', files, files.name);
+
+    console.log(formData);
+    return this.http.post<File>(apiUrl, formData);
   }
 
   public uploadFile<T>(file: File): Observable<T> {

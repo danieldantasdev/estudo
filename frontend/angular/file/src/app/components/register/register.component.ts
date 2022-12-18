@@ -1,11 +1,9 @@
 import { User } from './../../model/User';
-import { DadosRegistro } from './../../model/DadosRegistro';
-import { UsuariosService } from './../../services/usuario.service';
+import { UserService } from '../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -23,11 +21,12 @@ export class RegisterComponent implements OnInit {
   //   password: '',
   // };
   usuario: User = new User();
-  foto: File | null = null;
+  // foto: File | null = null;
+  foto!: File;
 
   constructor(
     private formBuilder: FormBuilder,
-    private userService: UsuariosService,
+    private userService: UserService,
     private router: Router,
     private _snackBar: MatSnackBar
   ) {}
@@ -36,8 +35,8 @@ export class RegisterComponent implements OnInit {
     this.loginForm = this.formBuilder.group({
       id: ['', Validators.required],
       name: ['', Validators.required],
-      photo: ['', Validators.required],
       password: ['', Validators.required],
+      photo: ['', Validators.required],
     });
   }
 
@@ -61,7 +60,7 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  SelecionarFoto(event: any): void {
+  selecionarFoto(event: any): void {
     this.foto = event.target.files[0] as File;
     const reader: FileReader = new FileReader();
     reader.onload = function (e: any) {
@@ -69,20 +68,10 @@ export class RegisterComponent implements OnInit {
       document.getElementById('foto')?.setAttribute('src', e.target.result);
     };
     reader.readAsDataURL(this.foto);
-
-    const formData: FormData = new FormData();
-
-    if (this.foto != null) {
-      formData.append('file', this.foto, this.foto.name);
-      console.log(formData.append('file', this.foto, this.foto.name));
-    }
-    // this.userService.savePhoto(formData).subscribe({
-    //   next: (r) => {},
-    // });
   }
 
   private onSuccess() {
-    this.router.navigate(['/home']);
+    // this.router.navigate(['/home']);
     this._snackBar.open('Usuário salvo com sucesso!', '', { duration: 5000 });
   }
 
