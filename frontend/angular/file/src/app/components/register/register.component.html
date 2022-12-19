@@ -1,6 +1,5 @@
 <section class="l-section">
   <form class="example-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <mat-spinner *ngIf="isLoading"></mat-spinner>
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Id</mat-label>
       <input
@@ -93,6 +92,17 @@
     <button
       mat-raised-button
       color="primary"
+      type="submit"
+      name="action"
+      class="button"
+      (click)="onUpload()"
+    >
+      Upload
+    </button>
+
+    <button
+      mat-raised-button
+      color="primary"
       [disabled]="!loginForm.valid"
       type="submit"
       name="action"
@@ -102,3 +112,6 @@
     </button>
   </form>
 </section>
+
+<!-- <h1>{{ base64Output }}</h1> -->
+<h1>{{ foto }}</h1>

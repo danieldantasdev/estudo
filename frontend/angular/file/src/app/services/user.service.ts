@@ -1,10 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Injectable, Renderer2 } from '@angular/core';
+import { Observable, ReplaySubject, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
-import { DadosLogin } from '../model/DadosLogin';
-import { DadosRegistro } from '../model/DadosRegistro';
 import { User } from '../model/User';
 
 const httpOptions = {
@@ -36,28 +34,37 @@ export class UserService {
   savePhoto(files: File): Observable<File> {
     const apiUrl = `${environment.apiServer}salvarFoto`;
 
-    const formData = new FormData();
-    formData.append('file', files, files.name);
+    // const formData = new FormData();
+    // formData.append('file', files, files.name);
 
-    console.log(formData);
-    return this.http.post<File>(apiUrl, formData);
+    return this.http.post<File>(apiUrl, files, {
+      observe: 'body',
+      reportProgress: true,
+    });
   }
 
-  public uploadFile<T>(file: File): Observable<T> {
-    let formData = new FormData();
-    formData.append('file', file, file.name);
+  convertFile(file: File): Observable<string> {
+    const result = new ReplaySubject<string>(1);
+    const reader = new FileReader();
+    reader.readAsBinaryString(file);
+    reader.onload = (event) =>
+      result.next(btoa(event.target!.result!.toString()));
+    return result;
+  }
 
-    var request = this.http.post<T>(this.url, formData);
-    return request;
+  dataURItoBlob(dataURI: any) {
+    const byteString = window.atob(dataURI);
+    const arrayBuffer = new ArrayBuffer(byteString.length);
+    const int8Array = new Uint8Array(arrayBuffer);
+    for (let i = 0; i < byteString.length; i++) {
+      int8Array[i] = byteString.charCodeAt(i);
+    }
+    const blob = new Blob([int8Array], { type: 'image/png' });
+    return blob;
   }
 
   create(user: User): Observable<User> {
     const apiUrl = `${this.url}`;
     return this.http.post<User>(apiUrl, user, httpOptions);
-  }
-
-  LogarUser(dadosLogin: DadosLogin): Observable<any> {
-    const apiUrl = `${this.url}/LogarUser`;
-    return this.http.post<DadosRegistro>(apiUrl, dadosLogin);
   }
 }
