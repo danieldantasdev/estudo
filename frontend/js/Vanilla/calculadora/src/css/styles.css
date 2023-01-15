@@ -20,11 +20,14 @@
   gap: 1rem;
 }
 
-.l-section:nth-child(2), .l-section:nth-child(3), .l-section:nth-child(4), .l-section:nth-child(5){
+.l-section:nth-child(2),
+.l-section:nth-child(3),
+.l-section:nth-child(4),
+.l-section:nth-child(5) {
   margin-top: 1rem;
 }
 
-button {
+input {
   background: black;
   color: white;
   padding: 2rem;
@@ -33,7 +36,7 @@ button {
   font: 400 1rem 'Roboto', sans-serif;
 }
 
-button:hover {
+input:hover {
   transition: 0.2s all linear;
   filter: brightness(2);
   background-color: rgba(0, 0, 0, 0.774);
